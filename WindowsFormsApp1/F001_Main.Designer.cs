@@ -55,85 +55,98 @@
             // 
             // workReportButton
             // 
+            this.workReportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.workReportButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.workReportButton.Location = new System.Drawing.Point(3, 3);
             this.workReportButton.Name = "workReportButton";
             this.workReportButton.Size = new System.Drawing.Size(217, 104);
             this.workReportButton.TabIndex = 0;
             this.workReportButton.Text = "Working Report";
-            this.workReportButton.UseVisualStyleBackColor = true;
+            this.workReportButton.UseVisualStyleBackColor = false;
+            this.workReportButton.Click += new System.EventHandler(this.WorkReportButton_Click);
             // 
             // addProjectButton
             // 
+            this.addProjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.addProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addProjectButton.Location = new System.Drawing.Point(226, 3);
             this.addProjectButton.Name = "addProjectButton";
             this.addProjectButton.Size = new System.Drawing.Size(217, 104);
             this.addProjectButton.TabIndex = 1;
             this.addProjectButton.Text = "Add Project";
-            this.addProjectButton.UseVisualStyleBackColor = true;
+            this.addProjectButton.UseVisualStyleBackColor = false;
             this.addProjectButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // addEmployeeButton
             // 
+            this.addEmployeeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.addEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addEmployeeButton.Location = new System.Drawing.Point(449, 3);
             this.addEmployeeButton.Name = "addEmployeeButton";
             this.addEmployeeButton.Size = new System.Drawing.Size(217, 104);
             this.addEmployeeButton.TabIndex = 2;
             this.addEmployeeButton.Text = "Add Employee";
-            this.addEmployeeButton.UseVisualStyleBackColor = true;
+            this.addEmployeeButton.UseVisualStyleBackColor = false;
             this.addEmployeeButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // assignButton
             // 
+            this.assignButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.assignButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.assignButton.Location = new System.Drawing.Point(672, 3);
             this.assignButton.Name = "assignButton";
             this.assignButton.Size = new System.Drawing.Size(217, 104);
             this.assignButton.TabIndex = 3;
             this.assignButton.Text = "Project Assign";
-            this.assignButton.UseVisualStyleBackColor = true;
+            this.assignButton.UseVisualStyleBackColor = false;
+            this.assignButton.Click += new System.EventHandler(this.assignButton_Click);
             // 
             // updateSkillButton
             // 
+            this.updateSkillButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateSkillButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.updateSkillButton.Location = new System.Drawing.Point(3, 113);
             this.updateSkillButton.Name = "updateSkillButton";
             this.updateSkillButton.Size = new System.Drawing.Size(217, 104);
             this.updateSkillButton.TabIndex = 4;
             this.updateSkillButton.Text = "Update Skill";
-            this.updateSkillButton.UseVisualStyleBackColor = true;
+            this.updateSkillButton.UseVisualStyleBackColor = false;
+            this.updateSkillButton.Click += new System.EventHandler(this.updateSkillButton_Click);
             // 
             // updateProjectButton
             // 
+            this.updateProjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.updateProjectButton.Location = new System.Drawing.Point(226, 113);
             this.updateProjectButton.Name = "updateProjectButton";
             this.updateProjectButton.Size = new System.Drawing.Size(217, 104);
             this.updateProjectButton.TabIndex = 5;
             this.updateProjectButton.Text = "Update Project";
-            this.updateProjectButton.UseVisualStyleBackColor = true;
+            this.updateProjectButton.UseVisualStyleBackColor = false;
+            this.updateProjectButton.Click += new System.EventHandler(this.updateProjectButton_Click);
             // 
             // updateEmployeeButton
             // 
+            this.updateEmployeeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.updateEmployeeButton.Location = new System.Drawing.Point(449, 113);
             this.updateEmployeeButton.Name = "updateEmployeeButton";
             this.updateEmployeeButton.Size = new System.Drawing.Size(217, 104);
             this.updateEmployeeButton.TabIndex = 6;
             this.updateEmployeeButton.Text = "Update Employee";
-            this.updateEmployeeButton.UseVisualStyleBackColor = true;
+            this.updateEmployeeButton.UseVisualStyleBackColor = false;
+            this.updateEmployeeButton.Click += new System.EventHandler(this.updateEmployeeButton_Click);
             // 
             // profileButton
             // 
+            this.profileButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.profileButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profileButton.Location = new System.Drawing.Point(672, 113);
             this.profileButton.Name = "profileButton";
             this.profileButton.Size = new System.Drawing.Size(217, 104);
             this.profileButton.TabIndex = 7;
             this.profileButton.Text = "Change My Profile";
-            this.profileButton.UseVisualStyleBackColor = true;
+            this.profileButton.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -184,7 +197,7 @@
             this.timeBox.FormattingEnabled = true;
             this.timeBox.Location = new System.Drawing.Point(311, 264);
             this.timeBox.Name = "timeBox";
-            this.timeBox.Size = new System.Drawing.Size(99, 24);
+            this.timeBox.Size = new System.Drawing.Size(109, 24);
             this.timeBox.TabIndex = 12;
             // 
             // fromDatePick
@@ -204,6 +217,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Lime;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -250,22 +264,23 @@
             // Employee
             // 
             this.Employee.Text = "Employee";
-            this.Employee.Width = 333;
+            this.Employee.Width = 200;
             // 
             // WorkingTime
             // 
             this.WorkingTime.Text = "WorkingTime";
-            this.WorkingTime.Width = 213;
+            this.WorkingTime.Width = 100;
             // 
             // WorkingHour
             // 
             this.WorkingHour.Text = "WorkingHour";
-            this.WorkingHour.Width = 206;
+            this.WorkingHour.Width = 100;
             // 
             // F001_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(1066, 546);
             this.Controls.Add(this.employeeList);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -277,6 +292,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "F001_Main";
             this.Text = "F001_Main";
             this.Load += new System.EventHandler(this.Form1_Load);

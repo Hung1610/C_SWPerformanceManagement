@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.projectName = new System.Windows.Forms.Label();
             this.projectNameBox = new System.Windows.Forms.ComboBox();
+            this.projectName = new System.Windows.Forms.Label();
             this.projectAssignList = new System.Windows.Forms.ListView();
             this.employeeName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.role = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,6 +52,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Lime;
             this.splitContainer1.Panel1.Controls.Add(this.projectNameBox);
             this.splitContainer1.Panel1.Controls.Add(this.projectName);
             // 
@@ -62,6 +63,14 @@
             this.splitContainer1.SplitterDistance = 225;
             this.splitContainer1.TabIndex = 2;
             // 
+            // projectNameBox
+            // 
+            this.projectNameBox.FormattingEnabled = true;
+            this.projectNameBox.Location = new System.Drawing.Point(241, 57);
+            this.projectNameBox.Name = "projectNameBox";
+            this.projectNameBox.Size = new System.Drawing.Size(250, 24);
+            this.projectNameBox.TabIndex = 1;
+            // 
             // projectName
             // 
             this.projectName.AutoSize = true;
@@ -71,14 +80,6 @@
             this.projectName.Size = new System.Drawing.Size(139, 26);
             this.projectName.TabIndex = 0;
             this.projectName.Text = "ProjectName";
-            // 
-            // projectNameBox
-            // 
-            this.projectNameBox.FormattingEnabled = true;
-            this.projectNameBox.Location = new System.Drawing.Point(170, 62);
-            this.projectNameBox.Name = "projectNameBox";
-            this.projectNameBox.Size = new System.Drawing.Size(250, 24);
-            this.projectNameBox.TabIndex = 1;
             // 
             // projectAssignList
             // 
@@ -104,7 +105,7 @@
             // role
             // 
             this.role.Text = "Role";
-            this.role.Width = 155;
+            this.role.Width = 140;
             // 
             // startDate
             // 
@@ -114,7 +115,7 @@
             // endDate
             // 
             this.endDate.Text = "EndDate";
-            this.endDate.Width = 125;
+            this.endDate.Width = 108;
             // 
             // remark
             // 

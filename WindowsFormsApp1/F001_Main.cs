@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class F001_Main : Form
     {
+        
         public F001_Main()
         {
             InitializeComponent();
@@ -24,12 +25,24 @@ namespace WindowsFormsApp1
         }
         private void button3_Click(object sender, EventArgs e)
         {
-
+            F300_Employee f300 = new F300_Employee();
+            f300.Show();
         }
-        
+        private void updateEmployeeButton_Click(object sender, EventArgs e)
+        {
+            F300_Employee f300 = new F300_Employee();
+            f300.Show();
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-
+            F200_Project f200 = new F200_Project();
+            f200.Show();
+        }
+        private void updateProjectButton_Click(object sender, EventArgs e)
+        {
+            F200_Project f200 = new F200_Project();
+            f200.Show();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -37,6 +50,22 @@ namespace WindowsFormsApp1
 
         }
 
-        
+        private void WorkReportButton_Click(object sender, EventArgs e)
+        {
+            F100_WorkingReport f100= new F100_WorkingReport();
+            f100.Show();
+        }
+
+        private void updateSkillButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void assignButton_Click(object sender, EventArgs e)
+        {
+            F201_ProjectAssign f201 = new F201_ProjectAssign();
+            f201.Show();
+        }
+
     }
 }

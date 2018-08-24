@@ -47,13 +47,12 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.userTxt, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.passTxt, 1, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(61, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(605, 166);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(485, 120);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -71,7 +70,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 83);
+            this.label2.Location = new System.Drawing.Point(3, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 0;
@@ -80,14 +79,14 @@
             // 
             // userTxt
             // 
-            this.userTxt.Location = new System.Drawing.Point(305, 3);
+            this.userTxt.Location = new System.Drawing.Point(245, 3);
             this.userTxt.Name = "userTxt";
             this.userTxt.Size = new System.Drawing.Size(175, 22);
             this.userTxt.TabIndex = 1;
             // 
             // passTxt
             // 
-            this.passTxt.Location = new System.Drawing.Point(305, 86);
+            this.passTxt.Location = new System.Drawing.Point(245, 63);
             this.passTxt.Name = "passTxt";
             this.passTxt.Size = new System.Drawing.Size(175, 22);
             this.passTxt.TabIndex = 2;
@@ -116,6 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(605, 356);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.loginButton);
