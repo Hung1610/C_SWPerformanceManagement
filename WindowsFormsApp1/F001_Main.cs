@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         {
             string[] row = { "lol", "fux", "ayy", "ok" };
             var listViewItem = new ListViewItem(row);
-            listView1.Items.Add(listViewItem);
+            employeeList.Items.Add(listViewItem);
         }
         private void button3_Click(object sender, EventArgs e)
         {

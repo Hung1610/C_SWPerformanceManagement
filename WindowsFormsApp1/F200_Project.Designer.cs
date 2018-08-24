@@ -30,21 +30,21 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.projectNameTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.projectInfoTxt = new System.Windows.Forms.TextBox();
+            this.cusNameTxt = new System.Windows.Forms.TextBox();
+            this.cusInfoTxt = new System.Windows.Forms.TextBox();
+            this.startDatePick = new System.Windows.Forms.DateTimePicker();
+            this.endDatePick = new System.Windows.Forms.DateTimePicker();
+            this.remarkRichTxt = new System.Windows.Forms.RichTextBox();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,19 +54,19 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.projectNameTxt, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker2, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.richTextBox1, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.projectInfoTxt, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cusNameTxt, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cusInfoTxt, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.startDatePick, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.endDatePick, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.remarkRichTxt, 1, 6);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(191, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -90,12 +90,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ProjectName";
             // 
-            // textBox1
+            // projectNameTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 22);
-            this.textBox1.TabIndex = 1;
+            this.projectNameTxt.Location = new System.Drawing.Point(200, 3);
+            this.projectNameTxt.Name = "projectNameTxt";
+            this.projectNameTxt.Size = new System.Drawing.Size(190, 22);
+            this.projectNameTxt.TabIndex = 1;
             // 
             // label2
             // 
@@ -157,67 +157,67 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Remark";
             // 
-            // textBox2
+            // projectInfoTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(200, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 22);
-            this.textBox2.TabIndex = 1;
+            this.projectInfoTxt.Location = new System.Drawing.Point(200, 55);
+            this.projectInfoTxt.Name = "projectInfoTxt";
+            this.projectInfoTxt.Size = new System.Drawing.Size(187, 22);
+            this.projectInfoTxt.TabIndex = 1;
             // 
-            // textBox3
+            // cusNameTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(200, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 22);
-            this.textBox3.TabIndex = 1;
+            this.cusNameTxt.Location = new System.Drawing.Point(200, 107);
+            this.cusNameTxt.Name = "cusNameTxt";
+            this.cusNameTxt.Size = new System.Drawing.Size(187, 22);
+            this.cusNameTxt.TabIndex = 1;
             // 
-            // textBox4
+            // cusInfoTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(200, 159);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 22);
-            this.textBox4.TabIndex = 1;
+            this.cusInfoTxt.Location = new System.Drawing.Point(200, 159);
+            this.cusInfoTxt.Name = "cusInfoTxt";
+            this.cusInfoTxt.Size = new System.Drawing.Size(187, 22);
+            this.cusInfoTxt.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // startDatePick
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(200, 211);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(192, 22);
-            this.dateTimePicker1.TabIndex = 2;
+            this.startDatePick.Location = new System.Drawing.Point(200, 211);
+            this.startDatePick.Name = "startDatePick";
+            this.startDatePick.Size = new System.Drawing.Size(192, 22);
+            this.startDatePick.TabIndex = 2;
             // 
-            // dateTimePicker2
+            // endDatePick
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(200, 263);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(192, 22);
-            this.dateTimePicker2.TabIndex = 3;
+            this.endDatePick.Location = new System.Drawing.Point(200, 263);
+            this.endDatePick.Name = "endDatePick";
+            this.endDatePick.Size = new System.Drawing.Size(192, 22);
+            this.endDatePick.TabIndex = 3;
             // 
-            // richTextBox1
+            // remarkRichTxt
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(200, 315);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(192, 40);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.remarkRichTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.remarkRichTxt.Location = new System.Drawing.Point(200, 315);
+            this.remarkRichTxt.Name = "remarkRichTxt";
+            this.remarkRichTxt.Size = new System.Drawing.Size(192, 40);
+            this.remarkRichTxt.TabIndex = 4;
+            this.remarkRichTxt.Text = "";
             // 
-            // button1
+            // saveButton
             // 
-            this.button1.Location = new System.Drawing.Point(12, 376);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 62);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.saveButton.Location = new System.Drawing.Point(12, 376);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(175, 62);
+            this.saveButton.TabIndex = 5;
+            this.saveButton.Text = "Create/Save";
+            this.saveButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // closeButton
             // 
-            this.button2.Location = new System.Drawing.Point(584, 376);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 62);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = true;
+            this.closeButton.Location = new System.Drawing.Point(584, 376);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(175, 62);
+            this.closeButton.TabIndex = 5;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
             // 
             // F200_Project
             // 
@@ -225,8 +225,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 450);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.saveButton);
             this.Name = "F200_Project";
             this.Text = "F200_Project";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -239,20 +239,20 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox projectNameTxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox projectInfoTxt;
+        private System.Windows.Forms.TextBox cusNameTxt;
+        private System.Windows.Forms.TextBox cusInfoTxt;
+        private System.Windows.Forms.DateTimePicker startDatePick;
+        private System.Windows.Forms.DateTimePicker endDatePick;
+        private System.Windows.Forms.RichTextBox remarkRichTxt;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button closeButton;
     }
 }

@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.workReportButton = new System.Windows.Forms.Button();
+            this.addProjectButton = new System.Windows.Forms.Button();
+            this.addEmployeeButton = new System.Windows.Forms.Button();
+            this.assignButton = new System.Windows.Forms.Button();
+            this.updateSkillButton = new System.Windows.Forms.Button();
+            this.updateProjectButton = new System.Windows.Forms.Button();
+            this.updateEmployeeButton = new System.Windows.Forms.Button();
+            this.profileButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.projectBox = new System.Windows.Forms.ComboBox();
+            this.timeBox = new System.Windows.Forms.ComboBox();
+            this.fromDatePick = new System.Windows.Forms.DateTimePicker();
+            this.toDatePick = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.employeeList = new System.Windows.Forms.ListView();
             this.Project = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Employee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.WorkingTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -53,87 +53,87 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // workReportButton
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 104);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.workReportButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.workReportButton.Location = new System.Drawing.Point(3, 3);
+            this.workReportButton.Name = "workReportButton";
+            this.workReportButton.Size = new System.Drawing.Size(217, 104);
+            this.workReportButton.TabIndex = 0;
+            this.workReportButton.Text = "Working Report";
+            this.workReportButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // addProjectButton
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(226, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 104);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.addProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addProjectButton.Location = new System.Drawing.Point(226, 3);
+            this.addProjectButton.Name = "addProjectButton";
+            this.addProjectButton.Size = new System.Drawing.Size(217, 104);
+            this.addProjectButton.TabIndex = 1;
+            this.addProjectButton.Text = "Add Project";
+            this.addProjectButton.UseVisualStyleBackColor = true;
+            this.addProjectButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // addEmployeeButton
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(449, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(217, 104);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.addEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addEmployeeButton.Location = new System.Drawing.Point(449, 3);
+            this.addEmployeeButton.Name = "addEmployeeButton";
+            this.addEmployeeButton.Size = new System.Drawing.Size(217, 104);
+            this.addEmployeeButton.TabIndex = 2;
+            this.addEmployeeButton.Text = "Add Employee";
+            this.addEmployeeButton.UseVisualStyleBackColor = true;
+            this.addEmployeeButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // assignButton
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(672, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(217, 104);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.assignButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.assignButton.Location = new System.Drawing.Point(672, 3);
+            this.assignButton.Name = "assignButton";
+            this.assignButton.Size = new System.Drawing.Size(217, 104);
+            this.assignButton.TabIndex = 3;
+            this.assignButton.Text = "Project Assign";
+            this.assignButton.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // updateSkillButton
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(3, 113);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(217, 104);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.updateSkillButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateSkillButton.Location = new System.Drawing.Point(3, 113);
+            this.updateSkillButton.Name = "updateSkillButton";
+            this.updateSkillButton.Size = new System.Drawing.Size(217, 104);
+            this.updateSkillButton.TabIndex = 4;
+            this.updateSkillButton.Text = "Update Skill";
+            this.updateSkillButton.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // updateProjectButton
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Location = new System.Drawing.Point(226, 113);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(217, 104);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.updateProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateProjectButton.Location = new System.Drawing.Point(226, 113);
+            this.updateProjectButton.Name = "updateProjectButton";
+            this.updateProjectButton.Size = new System.Drawing.Size(217, 104);
+            this.updateProjectButton.TabIndex = 5;
+            this.updateProjectButton.Text = "Update Project";
+            this.updateProjectButton.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // updateEmployeeButton
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.Location = new System.Drawing.Point(449, 113);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(217, 104);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.updateEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateEmployeeButton.Location = new System.Drawing.Point(449, 113);
+            this.updateEmployeeButton.Name = "updateEmployeeButton";
+            this.updateEmployeeButton.Size = new System.Drawing.Size(217, 104);
+            this.updateEmployeeButton.TabIndex = 6;
+            this.updateEmployeeButton.Text = "Update Employee";
+            this.updateEmployeeButton.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // profileButton
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.Location = new System.Drawing.Point(672, 113);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(217, 104);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.profileButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileButton.Location = new System.Drawing.Point(672, 113);
+            this.profileButton.Name = "profileButton";
+            this.profileButton.Size = new System.Drawing.Size(217, 104);
+            this.profileButton.TabIndex = 7;
+            this.profileButton.Text = "Change My Profile";
+            this.profileButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -171,35 +171,35 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "To";
             // 
-            // comboBox1
+            // projectBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 264);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 12;
+            this.projectBox.FormattingEnabled = true;
+            this.projectBox.Location = new System.Drawing.Point(110, 264);
+            this.projectBox.Name = "projectBox";
+            this.projectBox.Size = new System.Drawing.Size(121, 24);
+            this.projectBox.TabIndex = 12;
             // 
-            // comboBox2
+            // timeBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(289, 264);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 12;
+            this.timeBox.FormattingEnabled = true;
+            this.timeBox.Location = new System.Drawing.Point(311, 264);
+            this.timeBox.Name = "timeBox";
+            this.timeBox.Size = new System.Drawing.Size(99, 24);
+            this.timeBox.TabIndex = 12;
             // 
-            // dateTimePicker1
+            // fromDatePick
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(478, 262);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 13;
+            this.fromDatePick.Location = new System.Drawing.Point(478, 262);
+            this.fromDatePick.Name = "fromDatePick";
+            this.fromDatePick.Size = new System.Drawing.Size(200, 22);
+            this.fromDatePick.TabIndex = 13;
             // 
-            // dateTimePicker2
+            // toDatePick
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(750, 262);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 13;
+            this.toDatePick.Location = new System.Drawing.Point(750, 262);
+            this.toDatePick.Name = "toDatePick";
+            this.toDatePick.Size = new System.Drawing.Size(200, 22);
+            this.toDatePick.TabIndex = 13;
             // 
             // tableLayoutPanel1
             // 
@@ -210,14 +210,14 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.button8, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button6, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button7, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.profileButton, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.assignButton, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.addEmployeeButton, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.addProjectButton, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.workReportButton, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.updateSkillButton, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.updateProjectButton, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.updateEmployeeButton, 2, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(61, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -226,31 +226,31 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(892, 220);
             this.tableLayoutPanel1.TabIndex = 14;
             // 
-            // listView1
+            // employeeList
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.employeeList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Project,
             this.Employee,
             this.WorkingTime,
             this.WorkingHour});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.listView1.Location = new System.Drawing.Point(0, 306);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1066, 240);
-            this.listView1.TabIndex = 15;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.employeeList.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.employeeList.Location = new System.Drawing.Point(0, 306);
+            this.employeeList.Name = "employeeList";
+            this.employeeList.Size = new System.Drawing.Size(1066, 240);
+            this.employeeList.TabIndex = 15;
+            this.employeeList.UseCompatibleStateImageBehavior = false;
+            this.employeeList.View = System.Windows.Forms.View.Details;
+            this.employeeList.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Project
             // 
             this.Project.Text = "Project";
-            this.Project.Width = 215;
+            this.Project.Width = 300;
             // 
             // Employee
             // 
             this.Employee.Text = "Employee";
-            this.Employee.Width = 222;
+            this.Employee.Width = 333;
             // 
             // WorkingTime
             // 
@@ -260,25 +260,25 @@
             // WorkingHour
             // 
             this.WorkingHour.Text = "WorkingHour";
-            this.WorkingHour.Width = 397;
+            this.WorkingHour.Width = 206;
             // 
-            // Form1
+            // F001_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 546);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.employeeList);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.toDatePick);
+            this.Controls.Add(this.fromDatePick);
+            this.Controls.Add(this.timeBox);
+            this.Controls.Add(this.projectBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "F001_Main";
+            this.Text = "F001_Main";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -288,24 +288,24 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button workReportButton;
+        private System.Windows.Forms.Button addProjectButton;
+        private System.Windows.Forms.Button addEmployeeButton;
+        private System.Windows.Forms.Button assignButton;
+        private System.Windows.Forms.Button updateSkillButton;
+        private System.Windows.Forms.Button updateProjectButton;
+        private System.Windows.Forms.Button updateEmployeeButton;
+        private System.Windows.Forms.Button profileButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox projectBox;
+        private System.Windows.Forms.ComboBox timeBox;
+        private System.Windows.Forms.DateTimePicker fromDatePick;
+        private System.Windows.Forms.DateTimePicker toDatePick;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView employeeList;
         private System.Windows.Forms.ColumnHeader Project;
         private System.Windows.Forms.ColumnHeader Employee;
         private System.Windows.Forms.ColumnHeader WorkingTime;

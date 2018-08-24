@@ -10,16 +10,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class F300_Employee : Form
+    public partial class F201_ProjectAssign : Form
     {
-        public F300_Employee()
+        public F201_ProjectAssign()
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

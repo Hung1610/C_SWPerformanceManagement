@@ -70,6 +70,12 @@
     <Compile Include="F200_Project.Designer.cs">
       <DependentUpon>F200_Project.cs</DependentUpon>
     </Compile>
+    <Compile Include="F201_ProjectAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F201_ProjectAssign.Designer.cs">
+      <DependentUpon>F201_ProjectAssign.cs</DependentUpon>
+    </Compile>
     <Compile Include="F300_Employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F200_Project.resx">
       <DependentUpon>F200_Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F201_ProjectAssign.resx">
+      <DependentUpon>F201_ProjectAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F300_Employee.resx">
+      <DependentUpon>F300_Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
