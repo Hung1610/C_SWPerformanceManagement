@@ -1,3 +1,2 @@
 # C_SWPerformanceManagement
-Internship Project
-Don't touch my shit. Kthanks
+Simple Stuff. Don't touch. KThanks
