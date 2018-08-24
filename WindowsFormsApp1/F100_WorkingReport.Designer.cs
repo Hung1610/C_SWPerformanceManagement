@@ -146,7 +146,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Name = "F100_WorkingReport";
-            this.Text = "Form3";
+            this.Text = "F100_WorkingReport";
             ((System.ComponentModel.ISupportInitialize)(this.workTimeUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

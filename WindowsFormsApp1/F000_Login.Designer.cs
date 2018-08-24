@@ -121,7 +121,7 @@
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "F000_Login";
-            this.Text = "Form2";
+            this.Text = "F000_Login";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
