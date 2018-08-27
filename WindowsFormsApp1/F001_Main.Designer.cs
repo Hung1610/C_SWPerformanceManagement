@@ -50,6 +50,8 @@
             this.Employee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.WorkingTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.WorkingHour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label5 = new System.Windows.Forms.Label();
+            this.userLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,7 +153,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 267);
+            this.label1.Location = new System.Drawing.Point(12, 267);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 8;
@@ -160,7 +162,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(237, 267);
+            this.label2.Location = new System.Drawing.Point(197, 267);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 9;
@@ -169,7 +171,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(426, 267);
+            this.label3.Location = new System.Drawing.Point(386, 270);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 10;
@@ -178,7 +180,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(698, 267);
+            this.label4.Location = new System.Drawing.Point(638, 270);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 17);
             this.label4.TabIndex = 11;
@@ -187,7 +189,7 @@
             // projectBox
             // 
             this.projectBox.FormattingEnabled = true;
-            this.projectBox.Location = new System.Drawing.Point(110, 264);
+            this.projectBox.Location = new System.Drawing.Point(70, 267);
             this.projectBox.Name = "projectBox";
             this.projectBox.Size = new System.Drawing.Size(121, 24);
             this.projectBox.TabIndex = 12;
@@ -195,21 +197,21 @@
             // timeBox
             // 
             this.timeBox.FormattingEnabled = true;
-            this.timeBox.Location = new System.Drawing.Point(311, 264);
+            this.timeBox.Location = new System.Drawing.Point(271, 267);
             this.timeBox.Name = "timeBox";
             this.timeBox.Size = new System.Drawing.Size(109, 24);
             this.timeBox.TabIndex = 12;
             // 
             // fromDatePick
             // 
-            this.fromDatePick.Location = new System.Drawing.Point(478, 262);
+            this.fromDatePick.Location = new System.Drawing.Point(432, 267);
             this.fromDatePick.Name = "fromDatePick";
             this.fromDatePick.Size = new System.Drawing.Size(200, 22);
             this.fromDatePick.TabIndex = 13;
             // 
             // toDatePick
             // 
-            this.toDatePick.Location = new System.Drawing.Point(750, 262);
+            this.toDatePick.Location = new System.Drawing.Point(669, 267);
             this.toDatePick.Name = "toDatePick";
             this.toDatePick.Size = new System.Drawing.Size(200, 22);
             this.toDatePick.TabIndex = 13;
@@ -232,7 +234,7 @@
             this.tableLayoutPanel1.Controls.Add(this.updateSkillButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.updateProjectButton, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.updateEmployeeButton, 2, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(61, 28);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 28);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -250,7 +252,7 @@
             this.employeeList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.employeeList.Location = new System.Drawing.Point(0, 306);
             this.employeeList.Name = "employeeList";
-            this.employeeList.Size = new System.Drawing.Size(1066, 240);
+            this.employeeList.Size = new System.Drawing.Size(1280, 240);
             this.employeeList.TabIndex = 15;
             this.employeeList.UseCompatibleStateImageBehavior = false;
             this.employeeList.View = System.Windows.Forms.View.Details;
@@ -276,12 +278,35 @@
             this.WorkingHour.Text = "WorkingHour";
             this.WorkingHour.Width = 100;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(951, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 25);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Current User:";
+            // 
+            // userLabel
+            // 
+            this.userLabel.AutoSize = true;
+            this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userLabel.Location = new System.Drawing.Point(951, 44);
+            this.userLabel.Name = "userLabel";
+            this.userLabel.Size = new System.Drawing.Size(106, 25);
+            this.userLabel.TabIndex = 16;
+            this.userLabel.Text = "[Unknown]";
+            this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // F001_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lime;
-            this.ClientSize = new System.Drawing.Size(1066, 546);
+            this.ClientSize = new System.Drawing.Size(1280, 546);
+            this.Controls.Add(this.userLabel);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.employeeList);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.toDatePick);
@@ -327,7 +352,8 @@
         private System.Windows.Forms.ColumnHeader Employee;
         private System.Windows.Forms.ColumnHeader WorkingTime;
         private System.Windows.Forms.ColumnHeader WorkingHour;
-
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label userLabel;
     }
 }
 

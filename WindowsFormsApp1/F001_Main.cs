@@ -13,9 +13,10 @@ namespace WindowsFormsApp1
     public partial class F001_Main : Form
     {
         
-        public F001_Main()
+        public F001_Main(string user)
         {
             InitializeComponent();
+            userLabel.Text = user;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
