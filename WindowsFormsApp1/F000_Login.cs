@@ -36,6 +36,7 @@ namespace WindowsFormsApp1
             loginP = new LoginP(this);
             InitializeComponent();
             passTxt.UseSystemPasswordChar = true;
+            this.ControlBox = false;
         }
 
         private void button1_Click(object sender, EventArgs e)

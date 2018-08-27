@@ -86,7 +86,7 @@
             // 
             this.passTxt.Location = new System.Drawing.Point(103, 63);
             this.passTxt.Name = "passTxt";
-            this.passTxt.Size = new System.Drawing.Size(175, 22);
+            this.passTxt.Size = new System.Drawing.Size(151, 22);
             this.passTxt.TabIndex = 2;
             // 
             // loginButton
@@ -118,6 +118,7 @@
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "F000_Login";
             this.ShowInTaskbar = false;
             this.Text = "F000_Login";
