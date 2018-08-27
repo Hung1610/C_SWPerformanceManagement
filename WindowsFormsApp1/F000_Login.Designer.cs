@@ -41,8 +41,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.userTxt, 1, 0);
@@ -77,14 +77,14 @@
             // 
             // userTxt
             // 
-            this.userTxt.Location = new System.Drawing.Point(245, 3);
+            this.userTxt.Location = new System.Drawing.Point(103, 3);
             this.userTxt.Name = "userTxt";
-            this.userTxt.Size = new System.Drawing.Size(175, 22);
+            this.userTxt.Size = new System.Drawing.Size(300, 22);
             this.userTxt.TabIndex = 1;
             // 
             // passTxt
             // 
-            this.passTxt.Location = new System.Drawing.Point(245, 63);
+            this.passTxt.Location = new System.Drawing.Point(103, 63);
             this.passTxt.Name = "passTxt";
             this.passTxt.Size = new System.Drawing.Size(175, 22);
             this.passTxt.TabIndex = 2;
@@ -107,7 +107,7 @@
             this.closeButton.TabIndex = 1;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.button1_Click);
+            this.closeButton.Click += new System.EventHandler(this.close_Click);
             // 
             // F000_Login
             // 
@@ -119,6 +119,7 @@
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "F000_Login";
+            this.ShowInTaskbar = false;
             this.Text = "F000_Login";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

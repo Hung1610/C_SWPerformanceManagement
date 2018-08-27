@@ -16,7 +16,9 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new F000_Login());
+            F000_Login login = new F000_Login();
+            login.Show();
+            Application.Run();
         }
         /*
         public static bool OpenDetailFormOnClose { get; set; }

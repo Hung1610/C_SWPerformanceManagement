@@ -321,6 +321,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "F001_Main";
             this.Text = "F001_Main";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmData_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

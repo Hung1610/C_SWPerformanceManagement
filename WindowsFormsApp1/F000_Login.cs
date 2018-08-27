@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class F000_Login : Form, ILogin
     {
+        
         private LoginP loginP { get; set; }
         public string Username
         {
@@ -34,6 +35,7 @@ namespace WindowsFormsApp1
         {
             loginP = new LoginP(this);
             InitializeComponent();
+            passTxt.UseSystemPasswordChar = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,8 +50,12 @@ namespace WindowsFormsApp1
             {
                 F001_Main main = new F001_Main(Username);
                 main.Show();
-                this.Hide();
+                this.Close();
             }
+        }
+        private void close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
