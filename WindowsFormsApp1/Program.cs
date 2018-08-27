@@ -18,5 +18,28 @@ namespace WindowsFormsApp1
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new F000_Login());
         }
+        /*
+        public static bool OpenDetailFormOnClose { get; set; }
+
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            OpenDetailFormOnClose = false;
+
+            Application.Run(new F000_Login());
+
+            if (OpenDetailFormOnClose)
+            {
+                Application.Run(new F001_Main(Username));
+            }
+        }
+        */
     }
+
 }

@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Presenters;
-using WindowsFormsApp1.Views;
 
 namespace WindowsFormsApp1
 {
@@ -42,11 +41,14 @@ namespace WindowsFormsApp1
             if (loginP.GetLogin().pass == "Failure")
             {
                 Console.WriteLine("Login Failed");
+                MessageBox.Show("Wrong Username or Password", "Login Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 F001_Main main = new F001_Main(Username);
                 main.Show();
+                this.Hide();
             }
         }
     }

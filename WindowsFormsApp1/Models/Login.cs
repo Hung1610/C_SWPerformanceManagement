@@ -28,17 +28,18 @@ namespace WindowsFormsApp1.Models
                 "and DelFlag = 0";
             Console.WriteLine(sql);
             SqlCommand cmd = new SqlCommand(sql,conn);
-            if(cmd.ExecuteNonQuery() == 0)
-            {
-                Console.WriteLine("None found.");
-                conn.Close();
-                return 0;
-            }
-            else
+            if (cmd.ExecuteScalar()!= null)
             {
                 Console.WriteLine("Login Successful.");
                 conn.Close();
                 return 1;
+                
+            }
+            else
+            {
+                Console.WriteLine("None found.");
+                conn.Close();
+                return 0;
             }
             
         }

@@ -17,6 +17,7 @@ namespace WindowsFormsApp1.Presenters
             Login login = new Login();
             login.Username = vLogin.Username;
             login.Password = vLogin.Password;
+            //Console.WriteLine(login.credCheck());
             if (login.credCheck()==1)
             {
                 return (vLogin.Username, vLogin.Password);
