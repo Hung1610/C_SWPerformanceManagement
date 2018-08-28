@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WindowsFormsApp1.Models
 {
     
-    class Login: SQLConnect
+    class Login
     {
         public string Username;
         public string Password;

@@ -13,16 +13,18 @@ namespace WindowsFormsApp1
 {
     public partial class F001_Main : Form
     {
+        int UserID;
         private void frmData_FormClosed(object sender, FormClosedEventArgs e)
         {
             F000_Login login= new F000_Login();
             login.Show();
         }
-        ProjectList projectList = new ProjectList();
+        ProjectReport projectList = new ProjectReport();
         public F001_Main(string user,int ID)
         {
             InitializeComponent();
             Console.WriteLine(ID);
+            UserID = ID;
             userLabel.Text = user;
             List<string> projects = projectList.genList();
             foreach (string project in projects)
@@ -66,7 +68,7 @@ namespace WindowsFormsApp1
 
         private void WorkReportButton_Click(object sender, EventArgs e)
         {
-            F100_WorkingReport f100= new F100_WorkingReport();
+            F100_WorkingReport f100= new F100_WorkingReport(UserID);
             f100.Show();
         }
 

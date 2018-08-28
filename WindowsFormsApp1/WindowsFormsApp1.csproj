@@ -84,7 +84,7 @@
       <DependentUpon>F300_Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Login.cs" />
-    <Compile Include="Models\ProjectAssignData.cs" />
+    <Compile Include="Presenters\ProjectAssignData.cs" />
     <Compile Include="Models\ProjectReport.cs" />
     <Compile Include="Models\SQLConnect.cs" />
     <Compile Include="Presenters\ILogin.cs" />
