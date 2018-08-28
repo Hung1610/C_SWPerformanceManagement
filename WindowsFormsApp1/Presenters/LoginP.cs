@@ -12,18 +12,19 @@ namespace WindowsFormsApp1.Presenters
         private ILogin vLogin;
         
         public LoginP(ILogin view) => this.vLogin = view;
-        public (string user, string pass) GetLogin()
+        public (string user, int ID) GetLogin()
         {
             Login login = new Login();
             login.Username = vLogin.Username;
             login.Password = vLogin.Password;
-            //Console.WriteLine(login.credCheck());
-            if (login.credCheck()==1)
+            int ID = login.credCheck();
+            //Console.WriteLine(ID);
+            if (ID>=1)
             {
-                return (vLogin.Username, vLogin.Password);
+                return (vLogin.Username, ID);
             }
             else
-                return ("Login ", "Failure");
+                return ("Login ",0);
         }
     }
 }

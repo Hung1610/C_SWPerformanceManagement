@@ -13,11 +13,12 @@ namespace WindowsFormsApp1.Models
         public string Username;
         public string Password;
         // Check login credentials
+        SQLConnect cn = new SQLConnect();
         public int credCheck ()
         {
             Console.WriteLine("Checking user credentials.");
             // Connect to the table then establish connection.
-            SQLConnect cn = new SQLConnect();
+            
             SqlConnection conn = cn.Connect();
             conn.Open();
             // Write the query and execute.
@@ -28,20 +29,26 @@ namespace WindowsFormsApp1.Models
                 "and DelFlag = 0";
             Console.WriteLine(sql);
             SqlCommand cmd = new SqlCommand(sql,conn);
-            if (cmd.ExecuteScalar()!= null)
+            using (SqlDataReader reader = cmd.ExecuteReader())
             {
-                Console.WriteLine("Login Successful.");
-                conn.Close();
-                return 1;
                 
+                if (reader.HasRows && reader.Read())
+                {
+                    Console.WriteLine("Login Successful.");
+                    int ID = reader.GetInt32(0);
+                    conn.Close();
+                    return ID;
+                    
+                }
+                else
+                {
+                    Console.WriteLine("None found.");
+                    conn.Close();
+                    return 0;
+                }
+
             }
-            else
-            {
-                Console.WriteLine("None found.");
-                conn.Close();
-                return 0;
-            }
-            
+
         }
     }
 }

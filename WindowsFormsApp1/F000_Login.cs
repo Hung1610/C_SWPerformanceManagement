@@ -41,7 +41,8 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (loginP.GetLogin().pass == "Failure")
+            int ID = loginP.GetLogin().ID;
+            if (ID == 0)
             {
                 Console.WriteLine("Login Failed");
                 MessageBox.Show("Wrong Username or Password", "Login Error",
@@ -49,7 +50,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                F001_Main main = new F001_Main(Username);
+                F001_Main main = new F001_Main(Username,ID);
                 main.Show();
                 this.Close();
             }

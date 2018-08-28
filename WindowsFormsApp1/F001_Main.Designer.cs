@@ -276,7 +276,7 @@
             // WorkingHour
             // 
             this.WorkingHour.Text = "WorkingHour";
-            this.WorkingHour.Width = 100;
+            this.WorkingHour.Width = 172;
             // 
             // label5
             // 

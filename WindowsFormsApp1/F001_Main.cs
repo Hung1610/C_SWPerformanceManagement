@@ -19,9 +19,10 @@ namespace WindowsFormsApp1
             login.Show();
         }
         ProjectList projectList = new ProjectList();
-        public F001_Main(string user)
+        public F001_Main(string user,int ID)
         {
             InitializeComponent();
+            Console.WriteLine(ID);
             userLabel.Text = user;
             List<string> projects = projectList.genList();
             foreach (string project in projects)
