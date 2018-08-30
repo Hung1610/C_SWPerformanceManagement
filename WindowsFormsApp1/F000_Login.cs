@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     public partial class F000_Login : Form, ILogin
     {
         
-        private LoginP loginP { get; set; }
+        private PLogin loginP { get; set; }
         public string Username
         {
             get
@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
 
         public F000_Login()
         {
-            loginP = new LoginP(this);
+            loginP = new PLogin(this);
             InitializeComponent();
             passTxt.UseSystemPasswordChar = true;
             this.ControlBox = false;

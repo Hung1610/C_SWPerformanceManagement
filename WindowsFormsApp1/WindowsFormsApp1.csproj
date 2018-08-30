@@ -84,13 +84,16 @@
       <DependentUpon>F300_Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Projects.cs" />
+    <Compile Include="Presenters\IProjects.cs" />
     <Compile Include="Presenters\ProjectAssignData.cs" />
     <Compile Include="Models\ProjectReport.cs" />
     <Compile Include="Models\SQLConnect.cs" />
     <Compile Include="Presenters\ILogin.cs" />
     <Compile Include="Presenters\IProjectReport.cs" />
-    <Compile Include="Presenters\LoginP.cs" />
-    <Compile Include="Presenters\ProjectReportP.cs" />
+    <Compile Include="Presenters\PLogin.cs" />
+    <Compile Include="Presenters\PProjectReport.cs" />
+    <Compile Include="Presenters\PProjects.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="F001_Main.resx">

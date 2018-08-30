@@ -86,7 +86,7 @@
             // 
             this.passTxt.Location = new System.Drawing.Point(103, 63);
             this.passTxt.Name = "passTxt";
-            this.passTxt.Size = new System.Drawing.Size(151, 22);
+            this.passTxt.Size = new System.Drawing.Size(300, 22);
             this.passTxt.TabIndex = 2;
             // 
             // loginButton

@@ -209,6 +209,7 @@
             this.saveButton.TabIndex = 5;
             this.saveButton.Text = "Create/Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.createSave_Click);
             // 
             // closeButton
             // 
@@ -218,11 +219,11 @@
             this.closeButton.TabIndex = 5;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // F200_Project
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(771, 450);
             this.Controls.Add(this.tableLayoutPanel1);

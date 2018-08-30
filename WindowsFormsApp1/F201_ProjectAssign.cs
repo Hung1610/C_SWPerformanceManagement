@@ -15,7 +15,12 @@ namespace WindowsFormsApp1
         public F201_ProjectAssign()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
-        
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

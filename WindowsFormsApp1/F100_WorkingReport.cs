@@ -15,13 +15,13 @@ namespace WindowsFormsApp1
     {
         int UserID;
 
-        private ProjectReportP pReport{ get; set; }
+        private PProjectReport pReport{ get; set; }
         public F100_WorkingReport(int ID)
         {
             InitializeComponent();
             this.ControlBox = false;
             UserID = ID;
-            pReport = new ProjectReportP(this);
+            pReport = new PProjectReport(this);
             List<ProjectAssignData> projectList = pReport.assignList();
             foreach (ProjectAssignData pData in projectList)
             {
@@ -29,7 +29,8 @@ namespace WindowsFormsApp1
             }
             projectBox.DisplayMember = "ProjectName";
         }
-        #region Assign values to IProjectReport elements.
+
+        #region ASSIGN VALUES TO IProjectReport ELEMENTS.
         public int EmployeeID
         {
             get
@@ -93,7 +94,7 @@ namespace WindowsFormsApp1
                                                     MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                pReport = new ProjectReportP(this);
+                pReport = new PProjectReport(this);
                 pReport.Submit();
             }
         }

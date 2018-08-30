@@ -53,6 +53,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.userLabel = new System.Windows.Forms.Label();
             this.logoPIc = new System.Windows.Forms.PictureBox();
+            this.Remark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPIc)).BeginInit();
             this.SuspendLayout();
@@ -254,7 +255,8 @@
             this.Project,
             this.Employee,
             this.WorkingTime,
-            this.WorkingHour});
+            this.WorkingHour,
+            this.Remark});
             this.employeeList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.employeeList.Location = new System.Drawing.Point(0, 361);
             this.employeeList.Name = "employeeList";
@@ -272,12 +274,12 @@
             // Employee
             // 
             this.Employee.Text = "Employee";
-            this.Employee.Width = 200;
+            this.Employee.Width = 241;
             // 
             // WorkingTime
             // 
             this.WorkingTime.Text = "WorkingTime";
-            this.WorkingTime.Width = 100;
+            this.WorkingTime.Width = 114;
             // 
             // WorkingHour
             // 
@@ -316,10 +318,14 @@
             this.logoPIc.TabIndex = 17;
             this.logoPIc.TabStop = false;
             // 
+            // Remark
+            // 
+            this.Remark.Text = "Remark";
+            this.Remark.Width = 322;
+            // 
             // F001_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(1304, 601);
             this.Controls.Add(this.logoPIc);
@@ -375,6 +381,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label userLabel;
         private System.Windows.Forms.PictureBox logoPIc;
+        private System.Windows.Forms.ColumnHeader Remark;
     }
 }
 

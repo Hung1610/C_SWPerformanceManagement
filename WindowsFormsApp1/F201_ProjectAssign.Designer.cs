@@ -28,58 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.projectNameBox = new System.Windows.Forms.ComboBox();
             this.projectName = new System.Windows.Forms.Label();
+            this.projectNameBox = new System.Windows.Forms.ComboBox();
             this.projectAssignList = new System.Windows.Forms.ListView();
             this.employeeName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.role = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.startDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.endDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.remark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Lime;
-            this.splitContainer1.Panel1.Controls.Add(this.projectNameBox);
-            this.splitContainer1.Panel1.Controls.Add(this.projectName);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.projectAssignList);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 225;
-            this.splitContainer1.TabIndex = 2;
-            // 
-            // projectNameBox
-            // 
-            this.projectNameBox.FormattingEnabled = true;
-            this.projectNameBox.Location = new System.Drawing.Point(241, 57);
-            this.projectNameBox.Name = "projectNameBox";
-            this.projectNameBox.Size = new System.Drawing.Size(250, 24);
-            this.projectNameBox.TabIndex = 1;
             // 
             // projectName
             // 
             this.projectName.AutoSize = true;
             this.projectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projectName.Location = new System.Drawing.Point(25, 57);
+            this.projectName.Location = new System.Drawing.Point(82, 45);
             this.projectName.Name = "projectName";
             this.projectName.Size = new System.Drawing.Size(139, 26);
             this.projectName.TabIndex = 0;
             this.projectName.Text = "ProjectName";
+            // 
+            // projectNameBox
+            // 
+            this.projectNameBox.FormattingEnabled = true;
+            this.projectNameBox.Location = new System.Drawing.Point(298, 45);
+            this.projectNameBox.Name = "projectNameBox";
+            this.projectNameBox.Size = new System.Drawing.Size(250, 24);
+            this.projectNameBox.TabIndex = 1;
             // 
             // projectAssignList
             // 
@@ -89,8 +66,7 @@
             this.startDate,
             this.endDate,
             this.remark});
-            this.projectAssignList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.projectAssignList.Location = new System.Drawing.Point(0, 0);
+            this.projectAssignList.Location = new System.Drawing.Point(1, 131);
             this.projectAssignList.Name = "projectAssignList";
             this.projectAssignList.Size = new System.Drawing.Size(800, 221);
             this.projectAssignList.TabIndex = 2;
@@ -120,35 +96,56 @@
             // remark
             // 
             this.remark.Text = "Remark";
-            this.remark.Width = 221;
+            this.remark.Width = 240;
+            // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(12, 395);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(135, 43);
+            this.saveButton.TabIndex = 3;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
+            // closeButton
+            // 
+            this.closeButton.Location = new System.Drawing.Point(653, 395);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(135, 43);
+            this.closeButton.TabIndex = 3;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.close_Click);
             // 
             // F201_ProjectAssign
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.projectName);
+            this.Controls.Add(this.projectNameBox);
+            this.Controls.Add(this.projectAssignList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "F201_ProjectAssign";
             this.Text = "F201_ProjectAssign";
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.ComboBox projectNameBox;
         private System.Windows.Forms.Label projectName;
+        private System.Windows.Forms.ComboBox projectNameBox;
         private System.Windows.Forms.ListView projectAssignList;
         private System.Windows.Forms.ColumnHeader employeeName;
         private System.Windows.Forms.ColumnHeader role;
         private System.Windows.Forms.ColumnHeader startDate;
         private System.Windows.Forms.ColumnHeader endDate;
         private System.Windows.Forms.ColumnHeader remark;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button closeButton;
     }
 }

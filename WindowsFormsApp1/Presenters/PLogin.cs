@@ -7,11 +7,11 @@ using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1.Presenters
 {
-    class LoginP
+    class PLogin
     {
         private ILogin vLogin;
         
-        public LoginP(ILogin view) => this.vLogin = view;
+        public PLogin(ILogin view) => this.vLogin = view;
         public (string user, int ID) GetLogin()
         {
             Login login = new Login();

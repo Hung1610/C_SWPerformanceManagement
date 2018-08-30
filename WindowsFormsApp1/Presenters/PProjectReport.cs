@@ -7,10 +7,10 @@ using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1.Presenters
 {
-    class ProjectReportP
+    class PProjectReport
     {
         private IProjectReport vReport;
-        public ProjectReportP(IProjectReport view) => this.vReport = view;
+        public PProjectReport(IProjectReport view) => this.vReport = view;
         public List <ProjectAssignData> assignList()
         {
             ProjectReport report = new ProjectReport();

@@ -14,12 +14,18 @@ namespace WindowsFormsApp1
     {
         public F300_Employee()
         {
+            this.ControlBox = false;
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

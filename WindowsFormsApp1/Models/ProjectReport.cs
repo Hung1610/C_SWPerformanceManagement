@@ -15,13 +15,14 @@ namespace WindowsFormsApp1.Models
         SQLConnect cn = new SQLConnect();
         SqlConnection conn;
 
-        // Write the query and execute.
+        //Fields to be assigned by view.
         public DateTime Date;
         public int WorkingTime;
         public string Remark;
         public string ProjectName;
         public int EmployeeID;
         public int ProjectID;
+        // Methods to write the queries and execute.
         public List<string> genList()
         {
             conn = cn.Connect();
