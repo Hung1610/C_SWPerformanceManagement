@@ -16,6 +16,20 @@ namespace WindowsFormsApp1
         int UserID;
 
         private ProjectReportP pReport{ get; set; }
+        public F100_WorkingReport(int ID)
+        {
+            InitializeComponent();
+            this.ControlBox = false;
+            UserID = ID;
+            pReport = new ProjectReportP(this);
+            List<ProjectAssignData> projectList = pReport.assignList();
+            foreach (ProjectAssignData pData in projectList)
+            {
+                projectBox.Items.Add(pData);
+            }
+            projectBox.DisplayMember = "ProjectName";
+        }
+        #region Assign values to IProjectReport elements.
         public int EmployeeID
         {
             get
@@ -27,7 +41,7 @@ namespace WindowsFormsApp1
         {
             get
             {
-                ProjectAssignData current = projectBox.SelectedValue as ProjectAssignData;
+                ProjectAssignData current = projectBox.SelectedItem as ProjectAssignData;
                 return current.ProjectID;
             }
         }
@@ -50,7 +64,7 @@ namespace WindowsFormsApp1
         {
             get
             {
-                ProjectAssignData current = projectBox.SelectedValue as ProjectAssignData;
+                ProjectAssignData current = projectBox.SelectedItem as ProjectAssignData;
                 return current.ProjectName;
             }
         }
@@ -61,18 +75,7 @@ namespace WindowsFormsApp1
                 return datePick.Value;
             }
         }
-        public F100_WorkingReport(int ID)
-        { 
-            InitializeComponent();
-            UserID = ID;
-            pReport = new ProjectReportP(this); 
-            List <ProjectAssignData> projectList = pReport.assignList();
-            foreach (ProjectAssignData pData in projectList)
-            {
-                projectBox.Items.Add(pData);
-            }
-            projectBox.DisplayMember = "ProjectName";
-        }
+        #endregion
 
         private void projectBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -84,7 +87,19 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            DialogResult result = MessageBox.Show("Submit this report ?",
+                                                    "Executing Query",
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                pReport = new ProjectReportP(this);
+                pReport.Submit();
+            }
+        }
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

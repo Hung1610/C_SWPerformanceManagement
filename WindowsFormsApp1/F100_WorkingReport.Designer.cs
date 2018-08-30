@@ -129,6 +129,7 @@
             this.closeButton.TabIndex = 5;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.close_Click);
             // 
             // F100_WorkingReport
             // 
@@ -146,6 +147,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "F100_WorkingReport";
             this.Text = "F100_WorkingReport";
             ((System.ComponentModel.ISupportInitialize)(this.workTimeUpDown)).EndInit();

@@ -74,8 +74,8 @@ namespace WindowsFormsApp1.Models
         {
             conn = cn.Connect();
             conn.Open();
-            string sql = "insert into 100TB_Performance([ProjectID],[EmployeeID],[WorkingDate],[WorkingHour],[WorkingName],[WorkingDetail])" +
-                "value (@pID,@eID,@wDate,@wHour,@wName,@wDetail)";
+            string sql = "insert into [100TB_Performance]([ProjectID],[EmployeeID],[WorkingDate],[WorkingHour],[WorkingName],[WorkingDetail]) " +
+                "values (@pID,@eID,@wDate,@wHour,@wName,@wDetail)";
             Console.WriteLine(sql);
             using (SqlCommand command = new SqlCommand(sql, conn))
             {

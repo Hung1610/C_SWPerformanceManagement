@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
             {
                 projectBox.Items.Add(project);
             }
-            timeBox.Items.Add (new string[] { "last day", "last week","last month","last year" });
+            timeBox.DataSource =new string[] { "last day", "last week","last month","last year" };
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -82,6 +82,5 @@ namespace WindowsFormsApp1
             F201_ProjectAssign f201 = new F201_ProjectAssign();
             f201.Show();
         }
-
     }
 }
