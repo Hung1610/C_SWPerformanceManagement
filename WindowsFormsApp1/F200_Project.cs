@@ -106,5 +106,17 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void projectNameTxt_TextChanged(object sender, EventArgs e)
+        {
+            int foundID = pProject.listSearch(this.ProjectName, projectList);
+            var project = pProject.getProject(foundID);
+            projectInfoTxt.Text = project.pInfo;
+            cusNameTxt.Text = project.cName;
+            cusInfoTxt.Text = project.cInfo;
+            remarkRichTxt.Text = project.remark;
+            startDatePick.Value = project.start;
+            endDatePick.Value = project.end;
+        }
     }
 }

@@ -27,5 +27,10 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void nameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -247,6 +247,7 @@
             this.nameTxt.Name = "nameTxt";
             this.nameTxt.Size = new System.Drawing.Size(181, 22);
             this.nameTxt.TabIndex = 2;
+            this.nameTxt.TextChanged += new System.EventHandler(this.nameTxt_TextChanged);
             // 
             // posBox
             // 

@@ -96,6 +96,7 @@
             this.projectNameTxt.Name = "projectNameTxt";
             this.projectNameTxt.Size = new System.Drawing.Size(190, 22);
             this.projectNameTxt.TabIndex = 1;
+            this.projectNameTxt.TextChanged += new System.EventHandler(this.projectNameTxt_TextChanged);
             // 
             // label2
             // 

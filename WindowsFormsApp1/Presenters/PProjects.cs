@@ -47,6 +47,10 @@ namespace WindowsFormsApp1.Presenters
                 return 1;
             }
         }
-
+        public (string pInfo, string cName, string cInfo, string remark, DateTime start, DateTime end) getProject(int ID)
+        {
+            Projects project = new Projects();
+            return project.getProject(ID);
+        }
     }
 }

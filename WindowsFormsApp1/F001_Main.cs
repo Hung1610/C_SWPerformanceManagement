@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Models;
+using WindowsFormsApp1.Presenters;
 
 namespace WindowsFormsApp1
 {
@@ -26,11 +27,9 @@ namespace WindowsFormsApp1
             Console.WriteLine(ID);
             UserID = ID;
             userLabel.Text = user;
-            List<string> projects = projectList.genList();
-            foreach (string project in projects)
-            {
-                projectBox.Items.Add(project);
-            }
+            List<ProjectAssignData> projects = projectList.assignList();
+            projectBox.DataSource = projects;
+            projectBox.DisplayMember = "ProjectName";
             timeBox.DataSource =new string[] { "last day", "last week","last month","last year" };
         }
         private void Form1_Load(object sender, EventArgs e)

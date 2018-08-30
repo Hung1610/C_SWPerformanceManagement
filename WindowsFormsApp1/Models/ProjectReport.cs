@@ -23,27 +23,7 @@ namespace WindowsFormsApp1.Models
         public int EmployeeID;
         public int ProjectID;
         // Methods to write the queries and execute.
-        public List<string> genList()
-        {
-            conn = cn.Connect();
-            List<string> list= new List<string>();
-            conn.Open();
-            string sql = "select [ProjectName] " +
-                "from [200TB_Project] ";
-            Console.WriteLine(sql);
-            using (SqlCommand command = new SqlCommand(sql, conn))
-            {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        list.Add(reader.GetString(0));
-                    }
-                }
-            }
-            conn.Close();
-            return list;
-        }
+        
         public List<ProjectAssignData> assignList()
         {
             conn = cn.Connect();
@@ -57,11 +37,11 @@ namespace WindowsFormsApp1.Models
             Console.WriteLine(sql);
             using (SqlCommand command = new SqlCommand(sql, conn))
             {
-                ProjectAssignData project = new ProjectAssignData();
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
+                        ProjectAssignData project = new ProjectAssignData();
                         project.ProjectName = reader.GetString(1);
                         project.ProjectID = reader.GetInt32(0);
                         list.Add(project);
