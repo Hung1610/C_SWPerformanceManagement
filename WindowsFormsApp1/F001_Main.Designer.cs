@@ -50,10 +50,10 @@
             this.Employee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.WorkingTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.WorkingHour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Remark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.userLabel = new System.Windows.Forms.Label();
             this.logoPIc = new System.Windows.Forms.PictureBox();
-            this.Remark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPIc)).BeginInit();
             this.SuspendLayout();
@@ -208,6 +208,7 @@
             this.timeBox.Name = "timeBox";
             this.timeBox.Size = new System.Drawing.Size(109, 24);
             this.timeBox.TabIndex = 12;
+            this.timeBox.SelectedIndexChanged += new System.EventHandler(this.timeBox_SelectedIndexChanged);
             // 
             // fromDatePick
             // 
@@ -286,6 +287,11 @@
             this.WorkingHour.Text = "WorkingHour";
             this.WorkingHour.Width = 123;
             // 
+            // Remark
+            // 
+            this.Remark.Text = "Remark";
+            this.Remark.Width = 322;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -317,11 +323,6 @@
             this.logoPIc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoPIc.TabIndex = 17;
             this.logoPIc.TabStop = false;
-            // 
-            // Remark
-            // 
-            this.Remark.Text = "Remark";
-            this.Remark.Width = 322;
             // 
             // F001_Main
             // 

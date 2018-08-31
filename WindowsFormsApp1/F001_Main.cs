@@ -30,7 +30,20 @@ namespace WindowsFormsApp1
             List<ProjectAssignData> projects = projectList.assignList();
             projectBox.DataSource = projects;
             projectBox.DisplayMember = "ProjectName";
-            timeBox.DataSource =new string[] { "last day", "last week","last month","last year" };
+            timeBox.DataSource =new string[] { "last day", "last week","last month","last year","custom" };
+        }
+        private void timeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (timeBox.Text!= ("custom"))
+            {
+                fromDatePick.Enabled = false;
+                toDatePick.Enabled = false;
+            }
+            else
+            {
+                fromDatePick.Enabled = true;
+                toDatePick.Enabled = true;
+            }
         }
         private void Form1_Load(object sender, EventArgs e)
         {

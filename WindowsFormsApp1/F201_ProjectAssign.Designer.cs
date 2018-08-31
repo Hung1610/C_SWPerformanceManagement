@@ -30,14 +30,10 @@
         {
             this.projectName = new System.Windows.Forms.Label();
             this.projectNameBox = new System.Windows.Forms.ComboBox();
-            this.projectAssignList = new System.Windows.Forms.ListView();
-            this.employeeName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.role = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.startDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.endDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.remark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.saveButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.dataProjectAssign = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProjectAssign)).BeginInit();
             this.SuspendLayout();
             // 
             // projectName
@@ -57,46 +53,7 @@
             this.projectNameBox.Name = "projectNameBox";
             this.projectNameBox.Size = new System.Drawing.Size(250, 24);
             this.projectNameBox.TabIndex = 1;
-            // 
-            // projectAssignList
-            // 
-            this.projectAssignList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.employeeName,
-            this.role,
-            this.startDate,
-            this.endDate,
-            this.remark});
-            this.projectAssignList.Location = new System.Drawing.Point(1, 131);
-            this.projectAssignList.Name = "projectAssignList";
-            this.projectAssignList.Size = new System.Drawing.Size(800, 221);
-            this.projectAssignList.TabIndex = 2;
-            this.projectAssignList.UseCompatibleStateImageBehavior = false;
-            this.projectAssignList.View = System.Windows.Forms.View.Details;
-            // 
-            // employeeName
-            // 
-            this.employeeName.Text = "Employee Name";
-            this.employeeName.Width = 184;
-            // 
-            // role
-            // 
-            this.role.Text = "Role";
-            this.role.Width = 140;
-            // 
-            // startDate
-            // 
-            this.startDate.Text = "StartDate";
-            this.startDate.Width = 108;
-            // 
-            // endDate
-            // 
-            this.endDate.Text = "EndDate";
-            this.endDate.Width = 108;
-            // 
-            // remark
-            // 
-            this.remark.Text = "Remark";
-            this.remark.Width = 240;
+            this.projectNameBox.SelectedIndexChanged += new System.EventHandler(this.projectNameBox_SelectedIndexChanged);
             // 
             // saveButton
             // 
@@ -117,19 +74,29 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.close_Click);
             // 
+            // dataProjectAssign
+            // 
+            this.dataProjectAssign.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataProjectAssign.Location = new System.Drawing.Point(12, 95);
+            this.dataProjectAssign.Name = "dataProjectAssign";
+            this.dataProjectAssign.RowTemplate.Height = 24;
+            this.dataProjectAssign.Size = new System.Drawing.Size(776, 258);
+            this.dataProjectAssign.TabIndex = 4;
+            // 
             // F201_ProjectAssign
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataProjectAssign);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.projectName);
             this.Controls.Add(this.projectNameBox);
-            this.Controls.Add(this.projectAssignList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "F201_ProjectAssign";
             this.Text = "F201_ProjectAssign";
+            ((System.ComponentModel.ISupportInitialize)(this.dataProjectAssign)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,13 +106,8 @@
 
         private System.Windows.Forms.Label projectName;
         private System.Windows.Forms.ComboBox projectNameBox;
-        private System.Windows.Forms.ListView projectAssignList;
-        private System.Windows.Forms.ColumnHeader employeeName;
-        private System.Windows.Forms.ColumnHeader role;
-        private System.Windows.Forms.ColumnHeader startDate;
-        private System.Windows.Forms.ColumnHeader endDate;
-        private System.Windows.Forms.ColumnHeader remark;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.DataGridView dataProjectAssign;
     }
 }

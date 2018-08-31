@@ -83,9 +83,13 @@
     <Compile Include="F300_Employee.Designer.cs">
       <DependentUpon>F300_Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\ProjectAssign.cs" />
     <Compile Include="Models\Projects.cs" />
+    <Compile Include="Presenters\IProjectAssign.cs" />
     <Compile Include="Presenters\IProjects.cs" />
+    <Compile Include="Presenters\PProjectAssign.cs" />
     <Compile Include="Presenters\ProjectAssignData.cs" />
     <Compile Include="Models\ProjectReport.cs" />
     <Compile Include="Models\SQLConnect.cs" />

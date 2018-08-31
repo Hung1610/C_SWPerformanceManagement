@@ -8,9 +8,12 @@ namespace WindowsFormsApp1.Presenters
 {
     public class ProjectAssignData
     {
-        public string ProjectName { get; set; }
         public int ProjectID { get; set; }
-        public DateTime WorkingTime { get; set; }
+        public string ProjectName { get; set; }
+        public string EmployeeName { get; set; }
+        public string Role { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public string Remark { get; set; }
     }
 }

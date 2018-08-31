@@ -14,7 +14,7 @@ namespace WindowsFormsApp1.Models
         // Connect to the table then establish connection.
         SQLConnect cn = new SQLConnect();
         SqlConnection conn;
-        // Fields to be assigned by view.
+        // Fields to be implemented by view.
         public string ProjectName;
         public string ProjectInfo;
         public string CustomerName;
