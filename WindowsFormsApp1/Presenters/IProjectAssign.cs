@@ -11,10 +11,10 @@ namespace WindowsFormsApp1.Presenters
         int ProjectID { get; }
         int EmployeeID { get; }
         int ProjectRoleID { get; }
-        string Remark { get; }
         string ProjectName { get; }
         string EmployeeName { get; }
         string Role { get; }
+        string Remark { get; }
         DateTime StartDate { get; }
         DateTime EndDate { get; } 
     }

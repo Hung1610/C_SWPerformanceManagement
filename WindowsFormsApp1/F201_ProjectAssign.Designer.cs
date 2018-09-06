@@ -42,9 +42,9 @@
             this.projectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectName.Location = new System.Drawing.Point(82, 45);
             this.projectName.Name = "projectName";
-            this.projectName.Size = new System.Drawing.Size(139, 26);
+            this.projectName.Size = new System.Drawing.Size(145, 26);
             this.projectName.TabIndex = 0;
-            this.projectName.Text = "ProjectName";
+            this.projectName.Text = "Project Name";
             // 
             // projectNameBox
             // 
@@ -57,6 +57,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.Location = new System.Drawing.Point(12, 395);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(135, 43);
@@ -66,6 +67,7 @@
             // 
             // closeButton
             // 
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.Location = new System.Drawing.Point(653, 395);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(135, 43);
@@ -76,17 +78,20 @@
             // 
             // dataProjectAssign
             // 
+            this.dataProjectAssign.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataProjectAssign.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataProjectAssign.Location = new System.Drawing.Point(12, 95);
             this.dataProjectAssign.Name = "dataProjectAssign";
             this.dataProjectAssign.RowTemplate.Height = 24;
             this.dataProjectAssign.Size = new System.Drawing.Size(776, 258);
             this.dataProjectAssign.TabIndex = 4;
+            this.dataProjectAssign.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProjectAssign_RowEnter);
+            this.dataProjectAssign.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProjectAssign_RowLeave);
             // 
             // F201_ProjectAssign
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.Color.Lime;
+            this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataProjectAssign);
             this.Controls.Add(this.closeButton);

@@ -45,7 +45,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(189, 239);
+            this.label4.Location = new System.Drawing.Point(52, 236);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 0;
@@ -54,30 +54,30 @@
             // projectBox
             // 
             this.projectBox.FormattingEnabled = true;
-            this.projectBox.Location = new System.Drawing.Point(336, 51);
+            this.projectBox.Location = new System.Drawing.Point(238, 51);
             this.projectBox.Name = "projectBox";
             this.projectBox.Size = new System.Drawing.Size(268, 24);
             this.projectBox.TabIndex = 1;
             // 
             // datePick
             // 
-            this.datePick.Location = new System.Drawing.Point(335, 113);
+            this.datePick.Location = new System.Drawing.Point(238, 113);
             this.datePick.Name = "datePick";
             this.datePick.Size = new System.Drawing.Size(200, 22);
             this.datePick.TabIndex = 2;
             // 
             // workTimeUpDown
             // 
-            this.workTimeUpDown.Location = new System.Drawing.Point(335, 175);
+            this.workTimeUpDown.Location = new System.Drawing.Point(238, 175);
             this.workTimeUpDown.Name = "workTimeUpDown";
             this.workTimeUpDown.Size = new System.Drawing.Size(120, 22);
             this.workTimeUpDown.TabIndex = 3;
             // 
             // remarkRichTxt
             // 
-            this.remarkRichTxt.Location = new System.Drawing.Point(335, 236);
+            this.remarkRichTxt.Location = new System.Drawing.Point(238, 236);
             this.remarkRichTxt.Name = "remarkRichTxt";
-            this.remarkRichTxt.Size = new System.Drawing.Size(269, 65);
+            this.remarkRichTxt.Size = new System.Drawing.Size(317, 107);
             this.remarkRichTxt.TabIndex = 4;
             this.remarkRichTxt.Text = "";
             // 
@@ -85,7 +85,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(189, 174);
+            this.label1.Location = new System.Drawing.Point(52, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 0;
@@ -95,7 +95,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(189, 115);
+            this.label2.Location = new System.Drawing.Point(52, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 20);
             this.label2.TabIndex = 0;
@@ -105,7 +105,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(189, 51);
+            this.label3.Location = new System.Drawing.Point(52, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 0;
@@ -113,29 +113,33 @@
             // 
             // submitButton
             // 
+            this.submitButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.Location = new System.Drawing.Point(12, 377);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(182, 61);
             this.submitButton.TabIndex = 5;
             this.submitButton.Text = "Submit";
-            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.UseVisualStyleBackColor = false;
             this.submitButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(606, 377);
+            this.closeButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.Location = new System.Drawing.Point(373, 377);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(182, 61);
             this.closeButton.TabIndex = 5;
             this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.close_Click);
             // 
             // F100_WorkingReport
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.Color.Lime;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Gold;
+            this.ClientSize = new System.Drawing.Size(567, 450);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.remarkRichTxt);

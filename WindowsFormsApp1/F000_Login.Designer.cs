@@ -91,22 +91,26 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(12, 290);
+            this.loginButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButton.Location = new System.Drawing.Point(12, 221);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(183, 54);
             this.loginButton.TabIndex = 1;
             this.loginButton.Text = "Login";
-            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(410, 290);
+            this.closeButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.Location = new System.Drawing.Point(410, 221);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(183, 54);
             this.closeButton.TabIndex = 1;
             this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.close_Click);
             // 
             // F000_Login
@@ -114,8 +118,8 @@
             this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.Lime;
-            this.ClientSize = new System.Drawing.Size(605, 356);
+            this.BackColor = System.Drawing.Color.Gold;
+            this.ClientSize = new System.Drawing.Size(605, 285);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.tableLayoutPanel1);

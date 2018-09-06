@@ -60,8 +60,9 @@
             // 
             // workReportButton
             // 
-            this.workReportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.workReportButton.BackColor = System.Drawing.Color.Gold;
             this.workReportButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.workReportButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workReportButton.Location = new System.Drawing.Point(3, 3);
             this.workReportButton.Name = "workReportButton";
             this.workReportButton.Size = new System.Drawing.Size(217, 104);
@@ -72,8 +73,9 @@
             // 
             // addProjectButton
             // 
-            this.addProjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.addProjectButton.BackColor = System.Drawing.Color.Gold;
             this.addProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addProjectButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addProjectButton.Location = new System.Drawing.Point(226, 3);
             this.addProjectButton.Name = "addProjectButton";
             this.addProjectButton.Size = new System.Drawing.Size(217, 104);
@@ -84,8 +86,9 @@
             // 
             // addEmployeeButton
             // 
-            this.addEmployeeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.addEmployeeButton.BackColor = System.Drawing.Color.Gold;
             this.addEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmployeeButton.Location = new System.Drawing.Point(449, 3);
             this.addEmployeeButton.Name = "addEmployeeButton";
             this.addEmployeeButton.Size = new System.Drawing.Size(217, 104);
@@ -96,8 +99,9 @@
             // 
             // assignButton
             // 
-            this.assignButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.assignButton.BackColor = System.Drawing.Color.Gold;
             this.assignButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.assignButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignButton.Location = new System.Drawing.Point(672, 3);
             this.assignButton.Name = "assignButton";
             this.assignButton.Size = new System.Drawing.Size(217, 104);
@@ -108,8 +112,9 @@
             // 
             // updateSkillButton
             // 
-            this.updateSkillButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.updateSkillButton.BackColor = System.Drawing.Color.Gold;
             this.updateSkillButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateSkillButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateSkillButton.Location = new System.Drawing.Point(3, 113);
             this.updateSkillButton.Name = "updateSkillButton";
             this.updateSkillButton.Size = new System.Drawing.Size(217, 104);
@@ -120,8 +125,9 @@
             // 
             // updateProjectButton
             // 
-            this.updateProjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.updateProjectButton.BackColor = System.Drawing.Color.Gold;
             this.updateProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateProjectButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateProjectButton.Location = new System.Drawing.Point(226, 113);
             this.updateProjectButton.Name = "updateProjectButton";
             this.updateProjectButton.Size = new System.Drawing.Size(217, 104);
@@ -132,8 +138,9 @@
             // 
             // updateEmployeeButton
             // 
-            this.updateEmployeeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.updateEmployeeButton.BackColor = System.Drawing.Color.Gold;
             this.updateEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateEmployeeButton.Location = new System.Drawing.Point(449, 113);
             this.updateEmployeeButton.Name = "updateEmployeeButton";
             this.updateEmployeeButton.Size = new System.Drawing.Size(217, 104);
@@ -144,8 +151,9 @@
             // 
             // profileButton
             // 
-            this.profileButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.profileButton.BackColor = System.Drawing.Color.Gold;
             this.profileButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profileButton.Location = new System.Drawing.Point(672, 113);
             this.profileButton.Name = "profileButton";
             this.profileButton.Size = new System.Drawing.Size(217, 104);
@@ -185,6 +193,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(302, 328);
@@ -227,7 +236,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Lime;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Gainsboro;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -252,16 +261,18 @@
             // 
             // employeeList
             // 
+            this.employeeList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.employeeList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Project,
             this.Employee,
             this.WorkingTime,
             this.WorkingHour,
             this.Remark});
-            this.employeeList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.employeeList.Location = new System.Drawing.Point(0, 361);
+            this.employeeList.Location = new System.Drawing.Point(0, 360);
             this.employeeList.Name = "employeeList";
-            this.employeeList.Size = new System.Drawing.Size(1304, 240);
+            this.employeeList.Size = new System.Drawing.Size(1304, 241);
             this.employeeList.TabIndex = 15;
             this.employeeList.UseCompatibleStateImageBehavior = false;
             this.employeeList.View = System.Windows.Forms.View.Details;
@@ -294,6 +305,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(951, 19);
@@ -304,6 +316,7 @@
             // 
             // userLabel
             // 
+            this.userLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.userLabel.AutoSize = true;
             this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userLabel.Location = new System.Drawing.Point(951, 44);
@@ -315,6 +328,7 @@
             // 
             // logoPIc
             // 
+            this.logoPIc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logoPIc.Image = global::WindowsFormsApp1.Properties.Resources.softworld_logo_footer;
             this.logoPIc.InitialImage = global::WindowsFormsApp1.Properties.Resources.softworld_logo_footer;
             this.logoPIc.Location = new System.Drawing.Point(956, 104);
@@ -327,7 +341,7 @@
             // F001_Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.Color.Lime;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1304, 601);
             this.Controls.Add(this.logoPIc);
             this.Controls.Add(this.userLabel);
