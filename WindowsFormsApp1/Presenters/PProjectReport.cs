@@ -10,12 +10,17 @@ namespace WindowsFormsApp1.Presenters
     class PProjectReport
     {
         private IProjectReport vReport;
+        // Get data from view.
         public PProjectReport(IProjectReport view) => this.vReport = view;
+        
+        // Create project list.
         public List <ProjectAssignData> assignList()
         {
             ProjectReport report = new ProjectReport();
             return report.assignList();
         }
+
+        // Calling saveReport method from Models to update the database.
         public void Submit()
         {
             ProjectReport report = new ProjectReport();

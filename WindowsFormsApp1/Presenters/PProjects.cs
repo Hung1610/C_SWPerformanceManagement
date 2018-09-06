@@ -10,12 +10,17 @@ namespace WindowsFormsApp1.Presenters
     class PProjects
     {
         private IProjects vProject;
+        // Get data from view.
         public PProjects(IProjects view) => this.vProject = view;
+
+        // Create a project list.
         public List<ProjectAssignData> assignList()
         {
             Projects project = new Projects();
             return project.assignList();
         }
+
+        // Method for searching within a List of ProjectAssignDate using ProjectName
         public int listSearch(string pName, List<ProjectAssignData> list)
         {
             foreach (ProjectAssignData project in list)
@@ -25,6 +30,8 @@ namespace WindowsFormsApp1.Presenters
             }
             return -1;
         }
+
+        // Calling addProject/saveProject method from Models to INSERT/UPDATE the database.
         public int save(int ID)
         {
             Projects project = new Projects();

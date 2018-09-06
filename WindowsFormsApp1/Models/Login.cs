@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace WindowsFormsApp1.Models
 {
@@ -12,14 +13,16 @@ namespace WindowsFormsApp1.Models
     {
         public string Username;
         public string Password;
-        // Check login credentials
-        SQLConnect cn = new SQLConnect();
+        // Connection string gotten from config file.
+        string conStr = ConfigurationManager.ConnectionStrings["connectionString"].ToString();
+        //
+        // Checking User Credetials from input.
         public int credCheck ()
         {
             Console.WriteLine("Checking user credentials.");
             // Connect to the table then establish connection.
-            
-            SqlConnection conn = cn.Connect();
+
+            SqlConnection conn = new SqlConnection(conStr);
             conn.Open();
             // Write the query and execute.
             string sql = "select [EmployeeID] " +
@@ -31,7 +34,7 @@ namespace WindowsFormsApp1.Models
             SqlCommand cmd = new SqlCommand(sql,conn);
             using (SqlDataReader reader = cmd.ExecuteReader())
             {
-                
+                // If cred found => return first result.
                 if (reader.HasRows && reader.Read())
                 {
                     Console.WriteLine("Login Successful.");
@@ -40,15 +43,14 @@ namespace WindowsFormsApp1.Models
                     return ID;
                     
                 }
+                // else return 0.
                 else
                 {
                     Console.WriteLine("None found.");
                     conn.Close();
                     return 0;
                 }
-
             }
-
         }
     }
 }

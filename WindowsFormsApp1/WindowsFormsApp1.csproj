@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -92,12 +93,12 @@
     <Compile Include="Presenters\PProjectAssign.cs" />
     <Compile Include="Presenters\ProjectAssignData.cs" />
     <Compile Include="Models\ProjectReport.cs" />
-    <Compile Include="Models\SQLConnect.cs" />
     <Compile Include="Presenters\ILogin.cs" />
     <Compile Include="Presenters\IProjectReport.cs" />
     <Compile Include="Presenters\PLogin.cs" />
     <Compile Include="Presenters\PProjectReport.cs" />
     <Compile Include="Presenters\PProjects.cs" />
+    <Compile Include="Presenters\ProjectsData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="F001_Main.resx">

@@ -13,8 +13,12 @@ namespace WindowsFormsApp1
 {
     public partial class F200_Project : Form, IProjects
     {
+        // Declare presenter.
         private PProjects pProject;
+        // 
         List<ProjectAssignData> projectList;
+
+        // Initialize UI components along with some data.
         public F200_Project()
         {
             this.ControlBox = false;
@@ -23,6 +27,7 @@ namespace WindowsFormsApp1
             projectList = pProject.assignList();
         }
 
+        // This region implements IProjects elements.
         #region ASSIGN VALUES TO INTERFACE MEMBERS.
         public string ProjectName
         {
@@ -74,6 +79,8 @@ namespace WindowsFormsApp1
             }
         }
         #endregion
+
+        // Create/Save button.
         private void createSave_Click(object sender, EventArgs e)
         {
             int foundID = pProject.listSearch(this.ProjectName, projectList);
@@ -102,6 +109,8 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        // Close button.
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();

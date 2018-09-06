@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,8 @@ namespace WindowsFormsApp1.Models
 {
     class Employee
     {
-        // Connect to the table then establish connection.
-        SQLConnect cn = new SQLConnect();
-        SqlConnection conn;
+        // Connection string.
+        string conStr = ConfigurationManager.ConnectionStrings["connectionString"].ToString();
         // Fields to be implemented by view.
         
     }

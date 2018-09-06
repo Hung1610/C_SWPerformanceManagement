@@ -13,9 +13,12 @@ namespace WindowsFormsApp1
 {
     public partial class F100_WorkingReport : Form, IProjectReport
     {
+        // User ID gotten from Main.
         int UserID;
-
+        // Declare presenters.
         private PProjectReport pReport{ get; set; }
+
+        // Initialize UI components along with some data.
         public F100_WorkingReport(int ID)
         {
             InitializeComponent();
@@ -30,6 +33,7 @@ namespace WindowsFormsApp1
             projectBox.DisplayMember = "ProjectName";
         }
 
+        // This region implements IWorkingReport elements.
         #region ASSIGN VALUES TO IProjectReport ELEMENTS.
         public int EmployeeID
         {
@@ -78,6 +82,7 @@ namespace WindowsFormsApp1
         }
         #endregion
 
+        // Handles projectBox selection.
         private void projectBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (projectBox.SelectedValue != null)
@@ -86,6 +91,7 @@ namespace WindowsFormsApp1
             }
         }
 
+        // Submit button.
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Submit this report ?",
@@ -98,6 +104,8 @@ namespace WindowsFormsApp1
                 pReport.Submit();
             }
         }
+
+        //Close button.
         private void close_Click(object sender, EventArgs e)
         {
             this.Close();

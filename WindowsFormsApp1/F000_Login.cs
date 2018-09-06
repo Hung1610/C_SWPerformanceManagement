@@ -13,8 +13,10 @@ namespace WindowsFormsApp1
 {
     public partial class F000_Login : Form, ILogin
     {
-        
+        // Declare presenter.
         private PLogin loginP { get; set; }
+        // This region implements ILogin elements.
+        #region
         public string Username
         {
             get
@@ -30,7 +32,9 @@ namespace WindowsFormsApp1
                 return passTxt.Text;
             }
         }
-
+        #endregion
+        
+        // Initilize UI components along with some data.
         public F000_Login()
         {
             loginP = new PLogin(this);
@@ -39,6 +43,7 @@ namespace WindowsFormsApp1
             this.ControlBox = false;
         }
 
+        // Login button
         private void button1_Click(object sender, EventArgs e)
         {
             int ID = loginP.GetLogin().ID;
@@ -55,6 +60,8 @@ namespace WindowsFormsApp1
                 this.Close();
             }
         }
+
+        // Close button.
         private void close_Click(object sender, EventArgs e)
         {
             Application.Exit();
