@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp1.Data;
 using WindowsFormsApp1.Presenters;
 
 namespace WindowsFormsApp1.Models

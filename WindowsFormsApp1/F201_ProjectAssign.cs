@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Data;
 using WindowsFormsApp1.Presenters;
 
 namespace WindowsFormsApp1
@@ -139,6 +140,7 @@ namespace WindowsFormsApp1
                 dataProjectAssign.DataSource = projectList;/*.Select(o => new
                 { EmployeeName = o.EmployeeName, Role = o.Role , StartDate = o.StartDate, EndDate = o.EndDate, Remark = o.Remark }).ToList();
                 This hides the unneeded column but make things complicated.*/
+                // The commented out code above is for when you only need the elements selected.
             }
             else
             {
@@ -147,11 +149,15 @@ namespace WindowsFormsApp1
             }
         }
 
-        // DataGridView Interactions.
+        // DataGridView Interactions. List to store changed data.
         ProjectAssignData newdata;
         List<ProjectAssignData> changedList = new List<ProjectAssignData>();
+        // List to store deleted data.
+        List<ProjectAssignData> deleteList = new List<ProjectAssignData>();
+        // List to store newly added data.
+        List<ProjectAssignData> newList = new List<ProjectAssignData>();
 
-        // Event that fires when a row is entered.
+        // Event that fires when a row is entered. Give the selected row fancy color.
         private void dataProjectAssign_RowEnter(object sender,DataGridViewCellEventArgs e)
         {
             if(dataProjectAssign.CurrentRow != null)
@@ -163,7 +169,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        // Fires when a row is left. Add the row if it was changed into changedList.
+        // Fires when a row is left. Add the row's data , if it was changed, into changedList.
         private void dataProjectAssign_RowLeave(object sender, DataGridViewCellEventArgs e)
         {
             for (int i = 0; i < dataProjectAssign.Rows[e.RowIndex].Cells.Count; i++)
@@ -173,19 +179,43 @@ namespace WindowsFormsApp1
             if (dataProjectAssign.IsCurrentRowDirty)
             {
                 newdata = new ProjectAssignData();
-                newdata.ProjectID = Convert.ToInt32(dataProjectAssign.CurrentRow.Cells["ProjectID"].Value);
-                newdata.EmployeeID = Convert.ToInt32(dataProjectAssign.CurrentRow.Cells["EmployeeID"].Value);
+                newdata.ProjectID = this.ProjectID;
+                newdata.EmployeeID = this.EmployeeID;
                 newdata.ProjectAssignID = Convert.ToInt32(dataProjectAssign.CurrentRow.Cells["ProjectAssignID"].Value);
-                newdata.RoleID = Convert.ToInt32(dataProjectAssign.CurrentRow.Cells["RoleID"].Value);
-                newdata.ProjectName = Convert.ToString(dataProjectAssign.CurrentRow.Cells["ProjectName"].Value);
-                newdata.EmployeeName = Convert.ToString(dataProjectAssign.CurrentRow.Cells["EmployeeName"].Value);
-                newdata.Role = Convert.ToString(dataProjectAssign.CurrentRow.Cells["Role"].Value);
-                newdata.Remark = Convert.ToString(dataProjectAssign.CurrentRow.Cells["Remark"].Value);
-                newdata.StartDate = Convert.ToDateTime(dataProjectAssign.CurrentRow.Cells["StartDate"].Value);
-                newdata.EndDate = Convert.ToDateTime(dataProjectAssign.CurrentRow.Cells["EndDate"].Value);
+                newdata.RoleID = this.ProjectRoleID;
+                newdata.ProjectName = this.ProjectName;
+                newdata.EmployeeName = this.EmployeeName;
+                newdata.Role = this.Role;
+                newdata.Remark = this.Remark;
+                newdata.StartDate = this.StartDate;
+                newdata.EndDate = this.EndDate;
                 changedList.Add(newdata);
-                Console.WriteLine("New data created.");
+                Console.WriteLine("Data changes saved.");
             }
+        }
+
+        private void dataProjectAssign_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            e.Cancel = MessageBox.Show("Do you want really to delete the selected rows ?", "Confirm", MessageBoxButtons.OKCancel) != DialogResult.OK;
+            newdata = new ProjectAssignData();
+            newdata.ProjectID = this.ProjectID;
+            newdata.EmployeeID = this.EmployeeID;
+            newdata.ProjectAssignID = Convert.ToInt32(dataProjectAssign.CurrentRow.Cells["ProjectAssignID"].Value);
+            newdata.RoleID = this.ProjectRoleID;
+            newdata.ProjectName = this.ProjectName;
+            newdata.EmployeeName = this.EmployeeName;
+            newdata.Role = this.Role;
+            newdata.Remark = this.Remark;
+            newdata.StartDate = this.StartDate;
+            newdata.EndDate = this.EndDate;
+            deleteList.Add(newdata);
+            Console.WriteLine("Data to delete saved.");
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            F201_ProjectAssignAdd add = new F201_ProjectAssignAdd();
+            add.Show();
         }
     }
 }

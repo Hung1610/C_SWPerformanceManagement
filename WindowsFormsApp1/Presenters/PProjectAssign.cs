@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp1.Data;
 using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1.Presenters
@@ -25,6 +26,18 @@ namespace WindowsFormsApp1.Presenters
         {
             ProjectAssign project = new ProjectAssign();
             return project.getPList();
+        }
+        // A simple list of employees.
+        public BindingList<EmployeeData> GetEmployeeDatas()
+        {
+            ProjectAssign project = new ProjectAssign();
+            return project.GetEmployeeDatas();
+        }
+        // A simple list of roles.
+        public BindingList<RoleData> GetRoleDatas()
+        {
+            ProjectAssign project = new ProjectAssign();
+            return project.GetRoleDatas();
         }
     }
 }

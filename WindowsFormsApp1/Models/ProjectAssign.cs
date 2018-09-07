@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp1.Data;
 using WindowsFormsApp1.Presenters;
 
 namespace WindowsFormsApp1.Models
@@ -54,6 +55,60 @@ namespace WindowsFormsApp1.Models
             }
         }
 
+        // Getting a list of employees' names and their ID.
+        public BindingList<EmployeeData> GetEmployeeDatas()
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                BindingList<EmployeeData> list = new BindingList<EmployeeData>();
+                string sql = "SELECT [EmployeeID],[Name] " +
+                    "FROM [300TB_Employee]";
+                Console.WriteLine(sql);
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            EmployeeData emp = new EmployeeData();
+                            emp.EmployeeID = reader.GetInt32(0);
+                            emp.EmployeeName = reader.GetString(1);
+                            list.Add(emp);
+                        }
+                    }
+                }
+                return list;
+            }
+        }
+
+        // Getting a list of employees' names and their ID.
+        public BindingList<RoleData> GetRoleDatas()
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                BindingList<RoleData> list = new BindingList<RoleData>();
+                string sql = "SELECT [ProjectRoleID],[ProjectRoleName] " +
+                    "FROM [202TB_ProjectRole]";
+                Console.WriteLine(sql);
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            RoleData role = new RoleData();
+                            role.RoleID = reader.GetInt32(0);
+                            role.RoleName = reader.GetString(1);
+                            list.Add(role);
+                        }
+                    }
+                }
+                return list;
+            }
+        }
+
         // Getting a complete object list containing all project assign data.
         public BindingList<ProjectAssignData> assignList()
         {
@@ -61,7 +116,7 @@ namespace WindowsFormsApp1.Models
             {
                 conn.Open();
                 BindingList<ProjectAssignData> list = new BindingList<ProjectAssignData>();
-                string sql = "select [ProjectAssignID], " +
+                string sql = "SELECT [ProjectAssignID], " +
                                     "[201TB_ProjectAssign].[ProjectID], " +
                                     "[201TB_ProjectAssign].[EmployeeID], " +
                                     "[201TB_ProjectAssign].[ProjectRoleID], " +
@@ -71,10 +126,10 @@ namespace WindowsFormsApp1.Models
                                     "[201TB_ProjectAssign].StartDate, " +
                                     "[201TB_ProjectAssign].EndDate, " +
                                     "[201TB_ProjectAssign].Remark " +
-                    "from [200TB_Project] " +
-                    "join [201TB_ProjectAssign] on [200TB_Project].ProjectID = [201TB_ProjectAssign].ProjectID " +
-                    "join [202TB_ProjectRole] on [201TB_ProjectAssign].ProjectRoleID = [202TB_ProjectRole].ProjectRoleID " +
-                    "join [300TB_Employee] on [201TB_ProjectAssign].EmployeeID = [300TB_Employee].EmployeeID ";
+                    "FROM [200TB_Project] " +
+                    "JOIN [201TB_ProjectAssign] on [200TB_Project].ProjectID = [201TB_ProjectAssign].ProjectID " +
+                    "JOIN [202TB_ProjectRole] on [201TB_ProjectAssign].ProjectRoleID = [202TB_ProjectRole].ProjectRoleID " +
+                    "JOIN [300TB_Employee] on [201TB_ProjectAssign].EmployeeID = [300TB_Employee].EmployeeID ";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Presenters
+namespace WindowsFormsApp1.Data
 {
     // Object being used to create a multitude of lists. May not be efficient. Check again later.
     public class ProjectAssignData

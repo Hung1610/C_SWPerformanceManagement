@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonFormFunctions.cs" />
+    <Compile Include="Data\RoleData.cs" />
     <Compile Include="F001_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,27 +80,36 @@
     <Compile Include="F201_ProjectAssign.Designer.cs">
       <DependentUpon>F201_ProjectAssign.cs</DependentUpon>
     </Compile>
+    <Compile Include="F201_ProjectAssignAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F201_ProjectAssignAdd.Designer.cs">
+      <DependentUpon>F201_ProjectAssignAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="F300_Employee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="F300_Employee.Designer.cs">
       <DependentUpon>F300_Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\ProjectAssign.cs" />
     <Compile Include="Models\Projects.cs" />
+    <Compile Include="Presenters\BasePresenter.cs" />
+    <Compile Include="Data\EmployeeData.cs" />
     <Compile Include="Presenters\IProjectAssign.cs" />
     <Compile Include="Presenters\IProjects.cs" />
     <Compile Include="Presenters\PProjectAssign.cs" />
-    <Compile Include="Presenters\ProjectAssignData.cs" />
+    <Compile Include="Data\ProjectAssignData.cs" />
     <Compile Include="Models\ProjectReport.cs" />
     <Compile Include="Presenters\ILogin.cs" />
     <Compile Include="Presenters\IProjectReport.cs" />
     <Compile Include="Presenters\PLogin.cs" />
     <Compile Include="Presenters\PProjectReport.cs" />
     <Compile Include="Presenters\PProjects.cs" />
-    <Compile Include="Presenters\ProjectsData.cs" />
+    <Compile Include="Data\ProjectsData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="F001_Main.resx">
@@ -115,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F201_ProjectAssign.resx">
       <DependentUpon>F201_ProjectAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F201_ProjectAssignAdd.resx">
+      <DependentUpon>F201_ProjectAssignAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F300_Employee.resx">
       <DependentUpon>F300_Employee.cs</DependentUpon>
@@ -145,5 +159,6 @@
   <ItemGroup>
     <None Include="Resources\softworld_logo_footer.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

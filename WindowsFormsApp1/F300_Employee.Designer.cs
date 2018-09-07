@@ -349,6 +349,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.Location = new System.Drawing.Point(12, 551);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(176, 65);
@@ -359,6 +360,7 @@
             // 
             // closeButton
             // 
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.Location = new System.Drawing.Point(385, 551);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(176, 65);
@@ -370,7 +372,7 @@
             // F300_Employee
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.Color.Lime;
+            this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(577, 628);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.closeButton);

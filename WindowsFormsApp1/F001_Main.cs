@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Data;
 using WindowsFormsApp1.Models;
 using WindowsFormsApp1.Presenters;
 
@@ -69,11 +70,27 @@ namespace WindowsFormsApp1
         // Open Employee form.
         private void button3_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is F300_Employee)
+                {
+                    f.Focus();
+                    return;
+                }
+            }
             F300_Employee f300 = new F300_Employee();
             f300.Show();
         }
         private void updateEmployeeButton_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is F300_Employee)
+                {
+                    f.Focus();
+                    return;
+                }
+            }
             F300_Employee f300 = new F300_Employee();
             f300.Show();
         }
@@ -81,11 +98,27 @@ namespace WindowsFormsApp1
         // Open Project form.
         private void button2_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is F200_Project)
+                {
+                    f.Focus();
+                    return;
+                }
+            }
             F200_Project f200 = new F200_Project();
             f200.Show();
         }
         private void updateProjectButton_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is F200_Project)
+                {
+                    f.Focus();
+                    return;
+                }
+            }
             F200_Project f200 = new F200_Project();
             f200.Show();
         }
@@ -98,6 +131,14 @@ namespace WindowsFormsApp1
         // Open Work Report form.
         private void WorkReportButton_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is F100_WorkingReport)
+                {
+                    f.Focus();
+                    return;
+                }
+            }
             F100_WorkingReport f100= new F100_WorkingReport(UserID);
             f100.Show();
         }
@@ -110,6 +151,14 @@ namespace WindowsFormsApp1
         // Open Project Assign form.
         private void assignButton_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is F201_ProjectAssign)
+                {
+                    f.Focus();
+                    return;
+                }
+            }
             F201_ProjectAssign f201 = new F201_ProjectAssign();
             f201.Show();
         }

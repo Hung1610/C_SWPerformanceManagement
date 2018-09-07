@@ -96,7 +96,7 @@
             this.loginButton.Location = new System.Drawing.Point(12, 221);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(183, 54);
-            this.loginButton.TabIndex = 1;
+            this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.button1_Click);
@@ -108,7 +108,7 @@
             this.closeButton.Location = new System.Drawing.Point(410, 221);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(183, 54);
-            this.closeButton.TabIndex = 1;
+            this.closeButton.TabIndex = 4;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.close_Click);

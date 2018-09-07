@@ -45,7 +45,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 236);
+            this.label4.Location = new System.Drawing.Point(36, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 0;
@@ -54,28 +54,28 @@
             // projectBox
             // 
             this.projectBox.FormattingEnabled = true;
-            this.projectBox.Location = new System.Drawing.Point(238, 51);
+            this.projectBox.Location = new System.Drawing.Point(222, 49);
             this.projectBox.Name = "projectBox";
             this.projectBox.Size = new System.Drawing.Size(268, 24);
             this.projectBox.TabIndex = 1;
             // 
             // datePick
             // 
-            this.datePick.Location = new System.Drawing.Point(238, 113);
+            this.datePick.Location = new System.Drawing.Point(222, 111);
             this.datePick.Name = "datePick";
             this.datePick.Size = new System.Drawing.Size(200, 22);
             this.datePick.TabIndex = 2;
             // 
             // workTimeUpDown
             // 
-            this.workTimeUpDown.Location = new System.Drawing.Point(238, 175);
+            this.workTimeUpDown.Location = new System.Drawing.Point(222, 173);
             this.workTimeUpDown.Name = "workTimeUpDown";
             this.workTimeUpDown.Size = new System.Drawing.Size(120, 22);
             this.workTimeUpDown.TabIndex = 3;
             // 
             // remarkRichTxt
             // 
-            this.remarkRichTxt.Location = new System.Drawing.Point(238, 236);
+            this.remarkRichTxt.Location = new System.Drawing.Point(222, 234);
             this.remarkRichTxt.Name = "remarkRichTxt";
             this.remarkRichTxt.Size = new System.Drawing.Size(317, 107);
             this.remarkRichTxt.TabIndex = 4;
@@ -85,7 +85,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 174);
+            this.label1.Location = new System.Drawing.Point(36, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 0;
@@ -95,7 +95,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 115);
+            this.label2.Location = new System.Drawing.Point(36, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 20);
             this.label2.TabIndex = 0;
@@ -105,7 +105,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 51);
+            this.label3.Location = new System.Drawing.Point(36, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 20);
             this.label3.TabIndex = 0;
@@ -137,7 +137,8 @@
             // 
             // F100_WorkingReport
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(567, 450);
             this.Controls.Add(this.closeButton);

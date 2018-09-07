@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Presenters
+namespace WindowsFormsApp1.Data
 {
     // A simpler version of the ProjectAssignData object. Mostly used in comboboxes.
     class ProjectsData

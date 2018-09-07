@@ -307,6 +307,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(951, 19);
             this.label5.Name = "label5";
@@ -318,10 +319,13 @@
             // 
             this.userLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.userLabel.AutoSize = true;
+            this.userLabel.BackColor = System.Drawing.Color.DimGray;
+            this.userLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userLabel.ForeColor = System.Drawing.Color.OldLace;
             this.userLabel.Location = new System.Drawing.Point(951, 44);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(106, 25);
+            this.userLabel.Size = new System.Drawing.Size(108, 27);
             this.userLabel.TabIndex = 16;
             this.userLabel.Text = "[Unknown]";
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,7 +335,7 @@
             this.logoPIc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logoPIc.Image = global::WindowsFormsApp1.Properties.Resources.softworld_logo_footer;
             this.logoPIc.InitialImage = global::WindowsFormsApp1.Properties.Resources.softworld_logo_footer;
-            this.logoPIc.Location = new System.Drawing.Point(956, 104);
+            this.logoPIc.Location = new System.Drawing.Point(940, 100);
             this.logoPIc.Name = "logoPIc";
             this.logoPIc.Size = new System.Drawing.Size(339, 250);
             this.logoPIc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
