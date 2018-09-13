@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp1.Models;
+using C_SWInternPerformance.Models;
 
-namespace WindowsFormsApp1.Presenters
+namespace C_SWInternPerformance.Presenters
 {
     class PLogin
     {
@@ -16,10 +16,12 @@ namespace WindowsFormsApp1.Presenters
         // Calling User Credential checking method from Models.
         public (string user, int ID) GetLogin()
         {
-            Login login = new Login();
-            login.Username = vLogin.Username;
-            login.Password = vLogin.Password;
-            int ID = login.credCheck();
+            Login login = new Login
+            {
+                Username = vLogin.Username,
+                Password = vLogin.Password
+            };
+            int ID = login.CredCheck();
             //Console.WriteLine(ID);
             if (ID>=1)
             {
@@ -27,6 +29,12 @@ namespace WindowsFormsApp1.Presenters
             }
             else
                 return ("Login ",0);
+        }
+        // Get Employee Name from ID
+        public string GetUser(int ID)
+        {
+            Login login = new Login();
+            return login.GetUser(ID);
         }
     }
 }

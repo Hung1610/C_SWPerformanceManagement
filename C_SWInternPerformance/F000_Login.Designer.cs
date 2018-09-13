@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace C_SWInternPerformance
 {
     partial class F000_Login
     {
@@ -99,7 +99,7 @@
             this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
-            this.loginButton.Click += new System.EventHandler(this.button1_Click);
+            this.loginButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // closeButton
             // 
@@ -111,7 +111,7 @@
             this.closeButton.TabIndex = 4;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.close_Click);
+            this.closeButton.Click += new System.EventHandler(this.Close_Click);
             // 
             // F000_Login
             // 

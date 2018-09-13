@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Presenters;
+using C_SWInternPerformance.Presenters;
 
-namespace WindowsFormsApp1
+namespace C_SWInternPerformance
 {
     public partial class F000_Login : Form, ILogin
     {
         // Declare presenter.
-        private PLogin loginP { get; set; }
+        private PLogin LoginP { get; set; }
         // This region implements ILogin elements.
         #region
         public string Username
@@ -37,16 +37,16 @@ namespace WindowsFormsApp1
         // Initilize UI components along with some data.
         public F000_Login()
         {
-            loginP = new PLogin(this);
+            LoginP = new PLogin(this);
             InitializeComponent();
             passTxt.UseSystemPasswordChar = true;
             this.ControlBox = false;
         }
 
         // Login button
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            int ID = loginP.GetLogin().ID;
+            int ID = LoginP.GetLogin().ID;
             if (ID == 0)
             {
                 Console.WriteLine("Login Failed");
@@ -55,14 +55,15 @@ namespace WindowsFormsApp1
             }
             else
             {
-                F001_Main main = new F001_Main(Username,ID);
+                string Name = LoginP.GetUser(ID);
+                F001_Main main = new F001_Main(Name,ID);
                 main.Show();
                 this.Close();
             }
         }
 
         // Close button.
-        private void close_Click(object sender, EventArgs e)
+        private void Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

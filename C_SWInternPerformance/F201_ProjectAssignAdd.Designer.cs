@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace C_SWInternPerformance
 {
     partial class F201_ProjectAssignAdd
     {
@@ -158,6 +158,7 @@
             this.assignButton.TabIndex = 17;
             this.assignButton.Text = "Assign";
             this.assignButton.UseVisualStyleBackColor = true;
+            this.assignButton.Click += new System.EventHandler(this.AssignButton_Click);
             // 
             // closeButton
             // 
@@ -167,7 +168,7 @@
             this.closeButton.TabIndex = 17;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // F201_ProjectAssignAdd
             // 

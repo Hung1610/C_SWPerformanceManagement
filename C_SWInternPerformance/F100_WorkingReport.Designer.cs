@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace C_SWInternPerformance
 {
     partial class F100_WorkingReport
     {
@@ -121,7 +121,7 @@
             this.submitButton.TabIndex = 5;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = false;
-            this.submitButton.Click += new System.EventHandler(this.button1_Click);
+            this.submitButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // closeButton
             // 
@@ -133,7 +133,7 @@
             this.closeButton.TabIndex = 5;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.close_Click);
+            this.closeButton.Click += new System.EventHandler(this.Close_Click);
             // 
             // F100_WorkingReport
             // 

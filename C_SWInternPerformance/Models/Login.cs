@@ -6,49 +6,68 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 
-namespace WindowsFormsApp1.Models
+namespace C_SWInternPerformance.Models
 {
     
-    class Login
+    class Login:BaseModel
     {
         public string Username;
         public string Password;
-        // Connection string gotten from config file.
-        string conStr = ConfigurationManager.ConnectionStrings["connectionString"].ToString();
         //
         // Checking User Credetials from input.
-        public int credCheck ()
+        public int CredCheck ()
         {
             Console.WriteLine("Checking user credentials.");
             // Connect to the table then establish connection.
-
-            SqlConnection conn = new SqlConnection(conStr);
-            conn.Open();
-            // Write the query and execute.
-            string sql = "select [EmployeeID] " +
-                "from [301TB_Email] " +
-                "where EmailAddress = '" + this.Username + "' " +
-                "and EmployeePass = '" + this.Password + "' " +
-                "and DelFlag = 0";
-            Console.WriteLine(sql);
-            SqlCommand cmd = new SqlCommand(sql,conn);
-            using (SqlDataReader reader = cmd.ExecuteReader())
+            using (SqlConnection conn = new SqlConnection(conStr))
             {
-                // If cred found => return first result.
-                if (reader.HasRows && reader.Read())
+                conn.Open();
+                // Write the query and execute.
+                string sql = "SELECT [EmployeeID] " +
+                    "FROM [301TB_Email] " +
+                    "WHERE EmailAddress = '" + this.Username + "' " +
+                    "AND EmployeePass = '" + this.Password + "' " +
+                    "AND DelFlag = 0";
+                Console.WriteLine(sql);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    Console.WriteLine("Login Successful.");
-                    int ID = reader.GetInt32(0);
-                    conn.Close();
-                    return ID;
-                    
+                    // If cred found => return first result.
+                    if (reader.HasRows && reader.Read())
+                    {
+                        Console.WriteLine("Login Successful.");
+                        int ID = reader.GetInt32(0);
+                        return ID;
+
+                    }
+                    // else return 0.
+                    else
+                    {
+                        Console.WriteLine("None found.");
+                        return 0;
+                    }
                 }
-                // else return 0.
-                else
+            }
+           
+        }
+        public string GetUser(int ID)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                // Write the query and execute.
+                string sql = "SELECT Name " +
+                    "FROM [300TB_Employee] Employee " +
+                    "JOIN [301TB_Email] Email " +
+                    "ON Employee.EmployeeID = Email.EmployeeID " +
+                    "WHERE Email.EmployeeID = " + ID;
+                Console.WriteLine(sql);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    Console.WriteLine("None found.");
-                    conn.Close();
-                    return 0;
+                    reader.Read();
+                    string name = reader.GetString(0);
+                    return name;
                 }
             }
         }

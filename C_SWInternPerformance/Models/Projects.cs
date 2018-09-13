@@ -6,15 +6,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp1.Data;
-using WindowsFormsApp1.Presenters;
+using C_SWInternPerformance.Data;
+using C_SWInternPerformance.Presenters;
 
-namespace WindowsFormsApp1.Models
+namespace C_SWInternPerformance.Models
 {
-    class Projects
+    class Projects:BaseModel
     {
-        // Connection string.
-        string conStr = ConfigurationManager.ConnectionStrings["connectionString"].ToString();
         // Fields to be implemented by view.
         public string ProjectName;
         public string ProjectInfo;
@@ -25,63 +23,9 @@ namespace WindowsFormsApp1.Models
         public DateTime EndDate;
         // Methods to write the queries and execute.
 
-        // ID search for use in update query.
-        public int searchID (int ID)
-        {
-            using (SqlConnection conn = new SqlConnection(conStr))
-            {
-                conn.Open();
-                string sql = "select [ProjectID] " +
-                    "from [200TB_Project] " +
-                    "where ProjectID = " + ID + " " +
-                    "and DelFlag = 0";
-                Console.WriteLine(sql);
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    if (reader.HasRows && reader.Read())
-                    {
-                        int result = reader.GetInt32(0);
-                        return result;
-                    }
-                    else
-                    {
-                        return -1;
-                    }
-                }
-            }
-        }
-
-        // Creating a list of projects.
-        public List<ProjectAssignData> assignList()
-        {
-            using (SqlConnection conn = new SqlConnection(conStr))
-            {
-                conn.Open();
-                List<ProjectAssignData> list = new List<ProjectAssignData>();
-                string sql = "select [ProjectID]," +
-                                    "[ProjectName] " +
-                    "from [200TB_Project] ";
-                Console.WriteLine(sql);
-                using (SqlCommand command = new SqlCommand(sql, conn))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            ProjectAssignData project = new ProjectAssignData();
-                            project.ProjectName = reader.GetString(1);
-                            project.ProjectID = reader.GetInt32(0);
-                            list.Add(project);
-                        }
-                    }
-                }
-                return list;
-            }
-        }
 
         // INSERT a new project into the database.
-        public void addProject()
+        public void AddProject()
         {
             using (SqlConnection conn = new SqlConnection(conStr))
             {
@@ -105,7 +49,7 @@ namespace WindowsFormsApp1.Models
         }
 
         // UPDATE the project with new data based on input ID.
-        public void saveProject(int ID)
+        public void SaveProject(int ID)
         {
             using (SqlConnection conn = new SqlConnection(conStr))
             {
@@ -137,15 +81,15 @@ namespace WindowsFormsApp1.Models
         }
         
         // Return project data from database for use in work form.
-        public (string pInfo,string cName,string cInfo, string remark,DateTime start,DateTime end) getProject(int ID)
+        public (string pInfo,string cName,string cInfo, string remark,DateTime start,DateTime end) GetProject(int ID)
         {
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "select ProjectInfo, CustomerName, CustomerInfo, Remark, StartDate, EndDate " +
-                    "from [200TB_Project] " +
-                    "where ProjectID = " + ID + " " +
-                    "and DelFlag = 0";
+                string sql = "SELECT ProjectInfo, CustomerName, CustomerInfo, Remark, StartDate, EndDate " +
+                    "FROM [200TB_Project] " +
+                    "WHERE ProjectID = " + ID + " " +
+                    "AND DelFlag = 0";
                 Console.WriteLine(sql);
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 using (SqlDataReader reader = cmd.ExecuteReader())

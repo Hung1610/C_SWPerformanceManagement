@@ -6,12 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Models
+namespace C_SWInternPerformance.Models
 {
-    class Employee
+    class Employee:BaseModel
     {
-        // Connection string.
-        string conStr = ConfigurationManager.ConnectionStrings["connectionString"].ToString();
         // Fields to be implemented by view.
         
     }

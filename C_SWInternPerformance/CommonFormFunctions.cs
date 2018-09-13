@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace C_SWInternPerformance
 {
-    abstract class CommonFormFunctions
+    public abstract class CommonFormFunctions:Form
     {
+        // Close button.
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

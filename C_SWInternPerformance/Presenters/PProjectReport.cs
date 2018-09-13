@@ -1,37 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp1.Data;
-using WindowsFormsApp1.Models;
+using C_SWInternPerformance.Data;
+using C_SWInternPerformance.Models;
 
-namespace WindowsFormsApp1.Presenters
+namespace C_SWInternPerformance.Presenters
 {
-    class PProjectReport
+    class PProjectReport:BasePresenter
     {
         private IProjectReport vReport;
         // Get data from view.
         public PProjectReport(IProjectReport view) => this.vReport = view;
-        
-        // Create project list.
-        public List <ProjectAssignData> assignList()
+
+        // A simpler list for the combobox.
+        public BindingList<ProjectsData> GetProjects()
         {
-            ProjectReport report = new ProjectReport();
-            return report.assignList();
+            ProjectAssign project = new ProjectAssign();
+            return project.ProjectList();
         }
 
         // Calling saveReport method from Models to update the database.
         public void Submit()
         {
-            ProjectReport report = new ProjectReport();
-            report.ProjectID = vReport.ProjectID;
-            report.EmployeeID = vReport.EmployeeID;
-            report.WorkingTime = vReport.WorkingTime;
-            report.Remark = vReport.Remark;
-            report.ProjectName = vReport.ProjectName;
-            report.Date = vReport.Date;
-            report.saveReport();
+            ProjectReport report = new ProjectReport
+            {
+                ProjectID = vReport.ProjectID,
+                EmployeeID = vReport.EmployeeID,
+                WorkingTime = vReport.WorkingTime,
+                Remark = vReport.Remark,
+                ProjectName = vReport.ProjectName,
+                Date = vReport.Date
+            };
+            report.SaveReport();
         }
     }
 }

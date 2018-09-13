@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Presenters
+namespace C_SWInternPerformance.Presenters
 {
     interface IProjectAssign
     {
+        int ProjectAssignID { get; }
         int ProjectID { get; }
         int EmployeeID { get; }
         int ProjectRoleID { get; }

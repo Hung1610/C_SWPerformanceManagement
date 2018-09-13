@@ -7,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Data;
-using WindowsFormsApp1.Presenters;
+using C_SWInternPerformance.Data;
+using C_SWInternPerformance.Presenters;
 
-namespace WindowsFormsApp1
+namespace C_SWInternPerformance
 {
     public partial class F100_WorkingReport : Form, IProjectReport
     {
         // User ID gotten from Main.
         int UserID;
         // Declare presenters.
-        private PProjectReport pReport{ get; set; }
+        private PProjectReport PReport;
 
         // Initialize UI components along with some data.
         public F100_WorkingReport(int ID)
@@ -25,9 +25,9 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.ControlBox = false;
             UserID = ID;
-            pReport = new PProjectReport(this);
-            List<ProjectAssignData> projectList = pReport.assignList();
-            foreach (ProjectAssignData pData in projectList)
+            PReport = new PProjectReport(this);
+            BindingList<ProjectsData> projectList = PReport.GetProjects();
+            foreach (ProjectsData pData in projectList)
             {
                 projectBox.Items.Add(pData);
             }
@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
         #endregion
 
         // Handles projectBox selection.
-        private void projectBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void ProjectBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (projectBox.SelectedValue != null)
             {
@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
         }
 
         // Submit button.
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Submit this report ?",
                                                     "Executing Query",
@@ -101,13 +101,13 @@ namespace WindowsFormsApp1
                                                     MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                pReport = new PProjectReport(this);
-                pReport.Submit();
+                PReport = new PProjectReport(this);
+                PReport.Submit();
             }
         }
 
         //Close button.
-        private void close_Click(object sender, EventArgs e)
+        private void Close_Click(object sender, EventArgs e)
         {
             this.Close();
         }

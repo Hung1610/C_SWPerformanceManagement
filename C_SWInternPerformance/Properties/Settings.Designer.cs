@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsApp1.Properties {
+namespace C_SWInternPerformance.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -20,6 +20,17 @@ namespace WindowsFormsApp1.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-G8FN8CR\\SQLEXPRESS;Initial Catalog=SW_PerformanceManagement;P" +
+            "ersist Security Info=True;User ID=sa;Password=123")]
+        public string SW_PerformanceManagementConnectionString {
+            get {
+                return ((string)(this["SW_PerformanceManagementConnectionString"]));
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace C_SWInternPerformance
 {
     partial class F001_Main
     {
@@ -45,17 +45,13 @@
             this.fromDatePick = new System.Windows.Forms.DateTimePicker();
             this.toDatePick = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.employeeList = new System.Windows.Forms.ListView();
-            this.Project = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Employee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.WorkingTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.WorkingHour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Remark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.userLabel = new System.Windows.Forms.Label();
-            this.logoPIc = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.mainData = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPIc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainData)).BeginInit();
             this.SuspendLayout();
             // 
             // workReportButton
@@ -82,7 +78,7 @@
             this.addProjectButton.TabIndex = 1;
             this.addProjectButton.Text = "Add Project";
             this.addProjectButton.UseVisualStyleBackColor = false;
-            this.addProjectButton.Click += new System.EventHandler(this.button2_Click);
+            this.addProjectButton.Click += new System.EventHandler(this.Button2_Click);
             // 
             // addEmployeeButton
             // 
@@ -95,7 +91,7 @@
             this.addEmployeeButton.TabIndex = 2;
             this.addEmployeeButton.Text = "Add Employee";
             this.addEmployeeButton.UseVisualStyleBackColor = false;
-            this.addEmployeeButton.Click += new System.EventHandler(this.button3_Click);
+            this.addEmployeeButton.Click += new System.EventHandler(this.Button3_Click);
             // 
             // assignButton
             // 
@@ -108,7 +104,7 @@
             this.assignButton.TabIndex = 3;
             this.assignButton.Text = "Project Assign";
             this.assignButton.UseVisualStyleBackColor = false;
-            this.assignButton.Click += new System.EventHandler(this.assignButton_Click);
+            this.assignButton.Click += new System.EventHandler(this.AssignButton_Click);
             // 
             // updateSkillButton
             // 
@@ -121,7 +117,7 @@
             this.updateSkillButton.TabIndex = 4;
             this.updateSkillButton.Text = "Update Skill";
             this.updateSkillButton.UseVisualStyleBackColor = false;
-            this.updateSkillButton.Click += new System.EventHandler(this.updateSkillButton_Click);
+            this.updateSkillButton.Click += new System.EventHandler(this.UpdateSkillButton_Click);
             // 
             // updateProjectButton
             // 
@@ -134,7 +130,7 @@
             this.updateProjectButton.TabIndex = 5;
             this.updateProjectButton.Text = "Update Project";
             this.updateProjectButton.UseVisualStyleBackColor = false;
-            this.updateProjectButton.Click += new System.EventHandler(this.updateProjectButton_Click);
+            this.updateProjectButton.Click += new System.EventHandler(this.UpdateProjectButton_Click);
             // 
             // updateEmployeeButton
             // 
@@ -147,7 +143,7 @@
             this.updateEmployeeButton.TabIndex = 6;
             this.updateEmployeeButton.Text = "Update Employee";
             this.updateEmployeeButton.UseVisualStyleBackColor = false;
-            this.updateEmployeeButton.Click += new System.EventHandler(this.updateEmployeeButton_Click);
+            this.updateEmployeeButton.Click += new System.EventHandler(this.UpdateEmployeeButton_Click);
             // 
             // profileButton
             // 
@@ -217,7 +213,7 @@
             this.timeBox.Name = "timeBox";
             this.timeBox.Size = new System.Drawing.Size(109, 24);
             this.timeBox.TabIndex = 12;
-            this.timeBox.SelectedIndexChanged += new System.EventHandler(this.timeBox_SelectedIndexChanged);
+            this.timeBox.SelectedIndexChanged += new System.EventHandler(this.TimeBox_SelectedIndexChanged);
             // 
             // fromDatePick
             // 
@@ -259,57 +255,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(892, 220);
             this.tableLayoutPanel1.TabIndex = 14;
             // 
-            // employeeList
-            // 
-            this.employeeList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.employeeList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Project,
-            this.Employee,
-            this.WorkingTime,
-            this.WorkingHour,
-            this.Remark});
-            this.employeeList.Location = new System.Drawing.Point(0, 360);
-            this.employeeList.Name = "employeeList";
-            this.employeeList.Size = new System.Drawing.Size(1304, 241);
-            this.employeeList.TabIndex = 15;
-            this.employeeList.UseCompatibleStateImageBehavior = false;
-            this.employeeList.View = System.Windows.Forms.View.Details;
-            this.employeeList.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // Project
-            // 
-            this.Project.Text = "Project";
-            this.Project.Width = 300;
-            // 
-            // Employee
-            // 
-            this.Employee.Text = "Employee";
-            this.Employee.Width = 241;
-            // 
-            // WorkingTime
-            // 
-            this.WorkingTime.Text = "WorkingTime";
-            this.WorkingTime.Width = 114;
-            // 
-            // WorkingHour
-            // 
-            this.WorkingHour.Text = "WorkingHour";
-            this.WorkingHour.Width = 123;
-            // 
-            // Remark
-            // 
-            this.Remark.Text = "Remark";
-            this.Remark.Width = 322;
-            // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(951, 19);
+            this.label5.Location = new System.Drawing.Point(935, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 25);
             this.label5.TabIndex = 16;
@@ -323,34 +275,44 @@
             this.userLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userLabel.ForeColor = System.Drawing.Color.OldLace;
-            this.userLabel.Location = new System.Drawing.Point(951, 44);
+            this.userLabel.Location = new System.Drawing.Point(1059, 42);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(108, 27);
             this.userLabel.TabIndex = 16;
             this.userLabel.Text = "[Unknown]";
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // logoPIc
+            // pictureBox2
             // 
-            this.logoPIc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logoPIc.Image = global::WindowsFormsApp1.Properties.Resources.softworld_logo_footer;
-            this.logoPIc.InitialImage = global::WindowsFormsApp1.Properties.Resources.softworld_logo_footer;
-            this.logoPIc.Location = new System.Drawing.Point(940, 100);
-            this.logoPIc.Name = "logoPIc";
-            this.logoPIc.Size = new System.Drawing.Size(339, 250);
-            this.logoPIc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoPIc.TabIndex = 17;
-            this.logoPIc.TabStop = false;
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::C_SWInternPerformance.Properties.Resources.softworld_logo_footer;
+            this.pictureBox2.Location = new System.Drawing.Point(940, 100);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(352, 246);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // mainData
+            // 
+            this.mainData.AllowUserToAddRows = false;
+            this.mainData.AllowUserToDeleteRows = false;
+            this.mainData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mainData.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.mainData.Location = new System.Drawing.Point(0, 356);
+            this.mainData.Name = "mainData";
+            this.mainData.RowTemplate.Height = 24;
+            this.mainData.Size = new System.Drawing.Size(1304, 245);
+            this.mainData.TabIndex = 18;
             // 
             // F001_Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1304, 601);
-            this.Controls.Add(this.logoPIc);
+            this.Controls.Add(this.mainData);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.userLabel);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.employeeList);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.toDatePick);
             this.Controls.Add(this.fromDatePick);
@@ -364,10 +326,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "F001_Main";
             this.Text = "F001_Main";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmData_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmData_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoPIc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,15 +355,10 @@
         private System.Windows.Forms.DateTimePicker fromDatePick;
         private System.Windows.Forms.DateTimePicker toDatePick;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ListView employeeList;
-        private System.Windows.Forms.ColumnHeader Project;
-        private System.Windows.Forms.ColumnHeader Employee;
-        private System.Windows.Forms.ColumnHeader WorkingTime;
-        private System.Windows.Forms.ColumnHeader WorkingHour;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label userLabel;
-        private System.Windows.Forms.PictureBox logoPIc;
-        private System.Windows.Forms.ColumnHeader Remark;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridView mainData;
     }
 }
 

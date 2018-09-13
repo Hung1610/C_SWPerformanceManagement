@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp1.Data;
-using WindowsFormsApp1.Presenters;
+using C_SWInternPerformance.Data;
+using C_SWInternPerformance.Presenters;
 
-namespace WindowsFormsApp1.Models
+namespace C_SWInternPerformance.Models
 {
-    class ProjectAssign
+    class ProjectAssign:BaseModel
     {
-        // Connect to the table then establish connection.
-        string conStr = ConfigurationManager.ConnectionStrings["connectionString"].ToString();
         // Fields to be implemented by view.
+        public int ProjectAssignID;
         public int ProjectID;
         public int EmployeeID;
         public int ProjectRoleID;
@@ -23,64 +23,6 @@ namespace WindowsFormsApp1.Models
         public DateTime EndDate;
         public string Remark;
         // Methods to write and execute queries.
-
-        // Simple list containing ProjectID and ProjectName
-        public BindingList<ProjectsData> getPList()
-        {
-            using(SqlConnection conn = new SqlConnection(conStr))
-            {
-                conn.Open();
-                BindingList<ProjectsData> list = new BindingList<ProjectsData>();
-                ProjectsData item = new ProjectsData(-1, "All");
-                list.Add(item);
-                string sql = "SELECT [201TB_ProjectAssign].[ProjectID], " +
-                                    "[200TB_Project].[ProjectName] " +
-                    "FROM [200TB_Project] " +
-                    "JOIN [201TB_ProjectAssign] on [200TB_Project].ProjectID = [201TB_ProjectAssign].ProjectID ";
-                Console.WriteLine(sql);
-                using (SqlCommand command = new SqlCommand(sql, conn))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            ProjectsData project = new ProjectsData();
-                            project.ProjectID = reader.GetInt32(0);
-                            project.ProjectName = reader.GetString(1);
-                            list.Add(project);
-                        }
-                    }
-                }
-                return list;
-            }
-        }
-
-        // Getting a list of employees' names and their ID.
-        public BindingList<EmployeeData> GetEmployeeDatas()
-        {
-            using (SqlConnection conn = new SqlConnection(conStr))
-            {
-                conn.Open();
-                BindingList<EmployeeData> list = new BindingList<EmployeeData>();
-                string sql = "SELECT [EmployeeID],[Name] " +
-                    "FROM [300TB_Employee]";
-                Console.WriteLine(sql);
-                using (SqlCommand command = new SqlCommand(sql, conn))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            EmployeeData emp = new EmployeeData();
-                            emp.EmployeeID = reader.GetInt32(0);
-                            emp.EmployeeName = reader.GetString(1);
-                            list.Add(emp);
-                        }
-                    }
-                }
-                return list;
-            }
-        }
 
         // Getting a list of employees' names and their ID.
         public BindingList<RoleData> GetRoleDatas()
@@ -98,9 +40,11 @@ namespace WindowsFormsApp1.Models
                     {
                         while (reader.Read())
                         {
-                            RoleData role = new RoleData();
-                            role.RoleID = reader.GetInt32(0);
-                            role.RoleName = reader.GetString(1);
+                            RoleData role = new RoleData
+                            {
+                                RoleID = reader.GetInt32(0),
+                                RoleName = reader.GetString(1)
+                            };
                             list.Add(role);
                         }
                     }
@@ -110,7 +54,7 @@ namespace WindowsFormsApp1.Models
         }
 
         // Getting a complete object list containing all project assign data.
-        public BindingList<ProjectAssignData> assignList()
+        public BindingList<ProjectAssignData> AssignList()
         {
             using (SqlConnection conn = new SqlConnection(conStr))
             {
@@ -137,22 +81,91 @@ namespace WindowsFormsApp1.Models
                     {
                         while (reader.Read())
                         {
-                            ProjectAssignData project = new ProjectAssignData();
-                            project.ProjectAssignID = reader.GetInt32(0);
-                            project.ProjectID = reader.GetInt32(1);
-                            project.EmployeeID = reader.GetInt32(2);
-                            project.RoleID = reader.GetInt32(3);
-                            project.ProjectName = reader.GetString(4);
-                            project.EmployeeName = reader.GetString(5);
-                            project.Role = reader.GetString(6);
-                            project.StartDate = reader.GetDateTime(7);
-                            project.EndDate = reader.GetDateTime(8);
-                            project.Remark = reader.GetString(9);
+                            ProjectAssignData project = new ProjectAssignData
+                            {
+                                ProjectAssignID = reader.GetInt32(0),
+                                ProjectID = reader.GetInt32(1),
+                                EmployeeID = reader.GetInt32(2),
+                                RoleID = reader.GetInt32(3),
+                                ProjectName = reader.GetString(4),
+                                EmployeeName = reader.GetString(5),
+                                Role = reader.GetString(6),
+                                StartDate = reader.GetDateTime(7),
+                                EndDate = reader.GetDateTime(8),
+                                Remark = reader.GetString(9)
+                            };
                             list.Add(project);
                         }
                     }
                 }
                 return list;
+            }
+        }
+
+        // Add new project assignment data into database.
+        public void AddAssign(int ID)
+        {
+            using(SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                string sql = "INSERT INTO [201TB_ProjectAssign](ProjectID,EmployeeID,ProjectRoleID,StartDate,EndDate,Remark) " +
+                    "VALUES (@pID,@eID,@rID,@startDate,@endDate,@remark)";
+                Console.WriteLine(sql);
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    command.Parameters.Add("@pID", SqlDbType.Int).Value = ID;
+                    command.Parameters.Add("@eID", SqlDbType.Int).Value = this.EmployeeID;
+                    command.Parameters.Add("@rID", SqlDbType.Int).Value = this.ProjectRoleID;
+                    command.Parameters.Add("@startDate", SqlDbType.Date).Value = this.StartDate;
+                    command.Parameters.Add("@endDate", SqlDbType.Date).Value = this.EndDate;
+                    command.Parameters.Add("@remark", SqlDbType.NVarChar).Value = this.Remark;
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Delete project assignement from database.
+        public void DeleteAssign(int ProjectAssignID)
+        {
+            using(SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                string sql = "DELETE FROM [201TB_ProjectAssign] " +
+                    "WHERE ProjectAssignID = "+ProjectAssignID;
+                Console.WriteLine(sql);
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Save the changed datas to the database.
+        public void UpdateAssign(ProjectAssignData projectAssign)
+        {
+            using(SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                string sql = "UPDATE [201TB_ProjectAssign] " +
+                    "SET ProjectID = @pID, " +
+                    "EmployeeID = @eID, " +
+                    "ProjectRoleID = @rID, " +
+                    "StartDate = @startDate, " +
+                    "EndDate = @endDate, " +
+                    "Remark = @remark " +
+                    "WHERE ProjectAssignID = "+projectAssign.ProjectAssignID;
+                Console.WriteLine(sql);
+                using (SqlCommand command = new SqlCommand(sql, conn))
+                {
+                    command.Parameters.Add("@pID", SqlDbType.NVarChar).Value = projectAssign.ProjectID;
+                    command.Parameters.Add("@eID", SqlDbType.NVarChar).Value = projectAssign.EmployeeID;
+                    command.Parameters.Add("@rID", SqlDbType.NVarChar).Value = projectAssign.RoleID;
+                    command.Parameters.Add("@startDate", SqlDbType.Date).Value = projectAssign.StartDate;
+                    command.Parameters.Add("@endDate", SqlDbType.Date).Value = projectAssign.EndDate;
+                    command.Parameters.Add("@remark", SqlDbType.NVarChar).Value = projectAssign.Remark;
+                    command.ExecuteNonQuery();
+                    
+                }
             }
         }
     }

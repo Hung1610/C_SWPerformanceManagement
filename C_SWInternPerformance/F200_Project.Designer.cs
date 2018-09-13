@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace C_SWInternPerformance
 {
     partial class F200_Project
     {
@@ -96,7 +96,7 @@
             this.projectNameTxt.Name = "projectNameTxt";
             this.projectNameTxt.Size = new System.Drawing.Size(190, 22);
             this.projectNameTxt.TabIndex = 1;
-            this.projectNameTxt.TextChanged += new System.EventHandler(this.projectNameTxt_TextChanged);
+            this.projectNameTxt.TextChanged += new System.EventHandler(this.ProjectNameTxt_TextChanged);
             // 
             // label2
             // 
@@ -210,7 +210,7 @@
             this.saveButton.TabIndex = 5;
             this.saveButton.Text = "Create/Save";
             this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.createSave_Click);
+            this.saveButton.Click += new System.EventHandler(this.CreateSave_Click);
             // 
             // closeButton
             // 
@@ -220,7 +220,7 @@
             this.closeButton.TabIndex = 5;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // F200_Project
             // 

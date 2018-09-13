@@ -4,15 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Data
+namespace C_SWInternPerformance.Data
 {
     // A simpler version of the ProjectAssignData object. Mostly used in comboboxes.
-    class ProjectsData
+    public class ProjectsData
     {
         public ProjectsData(int ID, string Name)
         {
             this.ProjectID = ID;
             this.ProjectName = Name;
+        }
+        public ProjectsData This
+        {
+            get
+            {
+                return this;
+            }
         }
         public ProjectsData() { }
         public int ProjectID { get; set; }

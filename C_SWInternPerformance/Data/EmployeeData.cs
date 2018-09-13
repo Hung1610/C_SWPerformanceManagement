@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Data
+namespace C_SWInternPerformance.Data
 {
-    class EmployeeData
+    public class EmployeeData
     {
         public int EmployeeID { get; set; }
         public string EmployeeName { get; set; }

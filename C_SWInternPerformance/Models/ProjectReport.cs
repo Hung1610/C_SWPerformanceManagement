@@ -6,16 +6,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp1.Data;
-using WindowsFormsApp1.Presenters;
+using C_SWInternPerformance.Data;
+using C_SWInternPerformance.Presenters;
 
-namespace WindowsFormsApp1.Models
+namespace C_SWInternPerformance.Models
 {
-    public class ProjectReport
+    public class ProjectReport:BaseModel
     {
-        // Connection String.
-        string conStr = ConfigurationManager.ConnectionStrings["connectionString"].ToString();
-
         //Fields to be assigned by view.
         public DateTime Date;
         public int WorkingTime;
@@ -25,38 +22,9 @@ namespace WindowsFormsApp1.Models
         public int ProjectID;
         // Methods to write the queries and execute.
         
-        // List containing Project name and ID.
-        public List<ProjectAssignData> assignList()
-        {
-            using(SqlConnection conn = new SqlConnection(conStr))
-            {
-                conn.Open();
-                List<ProjectAssignData> list = new List<ProjectAssignData>();
-                string sql = "select [201TB_ProjectAssign].[ProjectID]," +
-                                    "[200TB_Project].[ProjectName] " +
-                    "from [201TB_ProjectAssign] " +
-                    "left join [200TB_Project] " +
-                    "on [200TB_Project].[ProjectID] = [201TB_ProjectAssign].[ProjectID]";
-                Console.WriteLine(sql);
-                using (SqlCommand command = new SqlCommand(sql, conn))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            ProjectAssignData project = new ProjectAssignData();
-                            project.ProjectName = reader.GetString(1);
-                            project.ProjectID = reader.GetInt32(0);
-                            list.Add(project);
-                        }
-                    }
-                }
-                return list;
-            }
-        }
 
         // Insert Working Report into the database.
-        public void saveReport()
+        public void SaveReport()
         {
             using(SqlConnection conn = new SqlConnection(conStr))
             {

@@ -7,18 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Data;
-using WindowsFormsApp1.Models;
-using WindowsFormsApp1.Presenters;
+using C_SWInternPerformance.Data;
+using C_SWInternPerformance.Models;
+using C_SWInternPerformance.Presenters;
 
-namespace WindowsFormsApp1
+namespace C_SWInternPerformance
 {
     public partial class F001_Main : Form
     {
         // ID taken from Login for use in this and other forms.
         int UserID;
         // Close all currently opened forms when this form is closed, then re-open Login.
-        private void frmData_FormClosed(object sender, FormClosedEventArgs e)
+        BindingList<ProjectsData> projects;
+        BindingList<ProjectAssignData> assignList;
+        private void FrmData_FormClosed(object sender, FormClosedEventArgs e)
         {
             List<Form> openForms = new List<Form>();
             foreach (Form f in Application.OpenForms)
@@ -38,14 +40,14 @@ namespace WindowsFormsApp1
             Console.WriteLine(ID);
             UserID = ID;
             userLabel.Text = user;
-            BindingList<ProjectsData> projects = pAssign.getPList();
+            projects = pAssign.GetProjects();
             projectBox.DataSource = projects;
             projectBox.DisplayMember = "ProjectName";
             timeBox.DataSource =new string[] { "last day", "last week","last month","last year","custom" };
         }
 
         // Handles the timebox selection.
-        private void timeBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void TimeBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (timeBox.Text!= ("custom"))
             {
@@ -62,13 +64,16 @@ namespace WindowsFormsApp1
         // Initialize Data for the list view.
         private void Form1_Load(object sender, EventArgs e)
         {
-            string[] row = { "lol", "fux", "ayy", "ok" };
-            var listViewItem = new ListViewItem(row);
-            employeeList.Items.Add(listViewItem);
+            assignList = pAssign.AssignList();
+            mainData.DataSource = assignList;
+            mainData.Columns["ProjectID"].Visible = false;
+            mainData.Columns["EmployeeID"].Visible = false;
+            mainData.Columns["RoleID"].Visible = false;
+            mainData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         // Open Employee form.
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             foreach (Form f in Application.OpenForms)
             {
@@ -81,7 +86,7 @@ namespace WindowsFormsApp1
             F300_Employee f300 = new F300_Employee();
             f300.Show();
         }
-        private void updateEmployeeButton_Click(object sender, EventArgs e)
+        private void UpdateEmployeeButton_Click(object sender, EventArgs e)
         {
             foreach (Form f in Application.OpenForms)
             {
@@ -96,7 +101,7 @@ namespace WindowsFormsApp1
         }
 
         // Open Project form.
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             foreach (Form f in Application.OpenForms)
             {
@@ -109,7 +114,7 @@ namespace WindowsFormsApp1
             F200_Project f200 = new F200_Project();
             f200.Show();
         }
-        private void updateProjectButton_Click(object sender, EventArgs e)
+        private void UpdateProjectButton_Click(object sender, EventArgs e)
         {
             foreach (Form f in Application.OpenForms)
             {
@@ -123,7 +128,7 @@ namespace WindowsFormsApp1
             f200.Show();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -143,13 +148,13 @@ namespace WindowsFormsApp1
             f100.Show();
         }
 
-        private void updateSkillButton_Click(object sender, EventArgs e)
+        private void UpdateSkillButton_Click(object sender, EventArgs e)
         {
 
         }
         
         // Open Project Assign form.
-        private void assignButton_Click(object sender, EventArgs e)
+        private void AssignButton_Click(object sender, EventArgs e)
         {
             foreach (Form f in Application.OpenForms)
             {

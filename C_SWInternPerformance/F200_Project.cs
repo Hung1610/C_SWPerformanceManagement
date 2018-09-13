@@ -7,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.Data;
-using WindowsFormsApp1.Presenters;
+using C_SWInternPerformance.Data;
+using C_SWInternPerformance.Presenters;
 
-namespace WindowsFormsApp1
+namespace C_SWInternPerformance
 {
     public partial class F200_Project : Form, IProjects
     {
         // Declare presenter.
         private PProjects pProject;
         //
-        List<ProjectAssignData> projectList;
+        BindingList<ProjectsData> projectList;
 
         // Initialize UI components along with some data.
         public F200_Project()
@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
             this.ControlBox = false;
             InitializeComponent();
             pProject = new PProjects(this);
-            projectList = pProject.assignList();
+            projectList = pProject.ProjectList();
         }
 
         // This region implements IProjects elements.
@@ -82,9 +82,9 @@ namespace WindowsFormsApp1
         #endregion
 
         // Create/Save button.
-        private void createSave_Click(object sender, EventArgs e)
+        private void CreateSave_Click(object sender, EventArgs e)
         {
-            int foundID = pProject.listSearch(this.ProjectName, projectList);
+            int foundID = pProject.ListSearch(this.ProjectName, projectList);
             if (foundID >= 0)
             {
                 DialogResult result = MessageBox.Show("Update this project ?",
@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    pProject.save(foundID);
+                    pProject.Save(foundID);
                     MessageBox.Show("Project Updated.");
                 }
             }
@@ -105,22 +105,22 @@ namespace WindowsFormsApp1
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    pProject.save(foundID);
+                    pProject.Save(foundID);
                     MessageBox.Show("New project Created.");
                 }
             }
         }
 
         // Close button.
-        private void closeButton_Click(object sender, EventArgs e)
+        private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void projectNameTxt_TextChanged(object sender, EventArgs e)
+        private void ProjectNameTxt_TextChanged(object sender, EventArgs e)
         {
-            int foundID = pProject.listSearch(this.ProjectName, projectList);
-            var project = pProject.getProject(foundID);
+            int foundID = pProject.ListSearch(this.ProjectName, projectList);
+            var project = pProject.GetProject(foundID);
             projectInfoTxt.Text = project.pInfo;
             cusNameTxt.Text = project.cName;
             cusInfoTxt.Text = project.cInfo;
