@@ -101,10 +101,9 @@
             this.dataProjectAssign.RowTemplate.Height = 24;
             this.dataProjectAssign.Size = new System.Drawing.Size(776, 258);
             this.dataProjectAssign.TabIndex = 4;
-            this.dataProjectAssign.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataProjectAssign_CellValueChanged);
             this.dataProjectAssign.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataProjectAssign_DataError);
             this.dataProjectAssign.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataProjectAssign_RowEnter);
-            this.dataProjectAssign.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataProjectAssign_RowLeave);
+            this.dataProjectAssign.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProjectAssign_RowLeave);
             this.dataProjectAssign.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.DataProjectAssign_UserDeletingRow);
             // 
             // ProjectCol
@@ -149,26 +148,29 @@
             // middleProjectBox
             // 
             this.middleProjectBox.FormattingEnabled = true;
-            this.middleProjectBox.Location = new System.Drawing.Point(12, 12);
+            this.middleProjectBox.Location = new System.Drawing.Point(268, 12);
             this.middleProjectBox.Name = "middleProjectBox";
             this.middleProjectBox.Size = new System.Drawing.Size(169, 24);
             this.middleProjectBox.TabIndex = 6;
+            this.middleProjectBox.Visible = false;
             // 
             // middleEmpBox
             // 
             this.middleEmpBox.FormattingEnabled = true;
-            this.middleEmpBox.Location = new System.Drawing.Point(187, 12);
+            this.middleEmpBox.Location = new System.Drawing.Point(444, 12);
             this.middleEmpBox.Name = "middleEmpBox";
             this.middleEmpBox.Size = new System.Drawing.Size(169, 24);
             this.middleEmpBox.TabIndex = 6;
+            this.middleEmpBox.Visible = false;
             // 
             // middleRoleBox
             // 
             this.middleRoleBox.FormattingEnabled = true;
-            this.middleRoleBox.Location = new System.Drawing.Point(362, 12);
+            this.middleRoleBox.Location = new System.Drawing.Point(619, 12);
             this.middleRoleBox.Name = "middleRoleBox";
             this.middleRoleBox.Size = new System.Drawing.Size(169, 24);
             this.middleRoleBox.TabIndex = 6;
+            this.middleRoleBox.Visible = false;
             // 
             // F201_ProjectAssign
             // 

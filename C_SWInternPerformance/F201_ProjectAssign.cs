@@ -31,7 +31,6 @@ namespace C_SWInternPerformance
             // Disable top box control.
             this.ControlBox = false;
         }
-
         private void F201_ProjectAssign_Load(object sender, EventArgs e)
         {
             // Getting the necessary lists.
@@ -79,16 +78,16 @@ namespace C_SWInternPerformance
             dataProjectAssign.Columns["StartDate"].HeaderText = "Start Date";
             dataProjectAssign.Columns["EndDate"].HeaderText = "End Date";
             dataProjectAssign.Columns["ProjectAssignID"].Visible = false;
-            //dataProjectAssign.Columns["ProjectID"].Visible = false;
-            //dataProjectAssign.Columns["EmployeeID"].Visible = false;
-            //dataProjectAssign.Columns["RoleID"].Visible = false;
+            dataProjectAssign.Columns["ProjectID"].Visible = false;
+            dataProjectAssign.Columns["EmployeeID"].Visible = false;
+            dataProjectAssign.Columns["RoleID"].Visible = false;
             // Setting autosize mode.
             EmployeeCol.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             ProjectCol.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataProjectAssign.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         // This region is for implementing IProjectAssign elements.
-        #region
+        #region IProjectAssign ELEMENTS
 
         public int ProjectAssignID
         {
@@ -110,7 +109,8 @@ namespace C_SWInternPerformance
                 {
                     return 0;
                 }
-                var value = dataProjectAssign.CurrentRow.Cells["ProjectID"].Value;
+                ProjectsData currentPro = (ProjectsData)middleProjectBox.SelectedItem;
+                var value = currentPro.ProjectID;
                 return (int)value;
             }
         }
@@ -122,7 +122,8 @@ namespace C_SWInternPerformance
                 {
                     return 0;
                 }
-                var value = dataProjectAssign.CurrentRow.Cells["EmployeeID"].Value;
+                EmployeeData currentEmp = (EmployeeData)middleEmpBox.SelectedItem;
+                var value = currentEmp.EmployeeID;
                 return (int)value;
             }
         }
@@ -134,7 +135,8 @@ namespace C_SWInternPerformance
                 {
                     return 0;
                 }
-                var value = dataProjectAssign.CurrentRow.Cells["RoleID"].Value;
+                RoleData currentRole = (RoleData)middleRoleBox.SelectedItem;
+                var value = currentRole.RoleID;
                 return (int)value;
             }
         }
@@ -146,7 +148,7 @@ namespace C_SWInternPerformance
                 {
                     return "";
                 }
-                var value = Convert.ToString(dataProjectAssign.CurrentRow.Cells["ProjectName"].Value);
+                var value = Convert.ToString(dataProjectAssign.CurrentRow.Cells["ProjectCol"].Value);
                 return value;
             }
         }
@@ -158,7 +160,7 @@ namespace C_SWInternPerformance
                 {
                     return "";
                 }
-                var value = Convert.ToString(dataProjectAssign.CurrentRow.Cells["EmployeeName"].Value);
+                var value = Convert.ToString(dataProjectAssign.CurrentRow.Cells["EmployeeCol"].Value);
                 return value;
             }
         }
@@ -170,7 +172,7 @@ namespace C_SWInternPerformance
                 {
                     return "";
                 }
-                var value = Convert.ToString(dataProjectAssign.CurrentRow.Cells["Role"].Value);
+                var value = Convert.ToString(dataProjectAssign.CurrentRow.Cells["RoleCol"].Value);
                 return value;
             }
         }
@@ -270,7 +272,7 @@ namespace C_SWInternPerformance
         }
 
         // Fires when a row is left. Add the row's data , if it was changed, into changedList.
-        private void DataProjectAssign_RowLeave(object sender, DataGridViewCellEventArgs e)
+        private void dataProjectAssign_RowLeave(object sender, DataGridViewCellEventArgs e)
         {
             for (int i = 0; i < dataProjectAssign.Rows[e.RowIndex].Cells.Count; i++)
             {
@@ -280,9 +282,9 @@ namespace C_SWInternPerformance
             {
                 newdata = new ProjectAssignData
                 {
+                    ProjectAssignID = Convert.ToInt32(dataProjectAssign.CurrentRow.Cells["ProjectAssignID"].Value),
                     ProjectID = this.ProjectID,
                     EmployeeID = this.EmployeeID,
-                    ProjectAssignID = Convert.ToInt32(dataProjectAssign.CurrentRow.Cells["ProjectAssignID"].Value),
                     RoleID = this.ProjectRoleID,
                     ProjectName = this.ProjectName,
                     EmployeeName = this.EmployeeName,
@@ -330,6 +332,10 @@ namespace C_SWInternPerformance
                 {
                     pAssign.UpdateAssign(projectAssign);
                 }
+                foreach(ProjectAssignData data in ChangedList)
+                {
+                    Console.WriteLine(data.ProjectID + " " + data.EmployeeID + " " + data.RoleID);
+                }
             }
             ChangedList.Clear();
             DeleteList.Clear();
@@ -346,25 +352,8 @@ namespace C_SWInternPerformance
             this.RefreshForm();
         }
 
-        private void DataProjectAssign_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                ProjectsData currentPro = (ProjectsData)middleProjectBox.SelectedItem;
-                EmployeeData currentEmp = (EmployeeData)middleEmpBox.SelectedItem;
-                RoleData currentRole = (RoleData)middleRoleBox.SelectedItem;
-                dataProjectAssign.Rows[e.RowIndex].Cells["ProjectName"].Value = dataProjectAssign.Rows[e.RowIndex].Cells["ProjectCol"].Value;
-                dataProjectAssign.Rows[e.RowIndex].Cells["ProjectID"].Value = currentPro.ProjectID;
-                dataProjectAssign.Rows[e.RowIndex].Cells["EmployeeName"].Value = dataProjectAssign.Rows[e.RowIndex].Cells["EmployeeCol"].Value;
-                dataProjectAssign.Rows[e.RowIndex].Cells["EmployeeID"].Value = currentEmp.EmployeeID;
-                dataProjectAssign.Rows[e.RowIndex].Cells["Role"].Value = dataProjectAssign.Rows[e.RowIndex].Cells["RoleCol"].Value;
-                dataProjectAssign.Rows[e.RowIndex].Cells["RoleID"].Value = currentRole.RoleID;
-            }
-            catch (Exception ex)
-            {
-            }
-        }
-
+        // CellValueChanged event used mainly for gridview combobox interactions.
+        
         // Close button.
         private void Close_Click(object sender, EventArgs e)
         {
