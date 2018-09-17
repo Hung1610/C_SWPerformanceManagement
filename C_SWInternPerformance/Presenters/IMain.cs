@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace C_SWInternPerformance.Presenters
 {
-    interface IProjectReport
+    interface IMain
     {
-        string ProjectName { get; }
-        Double WorkingTime { get; }
-        DateTime Date { get; }
-        string Remark { get; }
-        int EmployeeID { get; }
         int ProjectID { get; }
+        int EmployeeID { get; }
     }
 }

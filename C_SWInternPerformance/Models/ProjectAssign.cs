@@ -16,15 +16,15 @@ namespace C_SWInternPerformance.Models
     {
         // Fields to be implemented by view.
         public int ProjectAssignID;
-        public int ProjectID;
+        //public int ProjectID;
         public int EmployeeID;
         public int ProjectRoleID;
         public DateTime StartDate;
         public DateTime EndDate;
         public string Remark;
         // Methods to write and execute queries.
-
-        // Getting a list of employees' names and their ID.
+        
+        // Getting a list of roles and their ID.
         public BindingList<RoleData> GetRoleDatas()
         {
             using (SqlConnection conn = new SqlConnection(conStr))
@@ -157,9 +157,9 @@ namespace C_SWInternPerformance.Models
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
-                    command.Parameters.Add("@pID", SqlDbType.NVarChar).Value = projectAssign.ProjectID;
-                    command.Parameters.Add("@eID", SqlDbType.NVarChar).Value = projectAssign.EmployeeID;
-                    command.Parameters.Add("@rID", SqlDbType.NVarChar).Value = projectAssign.RoleID;
+                    command.Parameters.Add("@pID", SqlDbType.Int).Value = projectAssign.ProjectID;
+                    command.Parameters.Add("@eID", SqlDbType.Int).Value = projectAssign.EmployeeID;
+                    command.Parameters.Add("@rID", SqlDbType.Int).Value = projectAssign.RoleID;
                     command.Parameters.Add("@startDate", SqlDbType.Date).Value = projectAssign.StartDate;
                     command.Parameters.Add("@endDate", SqlDbType.Date).Value = projectAssign.EndDate;
                     command.Parameters.Add("@remark", SqlDbType.NVarChar).Value = projectAssign.Remark;

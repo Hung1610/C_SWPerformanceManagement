@@ -73,7 +73,6 @@ namespace C_SWInternPerformance.Models
                     command.Parameters.Add("@cInfo", SqlDbType.NVarChar).Value = this.CustomerInfo;
                     command.Parameters.Add("@startDate", SqlDbType.Date).Value = this.StartDate;
                     command.Parameters.Add("@endDate", SqlDbType.Date).Value = this.EndDate;
-                    command.Parameters.Add("@del", SqlDbType.Int).Value = 0;
                     command.Parameters.Add("@remark", SqlDbType.NVarChar).Value = this.Remark;
                     command.ExecuteNonQuery();
                 }
@@ -81,12 +80,12 @@ namespace C_SWInternPerformance.Models
         }
         
         // Return project data from database for use in work form.
-        public (string pInfo,string cName,string cInfo, string remark,DateTime start,DateTime end) GetProject(int ID)
+        public (string pName, string pInfo,string cName,string cInfo, string remark,DateTime start,DateTime end) GetProject(int ID)
         {
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "SELECT ProjectInfo, CustomerName, CustomerInfo, Remark, StartDate, EndDate " +
+                string sql = "SELECT ProjectName, ProjectInfo, CustomerName, CustomerInfo, Remark, StartDate, EndDate " +
                     "FROM [200TB_Project] " +
                     "WHERE ProjectID = " + ID + " " +
                     "AND DelFlag = 0";
@@ -96,11 +95,11 @@ namespace C_SWInternPerformance.Models
                 {
                     if (reader.HasRows && reader.Read())
                     {
-                        return (reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetDateTime(4), reader.GetDateTime(5));
+                        return (reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetDateTime(5), reader.GetDateTime(6));
                     }
                     else
                     {
-                        return ("", "", "", "", DateTime.Now, DateTime.Now);
+                        return ("","", "", "", "", DateTime.Now, DateTime.Now);
                     }
                 }
             }

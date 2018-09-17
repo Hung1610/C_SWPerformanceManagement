@@ -27,10 +27,8 @@ namespace C_SWInternPerformance
             UserID = ID;
             PReport = new PProjectReport(this);
             BindingList<ProjectsData> projectList = PReport.GetProjects();
-            foreach (ProjectsData pData in projectList)
-            {
-                projectBox.Items.Add(pData);
-            }
+            projectList.RemoveAt(0);
+            projectBox.DataSource = projectList;
             projectBox.DisplayMember = "ProjectName";
         }
 
@@ -47,15 +45,15 @@ namespace C_SWInternPerformance
         {
             get
             {
-                ProjectAssignData current = projectBox.SelectedItem as ProjectAssignData;
+                ProjectsData current = projectBox.SelectedItem as ProjectsData;
                 return current.ProjectID;
             }
         }
-        public int WorkingTime
+        public Double WorkingTime
         {
             get
             {
-                int WorkTime = Convert.ToInt32(workTimeUpDown.Value);
+                Double WorkTime = Convert.ToDouble(workTimeUpDown.Value);
                 return WorkTime;
             }
         }
@@ -70,7 +68,7 @@ namespace C_SWInternPerformance
         {
             get
             {
-                ProjectAssignData current = projectBox.SelectedItem as ProjectAssignData;
+                ProjectsData current = projectBox.SelectedItem as ProjectsData;
                 return current.ProjectName;
             }
         }
@@ -103,6 +101,7 @@ namespace C_SWInternPerformance
             {
                 PReport = new PProjectReport(this);
                 PReport.Submit();
+                MessageBox.Show("Report submitted!");
             }
         }
 

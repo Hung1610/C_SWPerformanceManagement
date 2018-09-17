@@ -33,6 +33,7 @@ namespace C_SWInternPerformance
         }
         private void F201_ProjectAssign_Load(object sender, EventArgs e)
         {
+            RefreshButton.BackgroundImageLayout = ImageLayout.Stretch;
             // Getting the necessary lists.
             pAssign = new PProjectAssign(this);
             projectList = pAssign.AssignList();
@@ -184,8 +185,8 @@ namespace C_SWInternPerformance
                 {
                     return "";
                 }
-                var value = Convert.ToString(dataProjectAssign.CurrentRow.Cells["Remark"].Value);
-                return value;
+                var remark = Convert.ToString(dataProjectAssign.CurrentRow.Cells["Remark"].Value);
+                return remark;
             }
         }
         public DateTime StartDate
@@ -271,8 +272,8 @@ namespace C_SWInternPerformance
             }
         }
 
-        // Fires when a row is left. Add the row's data , if it was changed, into changedList.
-        private void dataProjectAssign_RowLeave(object sender, DataGridViewCellEventArgs e)
+        // Event that fires when a row is left, AFTER validating, firing after CellEditEnd events. Create new data for changedList.
+        private void DataProjectAssign_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
         {
             for (int i = 0; i < dataProjectAssign.Rows[e.RowIndex].Cells.Count; i++)
             {
@@ -340,7 +341,6 @@ namespace C_SWInternPerformance
             ChangedList.Clear();
             DeleteList.Clear();
             this.RefreshForm();
-
         }
 
 
@@ -351,8 +351,6 @@ namespace C_SWInternPerformance
             DeleteList.Clear();
             this.RefreshForm();
         }
-
-        // CellValueChanged event used mainly for gridview combobox interactions.
         
         // Close button.
         private void Close_Click(object sender, EventArgs e)
@@ -360,7 +358,7 @@ namespace C_SWInternPerformance
             this.Close();
         }
 
-        private void dataProjectAssign_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        private void DataProjectAssign_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             //DO NOTHING
             //FUCK DATAGRIDVIEW COMBOBOX

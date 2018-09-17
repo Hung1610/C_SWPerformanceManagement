@@ -36,11 +36,11 @@
             this.ProjectCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.EmployeeCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.RoleCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.AddButton = new System.Windows.Forms.Button();
-            this.RefreshButton = new System.Windows.Forms.Button();
             this.middleProjectBox = new System.Windows.Forms.ComboBox();
             this.middleEmpBox = new System.Windows.Forms.ComboBox();
             this.middleRoleBox = new System.Windows.Forms.ComboBox();
+            this.RefreshButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataProjectAssign)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,9 +101,9 @@
             this.dataProjectAssign.RowTemplate.Height = 24;
             this.dataProjectAssign.Size = new System.Drawing.Size(776, 258);
             this.dataProjectAssign.TabIndex = 4;
-            this.dataProjectAssign.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataProjectAssign_DataError);
+            this.dataProjectAssign.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.DataProjectAssign_DataError);
             this.dataProjectAssign.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataProjectAssign_RowEnter);
-            this.dataProjectAssign.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataProjectAssign_RowLeave);
+            this.dataProjectAssign.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.DataProjectAssign_RowValidating);
             this.dataProjectAssign.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.DataProjectAssign_UserDeletingRow);
             // 
             // ProjectCol
@@ -122,28 +122,6 @@
             // 
             this.RoleCol.HeaderText = "Role";
             this.RoleCol.Name = "RoleCol";
-            // 
-            // AddButton
-            // 
-            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddButton.Location = new System.Drawing.Point(484, 47);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(149, 32);
-            this.AddButton.TabIndex = 5;
-            this.AddButton.Text = "New Assignment";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // RefreshButton
-            // 
-            this.RefreshButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton.Location = new System.Drawing.Point(639, 47);
-            this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(149, 32);
-            this.RefreshButton.TabIndex = 5;
-            this.RefreshButton.Text = "Refresh";
-            this.RefreshButton.UseVisualStyleBackColor = true;
-            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // middleProjectBox
             // 
@@ -171,6 +149,39 @@
             this.middleRoleBox.Size = new System.Drawing.Size(169, 24);
             this.middleRoleBox.TabIndex = 6;
             this.middleRoleBox.Visible = false;
+            // 
+            // RefreshButton
+            // 
+            this.RefreshButton.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RefreshButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RefreshButton.Image = global::C_SWInternPerformance.Properties.Resources.refresh3;
+            this.RefreshButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RefreshButton.Location = new System.Drawing.Point(639, 47);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(104, 32);
+            this.RefreshButton.TabIndex = 5;
+            this.RefreshButton.Text = "Refresh";
+            this.RefreshButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.Image = global::C_SWInternPerformance.Properties.Resources.add_song__1_;
+            this.AddButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddButton.Location = new System.Drawing.Point(463, 47);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(170, 32);
+            this.AddButton.TabIndex = 5;
+            this.AddButton.Text = "New Assignment";
+            this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // F201_ProjectAssign
             // 

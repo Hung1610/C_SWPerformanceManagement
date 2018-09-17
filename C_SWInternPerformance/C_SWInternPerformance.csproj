@@ -66,6 +66,11 @@
     <Compile Include="CommonFormFunctions.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Data\BranchData.cs" />
+    <Compile Include="Data\DetailedEmployeeData.cs" />
+    <Compile Include="Data\LevelData.cs" />
+    <Compile Include="Data\PerformanceData.cs" />
+    <Compile Include="Data\PositionData.cs" />
     <Compile Include="Data\RoleData.cs" />
     <Compile Include="F001_Main.cs">
       <SubType>Form</SubType>
@@ -112,12 +117,17 @@
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Main.cs" />
     <Compile Include="Models\ProjectAssign.cs" />
     <Compile Include="Models\Projects.cs" />
     <Compile Include="Presenters\BasePresenter.cs" />
     <Compile Include="Data\EmployeeData.cs" />
+    <Compile Include="Presenters\IEmployee.cs" />
+    <Compile Include="Presenters\IMain.cs" />
     <Compile Include="Presenters\IProjectAssign.cs" />
     <Compile Include="Presenters\IProjects.cs" />
+    <Compile Include="Presenters\PEmployee.cs" />
+    <Compile Include="Presenters\PMain.cs" />
     <Compile Include="Presenters\PProjectAssign.cs" />
     <Compile Include="Data\ProjectAssignData.cs" />
     <Compile Include="Models\ProjectReport.cs" />
@@ -187,6 +197,21 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-song %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

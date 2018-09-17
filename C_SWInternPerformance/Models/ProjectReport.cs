@@ -15,13 +15,12 @@ namespace C_SWInternPerformance.Models
     {
         //Fields to be assigned by view.
         public DateTime Date;
-        public int WorkingTime;
+        public Double WorkingTime;
         public string Remark;
         public string ProjectName;
         public int EmployeeID;
         public int ProjectID;
         // Methods to write the queries and execute.
-        
 
         // Insert Working Report into the database.
         public void SaveReport()
@@ -38,7 +37,7 @@ namespace C_SWInternPerformance.Models
                     command.Parameters.Add("@pID", SqlDbType.Int).Value = this.ProjectID;
                     command.Parameters.Add("@eID", SqlDbType.Int).Value = this.EmployeeID;
                     command.Parameters.Add("@wDate", SqlDbType.Date).Value = this.Date;
-                    command.Parameters.Add("@wHour", SqlDbType.Real).Value = this.WorkingTime;
+                    command.Parameters.Add("@wHour", SqlDbType.Float).Value = this.WorkingTime;
                     command.Parameters.Add("@wDetail", SqlDbType.NVarChar).Value = this.Remark;
                     command.ExecuteNonQuery();
                 }

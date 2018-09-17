@@ -15,15 +15,8 @@ namespace C_SWInternPerformance.Presenters
         public PProjectAssign(IProjectAssign view) => this.vAssign = view;
         public PProjectAssign() { }
 
-        // A simpler list for the combobox.
-        public BindingList<ProjectsData> GetProjects()
-        {
-            ProjectAssign project = new ProjectAssign();
-            return project.ProjectList();
-        }
-
         // This list contains more data than the other lists. For use in constructing from listview and methods interacting with SQL database.
-         public BindingList<ProjectAssignData> AssignList()
+        public BindingList<ProjectAssignData> AssignList()
         {
             ProjectAssign project = new ProjectAssign();
             return project.AssignList();

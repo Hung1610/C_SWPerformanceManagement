@@ -46,7 +46,7 @@ namespace C_SWInternPerformance.Presenters
                 EndDate = vProject.EndDate,
                 Remark = vProject.Remark
             };
-            if (project.SearchID(ID) < 0)
+            if (ID == -1)
             {
                 project.AddProject();
                 return 0;
@@ -58,7 +58,7 @@ namespace C_SWInternPerformance.Presenters
                 return 1;
             }
         }
-        public (string pInfo, string cName, string cInfo, string remark, DateTime start, DateTime end) GetProject(int ID)
+        public (string pName, string pInfo, string cName, string cInfo, string remark, DateTime start, DateTime end) GetProject(int ID)
         {
             Projects project = new Projects();
             return project.GetProject(ID);

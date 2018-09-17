@@ -152,22 +152,28 @@
             // 
             // assignButton
             // 
+            this.assignButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.assignButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.assignButton.Image = global::C_SWInternPerformance.Properties.Resources.add_song__1_;
             this.assignButton.Location = new System.Drawing.Point(485, 26);
             this.assignButton.Name = "assignButton";
             this.assignButton.Size = new System.Drawing.Size(106, 43);
             this.assignButton.TabIndex = 17;
             this.assignButton.Text = "Assign";
-            this.assignButton.UseVisualStyleBackColor = true;
+            this.assignButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.assignButton.UseVisualStyleBackColor = false;
             this.assignButton.Click += new System.EventHandler(this.AssignButton_Click);
             // 
             // closeButton
             // 
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.closeButton.Location = new System.Drawing.Point(485, 70);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(106, 43);
             this.closeButton.TabIndex = 17;
             this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // F201_ProjectAssignAdd

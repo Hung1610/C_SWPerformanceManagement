@@ -33,13 +33,58 @@ namespace C_SWInternPerformance
             }
         }
         #endregion
-        
+
+        // This region sets up textbox watermark.
+        #region Setting up Watermark for the textboxes
+        private void Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void passTxt_Enter(object sender, EventArgs e)
+        {
+            if (passTxt.Text == "Password")
+            {
+                passTxt.Text = "";
+                passTxt.ForeColor = Color.Black;
+                passTxt.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void userTxt_Enter(object sender, EventArgs e)
+        {
+            if (userTxt.Text == "Enter email")
+            {
+                userTxt.Text = "";
+                userTxt.ForeColor = Color.Black;
+            }
+        }
+
+        private void userTxt_Leave(object sender, EventArgs e)
+        {
+            if (userTxt.Text == "")
+            {
+                userTxt.Text = "Enter email";
+                userTxt.ForeColor = Color.Silver;
+            }
+        }
+
+        private void passTxt_Leave(object sender, EventArgs e)
+        {
+            if (passTxt.Text == "")
+            {
+                passTxt.Text = "Password";
+                passTxt.UseSystemPasswordChar = false;
+                passTxt.ForeColor = Color.Silver;
+            }
+        }
+        #endregion
+
         // Initilize UI components along with some data.
         public F000_Login()
         {
             LoginP = new PLogin(this);
             InitializeComponent();
-            passTxt.UseSystemPasswordChar = true;
             this.ControlBox = false;
         }
 
@@ -63,9 +108,6 @@ namespace C_SWInternPerformance
         }
 
         // Close button.
-        private void Close_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
     }
 }

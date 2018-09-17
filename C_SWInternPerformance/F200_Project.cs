@@ -14,18 +14,44 @@ namespace C_SWInternPerformance
 {
     public partial class F200_Project : Form, IProjects
     {
+        // ID taken from main.
+        int editID = -1;
         // Declare presenter.
         private PProjects pProject;
         //
         BindingList<ProjectsData> projectList;
 
-        // Initialize UI components along with some data.
+        // Initialize UI components along with some data. Create Project form.
         public F200_Project()
         {
             this.ControlBox = false;
             InitializeComponent();
             pProject = new PProjects(this);
             projectList = pProject.ProjectList();
+            saveButton.Text = "Create";
+        }
+        // Initialize UI components along with some data. Edit Project form.
+        public F200_Project(int eID)
+        {
+            this.ControlBox = false;
+            InitializeComponent();
+            editID = eID;
+            pProject = new PProjects(this);
+            projectList = pProject.ProjectList();
+            saveButton.Text = "Save";
+            labelTitle.Text = "Edit Project";
+            labelProjectID.Visible = true;
+            txtEditID.Text = editID.ToString();
+            txtEditID.Visible = true;
+            // Populate the form with current Project to edit.
+            var project = pProject.GetProject(eID);
+            projectNameTxt.Text = project.pName;
+            projectInfoTxt.Text = project.pInfo;
+            cusNameTxt.Text = project.cName;
+            cusInfoTxt.Text = project.cInfo;
+            remarkRichTxt.Text = project.remark;
+            startDatePick.Value = project.start;
+            endDatePick.Value = project.end;
         }
 
         // This region implements IProjects elements.
@@ -84,8 +110,7 @@ namespace C_SWInternPerformance
         // Create/Save button.
         private void CreateSave_Click(object sender, EventArgs e)
         {
-            int foundID = pProject.ListSearch(this.ProjectName, projectList);
-            if (foundID >= 0)
+            if (editID != -1)
             {
                 DialogResult result = MessageBox.Show("Update this project ?",
                                                     "Executing Query",
@@ -93,7 +118,7 @@ namespace C_SWInternPerformance
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    pProject.Save(foundID);
+                    pProject.Save(editID);
                     MessageBox.Show("Project Updated.");
                 }
             }
@@ -105,7 +130,7 @@ namespace C_SWInternPerformance
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    pProject.Save(foundID);
+                    pProject.Save(editID);
                     MessageBox.Show("New project Created.");
                 }
             }

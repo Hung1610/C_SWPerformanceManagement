@@ -58,6 +58,11 @@
             // 
             this.workReportButton.BackColor = System.Drawing.Color.Gold;
             this.workReportButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.workReportButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.workReportButton.FlatAppearance.BorderSize = 2;
+            this.workReportButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.workReportButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.workReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workReportButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workReportButton.Location = new System.Drawing.Point(3, 3);
             this.workReportButton.Name = "workReportButton";
@@ -71,6 +76,11 @@
             // 
             this.addProjectButton.BackColor = System.Drawing.Color.Gold;
             this.addProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addProjectButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.addProjectButton.FlatAppearance.BorderSize = 2;
+            this.addProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.addProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.addProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProjectButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addProjectButton.Location = new System.Drawing.Point(226, 3);
             this.addProjectButton.Name = "addProjectButton";
@@ -84,6 +94,11 @@
             // 
             this.addEmployeeButton.BackColor = System.Drawing.Color.Gold;
             this.addEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addEmployeeButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.addEmployeeButton.FlatAppearance.BorderSize = 2;
+            this.addEmployeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.addEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.addEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmployeeButton.Location = new System.Drawing.Point(449, 3);
             this.addEmployeeButton.Name = "addEmployeeButton";
@@ -97,6 +112,11 @@
             // 
             this.assignButton.BackColor = System.Drawing.Color.Gold;
             this.assignButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.assignButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.assignButton.FlatAppearance.BorderSize = 2;
+            this.assignButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.assignButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.assignButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.assignButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignButton.Location = new System.Drawing.Point(672, 3);
             this.assignButton.Name = "assignButton";
@@ -110,6 +130,11 @@
             // 
             this.updateSkillButton.BackColor = System.Drawing.Color.Gold;
             this.updateSkillButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateSkillButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.updateSkillButton.FlatAppearance.BorderSize = 2;
+            this.updateSkillButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.updateSkillButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.updateSkillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateSkillButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateSkillButton.Location = new System.Drawing.Point(3, 113);
             this.updateSkillButton.Name = "updateSkillButton";
@@ -123,6 +148,11 @@
             // 
             this.updateProjectButton.BackColor = System.Drawing.Color.Gold;
             this.updateProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateProjectButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.updateProjectButton.FlatAppearance.BorderSize = 2;
+            this.updateProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.updateProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.updateProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateProjectButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateProjectButton.Location = new System.Drawing.Point(226, 113);
             this.updateProjectButton.Name = "updateProjectButton";
@@ -136,6 +166,11 @@
             // 
             this.updateEmployeeButton.BackColor = System.Drawing.Color.Gold;
             this.updateEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateEmployeeButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.updateEmployeeButton.FlatAppearance.BorderSize = 2;
+            this.updateEmployeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.updateEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.updateEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateEmployeeButton.Location = new System.Drawing.Point(449, 113);
             this.updateEmployeeButton.Name = "updateEmployeeButton";
@@ -149,6 +184,11 @@
             // 
             this.profileButton.BackColor = System.Drawing.Color.Gold;
             this.profileButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.profileButton.FlatAppearance.BorderSize = 2;
+            this.profileButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.profileButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.profileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profileButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profileButton.Location = new System.Drawing.Point(672, 113);
             this.profileButton.Name = "profileButton";
@@ -189,7 +229,6 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(302, 328);
@@ -205,6 +244,7 @@
             this.projectBox.Name = "projectBox";
             this.projectBox.Size = new System.Drawing.Size(151, 24);
             this.projectBox.TabIndex = 12;
+            this.projectBox.SelectedIndexChanged += new System.EventHandler(this.projectBox_SelectedIndexChanged);
             // 
             // timeBox
             // 
@@ -221,6 +261,7 @@
             this.fromDatePick.Name = "fromDatePick";
             this.fromDatePick.Size = new System.Drawing.Size(200, 22);
             this.fromDatePick.TabIndex = 13;
+            this.fromDatePick.ValueChanged += new System.EventHandler(this.fromDatePick_ValueChanged);
             // 
             // toDatePick
             // 
@@ -228,11 +269,12 @@
             this.toDatePick.Name = "toDatePick";
             this.toDatePick.Size = new System.Drawing.Size(200, 22);
             this.toDatePick.TabIndex = 13;
+            this.toDatePick.ValueChanged += new System.EventHandler(this.toDatePick_ValueChanged);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -261,7 +303,7 @@
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(935, 44);
+            this.label5.Location = new System.Drawing.Point(957, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 25);
             this.label5.TabIndex = 16;
@@ -275,7 +317,7 @@
             this.userLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userLabel.ForeColor = System.Drawing.Color.OldLace;
-            this.userLabel.Location = new System.Drawing.Point(1059, 42);
+            this.userLabel.Location = new System.Drawing.Point(1081, 7);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(108, 27);
             this.userLabel.TabIndex = 16;
@@ -286,9 +328,9 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::C_SWInternPerformance.Properties.Resources.softworld_logo_footer;
-            this.pictureBox2.Location = new System.Drawing.Point(940, 100);
+            this.pictureBox2.Location = new System.Drawing.Point(943, 47);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(352, 246);
+            this.pictureBox2.Size = new System.Drawing.Size(349, 242);
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 
@@ -296,13 +338,20 @@
             // 
             this.mainData.AllowUserToAddRows = false;
             this.mainData.AllowUserToDeleteRows = false;
+            this.mainData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.mainData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.mainData.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.mainData.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.mainData.Location = new System.Drawing.Point(0, 356);
             this.mainData.Name = "mainData";
             this.mainData.RowTemplate.Height = 24;
             this.mainData.Size = new System.Drawing.Size(1304, 245);
             this.mainData.TabIndex = 18;
+            this.mainData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainData_CellClick);
+            this.mainData.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainData_RowLeave);
+            this.mainData.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.mainData_RowValidating);
             // 
             // F001_Main
             // 
@@ -323,7 +372,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "F001_Main";
             this.Text = "F001_Main";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmData_FormClosed);

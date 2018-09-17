@@ -15,13 +15,6 @@ namespace C_SWInternPerformance.Presenters
         // Get data from view.
         public PProjectReport(IProjectReport view) => this.vReport = view;
 
-        // A simpler list for the combobox.
-        public BindingList<ProjectsData> GetProjects()
-        {
-            ProjectAssign project = new ProjectAssign();
-            return project.ProjectList();
-        }
-
         // Calling saveReport method from Models to update the database.
         public void Submit()
         {
