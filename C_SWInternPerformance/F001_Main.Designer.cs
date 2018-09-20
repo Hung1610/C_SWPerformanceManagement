@@ -63,7 +63,7 @@
             this.workReportButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.workReportButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.workReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.workReportButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.workReportButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workReportButton.Location = new System.Drawing.Point(3, 3);
             this.workReportButton.Name = "workReportButton";
             this.workReportButton.Size = new System.Drawing.Size(217, 104);
@@ -81,7 +81,7 @@
             this.addProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.addProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.addProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addProjectButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addProjectButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addProjectButton.Location = new System.Drawing.Point(226, 3);
             this.addProjectButton.Name = "addProjectButton";
             this.addProjectButton.Size = new System.Drawing.Size(217, 104);
@@ -99,7 +99,7 @@
             this.addEmployeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.addEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.addEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmployeeButton.Location = new System.Drawing.Point(449, 3);
             this.addEmployeeButton.Name = "addEmployeeButton";
             this.addEmployeeButton.Size = new System.Drawing.Size(217, 104);
@@ -117,7 +117,7 @@
             this.assignButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.assignButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.assignButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.assignButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignButton.Location = new System.Drawing.Point(672, 3);
             this.assignButton.Name = "assignButton";
             this.assignButton.Size = new System.Drawing.Size(217, 104);
@@ -135,7 +135,7 @@
             this.updateSkillButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateSkillButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.updateSkillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateSkillButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateSkillButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateSkillButton.Location = new System.Drawing.Point(3, 113);
             this.updateSkillButton.Name = "updateSkillButton";
             this.updateSkillButton.Size = new System.Drawing.Size(217, 104);
@@ -153,7 +153,7 @@
             this.updateProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.updateProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateProjectButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateProjectButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateProjectButton.Location = new System.Drawing.Point(226, 113);
             this.updateProjectButton.Name = "updateProjectButton";
             this.updateProjectButton.Size = new System.Drawing.Size(217, 104);
@@ -171,7 +171,7 @@
             this.updateEmployeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.updateEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateEmployeeButton.Location = new System.Drawing.Point(449, 113);
             this.updateEmployeeButton.Name = "updateEmployeeButton";
             this.updateEmployeeButton.Size = new System.Drawing.Size(217, 104);
@@ -189,13 +189,14 @@
             this.profileButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.profileButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.profileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.profileButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profileButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profileButton.Location = new System.Drawing.Point(672, 113);
             this.profileButton.Name = "profileButton";
             this.profileButton.Size = new System.Drawing.Size(217, 104);
             this.profileButton.TabIndex = 7;
             this.profileButton.Text = "Change My Profile";
             this.profileButton.UseVisualStyleBackColor = false;
+            this.profileButton.Click += new System.EventHandler(this.profileButton_Click);
             // 
             // label1
             // 
@@ -325,6 +326,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::C_SWInternPerformance.Properties.Resources.softworld_logo_footer;
             this.pictureBox2.Location = new System.Drawing.Point(955, 44);
             this.pictureBox2.Name = "pictureBox2";

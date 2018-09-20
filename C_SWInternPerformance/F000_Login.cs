@@ -37,11 +37,6 @@ namespace C_SWInternPerformance
         // This region sets up textbox watermark.
         #region Setting up Watermark for the textboxes
 
-        // Close button.
-        private void Close_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void passTxt_Enter(object sender, EventArgs e)
         {
@@ -102,11 +97,16 @@ namespace C_SWInternPerformance
             }
             else
             {
-                string Name = LoginP.GetUser(ID);
-                F001_Main main = new F001_Main(Name,ID);
+                F001_Main main = new F001_Main(ID);
                 main.Show();
                 this.Close();
             }
+        }
+
+        // Close button.
+        private void Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

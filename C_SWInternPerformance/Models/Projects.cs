@@ -22,8 +22,7 @@ namespace C_SWInternPerformance.Models
         public DateTime StartDate;
         public DateTime EndDate;
         // Methods to write the queries and execute.
-
-
+        //
         // INSERT a new project into the database.
         public void AddProject()
         {

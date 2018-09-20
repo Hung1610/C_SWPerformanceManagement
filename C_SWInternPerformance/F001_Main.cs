@@ -38,13 +38,13 @@ namespace C_SWInternPerformance
         }
 
         // Initialize components and some data.
-        public F001_Main(string user,int ID)
+        public F001_Main(int ID)
         {
             InitializeComponent();
             Console.WriteLine(ID);
-            UserID = ID;
-            userLabel.Text = user;
             pMain = new PMain(this);
+            UserID = ID;
+            userLabel.Text = pMain.GetUser(ID);
             // Populate the lists.
             projects = pMain.GetProjects();
             performances = pMain.GetPerformances();
@@ -323,5 +323,10 @@ namespace C_SWInternPerformance
             f201.Show();
         }
 
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            F301_Profile f301 = new F301_Profile(UserID);
+            f301.Show();
+        }
     }
 }

@@ -71,6 +71,7 @@
     <Compile Include="Data\LevelData.cs" />
     <Compile Include="Data\PerformanceData.cs" />
     <Compile Include="Data\PositionData.cs" />
+    <Compile Include="Data\ProfileData.cs" />
     <Compile Include="Data\RoleData.cs" />
     <Compile Include="F001_Main.cs">
       <SubType>Form</SubType>
@@ -114,20 +115,35 @@
     <Compile Include="F300_Employee.Designer.cs">
       <DependentUpon>F300_Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="F301_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F301_Profile.Designer.cs">
+      <DependentUpon>F301_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F500_SkillManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F500_SkillManage.Designer.cs">
+      <DependentUpon>F500_SkillManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Main.cs" />
+    <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\ProjectAssign.cs" />
     <Compile Include="Models\Projects.cs" />
     <Compile Include="Presenters\BasePresenter.cs" />
     <Compile Include="Data\EmployeeData.cs" />
     <Compile Include="Presenters\IEmployee.cs" />
     <Compile Include="Presenters\IMain.cs" />
+    <Compile Include="Presenters\IProfile.cs" />
     <Compile Include="Presenters\IProjectAssign.cs" />
     <Compile Include="Presenters\IProjects.cs" />
     <Compile Include="Presenters\PEmployee.cs" />
     <Compile Include="Presenters\PMain.cs" />
+    <Compile Include="Presenters\PProfile.cs" />
     <Compile Include="Presenters\PProjectAssign.cs" />
     <Compile Include="Data\ProjectAssignData.cs" />
     <Compile Include="Models\ProjectReport.cs" />
@@ -159,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F300_Employee.resx">
       <DependentUpon>F300_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F301_Profile.resx">
+      <DependentUpon>F301_Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

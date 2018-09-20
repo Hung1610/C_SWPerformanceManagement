@@ -55,7 +55,6 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
@@ -90,7 +89,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 3);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 25);
             this.label1.TabIndex = 0;
@@ -98,7 +97,7 @@
             // 
             // projectNameTxt
             // 
-            this.projectNameTxt.Location = new System.Drawing.Point(191, 6);
+            this.projectNameTxt.Location = new System.Drawing.Point(187, 3);
             this.projectNameTxt.Name = "projectNameTxt";
             this.projectNameTxt.Size = new System.Drawing.Size(315, 22);
             this.projectNameTxt.TabIndex = 1;
@@ -108,7 +107,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 52);
+            this.label2.Location = new System.Drawing.Point(3, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 25);
             this.label2.TabIndex = 0;
@@ -118,7 +117,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 101);
+            this.label3.Location = new System.Drawing.Point(3, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(149, 25);
             this.label3.TabIndex = 0;
@@ -128,7 +127,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 150);
+            this.label4.Location = new System.Drawing.Point(3, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 25);
             this.label4.TabIndex = 0;
@@ -138,7 +137,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 199);
+            this.label5.Location = new System.Drawing.Point(3, 196);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 25);
             this.label5.TabIndex = 0;
@@ -148,7 +147,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 248);
+            this.label6.Location = new System.Drawing.Point(3, 245);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 25);
             this.label6.TabIndex = 0;
@@ -158,7 +157,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 297);
+            this.label7.Location = new System.Drawing.Point(3, 294);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 25);
             this.label7.TabIndex = 0;
@@ -166,14 +165,14 @@
             // 
             // projectInfoTxt
             // 
-            this.projectInfoTxt.Location = new System.Drawing.Point(191, 55);
+            this.projectInfoTxt.Location = new System.Drawing.Point(187, 52);
             this.projectInfoTxt.Name = "projectInfoTxt";
             this.projectInfoTxt.Size = new System.Drawing.Size(315, 22);
             this.projectInfoTxt.TabIndex = 1;
             // 
             // cusNameTxt
             // 
-            this.cusNameTxt.Location = new System.Drawing.Point(191, 104);
+            this.cusNameTxt.Location = new System.Drawing.Point(187, 101);
             this.cusNameTxt.Name = "cusNameTxt";
             this.cusNameTxt.Size = new System.Drawing.Size(315, 22);
             this.cusNameTxt.TabIndex = 1;
@@ -181,21 +180,21 @@
             // cusInfoTxt
             // 
             this.cusInfoTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cusInfoTxt.Location = new System.Drawing.Point(191, 153);
+            this.cusInfoTxt.Location = new System.Drawing.Point(187, 150);
             this.cusInfoTxt.Name = "cusInfoTxt";
-            this.cusInfoTxt.Size = new System.Drawing.Size(541, 22);
+            this.cusInfoTxt.Size = new System.Drawing.Size(548, 22);
             this.cusInfoTxt.TabIndex = 1;
             // 
             // startDatePick
             // 
-            this.startDatePick.Location = new System.Drawing.Point(191, 202);
+            this.startDatePick.Location = new System.Drawing.Point(187, 199);
             this.startDatePick.Name = "startDatePick";
             this.startDatePick.Size = new System.Drawing.Size(192, 22);
             this.startDatePick.TabIndex = 2;
             // 
             // endDatePick
             // 
-            this.endDatePick.Location = new System.Drawing.Point(191, 251);
+            this.endDatePick.Location = new System.Drawing.Point(187, 248);
             this.endDatePick.Name = "endDatePick";
             this.endDatePick.Size = new System.Drawing.Size(192, 22);
             this.endDatePick.TabIndex = 3;
@@ -203,9 +202,9 @@
             // remarkRichTxt
             // 
             this.remarkRichTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.remarkRichTxt.Location = new System.Drawing.Point(191, 300);
+            this.remarkRichTxt.Location = new System.Drawing.Point(187, 297);
             this.remarkRichTxt.Name = "remarkRichTxt";
-            this.remarkRichTxt.Size = new System.Drawing.Size(541, 64);
+            this.remarkRichTxt.Size = new System.Drawing.Size(548, 70);
             this.remarkRichTxt.TabIndex = 4;
             this.remarkRichTxt.Text = "";
             // 

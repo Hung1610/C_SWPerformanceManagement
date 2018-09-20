@@ -67,7 +67,6 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.47826F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.52174F));
@@ -120,7 +119,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 3);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 25);
             this.label1.TabIndex = 1;
@@ -130,7 +129,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 37);
+            this.label2.Location = new System.Drawing.Point(3, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 25);
             this.label2.TabIndex = 1;
@@ -140,7 +139,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 71);
+            this.label3.Location = new System.Drawing.Point(3, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 25);
             this.label3.TabIndex = 1;
@@ -150,7 +149,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 105);
+            this.label4.Location = new System.Drawing.Point(3, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 25);
             this.label4.TabIndex = 1;
@@ -160,7 +159,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 139);
+            this.label5.Location = new System.Drawing.Point(3, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 25);
             this.label5.TabIndex = 1;
@@ -170,7 +169,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 173);
+            this.label6.Location = new System.Drawing.Point(3, 170);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 25);
             this.label6.TabIndex = 1;
@@ -180,7 +179,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 207);
+            this.label7.Location = new System.Drawing.Point(3, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 25);
             this.label7.TabIndex = 1;
@@ -190,7 +189,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 241);
+            this.label8.Location = new System.Drawing.Point(3, 238);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 25);
             this.label8.TabIndex = 1;
@@ -200,7 +199,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 275);
+            this.label9.Location = new System.Drawing.Point(3, 272);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 25);
             this.label9.TabIndex = 1;
@@ -210,7 +209,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 309);
+            this.label10.Location = new System.Drawing.Point(3, 306);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 25);
             this.label10.TabIndex = 1;
@@ -220,7 +219,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 343);
+            this.label11.Location = new System.Drawing.Point(3, 340);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 25);
             this.label11.TabIndex = 1;
@@ -230,7 +229,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 377);
+            this.label12.Location = new System.Drawing.Point(3, 374);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 25);
             this.label12.TabIndex = 1;
@@ -240,7 +239,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(6, 411);
+            this.label13.Location = new System.Drawing.Point(3, 408);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(79, 25);
             this.label13.TabIndex = 1;
@@ -249,39 +248,39 @@
             // nameTxt
             // 
             this.nameTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nameTxt.Location = new System.Drawing.Point(225, 6);
+            this.nameTxt.Location = new System.Drawing.Point(223, 3);
             this.nameTxt.Name = "nameTxt";
-            this.nameTxt.Size = new System.Drawing.Size(276, 22);
+            this.nameTxt.Size = new System.Drawing.Size(281, 22);
             this.nameTxt.TabIndex = 2;
             // 
             // posBox
             // 
             this.posBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.posBox.FormattingEnabled = true;
-            this.posBox.Location = new System.Drawing.Point(225, 40);
+            this.posBox.Location = new System.Drawing.Point(223, 37);
             this.posBox.Name = "posBox";
-            this.posBox.Size = new System.Drawing.Size(276, 24);
+            this.posBox.Size = new System.Drawing.Size(281, 24);
             this.posBox.TabIndex = 3;
             // 
             // braBox
             // 
             this.braBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.braBox.FormattingEnabled = true;
-            this.braBox.Location = new System.Drawing.Point(225, 74);
+            this.braBox.Location = new System.Drawing.Point(223, 71);
             this.braBox.Name = "braBox";
-            this.braBox.Size = new System.Drawing.Size(276, 24);
+            this.braBox.Size = new System.Drawing.Size(281, 24);
             this.braBox.TabIndex = 4;
             // 
             // startDatePick
             // 
-            this.startDatePick.Location = new System.Drawing.Point(225, 108);
+            this.startDatePick.Location = new System.Drawing.Point(223, 105);
             this.startDatePick.Name = "startDatePick";
             this.startDatePick.Size = new System.Drawing.Size(262, 22);
             this.startDatePick.TabIndex = 5;
             // 
             // endDatePick
             // 
-            this.endDatePick.Location = new System.Drawing.Point(225, 142);
+            this.endDatePick.Location = new System.Drawing.Point(223, 139);
             this.endDatePick.Name = "endDatePick";
             this.endDatePick.Size = new System.Drawing.Size(262, 22);
             this.endDatePick.TabIndex = 5;
@@ -289,30 +288,30 @@
             // emailTxt
             // 
             this.emailTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.emailTxt.Location = new System.Drawing.Point(225, 176);
+            this.emailTxt.Location = new System.Drawing.Point(223, 173);
             this.emailTxt.Name = "emailTxt";
-            this.emailTxt.Size = new System.Drawing.Size(276, 22);
+            this.emailTxt.Size = new System.Drawing.Size(281, 22);
             this.emailTxt.TabIndex = 6;
             // 
             // mobileTxt
             // 
             this.mobileTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mobileTxt.Location = new System.Drawing.Point(225, 210);
+            this.mobileTxt.Location = new System.Drawing.Point(223, 207);
             this.mobileTxt.Name = "mobileTxt";
-            this.mobileTxt.Size = new System.Drawing.Size(276, 22);
+            this.mobileTxt.Size = new System.Drawing.Size(281, 22);
             this.mobileTxt.TabIndex = 7;
             // 
             // addressTxt
             // 
             this.addressTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addressTxt.Location = new System.Drawing.Point(225, 244);
+            this.addressTxt.Location = new System.Drawing.Point(223, 241);
             this.addressTxt.Name = "addressTxt";
-            this.addressTxt.Size = new System.Drawing.Size(276, 22);
+            this.addressTxt.Size = new System.Drawing.Size(281, 22);
             this.addressTxt.TabIndex = 8;
             // 
             // birthDatePick
             // 
-            this.birthDatePick.Location = new System.Drawing.Point(225, 278);
+            this.birthDatePick.Location = new System.Drawing.Point(223, 275);
             this.birthDatePick.Name = "birthDatePick";
             this.birthDatePick.Size = new System.Drawing.Size(262, 22);
             this.birthDatePick.TabIndex = 9;
@@ -321,23 +320,23 @@
             // 
             this.lvlBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvlBox.FormattingEnabled = true;
-            this.lvlBox.Location = new System.Drawing.Point(225, 312);
+            this.lvlBox.Location = new System.Drawing.Point(223, 309);
             this.lvlBox.Name = "lvlBox";
-            this.lvlBox.Size = new System.Drawing.Size(276, 24);
+            this.lvlBox.Size = new System.Drawing.Size(281, 24);
             this.lvlBox.TabIndex = 10;
             // 
             // desireTxt
             // 
             this.desireTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.desireTxt.Location = new System.Drawing.Point(225, 346);
+            this.desireTxt.Location = new System.Drawing.Point(223, 343);
             this.desireTxt.Name = "desireTxt";
-            this.desireTxt.Size = new System.Drawing.Size(276, 22);
+            this.desireTxt.Size = new System.Drawing.Size(281, 22);
             this.desireTxt.TabIndex = 11;
             // 
             // delFlagCheck
             // 
             this.delFlagCheck.AutoSize = true;
-            this.delFlagCheck.Location = new System.Drawing.Point(225, 380);
+            this.delFlagCheck.Location = new System.Drawing.Point(223, 377);
             this.delFlagCheck.Name = "delFlagCheck";
             this.delFlagCheck.Size = new System.Drawing.Size(18, 17);
             this.delFlagCheck.TabIndex = 12;
@@ -346,9 +345,9 @@
             // remarkRichTxt
             // 
             this.remarkRichTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.remarkRichTxt.Location = new System.Drawing.Point(225, 414);
+            this.remarkRichTxt.Location = new System.Drawing.Point(223, 411);
             this.remarkRichTxt.Name = "remarkRichTxt";
-            this.remarkRichTxt.Size = new System.Drawing.Size(276, 59);
+            this.remarkRichTxt.Size = new System.Drawing.Size(281, 65);
             this.remarkRichTxt.TabIndex = 13;
             this.remarkRichTxt.Text = "";
             // 
