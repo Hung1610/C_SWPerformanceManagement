@@ -29,6 +29,57 @@ namespace C_SWInternPerformance.Models
         public int Del;
         public string Remark;
         // SQL queries.
+        //
+        // Get ONE employee data based on input ID.
+        public DetailedEmployeeData GetEmployee(int ID)
+        {
+            using (SqlConnection conn = new SqlConnection(conStr))
+            {
+                conn.Open();
+                string sql = "SELECT * " +
+                    "FROM [300TB_Employee] " +
+                    "WHERE EmployeeID = " + ID;
+                Console.WriteLine(sql);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.HasRows && reader.Read())
+                    {
+                        DateTime end = new DateTime();
+                        if (!reader.IsDBNull(5))
+                        {
+                            end = reader.GetDateTime(5);
+                        }
+                        else
+                        {
+                            end = DateTime.Now;
+                        }
+                        DetailedEmployeeData employee = new DetailedEmployeeData
+                        {
+                            EmployeeID = ID,
+                            EmployeeName = reader.GetString(1),
+                            PositionID = reader.GetInt32(2),
+                            BranchID = reader.GetInt32(3),
+                            StartDate = reader.GetDateTime(4),
+                            EndDate = end,
+                            Email = reader.GetString(6),
+                            Mobile = reader.GetString(7),
+                            Address = reader.GetString(8),
+                            Birthday = reader.GetDateTime(9),
+                            LevelID = reader.GetInt32(10),
+                            Desire = reader.GetString(11),
+                            Del =(int) reader.GetByte(12),
+                            Remark = reader.GetString(13)
+                        };
+                        return employee;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+        }
         // Get a list of Positions.
         public BindingList<PositionData> PositionList()
         {
@@ -58,6 +109,7 @@ namespace C_SWInternPerformance.Models
                 return list;
             }
         }
+
         // List of branches.
         public BindingList<BranchData> BranchList()
         {
@@ -87,6 +139,7 @@ namespace C_SWInternPerformance.Models
                 return list;
             }
         }
+
         // List of levels.
         public BindingList<LevelData> LevelList()
         {
@@ -138,7 +191,7 @@ namespace C_SWInternPerformance.Models
                     "Desire = @desire, " +
                     "DelFlag = @del, " +
                     "Remark = @remark " +
-                    "WHERE ProjectID = @proID";
+                    "WHERE EmployeeID = @proID";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {

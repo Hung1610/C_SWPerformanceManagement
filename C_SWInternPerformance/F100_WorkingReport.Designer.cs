@@ -113,7 +113,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.submitButton.BackColor = System.Drawing.Color.Gold;
             this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.Location = new System.Drawing.Point(12, 377);
             this.submitButton.Name = "submitButton";
@@ -125,7 +125,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.closeButton.BackColor = System.Drawing.Color.Gold;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.Location = new System.Drawing.Point(373, 377);
             this.closeButton.Name = "closeButton";
@@ -139,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.Gold;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(567, 450);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.submitButton);

@@ -36,6 +36,8 @@ namespace C_SWInternPerformance
 
         // This region sets up textbox watermark.
         #region Setting up Watermark for the textboxes
+
+        // Close button.
         private void Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -106,8 +108,5 @@ namespace C_SWInternPerformance
                 this.Close();
             }
         }
-
-        // Close button.
-
     }
 }

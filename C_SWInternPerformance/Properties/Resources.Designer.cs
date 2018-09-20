@@ -73,6 +73,16 @@ namespace C_SWInternPerformance.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login {
+            get {
+                object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap refresh {
             get {
                 object obj = ResourceManager.GetObject("refresh", resourceCulture);
@@ -116,6 +126,16 @@ namespace C_SWInternPerformance.Properties {
         internal static System.Drawing.Bitmap softworld_logo_footer {
             get {
                 object obj = ResourceManager.GetObject("softworld_logo_footer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_512 {
+            get {
+                object obj = ResourceManager.GetObject("user-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

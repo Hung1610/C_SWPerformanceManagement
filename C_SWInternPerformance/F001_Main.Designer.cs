@@ -299,11 +299,10 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(957, 9);
+            this.label5.Location = new System.Drawing.Point(29, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 25);
             this.label5.TabIndex = 16;
@@ -311,13 +310,12 @@
             // 
             // userLabel
             // 
-            this.userLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.userLabel.AutoSize = true;
-            this.userLabel.BackColor = System.Drawing.Color.DimGray;
+            this.userLabel.BackColor = System.Drawing.Color.Black;
             this.userLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userLabel.ForeColor = System.Drawing.Color.OldLace;
-            this.userLabel.Location = new System.Drawing.Point(1081, 7);
+            this.userLabel.Location = new System.Drawing.Point(153, 7);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(108, 27);
             this.userLabel.TabIndex = 16;
@@ -328,9 +326,9 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::C_SWInternPerformance.Properties.Resources.softworld_logo_footer;
-            this.pictureBox2.Location = new System.Drawing.Point(943, 47);
+            this.pictureBox2.Location = new System.Drawing.Point(955, 44);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(349, 242);
+            this.pictureBox2.Size = new System.Drawing.Size(349, 230);
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 

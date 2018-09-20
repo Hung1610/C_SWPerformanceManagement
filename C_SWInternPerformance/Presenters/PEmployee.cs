@@ -14,7 +14,12 @@ namespace C_SWInternPerformance.Presenters
         private IEmployee vEmployee;
         public PEmployee(IEmployee view) => this.vEmployee = view;
         public PEmployee() { }
-
+        // Get ONE single employee based on input ID.
+        public DetailedEmployeeData GetEmployee(int ID)
+        {
+            Employee emp = new Employee();
+            return emp.GetEmployee(ID);
+        }
         // Get lists.
         // Get a list of Position for the combobox.
         public BindingList<PositionData> GetPositions()

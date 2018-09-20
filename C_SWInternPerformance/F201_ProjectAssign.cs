@@ -224,7 +224,7 @@ namespace C_SWInternPerformance
         // List to store deleted data.
         List<int> DeleteList = new List<int>();
 
-        // Refresh function
+        // Refresh the form.
         private void RefreshForm()
         {
             pAssign = new PProjectAssign(this);

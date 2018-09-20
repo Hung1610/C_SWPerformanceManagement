@@ -52,7 +52,7 @@
             this.addressTxt = new System.Windows.Forms.TextBox();
             this.birthDatePick = new System.Windows.Forms.DateTimePicker();
             this.lvlBox = new System.Windows.Forms.ComboBox();
-            this.desireBox = new System.Windows.Forms.TextBox();
+            this.desireTxt = new System.Windows.Forms.TextBox();
             this.delFlagCheck = new System.Windows.Forms.CheckBox();
             this.remarkRichTxt = new System.Windows.Forms.RichTextBox();
             this.saveButton = new System.Windows.Forms.Button();
@@ -60,7 +60,9 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelEmpID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.panelTitle = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -92,10 +94,10 @@
             this.tableLayoutPanel1.Controls.Add(this.addressTxt, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.birthDatePick, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.lvlBox, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.desireBox, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.desireTxt, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.delFlagCheck, 1, 11);
             this.tableLayoutPanel1.Controls.Add(this.remarkRichTxt, 1, 12);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 94);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 108);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 13;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145408F));
@@ -251,7 +253,6 @@
             this.nameTxt.Name = "nameTxt";
             this.nameTxt.Size = new System.Drawing.Size(276, 22);
             this.nameTxt.TabIndex = 2;
-            this.nameTxt.TextChanged += new System.EventHandler(this.nameTxt_TextChanged);
             // 
             // posBox
             // 
@@ -325,13 +326,13 @@
             this.lvlBox.Size = new System.Drawing.Size(276, 24);
             this.lvlBox.TabIndex = 10;
             // 
-            // desireBox
+            // desireTxt
             // 
-            this.desireBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.desireBox.Location = new System.Drawing.Point(225, 346);
-            this.desireBox.Name = "desireBox";
-            this.desireBox.Size = new System.Drawing.Size(276, 22);
-            this.desireBox.TabIndex = 11;
+            this.desireTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.desireTxt.Location = new System.Drawing.Point(225, 346);
+            this.desireTxt.Name = "desireTxt";
+            this.desireTxt.Size = new System.Drawing.Size(276, 22);
+            this.desireTxt.TabIndex = 11;
             // 
             // delFlagCheck
             // 
@@ -353,31 +354,36 @@
             // 
             // saveButton
             // 
-            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(27, 593);
+            this.saveButton.BackColor = System.Drawing.Color.Gold;
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.ForeColor = System.Drawing.Color.Black;
+            this.saveButton.Location = new System.Drawing.Point(27, 615);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(176, 65);
+            this.saveButton.Size = new System.Drawing.Size(176, 43);
             this.saveButton.TabIndex = 14;
             this.saveButton.Text = "Create/Save";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.button1_Click);
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // closeButton
             // 
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.Location = new System.Drawing.Point(358, 593);
+            this.closeButton.BackColor = System.Drawing.Color.Gold;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.Color.Black;
+            this.closeButton.Location = new System.Drawing.Point(358, 615);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(176, 65);
+            this.closeButton.Size = new System.Drawing.Size(176, 43);
             this.closeButton.TabIndex = 14;
             this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(22, 9);
+            this.labelTitle.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelTitle.Location = new System.Drawing.Point(20, 9);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(325, 39);
             this.labelTitle.TabIndex = 15;
@@ -387,7 +393,8 @@
             // 
             this.labelEmpID.AutoSize = true;
             this.labelEmpID.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmpID.Location = new System.Drawing.Point(22, 48);
+            this.labelEmpID.ForeColor = System.Drawing.SystemColors.Info;
+            this.labelEmpID.Location = new System.Drawing.Point(20, 48);
             this.labelEmpID.Name = "labelEmpID";
             this.labelEmpID.Size = new System.Drawing.Size(153, 29);
             this.labelEmpID.TabIndex = 15;
@@ -396,31 +403,42 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(182, 52);
+            this.txtID.Location = new System.Drawing.Point(180, 52);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(57, 22);
             this.txtID.TabIndex = 16;
             this.txtID.Visible = false;
             // 
+            // panelTitle
+            // 
+            this.panelTitle.BackColor = System.Drawing.Color.Black;
+            this.panelTitle.Controls.Add(this.labelTitle);
+            this.panelTitle.Controls.Add(this.txtID);
+            this.panelTitle.Controls.Add(this.labelEmpID);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(561, 88);
+            this.panelTitle.TabIndex = 17;
+            // 
             // F300_Employee
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.Color.Gold;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(561, 670);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.labelEmpID);
-            this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.saveButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "F300_Employee";
             this.Text = "F300_Employee";
-            this.Load += new System.EventHandler(this.F300_Employee_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panelTitle.ResumeLayout(false);
+            this.panelTitle.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -450,7 +468,7 @@
         private System.Windows.Forms.TextBox addressTxt;
         private System.Windows.Forms.DateTimePicker birthDatePick;
         private System.Windows.Forms.ComboBox lvlBox;
-        private System.Windows.Forms.TextBox desireBox;
+        private System.Windows.Forms.TextBox desireTxt;
         private System.Windows.Forms.CheckBox delFlagCheck;
         private System.Windows.Forms.RichTextBox remarkRichTxt;
         private System.Windows.Forms.Button saveButton;
@@ -458,5 +476,6 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelEmpID;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Panel panelTitle;
     }
 }

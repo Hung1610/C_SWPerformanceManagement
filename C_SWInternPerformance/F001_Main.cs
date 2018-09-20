@@ -112,6 +112,25 @@ namespace C_SWInternPerformance
             
         }
 
+        // Refresh the form.
+        private void RefreshForm()
+        {
+            pMain = new PMain(this);
+            userLabel.Text = pMain.GetUser(UserID);
+            projectBox.SelectedIndex = 0;
+            timeBox.SelectedIndex = 0;
+            projects = pMain.GetProjects();
+            performances = pMain.GetPerformances();
+            projectBox.SelectedIndex = 0;
+            timeBox.SelectedIndex = 0;
+            mainData.DataSource = new BindingList<PerformanceData>(performances.OrderBy(x => x.ProjectName).ToList());
+        }
+        // Listen to refresh event from other forms.
+        private void RefreshRequest(object sender, EventArgs e)
+        {
+            this.RefreshForm();
+        }
+
         // Current filtered mainData DataSource.
         BindingList<PerformanceData> currentList;
         // Handles the timebox selection.
@@ -203,6 +222,7 @@ namespace C_SWInternPerformance
                 }
             }
             F300_Employee f300 = new F300_Employee();
+            f300.EmployeeRefresh += RefreshRequest;
             f300.Show();
         }
         // To Edit.
@@ -216,8 +236,16 @@ namespace C_SWInternPerformance
                     return;
                 }
             }
-            F300_Employee f300 = new F300_Employee();
-            f300.Show();
+            if (mainData.CurrentRow != null)
+            {
+                F300_Employee f300 = new F300_Employee(this.EmployeeID);
+                f300.EmployeeRefresh += RefreshRequest;
+                f300.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a row from the table.");
+            }
         }
 
         // Open Project form.
@@ -233,6 +261,7 @@ namespace C_SWInternPerformance
                 }
             }
             F200_Project f200 = new F200_Project();
+            f200.ProjectRefresh += RefreshRequest;
             f200.Show();
         }
         // To Edit.
@@ -249,6 +278,7 @@ namespace C_SWInternPerformance
             if (mainData.CurrentRow != null)
             {
                 F200_Project f200 = new F200_Project(this.ProjectID);
+                f200.ProjectRefresh += RefreshRequest;
                 f200.Show();
             }
             else

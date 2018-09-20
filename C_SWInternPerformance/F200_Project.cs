@@ -21,6 +21,10 @@ namespace C_SWInternPerformance
         //
         BindingList<ProjectsData> projectList;
 
+        // Events to refresh F001_Main.
+        public delegate void RefreshEventHandler(object sender, EventArgs e);
+        public event RefreshEventHandler ProjectRefresh;
+
         // Initialize UI components along with some data. Create Project form.
         public F200_Project()
         {
@@ -134,6 +138,7 @@ namespace C_SWInternPerformance
                     MessageBox.Show("New project Created.");
                 }
             }
+            ProjectRefresh?.Invoke(this, new EventArgs());
         }
 
         // Close button.
@@ -144,14 +149,6 @@ namespace C_SWInternPerformance
 
         private void ProjectNameTxt_TextChanged(object sender, EventArgs e)
         {
-            int foundID = pProject.ListSearch(this.ProjectName, projectList);
-            var project = pProject.GetProject(foundID);
-            projectInfoTxt.Text = project.pInfo;
-            cusNameTxt.Text = project.cName;
-            cusInfoTxt.Text = project.cInfo;
-            remarkRichTxt.Text = project.remark;
-            startDatePick.Value = project.start;
-            endDatePick.Value = project.end;
         }
     }
 }

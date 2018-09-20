@@ -18,5 +18,12 @@ namespace C_SWInternPerformance.Presenters
             BaseModel project = new ProjectAssign();
             return project.ProjectList();
         }
+
+        // Get Employee Name from ID
+        public string GetUser(int ID)
+        {
+            Login login = new Login();
+            return login.GetUser(ID);
+        }
     }
 }

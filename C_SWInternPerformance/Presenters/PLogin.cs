@@ -7,7 +7,7 @@ using C_SWInternPerformance.Models;
 
 namespace C_SWInternPerformance.Presenters
 {
-    class PLogin
+    class PLogin:BasePresenter
     {
         private ILogin vLogin;
         // Get data from view.
@@ -29,12 +29,6 @@ namespace C_SWInternPerformance.Presenters
             }
             else
                 return ("Login ",0);
-        }
-        // Get Employee Name from ID
-        public string GetUser(int ID)
-        {
-            Login login = new Login();
-            return login.GetUser(ID);
         }
     }
 }

@@ -152,7 +152,7 @@
             // 
             // assignButton
             // 
-            this.assignButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.assignButton.BackColor = System.Drawing.Color.Gold;
             this.assignButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.assignButton.Image = global::C_SWInternPerformance.Properties.Resources.add_song__1_;
             this.assignButton.Location = new System.Drawing.Point(485, 26);
@@ -166,7 +166,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.closeButton.BackColor = System.Drawing.Color.Gold;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.closeButton.Location = new System.Drawing.Point(485, 70);
             this.closeButton.Name = "closeButton";
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.Gold;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(635, 310);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.assignButton);
