@@ -55,14 +55,12 @@
             this.desireTxt = new System.Windows.Forms.TextBox();
             this.delFlagCheck = new System.Windows.Forms.CheckBox();
             this.remarkRichTxt = new System.Windows.Forms.RichTextBox();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelEmpID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.panelTitle = new System.Windows.Forms.Panel();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.saveButton = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.closeButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
@@ -380,34 +378,6 @@
             this.remarkRichTxt.TabIndex = 13;
             this.remarkRichTxt.Text = "";
             // 
-            // saveButton
-            // 
-            this.saveButton.BackColor = System.Drawing.Color.Gold;
-            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.ForeColor = System.Drawing.Color.Black;
-            this.saveButton.Location = new System.Drawing.Point(22, 492);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(2);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(141, 34);
-            this.saveButton.TabIndex = 14;
-            this.saveButton.Text = "Create/Save";
-            this.saveButton.UseVisualStyleBackColor = false;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.Gold;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.ForeColor = System.Drawing.Color.Black;
-            this.closeButton.Location = new System.Drawing.Point(286, 492);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(2);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(141, 34);
-            this.closeButton.TabIndex = 14;
-            this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
@@ -446,8 +416,8 @@
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelTitle.Controls.Add(this.materialRaisedButton2);
-            this.panelTitle.Controls.Add(this.materialRaisedButton1);
+            this.panelTitle.Controls.Add(this.closeButton);
+            this.panelTitle.Controls.Add(this.saveButton);
             this.panelTitle.Controls.Add(this.labelTitle);
             this.panelTitle.Controls.Add(this.txtID);
             this.panelTitle.Controls.Add(this.labelEmpID);
@@ -458,40 +428,40 @@
             this.panelTitle.Size = new System.Drawing.Size(449, 82);
             this.panelTitle.TabIndex = 17;
             // 
-            // materialRaisedButton1
+            // saveButton
             // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(310, 15);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(118, 23);
-            this.materialRaisedButton1.TabIndex = 17;
-            this.materialRaisedButton1.Text = "Create/Save";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.saveButton.Depth = 0;
+            this.saveButton.Location = new System.Drawing.Point(310, 15);
+            this.saveButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Primary = true;
+            this.saveButton.Size = new System.Drawing.Size(118, 23);
+            this.saveButton.TabIndex = 17;
+            this.saveButton.Text = "Create/Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // materialRaisedButton2
+            // closeButton
             // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(310, 42);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(118, 23);
-            this.materialRaisedButton2.TabIndex = 17;
-            this.materialRaisedButton2.Text = "Close";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.closeButton.Depth = 0;
+            this.closeButton.Location = new System.Drawing.Point(310, 42);
+            this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Primary = true;
+            this.closeButton.Size = new System.Drawing.Size(118, 23);
+            this.closeButton.TabIndex = 17;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // F300_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(449, 529);
+            this.ClientSize = new System.Drawing.Size(449, 508);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.saveButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F300_Employee";
@@ -533,13 +503,11 @@
         private System.Windows.Forms.TextBox desireTxt;
         private System.Windows.Forms.CheckBox delFlagCheck;
         private System.Windows.Forms.RichTextBox remarkRichTxt;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelEmpID;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Panel panelTitle;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton closeButton;
+        private MaterialSkin.Controls.MaterialRaisedButton saveButton;
     }
 }

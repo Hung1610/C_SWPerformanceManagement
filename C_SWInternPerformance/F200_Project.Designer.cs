@@ -43,12 +43,12 @@
             this.startDatePick = new System.Windows.Forms.DateTimePicker();
             this.endDatePick = new System.Windows.Forms.DateTimePicker();
             this.remarkRichTxt = new System.Windows.Forms.RichTextBox();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelProjectID = new System.Windows.Forms.Label();
             this.txtEditID = new System.Windows.Forms.TextBox();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.saveButton = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.closeButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -208,32 +208,6 @@
             this.remarkRichTxt.TabIndex = 4;
             this.remarkRichTxt.Text = "";
             // 
-            // saveButton
-            // 
-            this.saveButton.BackColor = System.Drawing.Color.Gold;
-            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.ForeColor = System.Drawing.Color.Black;
-            this.saveButton.Location = new System.Drawing.Point(12, 517);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(179, 45);
-            this.saveButton.TabIndex = 5;
-            this.saveButton.Text = "Create/Save";
-            this.saveButton.UseVisualStyleBackColor = false;
-            this.saveButton.Click += new System.EventHandler(this.CreateSave_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.Gold;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.ForeColor = System.Drawing.Color.Black;
-            this.closeButton.Location = new System.Drawing.Point(408, 518);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(179, 45);
-            this.closeButton.TabIndex = 5;
-            this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
@@ -270,6 +244,8 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.topPanel.Controls.Add(this.closeButton);
+            this.topPanel.Controls.Add(this.saveButton);
             this.topPanel.Controls.Add(this.labelTitle);
             this.topPanel.Controls.Add(this.txtEditID);
             this.topPanel.Controls.Add(this.labelProjectID);
@@ -279,17 +255,40 @@
             this.topPanel.Size = new System.Drawing.Size(599, 85);
             this.topPanel.TabIndex = 8;
             // 
+            // saveButton
+            // 
+            this.saveButton.Depth = 0;
+            this.saveButton.Location = new System.Drawing.Point(476, 13);
+            this.saveButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Primary = true;
+            this.saveButton.Size = new System.Drawing.Size(108, 27);
+            this.saveButton.TabIndex = 8;
+            this.saveButton.Text = "Create/Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.CreateSave_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.Depth = 0;
+            this.closeButton.Location = new System.Drawing.Point(476, 48);
+            this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Primary = true;
+            this.closeButton.Size = new System.Drawing.Size(108, 27);
+            this.closeButton.TabIndex = 8;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // F200_Project
             // 
-            this.AcceptButton = this.saveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(599, 575);
+            this.ClientSize = new System.Drawing.Size(599, 507);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.saveButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "F200_Project";
             this.Text = "F200_Project";
@@ -318,11 +317,11 @@
         private System.Windows.Forms.DateTimePicker startDatePick;
         private System.Windows.Forms.DateTimePicker endDatePick;
         private System.Windows.Forms.RichTextBox remarkRichTxt;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelProjectID;
         private System.Windows.Forms.TextBox txtEditID;
         private System.Windows.Forms.Panel topPanel;
+        private MaterialSkin.Controls.MaterialRaisedButton closeButton;
+        private MaterialSkin.Controls.MaterialRaisedButton saveButton;
     }
 }

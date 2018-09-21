@@ -36,11 +36,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.submitButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelTitle = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.closeButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.submitButton = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.workTimeUpDown)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -60,24 +60,24 @@
             // projectBox
             // 
             this.projectBox.FormattingEnabled = true;
-            this.projectBox.Location = new System.Drawing.Point(182, 2);
-            this.projectBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.projectBox.Location = new System.Drawing.Point(205, 2);
+            this.projectBox.Margin = new System.Windows.Forms.Padding(2);
             this.projectBox.Name = "projectBox";
             this.projectBox.Size = new System.Drawing.Size(250, 21);
             this.projectBox.TabIndex = 1;
             // 
             // datePick
             // 
-            this.datePick.Location = new System.Drawing.Point(182, 52);
-            this.datePick.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datePick.Location = new System.Drawing.Point(205, 52);
+            this.datePick.Margin = new System.Windows.Forms.Padding(2);
             this.datePick.Name = "datePick";
             this.datePick.Size = new System.Drawing.Size(250, 20);
             this.datePick.TabIndex = 2;
             // 
             // workTimeUpDown
             // 
-            this.workTimeUpDown.Location = new System.Drawing.Point(182, 102);
-            this.workTimeUpDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.workTimeUpDown.Location = new System.Drawing.Point(205, 102);
+            this.workTimeUpDown.Margin = new System.Windows.Forms.Padding(2);
             this.workTimeUpDown.Name = "workTimeUpDown";
             this.workTimeUpDown.Size = new System.Drawing.Size(96, 20);
             this.workTimeUpDown.TabIndex = 3;
@@ -85,10 +85,10 @@
             // remarkRichTxt
             // 
             this.remarkRichTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.remarkRichTxt.Location = new System.Drawing.Point(182, 152);
-            this.remarkRichTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.remarkRichTxt.Location = new System.Drawing.Point(205, 152);
+            this.remarkRichTxt.Margin = new System.Windows.Forms.Padding(2);
             this.remarkRichTxt.Name = "remarkRichTxt";
-            this.remarkRichTxt.Size = new System.Drawing.Size(250, 80);
+            this.remarkRichTxt.Size = new System.Drawing.Size(282, 80);
             this.remarkRichTxt.TabIndex = 4;
             this.remarkRichTxt.Text = "";
             // 
@@ -125,32 +125,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Project";
             // 
-            // submitButton
-            // 
-            this.submitButton.BackColor = System.Drawing.Color.Gold;
-            this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitButton.Location = new System.Drawing.Point(10, 331);
-            this.submitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(146, 49);
-            this.submitButton.TabIndex = 5;
-            this.submitButton.Text = "Submit";
-            this.submitButton.UseVisualStyleBackColor = false;
-            this.submitButton.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.Gold;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.Location = new System.Drawing.Point(298, 331);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(146, 49);
-            this.closeButton.TabIndex = 5;
-            this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.Close_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -164,52 +138,82 @@
             this.tableLayoutPanel1.Controls.Add(this.projectBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.workTimeUpDown, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 78);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 75);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.78261F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(434, 234);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(489, 234);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.labelTitle);
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.closeButton);
+            this.panel1.Controls.Add(this.submitButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(454, 54);
+            this.panel1.Size = new System.Drawing.Size(511, 61);
             this.panel1.TabIndex = 7;
             // 
-            // labelTitle
+            // label5
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(17, 10);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(188, 31);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "Working Report";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(17, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(188, 31);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Working Report";
+            // 
+            // closeButton
+            // 
+            this.closeButton.AutoSize = true;
+            this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.closeButton.Depth = 0;
+            this.closeButton.Location = new System.Drawing.Point(444, 15);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Primary = false;
+            this.closeButton.Size = new System.Drawing.Size(54, 36);
+            this.closeButton.TabIndex = 2;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.Close_Click);
+            // 
+            // submitButton
+            // 
+            this.submitButton.AutoSize = true;
+            this.submitButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.submitButton.Depth = 0;
+            this.submitButton.Location = new System.Drawing.Point(365, 14);
+            this.submitButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.submitButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Primary = false;
+            this.submitButton.Size = new System.Drawing.Size(62, 36);
+            this.submitButton.TabIndex = 1;
+            this.submitButton.Text = "Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // F100_WorkingReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(454, 390);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(511, 342);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.submitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F100_WorkingReport";
             this.Text = "F100_WorkingReport";
             ((System.ComponentModel.ISupportInitialize)(this.workTimeUpDown)).EndInit();
@@ -230,10 +234,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button submitButton;
-        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelTitle;
+        private MaterialSkin.Controls.MaterialFlatButton submitButton;
+        private MaterialSkin.Controls.MaterialFlatButton closeButton;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -30,8 +30,6 @@
         {
             this.projectName = new System.Windows.Forms.Label();
             this.projectNameBox = new System.Windows.Forms.ComboBox();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.dataProjectAssign = new System.Windows.Forms.DataGridView();
             this.ProjectCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.EmployeeCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -42,6 +40,8 @@
             this.panelTitle = new System.Windows.Forms.Panel();
             this.AddButton = new System.Windows.Forms.Button();
             this.RefreshButton = new System.Windows.Forms.Button();
+            this.saveButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.closeButton = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataProjectAssign)).BeginInit();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
@@ -68,34 +68,6 @@
             this.projectNameBox.Size = new System.Drawing.Size(201, 21);
             this.projectNameBox.TabIndex = 1;
             this.projectNameBox.SelectedIndexChanged += new System.EventHandler(this.ProjectNameBox_SelectedIndexChanged);
-            // 
-            // saveButton
-            // 
-            this.saveButton.BackColor = System.Drawing.Color.Gold;
-            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.ForeColor = System.Drawing.Color.Black;
-            this.saveButton.Location = new System.Drawing.Point(10, 351);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(2);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(108, 34);
-            this.saveButton.TabIndex = 3;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = false;
-            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.Gold;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.ForeColor = System.Drawing.Color.Black;
-            this.closeButton.Location = new System.Drawing.Point(628, 351);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(2);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(108, 34);
-            this.closeButton.TabIndex = 3;
-            this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.Close_Click);
             // 
             // dataProjectAssign
             // 
@@ -230,19 +202,51 @@
             this.RefreshButton.UseVisualStyleBackColor = false;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
+            // saveButton
+            // 
+            this.saveButton.AutoSize = true;
+            this.saveButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.saveButton.Depth = 0;
+            this.saveButton.Location = new System.Drawing.Point(615, 351);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.saveButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Primary = false;
+            this.saveButton.Size = new System.Drawing.Size(46, 36);
+            this.saveButton.TabIndex = 8;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.AutoSize = true;
+            this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.closeButton.Depth = 0;
+            this.closeButton.Location = new System.Drawing.Point(682, 351);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Primary = false;
+            this.closeButton.Size = new System.Drawing.Size(54, 36);
+            this.closeButton.TabIndex = 8;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.Close_Click);
+            // 
             // F201_ProjectAssign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(747, 396);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.middleRoleBox);
             this.Controls.Add(this.middleEmpBox);
             this.Controls.Add(this.middleProjectBox);
             this.Controls.Add(this.dataProjectAssign);
-            this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.saveButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F201_ProjectAssign";
@@ -252,6 +256,7 @@
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -259,8 +264,6 @@
 
         private System.Windows.Forms.Label projectName;
         private System.Windows.Forms.ComboBox projectNameBox;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.DataGridView dataProjectAssign;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button RefreshButton;
@@ -271,5 +274,7 @@
         private System.Windows.Forms.ComboBox middleEmpBox;
         private System.Windows.Forms.ComboBox middleRoleBox;
         private System.Windows.Forms.Panel panelTitle;
+        private MaterialSkin.Controls.MaterialFlatButton saveButton;
+        private MaterialSkin.Controls.MaterialFlatButton closeButton;
     }
 }

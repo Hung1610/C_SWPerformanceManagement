@@ -326,8 +326,17 @@ namespace C_SWInternPerformance
             f201.Show();
         }
 
+        // Open Profile Edit form.
         private void profileButton_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is F301_Profile)
+                {
+                    f.Focus();
+                    return;
+                }
+            }
             F301_Profile f301 = new F301_Profile(UserID);
             f301.Show();
         }

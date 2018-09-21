@@ -13,7 +13,7 @@ using MaterialSkin.Controls;
 
 namespace C_SWInternPerformance
 {
-    public partial class F000_Login : MaterialForm, ILogin
+    public partial class F000_Login : Form, ILogin
     {
         // Declare presenter.
         private PLogin LoginP { get; set; }

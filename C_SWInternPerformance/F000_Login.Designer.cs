@@ -41,7 +41,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::C_SWInternPerformance.Properties.Resources.softworld_logo_footer;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 76);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 34);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(271, 205);
@@ -53,8 +53,9 @@
             // 
             this.loginButton.AutoSize = true;
             this.loginButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.loginButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.loginButton.BackColor = System.Drawing.Color.White;
             this.loginButton.Depth = 0;
+            this.loginButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.loginButton.Location = new System.Drawing.Point(38, 379);
             this.loginButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.loginButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -89,7 +90,7 @@
             this.flatTxtUser.Depth = 0;
             this.flatTxtUser.ForeColor = System.Drawing.SystemColors.ControlText;
             this.flatTxtUser.Hint = "";
-            this.flatTxtUser.Location = new System.Drawing.Point(38, 294);
+            this.flatTxtUser.Location = new System.Drawing.Point(38, 278);
             this.flatTxtUser.MouseState = MaterialSkin.MouseState.HOVER;
             this.flatTxtUser.Name = "flatTxtUser";
             this.flatTxtUser.PasswordChar = '\0';
@@ -108,7 +109,7 @@
             this.flatTxtPass.BackColor = System.Drawing.Color.LightGray;
             this.flatTxtPass.Depth = 0;
             this.flatTxtPass.Hint = "";
-            this.flatTxtPass.Location = new System.Drawing.Point(38, 332);
+            this.flatTxtPass.Location = new System.Drawing.Point(38, 316);
             this.flatTxtPass.MouseState = MaterialSkin.MouseState.HOVER;
             this.flatTxtPass.Name = "flatTxtPass";
             this.flatTxtPass.PasswordChar = '\0';
@@ -125,8 +126,7 @@
             // F000_Login
             // 
             this.AcceptButton = this.loginButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(348, 436);
             this.ControlBox = false;
