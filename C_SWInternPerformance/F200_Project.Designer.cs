@@ -82,7 +82,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.50309F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.50309F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.98148F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(738, 370);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(574, 370);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -91,15 +91,15 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 25);
+            this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "ProjectName";
             // 
             // projectNameTxt
             // 
-            this.projectNameTxt.Location = new System.Drawing.Point(187, 3);
+            this.projectNameTxt.Location = new System.Drawing.Point(146, 3);
             this.projectNameTxt.Name = "projectNameTxt";
-            this.projectNameTxt.Size = new System.Drawing.Size(315, 22);
+            this.projectNameTxt.Size = new System.Drawing.Size(315, 20);
             this.projectNameTxt.TabIndex = 1;
             this.projectNameTxt.TextChanged += new System.EventHandler(this.ProjectNameTxt_TextChanged);
             // 
@@ -109,7 +109,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 25);
+            this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "ProjectInfo";
             // 
@@ -119,7 +119,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 25);
+            this.label3.Size = new System.Drawing.Size(120, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "CustomerName";
             // 
@@ -129,7 +129,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 147);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 25);
+            this.label4.Size = new System.Drawing.Size(106, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "CustomerInfo";
             // 
@@ -139,7 +139,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 196);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 25);
+            this.label5.Size = new System.Drawing.Size(79, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "StartDate";
             // 
@@ -149,7 +149,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 245);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 25);
+            this.label6.Size = new System.Drawing.Size(73, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "EndDate";
             // 
@@ -159,52 +159,52 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 294);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 25);
+            this.label7.Size = new System.Drawing.Size(65, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "Remark";
             // 
             // projectInfoTxt
             // 
-            this.projectInfoTxt.Location = new System.Drawing.Point(187, 52);
+            this.projectInfoTxt.Location = new System.Drawing.Point(146, 52);
             this.projectInfoTxt.Name = "projectInfoTxt";
-            this.projectInfoTxt.Size = new System.Drawing.Size(315, 22);
+            this.projectInfoTxt.Size = new System.Drawing.Size(315, 20);
             this.projectInfoTxt.TabIndex = 1;
             // 
             // cusNameTxt
             // 
-            this.cusNameTxt.Location = new System.Drawing.Point(187, 101);
+            this.cusNameTxt.Location = new System.Drawing.Point(146, 101);
             this.cusNameTxt.Name = "cusNameTxt";
-            this.cusNameTxt.Size = new System.Drawing.Size(315, 22);
+            this.cusNameTxt.Size = new System.Drawing.Size(315, 20);
             this.cusNameTxt.TabIndex = 1;
             // 
             // cusInfoTxt
             // 
             this.cusInfoTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cusInfoTxt.Location = new System.Drawing.Point(187, 150);
+            this.cusInfoTxt.Location = new System.Drawing.Point(146, 150);
             this.cusInfoTxt.Name = "cusInfoTxt";
-            this.cusInfoTxt.Size = new System.Drawing.Size(548, 22);
+            this.cusInfoTxt.Size = new System.Drawing.Size(425, 20);
             this.cusInfoTxt.TabIndex = 1;
             // 
             // startDatePick
             // 
-            this.startDatePick.Location = new System.Drawing.Point(187, 199);
+            this.startDatePick.Location = new System.Drawing.Point(146, 199);
             this.startDatePick.Name = "startDatePick";
-            this.startDatePick.Size = new System.Drawing.Size(192, 22);
+            this.startDatePick.Size = new System.Drawing.Size(192, 20);
             this.startDatePick.TabIndex = 2;
             // 
             // endDatePick
             // 
-            this.endDatePick.Location = new System.Drawing.Point(187, 248);
+            this.endDatePick.Location = new System.Drawing.Point(146, 248);
             this.endDatePick.Name = "endDatePick";
-            this.endDatePick.Size = new System.Drawing.Size(192, 22);
+            this.endDatePick.Size = new System.Drawing.Size(192, 20);
             this.endDatePick.TabIndex = 3;
             // 
             // remarkRichTxt
             // 
             this.remarkRichTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.remarkRichTxt.Location = new System.Drawing.Point(187, 297);
+            this.remarkRichTxt.Location = new System.Drawing.Point(146, 297);
             this.remarkRichTxt.Name = "remarkRichTxt";
-            this.remarkRichTxt.Size = new System.Drawing.Size(548, 70);
+            this.remarkRichTxt.Size = new System.Drawing.Size(425, 70);
             this.remarkRichTxt.TabIndex = 4;
             this.remarkRichTxt.Text = "";
             // 
@@ -226,7 +226,7 @@
             this.closeButton.BackColor = System.Drawing.Color.Gold;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.ForeColor = System.Drawing.Color.Black;
-            this.closeButton.Location = new System.Drawing.Point(571, 517);
+            this.closeButton.Location = new System.Drawing.Point(408, 518);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(179, 45);
             this.closeButton.TabIndex = 5;
@@ -241,7 +241,7 @@
             this.labelTitle.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelTitle.Location = new System.Drawing.Point(15, 9);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(283, 39);
+            this.labelTitle.Size = new System.Drawing.Size(226, 31);
             this.labelTitle.TabIndex = 6;
             this.labelTitle.Text = "Create New Project";
             // 
@@ -252,39 +252,40 @@
             this.labelProjectID.ForeColor = System.Drawing.SystemColors.Info;
             this.labelProjectID.Location = new System.Drawing.Point(15, 48);
             this.labelProjectID.Name = "labelProjectID";
-            this.labelProjectID.Size = new System.Drawing.Size(122, 29);
+            this.labelProjectID.Size = new System.Drawing.Size(98, 22);
             this.labelProjectID.TabIndex = 6;
             this.labelProjectID.Text = "Project ID:";
             this.labelProjectID.Visible = false;
             // 
             // txtEditID
             // 
-            this.txtEditID.Location = new System.Drawing.Point(144, 52);
+            this.txtEditID.Location = new System.Drawing.Point(119, 48);
             this.txtEditID.Name = "txtEditID";
             this.txtEditID.ReadOnly = true;
-            this.txtEditID.Size = new System.Drawing.Size(66, 22);
+            this.txtEditID.Size = new System.Drawing.Size(47, 20);
             this.txtEditID.TabIndex = 7;
             this.txtEditID.TabStop = false;
             this.txtEditID.Visible = false;
             // 
             // topPanel
             // 
-            this.topPanel.BackColor = System.Drawing.Color.Black;
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.topPanel.Controls.Add(this.labelTitle);
             this.topPanel.Controls.Add(this.txtEditID);
             this.topPanel.Controls.Add(this.labelProjectID);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(763, 85);
+            this.topPanel.Size = new System.Drawing.Size(599, 85);
             this.topPanel.TabIndex = 8;
             // 
             // F200_Project
             // 
             this.AcceptButton = this.saveButton;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(763, 575);
+            this.ClientSize = new System.Drawing.Size(599, 575);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.closeButton);

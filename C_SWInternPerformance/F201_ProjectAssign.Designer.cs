@@ -52,18 +52,20 @@
             this.projectName.BackColor = System.Drawing.Color.Transparent;
             this.projectName.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectName.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.projectName.Location = new System.Drawing.Point(21, 28);
+            this.projectName.Location = new System.Drawing.Point(17, 22);
+            this.projectName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectName.Name = "projectName";
-            this.projectName.Size = new System.Drawing.Size(202, 39);
+            this.projectName.Size = new System.Drawing.Size(161, 31);
             this.projectName.TabIndex = 0;
             this.projectName.Text = "Project Name";
             // 
             // projectNameBox
             // 
             this.projectNameBox.FormattingEnabled = true;
-            this.projectNameBox.Location = new System.Drawing.Point(229, 37);
+            this.projectNameBox.Location = new System.Drawing.Point(183, 30);
+            this.projectNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.projectNameBox.Name = "projectNameBox";
-            this.projectNameBox.Size = new System.Drawing.Size(250, 24);
+            this.projectNameBox.Size = new System.Drawing.Size(201, 21);
             this.projectNameBox.TabIndex = 1;
             this.projectNameBox.SelectedIndexChanged += new System.EventHandler(this.ProjectNameBox_SelectedIndexChanged);
             // 
@@ -72,9 +74,10 @@
             this.saveButton.BackColor = System.Drawing.Color.Gold;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.ForeColor = System.Drawing.Color.Black;
-            this.saveButton.Location = new System.Drawing.Point(12, 395);
+            this.saveButton.Location = new System.Drawing.Point(10, 351);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(2);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(135, 43);
+            this.saveButton.Size = new System.Drawing.Size(108, 34);
             this.saveButton.TabIndex = 3;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = false;
@@ -85,9 +88,10 @@
             this.closeButton.BackColor = System.Drawing.Color.Gold;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.ForeColor = System.Drawing.Color.Black;
-            this.closeButton.Location = new System.Drawing.Point(653, 395);
+            this.closeButton.Location = new System.Drawing.Point(628, 351);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(2);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(135, 43);
+            this.closeButton.Size = new System.Drawing.Size(108, 34);
             this.closeButton.TabIndex = 3;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = false;
@@ -102,10 +106,11 @@
             this.ProjectCol,
             this.EmployeeCol,
             this.RoleCol});
-            this.dataProjectAssign.Location = new System.Drawing.Point(12, 95);
+            this.dataProjectAssign.Location = new System.Drawing.Point(10, 76);
+            this.dataProjectAssign.Margin = new System.Windows.Forms.Padding(2);
             this.dataProjectAssign.Name = "dataProjectAssign";
             this.dataProjectAssign.RowTemplate.Height = 24;
-            this.dataProjectAssign.Size = new System.Drawing.Size(776, 258);
+            this.dataProjectAssign.Size = new System.Drawing.Size(726, 258);
             this.dataProjectAssign.TabIndex = 4;
             this.dataProjectAssign.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.DataProjectAssign_DataError);
             this.dataProjectAssign.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataProjectAssign_RowEnter);
@@ -132,45 +137,54 @@
             // middleProjectBox
             // 
             this.middleProjectBox.FormattingEnabled = true;
-            this.middleProjectBox.Location = new System.Drawing.Point(53, 122);
+            this.middleProjectBox.Location = new System.Drawing.Point(42, 98);
+            this.middleProjectBox.Margin = new System.Windows.Forms.Padding(2);
             this.middleProjectBox.Name = "middleProjectBox";
-            this.middleProjectBox.Size = new System.Drawing.Size(93, 24);
+            this.middleProjectBox.Size = new System.Drawing.Size(75, 21);
             this.middleProjectBox.TabIndex = 6;
             this.middleProjectBox.Visible = false;
             // 
             // middleEmpBox
             // 
             this.middleEmpBox.FormattingEnabled = true;
-            this.middleEmpBox.Location = new System.Drawing.Point(152, 122);
+            this.middleEmpBox.Location = new System.Drawing.Point(122, 98);
+            this.middleEmpBox.Margin = new System.Windows.Forms.Padding(2);
             this.middleEmpBox.Name = "middleEmpBox";
-            this.middleEmpBox.Size = new System.Drawing.Size(85, 24);
+            this.middleEmpBox.Size = new System.Drawing.Size(69, 21);
             this.middleEmpBox.TabIndex = 6;
             this.middleEmpBox.Visible = false;
             // 
             // middleRoleBox
             // 
             this.middleRoleBox.FormattingEnabled = true;
-            this.middleRoleBox.Location = new System.Drawing.Point(253, 122);
+            this.middleRoleBox.Location = new System.Drawing.Point(202, 98);
+            this.middleRoleBox.Margin = new System.Windows.Forms.Padding(2);
             this.middleRoleBox.Name = "middleRoleBox";
-            this.middleRoleBox.Size = new System.Drawing.Size(97, 24);
+            this.middleRoleBox.Size = new System.Drawing.Size(78, 21);
             this.middleRoleBox.TabIndex = 6;
             this.middleRoleBox.Visible = false;
             // 
             // panelTitle
             // 
-            this.panelTitle.BackColor = System.Drawing.Color.Black;
+            this.panelTitle.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panelTitle.Controls.Add(this.AddButton);
             this.panelTitle.Controls.Add(this.projectNameBox);
             this.panelTitle.Controls.Add(this.RefreshButton);
             this.panelTitle.Controls.Add(this.projectName);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelTitle.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(800, 78);
+            this.panelTitle.Size = new System.Drawing.Size(747, 63);
             this.panelTitle.TabIndex = 7;
             // 
             // AddButton
             // 
+            this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddButton.AutoSize = true;
+            this.AddButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AddButton.BackColor = System.Drawing.Color.Gold;
             this.AddButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.AddButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
@@ -180,9 +194,10 @@
             this.AddButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AddButton.Image = global::C_SWInternPerformance.Properties.Resources.add_song__1_;
             this.AddButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddButton.Location = new System.Drawing.Point(506, 31);
+            this.AddButton.Location = new System.Drawing.Point(490, 23);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(170, 32);
+            this.AddButton.Size = new System.Drawing.Size(148, 32);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "New Assignment";
             this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -192,6 +207,10 @@
             // 
             // RefreshButton
             // 
+            this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RefreshButton.AutoSize = true;
+            this.RefreshButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.RefreshButton.BackColor = System.Drawing.Color.Gold;
             this.RefreshButton.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.RefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GreenYellow;
@@ -201,9 +220,10 @@
             this.RefreshButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.RefreshButton.Image = global::C_SWInternPerformance.Properties.Resources.refresh3;
             this.RefreshButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RefreshButton.Location = new System.Drawing.Point(682, 31);
+            this.RefreshButton.Location = new System.Drawing.Point(642, 23);
+            this.RefreshButton.Margin = new System.Windows.Forms.Padding(2);
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(104, 32);
+            this.RefreshButton.Size = new System.Drawing.Size(94, 32);
             this.RefreshButton.TabIndex = 5;
             this.RefreshButton.Text = "Refresh";
             this.RefreshButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -212,9 +232,10 @@
             // 
             // F201_ProjectAssign
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(747, 396);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.middleRoleBox);
             this.Controls.Add(this.middleEmpBox);
@@ -223,6 +244,7 @@
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.saveButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F201_ProjectAssign";
             this.Text = "F201_ProjectAssign";
             this.Load += new System.EventHandler(this.F201_ProjectAssign_Load);

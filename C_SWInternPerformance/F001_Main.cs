@@ -10,10 +10,13 @@ using System.Windows.Forms;
 using C_SWInternPerformance.Data;
 using C_SWInternPerformance.Models;
 using C_SWInternPerformance.Presenters;
+using MaterialSkin.Controls;
+using MaterialSkin.Animations;
+using MaterialSkin;
 
 namespace C_SWInternPerformance
 {
-    public partial class F001_Main : Form,IMain
+    public partial class F001_Main : MaterialForm,IMain
     {
         // ID taken from Login for use in this and other forms.
         int UserID;

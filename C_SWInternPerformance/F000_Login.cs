@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using C_SWInternPerformance.Presenters;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace C_SWInternPerformance
 {
-    public partial class F000_Login : Form, ILogin
+    public partial class F000_Login : MaterialForm, ILogin
     {
         // Declare presenter.
         private PLogin LoginP { get; set; }
@@ -21,7 +23,7 @@ namespace C_SWInternPerformance
         {
             get
             {
-                return userTxt.Text;
+                return flatTxtUser.Text;
             }
         }
 
@@ -29,7 +31,7 @@ namespace C_SWInternPerformance
         {
             get
             {
-                return passTxt.Text;
+                return flatTxtPass.Text;
             }
         }
         #endregion
@@ -40,41 +42,42 @@ namespace C_SWInternPerformance
 
         private void passTxt_Enter(object sender, EventArgs e)
         {
-            if (passTxt.Text == "Password")
+            if (flatTxtPass.Text == "Password")
             {
-                passTxt.Text = "";
-                passTxt.ForeColor = Color.Black;
-                passTxt.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void userTxt_Enter(object sender, EventArgs e)
-        {
-            if (userTxt.Text == "Enter email")
-            {
-                userTxt.Text = "";
-                userTxt.ForeColor = Color.Black;
-            }
-        }
-
-        private void userTxt_Leave(object sender, EventArgs e)
-        {
-            if (userTxt.Text == "")
-            {
-                userTxt.Text = "Enter email";
-                userTxt.ForeColor = Color.Silver;
+                flatTxtPass.Text = "";
+                flatTxtPass.ForeColor = Color.Black;
+                flatTxtPass.UseSystemPasswordChar = true;
             }
         }
 
         private void passTxt_Leave(object sender, EventArgs e)
         {
-            if (passTxt.Text == "")
+            if (flatTxtPass.Text == "")
             {
-                passTxt.Text = "Password";
-                passTxt.UseSystemPasswordChar = false;
-                passTxt.ForeColor = Color.Silver;
+                flatTxtPass.Text = "Password";
+                flatTxtPass.UseSystemPasswordChar = false;
+                flatTxtPass.ForeColor = Color.Silver;
             }
         }
+
+        private void userTxt_Enter(object sender, EventArgs e)
+        {
+            if (flatTxtUser.Text == "Enter Email")
+            {
+                flatTxtUser.Text = "";
+                flatTxtUser.ForeColor = Color.Black;
+            }
+        }
+
+        private void userTxt_Leave(object sender, EventArgs e)
+        {
+            if (flatTxtUser.Text == "")
+            {
+                flatTxtUser.Text = "Enter Email";
+                flatTxtUser.ForeColor = Color.Silver;
+            }
+        }
+
         #endregion
 
         // Initilize UI components along with some data.
@@ -82,11 +85,12 @@ namespace C_SWInternPerformance
         {
             LoginP = new PLogin(this);
             InitializeComponent();
-            this.ControlBox = false;
+            this.MaximumSize = this.Size;
+            this.MinimumSize = this.Size;
         }
 
         // Login button
-        private void Button1_Click(object sender, EventArgs e)
+        private void Login_Click(object sender, EventArgs e)
         {
             int ID = LoginP.GetLogin().ID;
             if (ID == 0)
