@@ -18,6 +18,9 @@ namespace C_SWInternPerformance
 {
     public partial class F001_Main : MaterialForm,IMain
     {
+        // Message box strings.
+        string RowSelectMessage = "Please select a row from the table.";
+
         // ID taken from Login for use in this and other forms.
         int UserID;
 
@@ -259,7 +262,7 @@ namespace C_SWInternPerformance
             }
             else
             {
-                MessageBox.Show("Please select a row from the table.");
+                MessageBox.Show(RowSelectMessage);
             }
         }
 
@@ -298,7 +301,7 @@ namespace C_SWInternPerformance
             }
             else
             {
-                MessageBox.Show("Please select a row from the table.");
+                MessageBox.Show(RowSelectMessage);
             }
         }
 

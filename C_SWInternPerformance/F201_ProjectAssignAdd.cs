@@ -14,6 +14,11 @@ namespace C_SWInternPerformance
 {
     public partial class F201_ProjectAssignAdd : Form, IProjectAssign
     {
+        // Message box strings.
+        string AssignConfirmTitle = "Assignment Confirm";
+        string AssignConfirmMessage = "Assign the project ?";
+        string AssignConfirmOk = "Projected assigned to selected employee.";
+
         // Events to interact with F201_ProjectAssign
         public delegate void RefreshEventHandler(object sender, EventArgs e);
         public event RefreshEventHandler AssignRefresh;
@@ -134,8 +139,8 @@ namespace C_SWInternPerformance
         // Save the Assigned Project data into database.
         private void AssignButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Assign this project ?",
-                                                    "Executing Query",
+            DialogResult result = MessageBox.Show(AssignConfirmMessage,
+                                                    AssignConfirmTitle,
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
@@ -160,6 +165,7 @@ namespace C_SWInternPerformance
                     pAssign.AddAssign(pID);
                 }
                 AssignRefresh?.Invoke(this, new EventArgs());
+                MessageBox.Show(AssignConfirmOk);
             }
         }
     }

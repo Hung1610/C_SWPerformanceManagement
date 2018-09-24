@@ -14,6 +14,15 @@ namespace C_SWInternPerformance
 {
     public partial class F200_Project : Form, IProjects
     {
+        // Message box strings.
+        string CreateConfirmTitle = "Confirm Create";
+        string CreateConfirmMessage = "Create a new project ?";
+        string CreateConfirmOk = "Project Created.";
+
+        string SaveConfirmTitle = "Confirm Save";
+        string SaveConfirmMessage = "Save this project ?";
+        string SaveConfirmOk = "Project Saved.";
+
         // ID taken from main.
         int editID = -1;
         // Declare presenter.
@@ -116,26 +125,26 @@ namespace C_SWInternPerformance
         {
             if (editID != -1)
             {
-                DialogResult result = MessageBox.Show("Update this project ?",
-                                                    "Executing Query",
+                DialogResult result = MessageBox.Show(SaveConfirmMessage,
+                                                    SaveConfirmTitle,
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
                     pProject.Save(editID);
-                    MessageBox.Show("Project Updated.");
+                    MessageBox.Show(SaveConfirmOk);
                 }
             }
             else
             {
-                DialogResult result = MessageBox.Show("Create a new project ?",
-                                                    "Executing Query",
+                DialogResult result = MessageBox.Show(CreateConfirmMessage,
+                                                    CreateConfirmTitle,
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
                     pProject.Save(editID);
-                    MessageBox.Show("New project Created.");
+                    MessageBox.Show(CreateConfirmOk);
                 }
             }
             ProjectRefresh?.Invoke(this, new EventArgs());

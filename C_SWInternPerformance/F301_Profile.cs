@@ -15,6 +15,14 @@ namespace C_SWInternPerformance
 {
     public partial class F301_Profile : Form,IProfile
     {
+        // Message box strings.
+        string EmailErrorTitle = "Email Unvailable";
+        string EmailErrorMessage = "Please enter another email.";
+
+        string SaveConfirmTitle = "Profile Update Confirm";
+        string SaveConfirmMessage = "Update your profile ?";
+        string SaveConfirmOk = "Profile Updated.";
+
         // Store the current user ID for updating.
         int userID;
         // Declare Presenter.
@@ -77,18 +85,18 @@ namespace C_SWInternPerformance
             pProfile = new PProfile(this);
             if (pProfile.Save() == 0)
             {
-                MessageBox.Show("Please enter another Email.", "Email Unavailable.");
+                MessageBox.Show(EmailErrorMessage, EmailErrorTitle);
             }
             else
             {
-                DialogResult result = MessageBox.Show("Update your Profile ?",
-                                                    "Executing Query",
+                DialogResult result = MessageBox.Show(SaveConfirmMessage,
+                                                    SaveConfirmTitle,
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
                     pProfile.Save();
-                    MessageBox.Show("Profile Updated.");
+                    MessageBox.Show(SaveConfirmOk);
                 }
             }
         }

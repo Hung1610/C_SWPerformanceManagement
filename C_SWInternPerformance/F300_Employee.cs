@@ -14,6 +14,15 @@ namespace C_SWInternPerformance
 {
     public partial class F300_Employee : Form,IEmployee
     {
+        // Message box strings.
+        string SaveConfirmTitle = "Save Confirm";
+        string SaveConfirmMessage = "Update this employee Info ?";
+        string SaveConfirmOk = "Employee Info Saved.";
+
+        string CreateConfirmTitle = "Create confirm";
+        string CreateConfirmMessage = "Create a new employee ?";
+        string CreateConfirmOk = "Employee Created.";
+
         // ID gotten from main for use in Edit mode.
         int editID;
         // Declare presenter.
@@ -204,26 +213,26 @@ namespace C_SWInternPerformance
         {
             if (editID != -1)
             {
-                DialogResult result = MessageBox.Show("Update this employee ?",
-                                                    "Executing Query",
+                DialogResult result = MessageBox.Show(SaveConfirmMessage,
+                                                    SaveConfirmTitle,
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
                     pEmployee.Save(editID);
-                    MessageBox.Show("Employee Updated.");
+                    MessageBox.Show(SaveConfirmOk);
                 }
             }
             else
             {
-                DialogResult result = MessageBox.Show("Create a new employee ?",
-                                                    "Executing Query",
+                DialogResult result = MessageBox.Show(CreateConfirmMessage,
+                                                    CreateConfirmTitle,
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
                     pEmployee.Save(editID);
-                    MessageBox.Show("New Employee Created.");
+                    MessageBox.Show(CreateConfirmOk);
                 }
             }
             EmployeeRefresh?.Invoke(this, new EventArgs());

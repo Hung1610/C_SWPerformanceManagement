@@ -15,6 +15,10 @@ namespace C_SWInternPerformance
 {
     public partial class F000_Login : Form, ILogin
     {
+        // Message box strings.
+        string LoginErrorTitle = "Login Error";
+        string LoginErrorMessage = "Wrong user Name or Password";
+
         // Declare presenter.
         private PLogin LoginP { get; set; }
         // This region implements ILogin elements.
@@ -79,7 +83,7 @@ namespace C_SWInternPerformance
         }
 
         #endregion
-
+        
         // Initilize UI components along with some data.
         public F000_Login()
         {
@@ -96,7 +100,7 @@ namespace C_SWInternPerformance
             if (ID == 0)
             {
                 Console.WriteLine("Login Failed");
-                MessageBox.Show("Wrong Username or Password", "Login Error",
+                MessageBox.Show(LoginErrorMessage, LoginErrorTitle,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else

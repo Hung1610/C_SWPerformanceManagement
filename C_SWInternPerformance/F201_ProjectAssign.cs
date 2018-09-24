@@ -14,6 +14,11 @@ namespace C_SWInternPerformance
 {
     public partial class F201_ProjectAssign : Form,IProjectAssign
     {
+        // Message box strings.
+        string SaveConfirmTitle = "Changes Confirm.";
+        string SaveConfirmMessage = "Carry out the changes ?";
+        string SaveConfirmOk = "Database updated.";
+
         // Declare presenter.
         private PProjectAssign pAssign;
         // Lists to populate with database data.
@@ -236,7 +241,6 @@ namespace C_SWInternPerformance
         // Listen to refresh event from F201_ProjectAssignAdd.
         private void RefreshRequest(object sender, EventArgs e)
         {
-            MessageBox.Show("Project Assigned!");
             this.RefreshForm();
         }
 
@@ -319,8 +323,8 @@ namespace C_SWInternPerformance
         // Save button.
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Carry out the changes ?",
-                                                    "Executing Query",
+            DialogResult result = MessageBox.Show(SaveConfirmMessage,
+                                                    SaveConfirmTitle,
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);
             if (result == DialogResult.Yes)

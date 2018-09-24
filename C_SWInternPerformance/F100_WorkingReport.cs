@@ -14,6 +14,11 @@ namespace C_SWInternPerformance
 {
     public partial class F100_WorkingReport : Form, IProjectReport
     {
+        // Message box strings.
+        string SubmitConfirmTitle = "Confirm Submit";
+        string SubmitConfirmMessage = "Submit this report ?";
+        string SubmitConfirmOk = "Report Submitted.";
+
         // User ID gotten from Main.
         int UserID;
         // Declare presenters.
@@ -93,15 +98,15 @@ namespace C_SWInternPerformance
         // Submit button.
         private void Button1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Submit this report ?",
-                                                    "Executing Query",
+            DialogResult result = MessageBox.Show(SubmitConfirmMessage,
+                                                    SubmitConfirmTitle,
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 PReport = new PProjectReport(this);
                 PReport.Submit();
-                MessageBox.Show("Report submitted!");
+                MessageBox.Show(SubmitConfirmOk);
             }
         }
 
