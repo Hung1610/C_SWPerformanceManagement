@@ -50,7 +50,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 150);
+            this.label4.Location = new System.Drawing.Point(2, 165);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 22);
@@ -68,7 +68,7 @@
             // 
             // datePick
             // 
-            this.datePick.Location = new System.Drawing.Point(205, 52);
+            this.datePick.Location = new System.Drawing.Point(205, 57);
             this.datePick.Margin = new System.Windows.Forms.Padding(2);
             this.datePick.Name = "datePick";
             this.datePick.Size = new System.Drawing.Size(250, 20);
@@ -76,7 +76,7 @@
             // 
             // workTimeUpDown
             // 
-            this.workTimeUpDown.Location = new System.Drawing.Point(205, 102);
+            this.workTimeUpDown.Location = new System.Drawing.Point(205, 112);
             this.workTimeUpDown.Margin = new System.Windows.Forms.Padding(2);
             this.workTimeUpDown.Name = "workTimeUpDown";
             this.workTimeUpDown.Size = new System.Drawing.Size(96, 20);
@@ -85,10 +85,10 @@
             // remarkRichTxt
             // 
             this.remarkRichTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.remarkRichTxt.Location = new System.Drawing.Point(205, 152);
+            this.remarkRichTxt.Location = new System.Drawing.Point(205, 167);
             this.remarkRichTxt.Margin = new System.Windows.Forms.Padding(2);
             this.remarkRichTxt.Name = "remarkRichTxt";
-            this.remarkRichTxt.Size = new System.Drawing.Size(282, 80);
+            this.remarkRichTxt.Size = new System.Drawing.Size(282, 87);
             this.remarkRichTxt.TabIndex = 4;
             this.remarkRichTxt.Text = "";
             // 
@@ -96,7 +96,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 100);
+            this.label1.Location = new System.Drawing.Point(2, 110);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 22);
@@ -107,7 +107,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 50);
+            this.label2.Location = new System.Drawing.Point(2, 55);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 22);
@@ -146,12 +146,12 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.78261F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(489, 234);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(489, 256);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.closeButton);
             this.panel1.Controls.Add(this.submitButton);
@@ -166,6 +166,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(17, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(188, 31);

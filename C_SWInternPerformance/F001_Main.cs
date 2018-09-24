@@ -44,6 +44,18 @@ namespace C_SWInternPerformance
         public F001_Main(int ID)
         {
             InitializeComponent();
+            // Create a material theme manager and add the form to manage (this)
+            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            // Configure color schema
+            /*
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Grey700, Primary.Grey900,
+                Primary.Blue500, Accent.LightBlue200,
+                TextShade.WHITE
+            );
+            */
             Console.WriteLine(ID);
             pMain = new PMain(this);
             UserID = ID;
@@ -308,7 +320,16 @@ namespace C_SWInternPerformance
         // Open Skill Update form.
         private void UpdateSkillButton_Click(object sender, EventArgs e)
         {
-
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is F500_SkillManage)
+                {
+                    f.Focus();
+                    return;
+                }
+            }
+            F500_SkillManage f500 = new F500_SkillManage();
+            f500.Show();
         }
         
         // Open Project Assign form.

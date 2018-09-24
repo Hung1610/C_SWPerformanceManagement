@@ -15,6 +15,12 @@ namespace C_SWInternPerformance
         public F500_SkillManage()
         {
             InitializeComponent();
+
+        }
+
+        private void materialDivider1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
