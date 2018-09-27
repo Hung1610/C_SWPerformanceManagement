@@ -62,7 +62,6 @@
             this.workReportButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.workReportButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.workReportButton.FlatAppearance.BorderSize = 2;
-            this.workReportButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.workReportButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.workReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workReportButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,7 +80,6 @@
             this.addProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addProjectButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.addProjectButton.FlatAppearance.BorderSize = 2;
-            this.addProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.addProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.addProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProjectButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,7 +98,6 @@
             this.addEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addEmployeeButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.addEmployeeButton.FlatAppearance.BorderSize = 2;
-            this.addEmployeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.addEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.addEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,7 +116,6 @@
             this.assignButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.assignButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.assignButton.FlatAppearance.BorderSize = 2;
-            this.assignButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.assignButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.assignButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.assignButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,7 +134,6 @@
             this.updateSkillButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.updateSkillButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.updateSkillButton.FlatAppearance.BorderSize = 2;
-            this.updateSkillButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateSkillButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.updateSkillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateSkillButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,7 +152,6 @@
             this.updateProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.updateProjectButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.updateProjectButton.FlatAppearance.BorderSize = 2;
-            this.updateProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.updateProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateProjectButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -176,7 +170,6 @@
             this.updateEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.updateEmployeeButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.updateEmployeeButton.FlatAppearance.BorderSize = 2;
-            this.updateEmployeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.updateEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,7 +188,6 @@
             this.profileButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profileButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.profileButton.FlatAppearance.BorderSize = 2;
-            this.profileButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.profileButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.profileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profileButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

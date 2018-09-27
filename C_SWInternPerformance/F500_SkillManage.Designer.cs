@@ -33,15 +33,14 @@
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.checkedList = new System.Windows.Forms.CheckedListBox();
+            this.splitCon = new System.Windows.Forms.SplitContainer();
             this.saveSkillManageButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datePickStart = new System.Windows.Forms.DateTimePicker();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.checkDel = new MaterialSkin.Controls.MaterialCheckBox();
+            this.richTxtRemark = new System.Windows.Forms.RichTextBox();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.saveSkillButton = new MaterialSkin.Controls.MaterialFlatButton();
@@ -57,13 +56,16 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
+            this.listBoxSkill = new System.Windows.Forms.ListBox();
+            this.comboBoxSkill = new System.Windows.Forms.ComboBox();
             this.panelTitle.SuspendLayout();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitCon)).BeginInit();
+            this.splitCon.Panel1.SuspendLayout();
+            this.splitCon.Panel2.SuspendLayout();
+            this.splitCon.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -129,45 +131,37 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.splitContainer1);
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.splitCon);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(617, 199);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Skill Assign";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1
+            // splitCon
             // 
-            this.splitContainer1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer1.Name = "splitContainer1";
+            this.splitCon.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.splitCon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitCon.Location = new System.Drawing.Point(3, 3);
+            this.splitCon.Name = "splitCon";
             // 
-            // splitContainer1.Panel1
+            // splitCon.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.checkedList);
+            this.splitCon.Panel1.Controls.Add(this.listBoxSkill);
             // 
-            // splitContainer1.Panel2
+            // splitCon.Panel2
             // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel2.Controls.Add(this.saveSkillManageButton);
-            this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(611, 193);
-            this.splitContainer1.SplitterDistance = 173;
-            this.splitContainer1.TabIndex = 3;
-            // 
-            // checkedList
-            // 
-            this.checkedList.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.checkedList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkedList.FormattingEnabled = true;
-            this.checkedList.Location = new System.Drawing.Point(0, 0);
-            this.checkedList.Name = "checkedList";
-            this.checkedList.Size = new System.Drawing.Size(173, 193);
-            this.checkedList.TabIndex = 0;
+            this.splitCon.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitCon.Panel2.Controls.Add(this.saveSkillManageButton);
+            this.splitCon.Panel2.Controls.Add(this.tableLayoutPanel1);
+            this.splitCon.Size = new System.Drawing.Size(611, 193);
+            this.splitCon.SplitterDistance = 173;
+            this.splitCon.TabIndex = 3;
+            this.splitCon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.splitCont_MouseDown);
+            this.splitCon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.splitCont_MouseMove);
+            this.splitCon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.splitCont_MouseUp);
             // 
             // saveSkillManageButton
             // 
@@ -179,37 +173,42 @@
             this.saveSkillManageButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.saveSkillManageButton.Name = "saveSkillManageButton";
             this.saveSkillManageButton.Primary = false;
-            this.saveSkillManageButton.Size = new System.Drawing.Size(46, 36);
+            this.saveSkillManageButton.Size = new System.Drawing.Size(79, 36);
             this.saveSkillManageButton.TabIndex = 1;
-            this.saveSkillManageButton.Text = "Save";
+            this.saveSkillManageButton.Text = "Save/Add";
             this.saveSkillManageButton.UseVisualStyleBackColor = true;
+            this.saveSkillManageButton.Click += new System.EventHandler(this.saveSkillManageButton_Click);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.materialLabel2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.materialLabel1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.materialCheckBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.richTextBox1, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.materialLabel3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.materialLabel2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.richTxtRemark, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.materialLabel1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.checkDel, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.materialLabel3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.datePickStart, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.materialLabel9, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.comboBoxSkill, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(18, 13);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.85715F));
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.84121F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.84121F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.48439F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.83318F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(365, 157);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // datePickStart
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(155, 3);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.datePickStart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datePickStart.Location = new System.Drawing.Point(155, 31);
+            this.datePickStart.Name = "datePickStart";
+            this.datePickStart.Size = new System.Drawing.Size(207, 20);
+            this.datePickStart.TabIndex = 1;
             // 
             // materialLabel2
             // 
@@ -217,7 +216,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(3, 88);
+            this.materialLabel2.Location = new System.Drawing.Point(3, 83);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(60, 19);
@@ -230,36 +229,36 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(3, 44);
+            this.materialLabel1.Location = new System.Drawing.Point(3, 56);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(52, 19);
             this.materialLabel1.TabIndex = 2;
             this.materialLabel1.Text = "Delete";
             // 
-            // materialCheckBox1
+            // checkDel
             // 
-            this.materialCheckBox1.AutoSize = true;
-            this.materialCheckBox1.Depth = 0;
-            this.materialCheckBox1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialCheckBox1.Location = new System.Drawing.Point(152, 44);
-            this.materialCheckBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckBox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckBox1.Name = "materialCheckBox1";
-            this.materialCheckBox1.Ripple = true;
-            this.materialCheckBox1.Size = new System.Drawing.Size(26, 30);
-            this.materialCheckBox1.TabIndex = 4;
-            this.materialCheckBox1.UseVisualStyleBackColor = true;
+            this.checkDel.AutoSize = true;
+            this.checkDel.Depth = 0;
+            this.checkDel.Font = new System.Drawing.Font("Roboto", 10F);
+            this.checkDel.Location = new System.Drawing.Point(152, 56);
+            this.checkDel.Margin = new System.Windows.Forms.Padding(0);
+            this.checkDel.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkDel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkDel.Name = "checkDel";
+            this.checkDel.Ripple = true;
+            this.checkDel.Size = new System.Drawing.Size(24, 27);
+            this.checkDel.TabIndex = 4;
+            this.checkDel.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // richTxtRemark
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(155, 91);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(207, 63);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
+            this.richTxtRemark.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTxtRemark.Location = new System.Drawing.Point(155, 86);
+            this.richTxtRemark.Name = "richTxtRemark";
+            this.richTxtRemark.Size = new System.Drawing.Size(207, 68);
+            this.richTxtRemark.TabIndex = 5;
+            this.richTxtRemark.Text = "";
             // 
             // materialLabel3
             // 
@@ -267,7 +266,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(3, 0);
+            this.materialLabel3.Location = new System.Drawing.Point(3, 28);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(76, 19);
@@ -300,14 +299,14 @@
             this.saveSkillButton.AutoSize = true;
             this.saveSkillButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.saveSkillButton.Depth = 0;
-            this.saveSkillButton.Location = new System.Drawing.Point(27, 189);
+            this.saveSkillButton.Location = new System.Drawing.Point(27, 183);
             this.saveSkillButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.saveSkillButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.saveSkillButton.Name = "saveSkillButton";
             this.saveSkillButton.Primary = false;
-            this.saveSkillButton.Size = new System.Drawing.Size(46, 36);
+            this.saveSkillButton.Size = new System.Drawing.Size(79, 36);
             this.saveSkillButton.TabIndex = 5;
-            this.saveSkillButton.Text = "Save";
+            this.saveSkillButton.Text = "Save/Add";
             this.saveSkillButton.UseVisualStyleBackColor = true;
             // 
             // materialLabel8
@@ -442,6 +441,48 @@
             this.panel1.Size = new System.Drawing.Size(625, 228);
             this.panel1.TabIndex = 4;
             // 
+            // materialLabel9
+            // 
+            this.materialLabel9.AutoSize = true;
+            this.materialLabel9.Depth = 0;
+            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel9.Location = new System.Drawing.Point(3, 0);
+            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel9.Name = "materialLabel9";
+            this.materialLabel9.Size = new System.Drawing.Size(38, 19);
+            this.materialLabel9.TabIndex = 2;
+            this.materialLabel9.Text = "Skill";
+            // 
+            // listBoxSkill
+            // 
+            this.listBoxSkill.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listBoxSkill.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBoxSkill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxSkill.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxSkill.FormattingEnabled = true;
+            this.listBoxSkill.ItemHeight = 16;
+            this.listBoxSkill.Items.AddRange(new object[] {
+            "C#",
+            "JAVA",
+            "VB",
+            "PHP",
+            "JSP",
+            "blahbalh"});
+            this.listBoxSkill.Location = new System.Drawing.Point(0, 0);
+            this.listBoxSkill.Name = "listBoxSkill";
+            this.listBoxSkill.Size = new System.Drawing.Size(173, 193);
+            this.listBoxSkill.TabIndex = 0;
+            this.listBoxSkill.SelectedIndexChanged += new System.EventHandler(this.listBoxSkill_SelectedIndexChanged);
+            // 
+            // comboBoxSkill
+            // 
+            this.comboBoxSkill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxSkill.Location = new System.Drawing.Point(155, 3);
+            this.comboBoxSkill.Name = "comboBoxSkill";
+            this.comboBoxSkill.Size = new System.Drawing.Size(207, 21);
+            this.comboBoxSkill.TabIndex = 6;
+            // 
             // F500_SkillManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -458,11 +499,11 @@
             this.panelTitle.PerformLayout();
             this.materialTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.splitCon.Panel1.ResumeLayout(false);
+            this.splitCon.Panel2.ResumeLayout(false);
+            this.splitCon.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitCon)).EndInit();
+            this.splitCon.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -480,16 +521,15 @@
         private System.Windows.Forms.TabPage tabPage1;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitCon;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datePickStart;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private MaterialSkin.Controls.MaterialCheckBox checkDel;
+        private System.Windows.Forms.RichTextBox richTxtRemark;
         private MaterialSkin.Controls.MaterialFlatButton saveSkillManageButton;
-        private System.Windows.Forms.CheckedListBox checkedList;
         private MaterialSkin.Controls.MaterialFlatButton saveSkillButton;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
@@ -503,5 +543,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private MaterialSkin.Controls.MaterialFlatButton closeButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListBox listBoxSkill;
+        private MaterialSkin.Controls.MaterialLabel materialLabel9;
+        private System.Windows.Forms.ComboBox comboBoxSkill;
     }
 }

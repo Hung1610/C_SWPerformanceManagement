@@ -407,7 +407,7 @@ namespace C_SWInternPerformance
                     return;
                 }
             }
-            F500_SkillManage f500 = new F500_SkillManage();
+            F500_SkillManage f500 = new F500_SkillManage(UserID);
             f500.Show();
         }
         

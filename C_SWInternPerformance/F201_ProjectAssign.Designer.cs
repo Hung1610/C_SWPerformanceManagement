@@ -39,12 +39,12 @@
             this.middleEmpBox = new System.Windows.Forms.ComboBox();
             this.middleRoleBox = new System.Windows.Forms.ComboBox();
             this.panelTitle = new System.Windows.Forms.Panel();
+            this.closeButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.AddButton = new System.Windows.Forms.Button();
             this.RefreshButton = new System.Windows.Forms.Button();
             this.saveButton = new MaterialSkin.Controls.MaterialFlatButton();
-            this.closeButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.labelTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataProjectAssign)).BeginInit();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +75,7 @@
             // dataProjectAssign
             // 
             this.dataProjectAssign.AllowUserToAddRows = false;
-            this.dataProjectAssign.BackgroundColor = System.Drawing.Color.White;
+            this.dataProjectAssign.BackgroundColor = System.Drawing.Color.Silver;
             this.dataProjectAssign.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataProjectAssign.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataProjectAssign.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -157,6 +157,35 @@
             this.panelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
             this.panelTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseUp);
             // 
+            // closeButton
+            // 
+            this.closeButton.AutoSize = true;
+            this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.closeButton.Depth = 0;
+            this.closeButton.Location = new System.Drawing.Point(719, -1);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Primary = false;
+            this.closeButton.Size = new System.Drawing.Size(21, 36);
+            this.closeButton.TabIndex = 8;
+            this.closeButton.Text = "X";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.Close_Click);
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.Black;
+            this.labelTitle.Location = new System.Drawing.Point(11, 10);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(139, 25);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Project Assign";
+            // 
             // AddButton
             // 
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -217,35 +246,6 @@
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.AutoSize = true;
-            this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.closeButton.Depth = 0;
-            this.closeButton.Location = new System.Drawing.Point(713, -1);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Primary = false;
-            this.closeButton.Size = new System.Drawing.Size(21, 36);
-            this.closeButton.TabIndex = 8;
-            this.closeButton.Text = "X";
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.Close_Click);
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.Black;
-            this.labelTitle.Location = new System.Drawing.Point(11, 10);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(139, 25);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "Project Assign";
             // 
             // F201_ProjectAssign
             // 

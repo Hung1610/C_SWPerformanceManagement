@@ -374,7 +374,7 @@ namespace C_SWInternPerformance
         }
         
         // Close button.
-        private void Close_Click(object sender, EventArgs e)
+        private new void Close_Click(object sender, EventArgs e)
         {
             base.Close_Click(sender, e);
             this.Close();

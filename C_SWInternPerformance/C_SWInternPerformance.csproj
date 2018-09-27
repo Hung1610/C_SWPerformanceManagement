@@ -79,6 +79,7 @@
     <Compile Include="Data\PositionData.cs" />
     <Compile Include="Data\ProfileData.cs" />
     <Compile Include="Data\RoleData.cs" />
+    <Compile Include="Data\SkillData.cs" />
     <Compile Include="F001_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +141,7 @@
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\ProjectAssign.cs" />
     <Compile Include="Models\Projects.cs" />
+    <Compile Include="Models\SkillManage.cs" />
     <Compile Include="Presenters\BasePresenter.cs" />
     <Compile Include="Data\EmployeeData.cs" />
     <Compile Include="Presenters\IEmployee.cs" />
@@ -147,6 +149,7 @@
     <Compile Include="Presenters\IProfile.cs" />
     <Compile Include="Presenters\IProjectAssign.cs" />
     <Compile Include="Presenters\IProjects.cs" />
+    <Compile Include="Presenters\ISkillManage.cs" />
     <Compile Include="Presenters\PEmployee.cs" />
     <Compile Include="Presenters\PMain.cs" />
     <Compile Include="Presenters\PProfile.cs" />
@@ -159,6 +162,7 @@
     <Compile Include="Presenters\PProjectReport.cs" />
     <Compile Include="Presenters\PProjects.cs" />
     <Compile Include="Data\ProjectsData.cs" />
+    <Compile Include="Presenters\PSkillManage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="F001_Main.resx">
@@ -199,6 +203,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\C_SWInternPerformance.Data.SkillData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
