@@ -59,8 +59,8 @@
             this.labelEmpID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.panelTitle = new System.Windows.Forms.Panel();
-            this.saveButton = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.closeButton = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
@@ -381,12 +381,12 @@
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelTitle.Location = new System.Drawing.Point(16, 7);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(259, 31);
+            this.labelTitle.Size = new System.Drawing.Size(211, 25);
             this.labelTitle.TabIndex = 15;
             this.labelTitle.Text = "Create New Employee";
             // 
@@ -405,11 +405,12 @@
             // 
             // txtID
             // 
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtID.Location = new System.Drawing.Point(142, 45);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(46, 20);
+            this.txtID.Size = new System.Drawing.Size(36, 20);
             this.txtID.TabIndex = 16;
             this.txtID.Visible = false;
             // 
@@ -427,42 +428,52 @@
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(449, 82);
             this.panelTitle.TabIndex = 17;
-            // 
-            // saveButton
-            // 
-            this.saveButton.Depth = 0;
-            this.saveButton.Location = new System.Drawing.Point(310, 15);
-            this.saveButton.MouseState = MaterialSkin.MouseState.HOVER;
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Primary = true;
-            this.saveButton.Size = new System.Drawing.Size(118, 23);
-            this.saveButton.TabIndex = 17;
-            this.saveButton.Text = "Create/Save";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            this.panelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
+            this.panelTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseUp);
             // 
             // closeButton
             // 
-            this.closeButton.Depth = 0;
-            this.closeButton.Location = new System.Drawing.Point(310, 42);
-            this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.closeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Location = new System.Drawing.Point(421, 0);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Primary = true;
-            this.closeButton.Size = new System.Drawing.Size(118, 23);
-            this.closeButton.TabIndex = 17;
-            this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Size = new System.Drawing.Size(25, 25);
+            this.closeButton.TabIndex = 19;
+            this.closeButton.Text = "X";
+            this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // saveButton
+            // 
+            this.saveButton.AutoSize = true;
+            this.saveButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.saveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.saveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(313, 38);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(115, 29);
+            this.saveButton.TabIndex = 18;
+            this.saveButton.Text = "CREATE/SAVE";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // F300_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(449, 508);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F300_Employee";
             this.Text = "F300_Employee";
@@ -507,7 +518,7 @@
         private System.Windows.Forms.Label labelEmpID;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Panel panelTitle;
-        private MaterialSkin.Controls.MaterialRaisedButton closeButton;
-        private MaterialSkin.Controls.MaterialRaisedButton saveButton;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button closeButton;
     }
 }

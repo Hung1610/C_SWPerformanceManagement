@@ -12,7 +12,7 @@ using C_SWInternPerformance.Presenters;
 
 namespace C_SWInternPerformance
 {
-    public partial class F201_ProjectAssignAdd : Form, IProjectAssign
+    public partial class F201_ProjectAssignAdd : CommonForm, IProjectAssign
     {
         // Message box strings.
         string AssignConfirmTitle = "Assignment Confirm";
@@ -133,6 +133,13 @@ namespace C_SWInternPerformance
         // Close the form.
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is F201_ProjectAssign)
+                {
+                    f.Focus();
+                }
+            }
             this.Close();
         }
 

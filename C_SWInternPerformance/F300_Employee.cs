@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace C_SWInternPerformance
 {
-    public partial class F300_Employee : Form,IEmployee
+    public partial class F300_Employee : CommonForm,IEmployee
     {
         // Message box strings.
         string SaveConfirmTitle = "Save Confirm";
@@ -42,7 +42,7 @@ namespace C_SWInternPerformance
             pEmployee = new PEmployee(this);
             this.ControlBox = false;
             InitializeComponent();
-            saveButton.Text = "Create";
+            saveButton.Text = "CREATE";
 
             // Assign lists to the comboboxes.
             posBox.DataSource = posList;
@@ -66,7 +66,7 @@ namespace C_SWInternPerformance
             labelEmpID.Visible = true;
             txtID.Text = editID.ToString();
             txtID.Visible = true;
-            saveButton.Text = "Save";
+            saveButton.Text = "SAVE";
 
             // Assign lists to the comboboxes.
             posBox.DataSource = posList;
@@ -96,6 +96,25 @@ namespace C_SWInternPerformance
             else delFlagCheck.Checked = false;
             remarkRichTxt.Text = employee.Remark;
         }
+
+        // Make dragging Title Panel drag the form around.
+        #region Title Panel Mouse events.
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseDown(sender, e);
+        }
+
+        private void panelTitle_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseMove(sender, e);
+        }
+
+        private void panelTitle_MouseUp(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseUp(sender, e);
+        }
+        #endregion
+
         // This region implements IEmployee interface elements.
         #region IEmployee ELEMENTS
         public int EmployeeID
@@ -206,6 +225,7 @@ namespace C_SWInternPerformance
         
         private void closeButton_Click(object sender, EventArgs e)
         {
+            base.Close_Click(sender, e);
             this.Close();
         }
 

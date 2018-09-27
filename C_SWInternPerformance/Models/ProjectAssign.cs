@@ -31,8 +31,7 @@ namespace C_SWInternPerformance.Models
             {
                 conn.Open();
                 BindingList<RoleData> list = new BindingList<RoleData>();
-                string sql = "SELECT [ProjectRoleID],[ProjectRoleName] " +
-                    "FROM [202TB_ProjectRole]";
+                string sql = "Execute GetRoleData";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
@@ -60,20 +59,7 @@ namespace C_SWInternPerformance.Models
             {
                 conn.Open();
                 BindingList<ProjectAssignData> list = new BindingList<ProjectAssignData>();
-                string sql = "SELECT [ProjectAssignID], " +
-                                    "[201TB_ProjectAssign].[ProjectID], " +
-                                    "[201TB_ProjectAssign].[EmployeeID], " +
-                                    "[201TB_ProjectAssign].[ProjectRoleID], " +
-                                    "[200TB_Project].[ProjectName], " +
-                                    "[300TB_Employee].Name, " +
-                                    "[202TB_ProjectRole].[ProjectRoleName], " +
-                                    "[201TB_ProjectAssign].StartDate, " +
-                                    "[201TB_ProjectAssign].EndDate, " +
-                                    "[201TB_ProjectAssign].Remark " +
-                    "FROM [200TB_Project] " +
-                    "JOIN [201TB_ProjectAssign] on [200TB_Project].ProjectID = [201TB_ProjectAssign].ProjectID " +
-                    "JOIN [202TB_ProjectRole] on [201TB_ProjectAssign].ProjectRoleID = [202TB_ProjectRole].ProjectRoleID " +
-                    "JOIN [300TB_Employee] on [201TB_ProjectAssign].EmployeeID = [300TB_Employee].EmployeeID ";
+                string sql = "Execute AssignList ";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
@@ -108,8 +94,7 @@ namespace C_SWInternPerformance.Models
             using(SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "INSERT INTO [201TB_ProjectAssign](ProjectID,EmployeeID,ProjectRoleID,StartDate,EndDate,Remark) " +
-                    "VALUES (@pID,@eID,@rID,@startDate,@endDate,@remark)";
+                string sql = "Execute AddAssign @pID,@eID,@rID,@startDate,@endDate,@remark";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
@@ -130,11 +115,11 @@ namespace C_SWInternPerformance.Models
             using(SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "DELETE FROM [201TB_ProjectAssign] " +
-                    "WHERE ProjectAssignID = "+ProjectAssignID;
+                string sql = "Execute DeleteAssign @paID";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
+                    command.Parameters.Add("@paID", SqlDbType.Int).Value = ProjectAssignID;
                     command.ExecuteNonQuery();
                 }
             }
@@ -146,17 +131,11 @@ namespace C_SWInternPerformance.Models
             using(SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "UPDATE [201TB_ProjectAssign] " +
-                    "SET ProjectID = @pID, " +
-                    "EmployeeID = @eID, " +
-                    "ProjectRoleID = @rID, " +
-                    "StartDate = @startDate, " +
-                    "EndDate = @endDate, " +
-                    "Remark = @remark " +
-                    "WHERE ProjectAssignID = "+projectAssign.ProjectAssignID;
+                string sql = "UpdateAssign @paID , @pID , @eID , @rID , @startDate , @endDate , @remark";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
+                    command.Parameters.Add("@paID", SqlDbType.Int).Value = projectAssign.ProjectAssignID;
                     command.Parameters.Add("@pID", SqlDbType.Int).Value = projectAssign.ProjectID;
                     command.Parameters.Add("@eID", SqlDbType.Int).Value = projectAssign.EmployeeID;
                     command.Parameters.Add("@rID", SqlDbType.Int).Value = projectAssign.RoleID;

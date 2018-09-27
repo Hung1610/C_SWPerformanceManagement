@@ -12,7 +12,7 @@ using C_SWInternPerformance.Presenters;
 
 namespace C_SWInternPerformance
 {
-    public partial class F100_WorkingReport : Form, IProjectReport
+    public partial class F100_WorkingReport : CommonForm, IProjectReport
     {
         // Message box strings.
         string SubmitConfirmTitle = "Confirm Submit";
@@ -86,6 +86,24 @@ namespace C_SWInternPerformance
         }
         #endregion
 
+        // Make dragging Title Panel drag the form around.
+        #region Title Panel Mouse events.
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseMove(sender, e);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseDown(sender, e);
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseUp(sender, e);
+        }
+        #endregion
+
         // Handles projectBox selection.
         private void ProjectBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -109,11 +127,12 @@ namespace C_SWInternPerformance
                 MessageBox.Show(SubmitConfirmOk);
             }
         }
-
         //Close button.
-        private void Close_Click(object sender, EventArgs e)
+        public new void Close_Click(object sender, EventArgs e)
         {
+            base.Close_Click(sender, e);
             this.Close();
         }
+
     }
 }

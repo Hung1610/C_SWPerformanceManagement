@@ -45,22 +45,22 @@
             this.fromDatePick = new System.Windows.Forms.DateTimePicker();
             this.toDatePick = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.userLabel = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mainData = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.labelWelcome = new MaterialSkin.Controls.MaterialLabel();
+            this.userLabel = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainData)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // workReportButton
             // 
             this.workReportButton.BackColor = System.Drawing.Color.Gold;
             this.workReportButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.workReportButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.workReportButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.workReportButton.FlatAppearance.BorderSize = 2;
             this.workReportButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.workReportButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
@@ -79,7 +79,7 @@
             // 
             this.addProjectButton.BackColor = System.Drawing.Color.Gold;
             this.addProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addProjectButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.addProjectButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.addProjectButton.FlatAppearance.BorderSize = 2;
             this.addProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.addProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
@@ -98,7 +98,7 @@
             // 
             this.addEmployeeButton.BackColor = System.Drawing.Color.Gold;
             this.addEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addEmployeeButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.addEmployeeButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.addEmployeeButton.FlatAppearance.BorderSize = 2;
             this.addEmployeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.addEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
@@ -117,7 +117,7 @@
             // 
             this.assignButton.BackColor = System.Drawing.Color.Gold;
             this.assignButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.assignButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.assignButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.assignButton.FlatAppearance.BorderSize = 2;
             this.assignButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.assignButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
@@ -136,7 +136,7 @@
             // 
             this.updateSkillButton.BackColor = System.Drawing.Color.Gold;
             this.updateSkillButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updateSkillButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.updateSkillButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.updateSkillButton.FlatAppearance.BorderSize = 2;
             this.updateSkillButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateSkillButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
@@ -155,7 +155,7 @@
             // 
             this.updateProjectButton.BackColor = System.Drawing.Color.Gold;
             this.updateProjectButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updateProjectButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.updateProjectButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.updateProjectButton.FlatAppearance.BorderSize = 2;
             this.updateProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
@@ -174,7 +174,7 @@
             // 
             this.updateEmployeeButton.BackColor = System.Drawing.Color.Gold;
             this.updateEmployeeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updateEmployeeButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.updateEmployeeButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.updateEmployeeButton.FlatAppearance.BorderSize = 2;
             this.updateEmployeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.updateEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
@@ -193,7 +193,7 @@
             // 
             this.profileButton.BackColor = System.Drawing.Color.Gold;
             this.profileButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.profileButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.profileButton.FlatAppearance.BorderSize = 2;
             this.profileButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.profileButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
@@ -293,7 +293,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkGray;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Silver;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -316,49 +316,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(724, 178);
             this.tableLayoutPanel1.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(752, 34);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 20);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Welcome,";
-            // 
-            // userLabel
-            // 
-            this.userLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.userLabel.AutoSize = true;
-            this.userLabel.BackColor = System.Drawing.Color.Transparent;
-            this.userLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userLabel.ForeColor = System.Drawing.Color.White;
-            this.userLabel.Location = new System.Drawing.Point(836, 34);
-            this.userLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(84, 20);
-            this.userLabel.TabIndex = 16;
-            this.userLabel.Text = "[Unknown]";
-            this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::C_SWInternPerformance.Properties.Resources.softworld_logo_footer;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(291, 207);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
             // 
             // mainData
             // 
@@ -390,16 +347,59 @@
             this.panel2.Size = new System.Drawing.Size(291, 207);
             this.panel2.TabIndex = 20;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::C_SWInternPerformance.Properties.Resources.softworld_logo_footer;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(291, 207);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // labelWelcome
+            // 
+            this.labelWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWelcome.AutoSize = true;
+            this.labelWelcome.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.labelWelcome.Depth = 0;
+            this.labelWelcome.Font = new System.Drawing.Font("Roboto", 11F);
+            this.labelWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelWelcome.Location = new System.Drawing.Point(762, 35);
+            this.labelWelcome.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelWelcome.Name = "labelWelcome";
+            this.labelWelcome.Size = new System.Drawing.Size(79, 19);
+            this.labelWelcome.TabIndex = 21;
+            this.labelWelcome.Text = "Welcome, ";
+            // 
+            // userLabel
+            // 
+            this.userLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userLabel.AutoSize = true;
+            this.userLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.userLabel.Depth = 0;
+            this.userLabel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.userLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.userLabel.Location = new System.Drawing.Point(847, 35);
+            this.userLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.userLabel.Name = "userLabel";
+            this.userLabel.Size = new System.Drawing.Size(77, 19);
+            this.userLabel.TabIndex = 22;
+            this.userLabel.Text = "[unknown]";
+            // 
             // F001_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1051, 591);
+            this.Controls.Add(this.userLabel);
+            this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.mainData);
-            this.Controls.Add(this.userLabel);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.toDatePick);
             this.Controls.Add(this.fromDatePick);
@@ -417,9 +417,9 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmData_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainData)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,11 +444,11 @@
         private System.Windows.Forms.DateTimePicker fromDatePick;
         private System.Windows.Forms.DateTimePicker toDatePick;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label userLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView mainData;
         private System.Windows.Forms.Panel panel2;
+        private MaterialSkin.Controls.MaterialLabel labelWelcome;
+        private MaterialSkin.Controls.MaterialLabel userLabel;
     }
 }
 

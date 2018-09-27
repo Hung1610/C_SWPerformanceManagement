@@ -29,8 +29,7 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "INSERT INTO [200TB_Project](ProjectName,ProjectInfo,CustomerName,CustomerInfo,StartDate,EndDate,DelFlag,Remark) " +
-                    "VALUES (@pName,@pInfo,@cName,@cInfo,@startDate,@endDate,@del,@remark)";
+                string sql = "Execute AddProject @pName,@pInfo,@cName,@cInfo,@startDate,@endDate,@del,@remark";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
@@ -53,19 +52,11 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "UPDATE [200TB_Project] " +
-                    "SET ProjectName = @pName, " +
-                    "ProjectInfo = @pInfo, " +
-                    "CustomerName = @cName, " +
-                    "CustomerInfo = @cInfo, " +
-                    "StartDate = @startDate, " +
-                    "EndDate = @endDate, " +
-                    "DelFlag = 0, " +
-                    "Remark = @remark " +
-                    "WHERE ProjectID = " + ID;
+                string sql = "Execute SaveProject @pName,  @pInfo, @cName, @cInfo, @startDate, @endDate, DelFlag = 0, @remark WHERE ProjectID = @ID";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
+                    command.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
                     command.Parameters.Add("@pName", SqlDbType.NVarChar).Value = this.ProjectName;
                     command.Parameters.Add("@pInfo", SqlDbType.NVarChar).Value = this.ProjectInfo;
                     command.Parameters.Add("@cName", SqlDbType.NVarChar).Value = this.CustomerName;
@@ -84,12 +75,10 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "SELECT ProjectName, ProjectInfo, CustomerName, CustomerInfo, Remark, StartDate, EndDate " +
-                    "FROM [200TB_Project] " +
-                    "WHERE ProjectID = " + ID + " " +
-                    "AND DelFlag = 0";
+                string sql = "Execute GetProject @ID";
                 Console.WriteLine(sql);
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     if (reader.HasRows && reader.Read())

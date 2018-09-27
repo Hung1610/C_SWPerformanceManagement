@@ -41,10 +41,10 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::C_SWInternPerformance.Properties.Resources.softworld_logo_footer;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 58);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(271, 205);
+            this.pictureBox1.Size = new System.Drawing.Size(271, 182);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -135,6 +135,7 @@
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F000_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

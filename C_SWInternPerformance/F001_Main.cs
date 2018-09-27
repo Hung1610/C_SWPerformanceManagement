@@ -47,18 +47,18 @@ namespace C_SWInternPerformance
         public F001_Main(int ID)
         {
             InitializeComponent();
+            this.Icon = Properties.Resources.SoftWorldICO;
             // Create a material theme manager and add the form to manage (this)
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             // Configure color schema
-            /*
             materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Grey700, Primary.Grey900,
+                Primary.Grey100, Primary.Grey800,
                 Primary.Blue500, Accent.LightBlue200,
-                TextShade.WHITE
+                TextShade.BLACK
             );
-            */
+
             Console.WriteLine(ID);
             pMain = new PMain(this);
             UserID = ID;
@@ -86,6 +86,82 @@ namespace C_SWInternPerformance
             mainData.Columns["WorkingHour"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             mainData.Columns["WorkingName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
         }
+
+        // Gives the form Shadow Drop.
+        #region SHADOWING for Borderless Forms.
+
+        private bool m_aeroEnabled;
+
+        private const int CS_DROPSHADOW = 0x00020000;
+        private const int WM_NCPAINT = 0x0085;
+        private const int WM_ACTIVATEAPP = 0x001C;
+
+        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
+        public static extern int DwmExtendFrameIntoClientArea(IntPtr hWnd, ref MARGINS pMarInset);
+        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
+        public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
+        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
+
+        public static extern int DwmIsCompositionEnabled(ref int pfEnabled);
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+            );
+
+        public struct MARGINS
+        {
+            public int leftWidth;
+            public int rightWidth;
+            public int topHeight;
+            public int bottomHeight;
+        }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                m_aeroEnabled = CheckAeroEnabled();
+                CreateParams cp = base.CreateParams;
+                if (!m_aeroEnabled)
+                    cp.ClassStyle |= CS_DROPSHADOW; return cp;
+            }
+        }
+        private bool CheckAeroEnabled()
+        {
+            if (Environment.OSVersion.Version.Major >= 6)
+            {
+                int enabled = 0; DwmIsCompositionEnabled(ref enabled);
+                return (enabled == 1) ? true : false;
+            }
+            return false;
+        }
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case WM_NCPAINT:
+                    if (m_aeroEnabled)
+                    {
+                        var v = 2;
+                        DwmSetWindowAttribute(this.Handle, 2, ref v, 4);
+                        MARGINS margins = new MARGINS()
+                        {
+                            bottomHeight = 1,
+                            leftWidth = 0,
+                            rightWidth = 0,
+                            topHeight = 0
+                        }; DwmExtendFrameIntoClientArea(this.Handle, ref margins);
+                    }
+                    break;
+                default: break;
+            }
+            base.WndProc(ref m);
+        }
+        #endregion
 
         // This region implements IMain elements.
         #region IMain ELEMENTS.

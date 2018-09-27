@@ -12,12 +12,11 @@ using C_SWInternPerformance.Presenters;
 
 namespace C_SWInternPerformance
 {
-    public partial class F201_ProjectAssign : Form,IProjectAssign
+    public partial class F201_ProjectAssign : CommonForm,IProjectAssign
     {
         // Message box strings.
         string SaveConfirmTitle = "Changes Confirm.";
         string SaveConfirmMessage = "Carry out the changes ?";
-        string SaveConfirmOk = "Database updated.";
 
         // Declare presenter.
         private PProjectAssign pAssign;
@@ -92,6 +91,24 @@ namespace C_SWInternPerformance
             ProjectCol.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataProjectAssign.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
+        // Make dragging Title Panel drag the form around.
+        #region Title Panel Mouse events.
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseDown(sender, e);
+        }
+
+        private void panelTitle_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseMove(sender, e);
+        }
+
+        private void panelTitle_MouseUp(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseUp(sender, e);
+        }
+        #endregion
         // This region is for implementing IProjectAssign elements.
         #region IProjectAssign ELEMENTS
 
@@ -359,6 +376,7 @@ namespace C_SWInternPerformance
         // Close button.
         private void Close_Click(object sender, EventArgs e)
         {
+            base.Close_Click(sender, e);
             this.Close();
         }
 
@@ -367,5 +385,6 @@ namespace C_SWInternPerformance
             //DO NOTHING
             //FUCK DATAGRIDVIEW COMBOBOX
         }
+
     }
 }

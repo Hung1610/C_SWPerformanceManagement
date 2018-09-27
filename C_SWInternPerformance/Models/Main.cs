@@ -18,12 +18,7 @@ namespace C_SWInternPerformance.Models
             {
                 conn.Open();
                 BindingList<PerformanceData> list = new BindingList<PerformanceData>();
-                string sql = "SELECT per.*, " +
-                    "emp.[Name], " +
-                    "pro.[ProjectName] " +
-                    "FROM [100TB_Performance] per " +
-                    "JOIN [300TB_Employee] emp ON per.EmployeeID = emp.EmployeeID " +
-                    "JOIN [200TB_Project] pro ON per.ProjectID = pro.ProjectID ";
+                string sql = "Execute GetPerfList";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {

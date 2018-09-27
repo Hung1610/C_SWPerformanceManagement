@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace C_SWInternPerformance
 {
-    public partial class F301_Profile : Form,IProfile
+    public partial class F301_Profile : CommonForm,IProfile
     {
         // Message box strings.
         string EmailErrorTitle = "Email Unvailable";
@@ -38,6 +38,23 @@ namespace C_SWInternPerformance
             richTxtRemark.Text = profile.Remark;
         }
 
+        // Make dragging Title Panel drag the form around.
+        #region Title Panel Mouse events.
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseDown(sender, e);
+        }
+
+        private void panelTitle_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseMove(sender, e);
+        }
+
+        private void panelTitle_MouseUp(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseUp(sender, e);
+        }
+        #endregion
         // This region implements IProfile elements.
         #region IProfile ELEMENTS
         public int ID
@@ -99,6 +116,13 @@ namespace C_SWInternPerformance
                     MessageBox.Show(SaveConfirmOk);
                 }
             }
+        }
+        
+        // Close Button.
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            base.Close_Click(sender, e);
+            this.Close();
         }
     }
 }

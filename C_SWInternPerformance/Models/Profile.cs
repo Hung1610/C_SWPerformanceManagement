@@ -25,11 +25,10 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "SELECT * " +
-                    "FROM [301TB_Email] " +
-                    "WHERE EmployeeID = " + ID;
+                string sql = "Execute GetProfile @ID";
                 Console.WriteLine(sql);
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     if (reader.HasRows && reader.Read())
@@ -57,13 +56,7 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "UPDATE [301TB_Email] " +
-                        "SET " +
-                        "EmailAddress = @eAddress, " +
-                        "EmployeePass = @pass, " +
-                        "DelFlag = @del, " +
-                        "Remark = @remark " +
-                        "WHERE EmployeeID = @eID";
+                string sql = "Execute SaveProfile @eID , @eAddress , @pass , @del , @remark";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
@@ -83,10 +76,7 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "SELECT * " +
-                    "FROM [301TB_Email] " +
-                    "WHERE EmailAddress = @email " +
-                    "AND EmployeeID <> @ID";
+                string sql = "Execute EmailCheck @email,@ID";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = this.Email;
                 cmd.Parameters.Add("@ID", SqlDbType.Int).Value = this.ID;

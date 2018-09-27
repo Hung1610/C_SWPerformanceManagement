@@ -36,11 +36,10 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "SELECT * " +
-                    "FROM [300TB_Employee] " +
-                    "WHERE EmployeeID = " + ID;
+                string sql = "Execute GetEmployee @ID";
                 Console.WriteLine(sql);
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     if (reader.HasRows && reader.Read())
@@ -87,9 +86,7 @@ namespace C_SWInternPerformance.Models
             {
                 conn.Open();
                 BindingList<PositionData> list = new BindingList<PositionData>();
-                string sql = "SELECT [PositionID], " +
-                    "[PositionName] " +
-                    "FROM [303TB_Position]";
+                string sql = "Execute PositionList";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
@@ -117,9 +114,7 @@ namespace C_SWInternPerformance.Models
             {
                 conn.Open();
                 BindingList<BranchData> list = new BindingList<BranchData>();
-                string sql = "SELECT [BranchID], " +
-                    "[Name] " +
-                    "FROM [400TB_Branch]";
+                string sql = "Execute BranchList";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
@@ -147,9 +142,7 @@ namespace C_SWInternPerformance.Models
             {
                 conn.Open();
                 BindingList<LevelData> list = new BindingList<LevelData>();
-                string sql = "SELECT [LevelID], " +
-                    "[Name] " +
-                    "FROM [302TB_Level]";
+                string sql = "Execute LevelList";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
@@ -176,22 +169,7 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "UPDATE [300TB_Employee] " +
-                    "SET " +
-                    "Name = @eName, " +
-                    "PositionID = @posID, " +
-                    "BranchID = @braID, " +
-                    "StartDate = @startDate, " +
-                    "EndDate = @endDate, " +
-                    "EmailPrivate = @email, " +
-                    "Mobile = @mobile, " +
-                    "Address = @address, " +
-                    "BirthDay = @birth, " +
-                    "LevelID = @lvlID, " +
-                    "Desire = @desire, " +
-                    "DelFlag = @del, " +
-                    "Remark = @remark " +
-                    "WHERE EmployeeID = @proID";
+                string sql = "Execute SaveEmployee @eName, @posID, @braID, @startDate, @endDate, @email, @mobile, @address, @birth, @lvlID, @desire, @del, @remark, @proID";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
@@ -220,8 +198,7 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "INSERT INTO [300TB_Employee](Name,PositionID,BranchID,StartDate,EndDate,EmailPrivate,Mobile,Address,BirthDay,LevelID,Desire,DelFlag,Remark) " +
-                    "VALUES (@eName,@posID,@braID,@startDate,@endDate,@email,@mobile,@address,@birth,@lvlID,@desire,@del,@remark)";
+                string sql = "Execute AddEmployee @eName,@posID,@braID,@startDate,@endDate,@email,@mobile,@address,@birth,@lvlID,@desire,@del,@remark";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {

@@ -138,7 +138,7 @@
             this.tableLayoutPanel1.Controls.Add(this.projectBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.workTimeUpDown, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 75);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 66);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -151,25 +151,27 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.closeButton);
-            this.panel1.Controls.Add(this.submitButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(511, 61);
+            this.panel1.Size = new System.Drawing.Size(508, 43);
             this.panel1.TabIndex = 7;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(17, 14);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(10, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 31);
+            this.label5.Size = new System.Drawing.Size(150, 25);
             this.label5.TabIndex = 3;
             this.label5.Text = "Working Report";
             // 
@@ -178,14 +180,14 @@
             this.closeButton.AutoSize = true;
             this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.closeButton.Depth = 0;
-            this.closeButton.Location = new System.Drawing.Point(444, 15);
+            this.closeButton.Location = new System.Drawing.Point(474, 0);
             this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.closeButton.Name = "closeButton";
             this.closeButton.Primary = false;
-            this.closeButton.Size = new System.Drawing.Size(54, 36);
+            this.closeButton.Size = new System.Drawing.Size(21, 36);
             this.closeButton.TabIndex = 2;
-            this.closeButton.Text = "Close";
+            this.closeButton.Text = "X";
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.Close_Click);
             // 
@@ -194,7 +196,8 @@
             this.submitButton.AutoSize = true;
             this.submitButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.submitButton.Depth = 0;
-            this.submitButton.Location = new System.Drawing.Point(365, 14);
+            this.submitButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.submitButton.Location = new System.Drawing.Point(433, 330);
             this.submitButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.submitButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.submitButton.Name = "submitButton";
@@ -210,10 +213,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(511, 342);
+            this.ClientSize = new System.Drawing.Size(508, 376);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F100_WorkingReport";
             this.Text = "F100_WorkingReport";
@@ -223,6 +227,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

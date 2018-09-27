@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.Data;
 
 namespace C_SWInternPerformance.Models
 {
@@ -23,13 +24,11 @@ namespace C_SWInternPerformance.Models
             {
                 conn.Open();
                 // Write the query and execute.
-                string sql = "SELECT [EmployeeID] " +
-                    "FROM [301TB_Email] " +
-                    "WHERE EmailAddress = '" + this.Username + "' " +
-                    "AND EmployeePass = '" + this.Password + "' " +
-                    "AND DelFlag = 0";
+                string sql = "Execute CredCheck @user,@pass";
                 Console.WriteLine(sql);
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.Add("@user", SqlDbType.NVarChar).Value = Username;
+                cmd.Parameters.Add("@pass", SqlDbType.NVarChar).Value = Password;
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     // If cred found => return first result.
@@ -56,13 +55,10 @@ namespace C_SWInternPerformance.Models
             {
                 conn.Open();
                 // Write the query and execute.
-                string sql = "SELECT Name " +
-                    "FROM [300TB_Employee] Employee " +
-                    "JOIN [301TB_Email] Email " +
-                    "ON Employee.EmployeeID = Email.EmployeeID " +
-                    "WHERE Email.EmployeeID = " + ID;
+                string sql = "Execute GetUser @ID";
                 Console.WriteLine(sql);
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     reader.Read();

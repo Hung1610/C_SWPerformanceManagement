@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -21,12 +22,10 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "select [ProjectID] " +
-                    "from [200TB_Project] " +
-                    "where ProjectID = " + ID + " " +
-                    "and DelFlag = 0";
+                string sql = "Execute SearchID @ID";
                 Console.WriteLine(sql);
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     if (reader.HasRows && reader.Read())
@@ -51,9 +50,7 @@ namespace C_SWInternPerformance.Models
                 BindingList<ProjectsData> list = new BindingList<ProjectsData>();
                 ProjectsData item = new ProjectsData(-1, "All");
                 list.Add(item);
-                string sql = "select [ProjectID]," +
-                                    "[ProjectName] " +
-                    "from [200TB_Project] ";
+                string sql = "Execute ProjectList";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
@@ -81,8 +78,7 @@ namespace C_SWInternPerformance.Models
             {
                 conn.Open();
                 BindingList<EmployeeData> list = new BindingList<EmployeeData>();
-                string sql = "SELECT [EmployeeID],[Name] " +
-                    "FROM [300TB_Employee]";
+                string sql = "Execute GetEmployeeDatas";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {

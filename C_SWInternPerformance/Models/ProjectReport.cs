@@ -28,8 +28,7 @@ namespace C_SWInternPerformance.Models
             using(SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "insert into [100TB_Performance]([ProjectID],[EmployeeID],[WorkingDate],[WorkingHour],[WorkingName],[WorkingDetail]) " +
-                    "values (@pID,@eID,@wDate,@wHour,@wName,@wDetail)";
+                string sql = "Execute SaveReport @pID,@eID,@wDate,@wHour,@wName,@wDetail";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {

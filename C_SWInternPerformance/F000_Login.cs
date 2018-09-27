@@ -13,7 +13,7 @@ using MaterialSkin.Controls;
 
 namespace C_SWInternPerformance
 {
-    public partial class F000_Login : Form, ILogin
+    public partial class F000_Login : CommonForm, ILogin
     {
         // Message box strings.
         string LoginErrorTitle = "Login Error";
@@ -112,7 +112,7 @@ namespace C_SWInternPerformance
         }
 
         // Close button.
-        private void Close_Click(object sender, EventArgs e)
+        private new void Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

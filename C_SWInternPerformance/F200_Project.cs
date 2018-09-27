@@ -12,7 +12,7 @@ using C_SWInternPerformance.Presenters;
 
 namespace C_SWInternPerformance
 {
-    public partial class F200_Project : Form, IProjects
+    public partial class F200_Project : CommonForm, IProjects
     {
         // Message box strings.
         string CreateConfirmTitle = "Confirm Create";
@@ -41,7 +41,7 @@ namespace C_SWInternPerformance
             InitializeComponent();
             pProject = new PProjects(this);
             projectList = pProject.ProjectList();
-            saveButton.Text = "Create";
+            saveButton.Text = "CREATE";
         }
         // Initialize UI components along with some data. Edit Project form.
         public F200_Project(int eID)
@@ -51,7 +51,7 @@ namespace C_SWInternPerformance
             editID = eID;
             pProject = new PProjects(this);
             projectList = pProject.ProjectList();
-            saveButton.Text = "Save";
+            saveButton.Text = "SAVE";
             labelTitle.Text = "Edit Project";
             labelProjectID.Visible = true;
             txtEditID.Text = editID.ToString();
@@ -66,6 +66,24 @@ namespace C_SWInternPerformance
             startDatePick.Value = project.start;
             endDatePick.Value = project.end;
         }
+
+        // Make dragging Title Panel drag the form around.
+        #region Title Panel Mouse events.
+        private void topPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseDown(sender, e);
+        }
+
+        private void topPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseMove(sender, e);
+        }
+
+        private void topPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseUp(sender, e);
+        }
+        #endregion
 
         // This region implements IProjects elements.
         #region ASSIGN VALUES TO INTERFACE MEMBERS.
@@ -153,11 +171,9 @@ namespace C_SWInternPerformance
         // Close button.
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            base.Close_Click(sender, e);
             this.Close();
         }
 
-        private void ProjectNameTxt_TextChanged(object sender, EventArgs e)
-        {
-        }
     }
 }

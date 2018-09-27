@@ -66,8 +66,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonFormFunctions.cs">
+    <Compile Include="CommonForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForm.Designer.cs">
+      <DependentUpon>CommonForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\BranchData.cs" />
     <Compile Include="Data\DetailedEmployeeData.cs" />
@@ -244,6 +247,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoftWorldICO.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
