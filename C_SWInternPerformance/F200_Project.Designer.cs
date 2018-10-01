@@ -73,7 +73,7 @@
             this.tableLayoutPanel1.Controls.Add(this.endDatePick, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.remarkRichTxt, 1, 6);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 136);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.50309F));
@@ -101,7 +101,7 @@
             // 
             this.projectNameTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projectNameTxt.Location = new System.Drawing.Point(148, 4);
-            this.projectNameTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.projectNameTxt.Margin = new System.Windows.Forms.Padding(4);
             this.projectNameTxt.Name = "projectNameTxt";
             this.projectNameTxt.Size = new System.Drawing.Size(424, 22);
             this.projectNameTxt.TabIndex = 1;
@@ -176,7 +176,7 @@
             // 
             this.projectInfoTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projectInfoTxt.Location = new System.Drawing.Point(148, 66);
-            this.projectInfoTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.projectInfoTxt.Margin = new System.Windows.Forms.Padding(4);
             this.projectInfoTxt.Name = "projectInfoTxt";
             this.projectInfoTxt.Size = new System.Drawing.Size(424, 22);
             this.projectInfoTxt.TabIndex = 1;
@@ -185,7 +185,7 @@
             // 
             this.cusNameTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cusNameTxt.Location = new System.Drawing.Point(148, 128);
-            this.cusNameTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cusNameTxt.Margin = new System.Windows.Forms.Padding(4);
             this.cusNameTxt.Name = "cusNameTxt";
             this.cusNameTxt.Size = new System.Drawing.Size(424, 22);
             this.cusNameTxt.TabIndex = 1;
@@ -194,7 +194,7 @@
             // 
             this.cusInfoTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cusInfoTxt.Location = new System.Drawing.Point(148, 190);
-            this.cusInfoTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cusInfoTxt.Margin = new System.Windows.Forms.Padding(4);
             this.cusInfoTxt.Name = "cusInfoTxt";
             this.cusInfoTxt.Size = new System.Drawing.Size(424, 22);
             this.cusInfoTxt.TabIndex = 1;
@@ -202,7 +202,7 @@
             // startDatePick
             // 
             this.startDatePick.Location = new System.Drawing.Point(148, 252);
-            this.startDatePick.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.startDatePick.Margin = new System.Windows.Forms.Padding(4);
             this.startDatePick.Name = "startDatePick";
             this.startDatePick.Size = new System.Drawing.Size(239, 22);
             this.startDatePick.TabIndex = 2;
@@ -210,7 +210,7 @@
             // endDatePick
             // 
             this.endDatePick.Location = new System.Drawing.Point(148, 314);
-            this.endDatePick.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.endDatePick.Margin = new System.Windows.Forms.Padding(4);
             this.endDatePick.Name = "endDatePick";
             this.endDatePick.Size = new System.Drawing.Size(239, 22);
             this.endDatePick.TabIndex = 3;
@@ -219,7 +219,7 @@
             // 
             this.remarkRichTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.remarkRichTxt.Location = new System.Drawing.Point(148, 376);
-            this.remarkRichTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.remarkRichTxt.Margin = new System.Windows.Forms.Padding(4);
             this.remarkRichTxt.Name = "remarkRichTxt";
             this.remarkRichTxt.Size = new System.Drawing.Size(424, 82);
             this.remarkRichTxt.TabIndex = 4;
@@ -244,7 +244,7 @@
             // 
             this.labelProjectID.AutoSize = true;
             this.labelProjectID.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProjectID.ForeColor = System.Drawing.SystemColors.Info;
+            this.labelProjectID.ForeColor = System.Drawing.Color.White;
             this.labelProjectID.Location = new System.Drawing.Point(19, 60);
             this.labelProjectID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProjectID.Name = "labelProjectID";
@@ -257,7 +257,7 @@
             // 
             this.txtEditID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEditID.Location = new System.Drawing.Point(149, 60);
-            this.txtEditID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEditID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditID.Name = "txtEditID";
             this.txtEditID.ReadOnly = true;
             this.txtEditID.Size = new System.Drawing.Size(46, 22);
@@ -275,7 +275,7 @@
             this.topPanel.Controls.Add(this.labelProjectID);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(4);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(609, 102);
             this.topPanel.TabIndex = 8;
@@ -293,7 +293,7 @@
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.ForeColor = System.Drawing.Color.White;
             this.closeButton.Location = new System.Drawing.Point(574, 0);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(31, 31);
             this.closeButton.TabIndex = 9;
@@ -310,7 +310,7 @@
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.Location = new System.Drawing.Point(421, 49);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(171, 40);
             this.saveButton.TabIndex = 9;
@@ -327,7 +327,7 @@
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F200_Project";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Project";

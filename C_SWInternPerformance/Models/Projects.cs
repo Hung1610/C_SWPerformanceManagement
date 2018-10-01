@@ -52,11 +52,10 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "Execute SaveProject @pName,  @pInfo, @cName, @cInfo, @startDate, @endDate, DelFlag = 0, @remark WHERE ProjectID = @ID";
+                string sql = "Execute SaveProject @pName,  @pInfo, @cName, @cInfo, @startDate, @endDate, @remark, @ID";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
-                    command.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
                     command.Parameters.Add("@pName", SqlDbType.NVarChar).Value = this.ProjectName;
                     command.Parameters.Add("@pInfo", SqlDbType.NVarChar).Value = this.ProjectInfo;
                     command.Parameters.Add("@cName", SqlDbType.NVarChar).Value = this.CustomerName;
@@ -64,6 +63,7 @@ namespace C_SWInternPerformance.Models
                     command.Parameters.Add("@startDate", SqlDbType.Date).Value = this.StartDate;
                     command.Parameters.Add("@endDate", SqlDbType.Date).Value = this.EndDate;
                     command.Parameters.Add("@remark", SqlDbType.NVarChar).Value = this.Remark;
+                    command.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
                     command.ExecuteNonQuery();
                 }
             }

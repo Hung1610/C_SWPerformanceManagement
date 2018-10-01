@@ -397,7 +397,7 @@
             // 
             this.labelEmpID.AutoSize = true;
             this.labelEmpID.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmpID.ForeColor = System.Drawing.SystemColors.Info;
+            this.labelEmpID.ForeColor = System.Drawing.Color.White;
             this.labelEmpID.Location = new System.Drawing.Point(22, 56);
             this.labelEmpID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEmpID.Name = "labelEmpID";
@@ -445,7 +445,7 @@
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.ForeColor = System.Drawing.Color.White;
             this.closeButton.Location = new System.Drawing.Point(526, 0);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(31, 31);
             this.closeButton.TabIndex = 19;
@@ -462,7 +462,7 @@
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.Location = new System.Drawing.Point(365, 45);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(171, 40);
             this.saveButton.TabIndex = 18;
