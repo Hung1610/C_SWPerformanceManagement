@@ -48,30 +48,30 @@
             // 
             this.projectName.AutoSize = true;
             this.projectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projectName.Location = new System.Drawing.Point(24, 21);
+            this.projectName.Location = new System.Drawing.Point(30, 26);
             this.projectName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectName.Name = "projectName";
-            this.projectName.Size = new System.Drawing.Size(118, 22);
+            this.projectName.Size = new System.Drawing.Size(145, 26);
             this.projectName.TabIndex = 1;
             this.projectName.Text = "Project Name";
             // 
             // projectNameBox
             // 
             this.projectNameBox.FormattingEnabled = true;
-            this.projectNameBox.Location = new System.Drawing.Point(156, 25);
+            this.projectNameBox.Location = new System.Drawing.Point(195, 31);
             this.projectNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.projectNameBox.Name = "projectNameBox";
-            this.projectNameBox.Size = new System.Drawing.Size(201, 21);
+            this.projectNameBox.Size = new System.Drawing.Size(250, 24);
             this.projectNameBox.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 60);
+            this.label1.Location = new System.Drawing.Point(30, 75);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.Size = new System.Drawing.Size(99, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Employee";
             // 
@@ -79,19 +79,19 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(24, 153);
+            this.label13.Location = new System.Drawing.Point(30, 191);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 20);
+            this.label13.Size = new System.Drawing.Size(79, 25);
             this.label13.TabIndex = 4;
             this.label13.Text = "Remark";
             // 
             // remarkRichTxt
             // 
-            this.remarkRichTxt.Location = new System.Drawing.Point(156, 156);
+            this.remarkRichTxt.Location = new System.Drawing.Point(195, 195);
             this.remarkRichTxt.Margin = new System.Windows.Forms.Padding(2);
             this.remarkRichTxt.Name = "remarkRichTxt";
-            this.remarkRichTxt.Size = new System.Drawing.Size(318, 62);
+            this.remarkRichTxt.Size = new System.Drawing.Size(396, 76);
             this.remarkRichTxt.TabIndex = 14;
             this.remarkRichTxt.Text = "";
             // 
@@ -99,39 +99,39 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 84);
+            this.label2.Location = new System.Drawing.Point(30, 105);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 20);
+            this.label2.Size = new System.Drawing.Size(51, 25);
             this.label2.TabIndex = 15;
             this.label2.Text = "Role";
             // 
             // employeeBox
             // 
             this.employeeBox.FormattingEnabled = true;
-            this.employeeBox.Location = new System.Drawing.Point(156, 63);
+            this.employeeBox.Location = new System.Drawing.Point(195, 79);
             this.employeeBox.Margin = new System.Windows.Forms.Padding(2);
             this.employeeBox.Name = "employeeBox";
-            this.employeeBox.Size = new System.Drawing.Size(201, 21);
+            this.employeeBox.Size = new System.Drawing.Size(250, 24);
             this.employeeBox.TabIndex = 2;
             // 
             // roleBox
             // 
             this.roleBox.FormattingEnabled = true;
-            this.roleBox.Location = new System.Drawing.Point(156, 87);
+            this.roleBox.Location = new System.Drawing.Point(195, 109);
             this.roleBox.Margin = new System.Windows.Forms.Padding(2);
             this.roleBox.Name = "roleBox";
-            this.roleBox.Size = new System.Drawing.Size(201, 21);
+            this.roleBox.Size = new System.Drawing.Size(250, 24);
             this.roleBox.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 111);
+            this.label3.Location = new System.Drawing.Point(30, 139);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.Size = new System.Drawing.Size(99, 25);
             this.label3.TabIndex = 15;
             this.label3.Text = "Start Date";
             // 
@@ -139,27 +139,27 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 132);
+            this.label4.Location = new System.Drawing.Point(30, 165);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 20);
+            this.label4.Size = new System.Drawing.Size(93, 25);
             this.label4.TabIndex = 15;
             this.label4.Text = "End Date";
             // 
             // startDatePicker
             // 
-            this.startDatePicker.Location = new System.Drawing.Point(156, 111);
+            this.startDatePicker.Location = new System.Drawing.Point(195, 139);
             this.startDatePicker.Margin = new System.Windows.Forms.Padding(2);
             this.startDatePicker.Name = "startDatePicker";
-            this.startDatePicker.Size = new System.Drawing.Size(161, 20);
+            this.startDatePicker.Size = new System.Drawing.Size(200, 22);
             this.startDatePicker.TabIndex = 16;
             // 
             // endDatePicker
             // 
-            this.endDatePicker.Location = new System.Drawing.Point(156, 134);
+            this.endDatePicker.Location = new System.Drawing.Point(195, 168);
             this.endDatePicker.Margin = new System.Windows.Forms.Padding(2);
             this.endDatePicker.Name = "endDatePicker";
-            this.endDatePicker.Size = new System.Drawing.Size(161, 20);
+            this.endDatePicker.Size = new System.Drawing.Size(200, 22);
             this.endDatePicker.TabIndex = 16;
             // 
             // assignButton
@@ -170,10 +170,10 @@
             this.assignButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.assignButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.assignButton.Image = global::C_SWInternPerformance.Properties.Resources.add_song__1_;
-            this.assignButton.Location = new System.Drawing.Point(389, 17);
+            this.assignButton.Location = new System.Drawing.Point(486, 21);
             this.assignButton.Margin = new System.Windows.Forms.Padding(2);
             this.assignButton.Name = "assignButton";
-            this.assignButton.Size = new System.Drawing.Size(85, 34);
+            this.assignButton.Size = new System.Drawing.Size(106, 42);
             this.assignButton.TabIndex = 17;
             this.assignButton.Text = "ASSIGN";
             this.assignButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -185,12 +185,12 @@
             this.closeButton.AutoSize = true;
             this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.closeButton.Depth = 0;
-            this.closeButton.Location = new System.Drawing.Point(483, -2);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.closeButton.Location = new System.Drawing.Point(604, -2);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
             this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.closeButton.Name = "closeButton";
             this.closeButton.Primary = false;
-            this.closeButton.Size = new System.Drawing.Size(21, 36);
+            this.closeButton.Size = new System.Drawing.Size(24, 36);
             this.closeButton.TabIndex = 18;
             this.closeButton.Text = "X";
             this.closeButton.UseVisualStyleBackColor = true;
@@ -198,10 +198,10 @@
             // 
             // F201_ProjectAssignAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(508, 248);
+            this.ClientSize = new System.Drawing.Size(635, 310);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.assignButton);
             this.Controls.Add(this.endDatePicker);
@@ -219,7 +219,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F201_ProjectAssignAdd";
-            this.Text = "F201_ProjectAssignAdd";
+            this.Text = "Project Assignment";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseUp);

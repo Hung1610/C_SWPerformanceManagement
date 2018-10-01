@@ -553,9 +553,9 @@
             this.label5.Location = new System.Drawing.Point(15, 11);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 31);
+            this.label5.Size = new System.Drawing.Size(158, 31);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Skill Update";
+            this.label5.Text = "Skill Manage";
             this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
             this.label5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseUp);
@@ -581,7 +581,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F500_SkillManage";
-            this.Text = "F500_SkillManage";
+            this.Text = "Skill Manage";
             this.Load += new System.EventHandler(this.F500_SkillManage_Load);
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();

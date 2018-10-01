@@ -244,7 +244,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F301_Profile";
-            this.Text = "F301_Profile";
+            this.Text = "Profile Edit";
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
