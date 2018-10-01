@@ -157,6 +157,7 @@
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\ProjectAssign.cs" />
     <Compile Include="Models\Projects.cs" />
+    <Compile Include="Models\SkillEdit.cs" />
     <Compile Include="Models\SkillManage.cs" />
     <Compile Include="Presenters\BasePresenter.cs" />
     <Compile Include="Data\EmployeeData.cs" />
@@ -179,6 +180,7 @@
     <Compile Include="Presenters\PProjectReport.cs" />
     <Compile Include="Presenters\PProjects.cs" />
     <Compile Include="Data\ProjectsData.cs" />
+    <Compile Include="Presenters\PSkillEdit.cs" />
     <Compile Include="Presenters\PSkillManage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

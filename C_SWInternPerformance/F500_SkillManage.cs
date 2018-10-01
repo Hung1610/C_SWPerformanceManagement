@@ -12,17 +12,27 @@ using System.Windows.Forms;
 
 namespace C_SWInternPerformance
 {
-    public partial class F500_SkillManage : CommonForm,ISkillManage
+    public partial class F500_SkillManage : CommonForm,ISkillManage,ISkillEdit
     {
         // Message box strings.
         string SaveConfirmTitle = "Confirm Save";
-        string SaveConfirmMessage = "Save this skill setting ?";
+        string SaveConfirmMessage = "Save this skill assignment setting ?";
         string CreateConfirmTitle = "Confirm Create";
         string CreateConfirmMessage = "Assign a new skill ?";
+        // Edit tab strings.
+        string EditSaveConfirmMessage = "Save this skill setting ?";
+        string EditCreateConfirmMessage = "Create this skill ?";
+        // Success strings.
+        string CreateSuccess = "Skill Created.";
+        string SaveSuccess = "Skill Updated.";
+        // Skill Duplicate Warning.
+        string SkillDupWarn = "A skill with this name already exist!";
+        string SkillDupWarnTitle = "Duplicate Warning!";
         // User ID gotten from main.
         int UserID;
         // Declare Presenter.
         PSkillManage PSkill;
+        PSkillEdit PSkillEdit;
         // Lists to populate with data.
         BindingList<SkillData> SkillList;
         BindingList<SkillData> UserSkills;
@@ -32,7 +42,7 @@ namespace C_SWInternPerformance
             InitializeComponent();
             UserID = ID;
             PSkill = new PSkillManage(this);
-            
+            PSkillEdit = new PSkillEdit(this);
         }
         private void F500_SkillManage_Load(object sender, EventArgs e)
         {
@@ -143,7 +153,7 @@ namespace C_SWInternPerformance
         #endregion
 
 
-        // Implements ISkillManage elements.
+        // Implements Interface elements.
         #region ISkillManage ELEMENTS.
         public int SkillListID
         {
@@ -174,6 +184,46 @@ namespace C_SWInternPerformance
             get
             {
                 return richTxtRemark.Text;
+            }
+        }
+        #endregion
+
+        #region ISkillEdit ELEMENTS.
+        public int SkillEditID {
+            get
+            {
+                SkillData skill = (SkillData)listBoxSkillEdit.SelectedItem;
+                return skill.SkillListID;
+            }
+        }
+        public string SkillName
+        {
+            get
+            {
+                return txtSkillName.Text;
+            }
+        }
+        public string SkillType
+        {
+            get
+            {
+                return comboSkillType.Text;
+            }
+        }
+        public int DelEdit
+        {
+            get
+            {
+                if (checkSkillDel.Checked)
+                    return 1;
+                else return 0;
+            }
+        }
+        public string RemarkEdit
+        {
+            get
+            {
+                return richTxtSkillRemark.Text;
             }
         }
         #endregion
@@ -227,22 +277,58 @@ namespace C_SWInternPerformance
                 if (edit)
                 {
                     PSkill.SaveSkillAssign(UserID);
-                    MessageBox.Show("Skill Updated.");
+                    MessageBox.Show(SaveSuccess);
                 }
                 else
                 {
                     PSkill.SkillAssign(UserID);
-                    MessageBox.Show("Skill Added.");
+                    MessageBox.Show(CreateSuccess);
                 }
                 UserSkills = PSkill.GetUserSkill(UserID);
                 listBoxSkill.DataSource = UserSkills;
             }
         }
 
-        // Save/Add Button. Skill Edit.
+        // Save Button. Skill Edit.
         private void saveSkillButton_Click(object sender, EventArgs e)
         {
+            string title = SaveConfirmTitle;
+            string message = EditSaveConfirmMessage;
+            DialogResult result = MessageBox.Show(message,
+                                                    title,
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                PSkillEdit.SaveSkill();
+                MessageBox.Show(SaveSuccess);
+                SkillList = PSkill.SkillList();
+                listBoxSkillEdit.DataSource = SkillList;
+            }
+        }
 
+        // Add Button. Skill Edit.
+        private void addSkillButton_Click(object sender, EventArgs e)
+        {
+
+            string title = CreateConfirmTitle;
+            string message = EditCreateConfirmMessage;
+            if (UtilFormFunctions.BoxContain(listBoxSkillEdit, txtSkillName.Text))
+            {
+                MessageBox.Show(SkillDupWarn, SkillDupWarnTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            DialogResult result = MessageBox.Show(message,
+                                                    title,
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                PSkillEdit.AddSkill();
+                MessageBox.Show(CreateSuccess);
+                SkillList = PSkill.SkillList();
+                listBoxSkillEdit.DataSource = SkillList;
+            }
         }
 
         // Close Button.

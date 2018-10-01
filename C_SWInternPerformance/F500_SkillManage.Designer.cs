@@ -49,6 +49,7 @@
             this.tabEdit = new System.Windows.Forms.TabPage();
             this.splitConSkill = new System.Windows.Forms.SplitContainer();
             this.listBoxSkillEdit = new System.Windows.Forms.ListBox();
+            this.addSkillButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.saveSkillButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
@@ -114,7 +115,7 @@
             this.materialTabSelector1.Depth = 0;
             this.materialTabSelector1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.materialTabSelector1.Location = new System.Drawing.Point(0, 52);
-            this.materialTabSelector1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.materialTabSelector1.Margin = new System.Windows.Forms.Padding(4);
             this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector1.Name = "materialTabSelector1";
             this.materialTabSelector1.Size = new System.Drawing.Size(781, 42);
@@ -129,7 +130,7 @@
             this.tabControlSkill.Depth = 0;
             this.tabControlSkill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlSkill.Location = new System.Drawing.Point(0, 0);
-            this.tabControlSkill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControlSkill.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlSkill.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabControlSkill.Name = "tabControlSkill";
             this.tabControlSkill.SelectedIndex = 0;
@@ -141,9 +142,9 @@
             this.tabManage.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabManage.Controls.Add(this.splitCon);
             this.tabManage.Location = new System.Drawing.Point(4, 28);
-            this.tabManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabManage.Margin = new System.Windows.Forms.Padding(4);
             this.tabManage.Name = "tabManage";
-            this.tabManage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabManage.Padding = new System.Windows.Forms.Padding(4);
             this.tabManage.Size = new System.Drawing.Size(773, 253);
             this.tabManage.TabIndex = 0;
             this.tabManage.Text = "Skill Assign";
@@ -153,7 +154,7 @@
             this.splitCon.BackColor = System.Drawing.Color.WhiteSmoke;
             this.splitCon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitCon.Location = new System.Drawing.Point(4, 4);
-            this.splitCon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitCon.Margin = new System.Windows.Forms.Padding(4);
             this.splitCon.Name = "splitCon";
             // 
             // splitCon.Panel1
@@ -205,7 +206,7 @@
             "JSP",
             "blahbalh"});
             this.listBoxSkill.Location = new System.Drawing.Point(0, 5);
-            this.listBoxSkill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxSkill.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxSkill.Name = "listBoxSkill";
             this.listBoxSkill.Size = new System.Drawing.Size(215, 240);
             this.listBoxSkill.TabIndex = 0;
@@ -241,7 +242,7 @@
             this.tableLayoutPanel1.Controls.Add(this.materialLabel9, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxSkill, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 16);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.84121F));
@@ -269,7 +270,7 @@
             // 
             this.richTxtRemark.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTxtRemark.Location = new System.Drawing.Point(194, 106);
-            this.richTxtRemark.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTxtRemark.Margin = new System.Windows.Forms.Padding(4);
             this.richTxtRemark.Name = "richTxtRemark";
             this.richTxtRemark.Size = new System.Drawing.Size(258, 86);
             this.richTxtRemark.TabIndex = 5;
@@ -322,7 +323,7 @@
             // 
             this.datePickStart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datePickStart.Location = new System.Drawing.Point(194, 38);
-            this.datePickStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.datePickStart.Margin = new System.Windows.Forms.Padding(4);
             this.datePickStart.Name = "datePickStart";
             this.datePickStart.Size = new System.Drawing.Size(258, 22);
             this.datePickStart.TabIndex = 1;
@@ -345,7 +346,7 @@
             // 
             this.comboBoxSkill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxSkill.Location = new System.Drawing.Point(194, 4);
-            this.comboBoxSkill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxSkill.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxSkill.Name = "comboBoxSkill";
             this.comboBoxSkill.Size = new System.Drawing.Size(258, 24);
             this.comboBoxSkill.TabIndex = 6;
@@ -355,9 +356,9 @@
             this.tabEdit.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabEdit.Controls.Add(this.splitConSkill);
             this.tabEdit.Location = new System.Drawing.Point(4, 28);
-            this.tabEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabEdit.Margin = new System.Windows.Forms.Padding(4);
             this.tabEdit.Name = "tabEdit";
-            this.tabEdit.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabEdit.Padding = new System.Windows.Forms.Padding(4);
             this.tabEdit.Size = new System.Drawing.Size(773, 253);
             this.tabEdit.TabIndex = 1;
             this.tabEdit.Text = "Skill Edit";
@@ -367,7 +368,7 @@
             this.splitConSkill.BackColor = System.Drawing.Color.WhiteSmoke;
             this.splitConSkill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitConSkill.Location = new System.Drawing.Point(4, 4);
-            this.splitConSkill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitConSkill.Margin = new System.Windows.Forms.Padding(4);
             this.splitConSkill.Name = "splitConSkill";
             // 
             // splitConSkill.Panel1
@@ -377,6 +378,7 @@
             // splitConSkill.Panel2
             // 
             this.splitConSkill.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitConSkill.Panel2.Controls.Add(this.addSkillButton);
             this.splitConSkill.Panel2.Controls.Add(this.saveSkillButton);
             this.splitConSkill.Panel2.Controls.Add(this.materialLabel8);
             this.splitConSkill.Panel2.Controls.Add(this.materialLabel6);
@@ -407,11 +409,27 @@
             "JSP",
             "blahbalh"});
             this.listBoxSkillEdit.Location = new System.Drawing.Point(0, 0);
-            this.listBoxSkillEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxSkillEdit.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxSkillEdit.Name = "listBoxSkillEdit";
             this.listBoxSkillEdit.Size = new System.Drawing.Size(215, 245);
             this.listBoxSkillEdit.TabIndex = 0;
             this.listBoxSkillEdit.SelectedIndexChanged += new System.EventHandler(this.listBoxSkillEdit_SelectedIndexChanged);
+            // 
+            // addSkillButton
+            // 
+            this.addSkillButton.AutoSize = true;
+            this.addSkillButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.addSkillButton.Depth = 0;
+            this.addSkillButton.Location = new System.Drawing.Point(100, 224);
+            this.addSkillButton.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
+            this.addSkillButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.addSkillButton.Name = "addSkillButton";
+            this.addSkillButton.Primary = false;
+            this.addSkillButton.Size = new System.Drawing.Size(47, 36);
+            this.addSkillButton.TabIndex = 1;
+            this.addSkillButton.Text = "Add";
+            this.addSkillButton.UseVisualStyleBackColor = true;
+            this.addSkillButton.Click += new System.EventHandler(this.addSkillButton_Click);
             // 
             // saveSkillButton
             // 
@@ -423,9 +441,9 @@
             this.saveSkillButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.saveSkillButton.Name = "saveSkillButton";
             this.saveSkillButton.Primary = false;
-            this.saveSkillButton.Size = new System.Drawing.Size(96, 36);
+            this.saveSkillButton.Size = new System.Drawing.Size(56, 36);
             this.saveSkillButton.TabIndex = 1;
-            this.saveSkillButton.Text = "Save/Add";
+            this.saveSkillButton.Text = "Save";
             this.saveSkillButton.UseVisualStyleBackColor = true;
             this.saveSkillButton.Click += new System.EventHandler(this.saveSkillButton_Click);
             // 
@@ -475,7 +493,7 @@
             // 
             this.comboSkillType.FormattingEnabled = true;
             this.comboSkillType.Location = new System.Drawing.Point(181, 55);
-            this.comboSkillType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboSkillType.Margin = new System.Windows.Forms.Padding(4);
             this.comboSkillType.Name = "comboSkillType";
             this.comboSkillType.Size = new System.Drawing.Size(248, 24);
             this.comboSkillType.TabIndex = 0;
@@ -497,7 +515,7 @@
             // txtSkillName
             // 
             this.txtSkillName.Location = new System.Drawing.Point(181, 22);
-            this.txtSkillName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSkillName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSkillName.Name = "txtSkillName";
             this.txtSkillName.Size = new System.Drawing.Size(248, 22);
             this.txtSkillName.TabIndex = 1;
@@ -521,9 +539,9 @@
             // richTxtSkillRemark
             // 
             this.richTxtSkillRemark.Location = new System.Drawing.Point(181, 126);
-            this.richTxtSkillRemark.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTxtSkillRemark.Margin = new System.Windows.Forms.Padding(4);
             this.richTxtSkillRemark.Name = "richTxtSkillRemark";
-            this.richTxtSkillRemark.Size = new System.Drawing.Size(355, 69);
+            this.richTxtSkillRemark.Size = new System.Drawing.Size(248, 69);
             this.richTxtSkillRemark.TabIndex = 3;
             this.richTxtSkillRemark.Text = "";
             // 
@@ -547,7 +565,7 @@
             this.panel1.Controls.Add(this.tabControlSkill);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 100);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(781, 285);
             this.panel1.TabIndex = 4;
@@ -561,7 +579,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F500_SkillManage";
             this.Text = "F500_SkillManage";
             this.Load += new System.EventHandler(this.F500_SkillManage_Load);
@@ -622,5 +640,6 @@
         private System.Windows.Forms.ListBox listBoxSkillEdit;
         private MaterialSkin.Controls.MaterialFlatButton saveSkillButton;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialFlatButton addSkillButton;
     }
 }
