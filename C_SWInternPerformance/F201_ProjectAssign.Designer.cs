@@ -32,9 +32,6 @@
             this.projectName = new System.Windows.Forms.Label();
             this.projectNameBox = new System.Windows.Forms.ComboBox();
             this.dataProjectAssign = new System.Windows.Forms.DataGridView();
-            this.ProjectCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.EmployeeCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.RoleCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.middleProjectBox = new System.Windows.Forms.ComboBox();
             this.middleEmpBox = new System.Windows.Forms.ComboBox();
             this.middleRoleBox = new System.Windows.Forms.ComboBox();
@@ -45,6 +42,9 @@
             this.RefreshButton = new System.Windows.Forms.Button();
             this.saveButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.ProjectCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.EmployeeCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.RoleCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataProjectAssign)).BeginInit();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +75,7 @@
             // dataProjectAssign
             // 
             this.dataProjectAssign.AllowUserToAddRows = false;
-            this.dataProjectAssign.BackgroundColor = System.Drawing.Color.Silver;
+            this.dataProjectAssign.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataProjectAssign.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataProjectAssign.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataProjectAssign.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -93,23 +93,6 @@
             this.dataProjectAssign.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataProjectAssign_RowEnter);
             this.dataProjectAssign.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.DataProjectAssign_RowValidating);
             this.dataProjectAssign.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.DataProjectAssign_UserDeletingRow);
-            // 
-            // ProjectCol
-            // 
-            this.ProjectCol.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.ProjectCol.HeaderText = "Project";
-            this.ProjectCol.Name = "ProjectCol";
-            // 
-            // EmployeeCol
-            // 
-            this.EmployeeCol.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.EmployeeCol.HeaderText = "Employee";
-            this.EmployeeCol.Name = "EmployeeCol";
-            // 
-            // RoleCol
-            // 
-            this.RoleCol.HeaderText = "Role";
-            this.RoleCol.Name = "RoleCol";
             // 
             // middleProjectBox
             // 
@@ -185,6 +168,9 @@
             this.labelTitle.Size = new System.Drawing.Size(139, 25);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Project Assign";
+            this.labelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            this.labelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
+            this.labelTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseUp);
             // 
             // AddButton
             // 
@@ -247,6 +233,24 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // ProjectCol
+            // 
+            this.ProjectCol.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.ProjectCol.HeaderText = "Project";
+            this.ProjectCol.Name = "ProjectCol";
+            // 
+            // EmployeeCol
+            // 
+            this.EmployeeCol.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.EmployeeCol.HeaderText = "Employee";
+            this.EmployeeCol.Name = "EmployeeCol";
+            // 
+            // RoleCol
+            // 
+            this.RoleCol.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.RoleCol.HeaderText = "Role";
+            this.RoleCol.Name = "RoleCol";
+            // 
             // F201_ProjectAssign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -283,9 +287,6 @@
         private System.Windows.Forms.DataGridView dataProjectAssign;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button RefreshButton;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ProjectCol;
-        private System.Windows.Forms.DataGridViewComboBoxColumn EmployeeCol;
-        private System.Windows.Forms.DataGridViewComboBoxColumn RoleCol;
         private System.Windows.Forms.ComboBox middleProjectBox;
         private System.Windows.Forms.ComboBox middleEmpBox;
         private System.Windows.Forms.ComboBox middleRoleBox;
@@ -294,5 +295,8 @@
         private MaterialSkin.Controls.MaterialFlatButton closeButton;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.DataGridViewComboBoxColumn ProjectCol;
+        private System.Windows.Forms.DataGridViewComboBoxColumn EmployeeCol;
+        private System.Windows.Forms.DataGridViewComboBoxColumn RoleCol;
     }
 }

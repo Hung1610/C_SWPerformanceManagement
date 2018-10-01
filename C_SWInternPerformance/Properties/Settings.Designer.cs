@@ -26,8 +26,8 @@ namespace C_SWInternPerformance.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-G8FN8CR\\SQLEXPRESS;Initial Catalog=SW_PerformanceManagement;P" +
-            "ersist Security Info=True;User ID=sa;Password=123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\SQLEXPRESS;Initial Catalog=SW_PerformanceManagement;Persist" +
+            " Security Info=True;User ID=sa;Password=123")]
         public string SW_PerformanceManagementConnectionString {
             get {
                 return ((string)(this["SW_PerformanceManagementConnectionString"]));

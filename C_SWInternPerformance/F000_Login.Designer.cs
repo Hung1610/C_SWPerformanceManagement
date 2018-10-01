@@ -48,6 +48,9 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseUp);
             // 
             // loginButton
             // 
@@ -140,6 +143,9 @@
             this.Name = "F000_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

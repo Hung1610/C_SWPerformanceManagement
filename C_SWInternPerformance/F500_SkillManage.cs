@@ -32,7 +32,12 @@ namespace C_SWInternPerformance
             InitializeComponent();
             UserID = ID;
             PSkill = new PSkillManage(this);
-            // Assign datas to lists.
+            
+        }
+        private void F500_SkillManage_Load(object sender, EventArgs e)
+        {
+            // tabManage data.
+            // Assign data to lists.
             SkillList = PSkill.SkillList();
             UserSkills = PSkill.GetUserSkill(UserID);
             // Assign boxes datasource.
@@ -42,6 +47,18 @@ namespace C_SWInternPerformance
             listBoxSkill.DataSource = UserSkills;
             listBoxSkill.DisplayMember = "SkillName";
             listBoxSkill.ValueMember = "SkillListID";
+            //
+            // tabEdit data.
+            // Assign data to lists.
+            // Assign boxes datasource.
+            listBoxSkillEdit.DataSource = SkillList;
+            listBoxSkillEdit.DisplayMember = "SkillName";
+            listBoxSkillEdit.ValueMember = "SkillListID";
+
+            foreach (SkillData skill in SkillList)
+            {
+                UtilFormFunctions.AddUnique(comboSkillType,skill.SkillType);
+            }
         }
 
         // Make dragging Title Panel drag the form around.
@@ -161,14 +178,8 @@ namespace C_SWInternPerformance
         }
         #endregion
 
-        // Close Button.
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            base.Close_Click(sender, e);
-            this.Close();
-        }
 
-        // Handle listbox selection.
+        // Handle listbox selection. tabManage.
         private void listBoxSkill_SelectedIndexChanged(object sender, EventArgs e)
         {
             SkillData current = (SkillData) listBoxSkill.SelectedItem;
@@ -180,38 +191,66 @@ namespace C_SWInternPerformance
             richTxtRemark.Text = current.Remark;
         }
 
-        // Save/Add button.
+        // Handle listbox selection. tabEdit.
+        private void listBoxSkillEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SkillData current = (SkillData)listBoxSkillEdit.SelectedItem;
+            txtSkillName.Text = current.SkillName;
+            richTxtSkillRemark.Text = current.Remark;
+            comboSkillType.Text = current.SkillType;
+        }
+
+        // Save/Add button. Manage.
         private void saveSkillManageButton_Click(object sender, EventArgs e)
         {
+            string title;
+            string message;
             bool edit = false;
-            if (listBoxSkill.SelectedValue.Equals(comboBoxSkill.SelectedValue))
+            if (UtilFormFunctions.BoxContain(listBoxSkill, comboBoxSkill.Text))
                 edit = true;
             if (edit)
             {
-                DialogResult result = MessageBox.Show(SaveConfirmMessage,
-                                                    SaveConfirmTitle,
+                title = SaveConfirmTitle;
+                message = SaveConfirmMessage;
+            }
+            else
+            {
+                title = CreateConfirmTitle;
+                message = CreateConfirmMessage;
+            }
+            DialogResult result = MessageBox.Show(message,
+                                                    title,
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
+            {
+                if (edit)
                 {
                     PSkill.SaveSkillAssign(UserID);
                     MessageBox.Show("Skill Updated.");
                 }
-            }
-            else
-            {
-                DialogResult result = MessageBox.Show(CreateConfirmMessage,
-                                                    CreateConfirmTitle,
-                                                    MessageBoxButtons.YesNo,
-                                                    MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                else
                 {
                     PSkill.SkillAssign(UserID);
                     MessageBox.Show("Skill Added.");
                 }
+                UserSkills = PSkill.GetUserSkill(UserID);
+                listBoxSkill.DataSource = UserSkills;
             }
-            UserSkills = PSkill.GetUserSkill(UserID);
-            listBoxSkill.DataSource = UserSkills;
         }
+
+        // Save/Add Button. Skill Edit.
+        private void saveSkillButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Close Button.
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            base.Close_Click(sender, e);
+            this.Close();
+        }
+
     }
 }

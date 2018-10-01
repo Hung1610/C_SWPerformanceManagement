@@ -89,6 +89,7 @@ namespace C_SWInternPerformance
             }
             return false;
         }
+
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
@@ -110,7 +111,7 @@ namespace C_SWInternPerformance
                 default: break;
             }
             base.WndProc(ref m);
-            if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
+            //if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
         }
         public void PanelMove_MouseDown(object sender, MouseEventArgs e)
         {

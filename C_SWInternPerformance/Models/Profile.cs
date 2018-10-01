@@ -76,7 +76,7 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "Execute EmailCheck @email,@ID";
+                string sql = "Execute EmailCheck @ID,@email";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.Add("@email", SqlDbType.NVarChar).Value = this.Email;
                 cmd.Parameters.Add("@ID", SqlDbType.Int).Value = this.ID;

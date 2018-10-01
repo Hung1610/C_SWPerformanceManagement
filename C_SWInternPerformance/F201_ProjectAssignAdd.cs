@@ -48,6 +48,23 @@ namespace C_SWInternPerformance
             roleBox.DataSource = roleList;
             roleBox.DisplayMember = "RoleName";
         }
+        // Make dragging Title Panel drag the form around.
+        #region Title Panel Mouse events.
+        private void panelTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseDown(sender, e);
+        }
+
+        private void panelTitle_MouseMove(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseMove(sender, e);
+        }
+
+        private void panelTitle_MouseUp(object sender, MouseEventArgs e)
+        {
+            base.PanelMove_MouseUp(sender, e);
+        }
+        #endregion
 
         // Region to implements IProjectAssign elements
         #region IProjectAssign ELEMENTS

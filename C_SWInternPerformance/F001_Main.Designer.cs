@@ -68,7 +68,7 @@
             this.workReportButton.Location = new System.Drawing.Point(2, 2);
             this.workReportButton.Margin = new System.Windows.Forms.Padding(2);
             this.workReportButton.Name = "workReportButton";
-            this.workReportButton.Size = new System.Drawing.Size(177, 85);
+            this.workReportButton.Size = new System.Drawing.Size(178, 86);
             this.workReportButton.TabIndex = 0;
             this.workReportButton.Text = "Working Report";
             this.workReportButton.UseVisualStyleBackColor = false;
@@ -83,10 +83,10 @@
             this.addProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.addProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProjectButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addProjectButton.Location = new System.Drawing.Point(183, 2);
+            this.addProjectButton.Location = new System.Drawing.Point(184, 2);
             this.addProjectButton.Margin = new System.Windows.Forms.Padding(2);
             this.addProjectButton.Name = "addProjectButton";
-            this.addProjectButton.Size = new System.Drawing.Size(177, 85);
+            this.addProjectButton.Size = new System.Drawing.Size(178, 86);
             this.addProjectButton.TabIndex = 1;
             this.addProjectButton.Text = "Add Project";
             this.addProjectButton.UseVisualStyleBackColor = false;
@@ -101,10 +101,10 @@
             this.addEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.addEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployeeButton.Location = new System.Drawing.Point(364, 2);
+            this.addEmployeeButton.Location = new System.Drawing.Point(366, 2);
             this.addEmployeeButton.Margin = new System.Windows.Forms.Padding(2);
             this.addEmployeeButton.Name = "addEmployeeButton";
-            this.addEmployeeButton.Size = new System.Drawing.Size(177, 85);
+            this.addEmployeeButton.Size = new System.Drawing.Size(178, 86);
             this.addEmployeeButton.TabIndex = 2;
             this.addEmployeeButton.Text = "Add Employee";
             this.addEmployeeButton.UseVisualStyleBackColor = false;
@@ -119,10 +119,10 @@
             this.assignButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.assignButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.assignButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assignButton.Location = new System.Drawing.Point(545, 2);
+            this.assignButton.Location = new System.Drawing.Point(548, 2);
             this.assignButton.Margin = new System.Windows.Forms.Padding(2);
             this.assignButton.Name = "assignButton";
-            this.assignButton.Size = new System.Drawing.Size(177, 85);
+            this.assignButton.Size = new System.Drawing.Size(178, 86);
             this.assignButton.TabIndex = 3;
             this.assignButton.Text = "Project Assign";
             this.assignButton.UseVisualStyleBackColor = false;
@@ -137,10 +137,10 @@
             this.updateSkillButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.updateSkillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateSkillButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateSkillButton.Location = new System.Drawing.Point(2, 91);
+            this.updateSkillButton.Location = new System.Drawing.Point(2, 92);
             this.updateSkillButton.Margin = new System.Windows.Forms.Padding(2);
             this.updateSkillButton.Name = "updateSkillButton";
-            this.updateSkillButton.Size = new System.Drawing.Size(177, 85);
+            this.updateSkillButton.Size = new System.Drawing.Size(178, 86);
             this.updateSkillButton.TabIndex = 4;
             this.updateSkillButton.Text = "Update Skill";
             this.updateSkillButton.UseVisualStyleBackColor = false;
@@ -155,10 +155,10 @@
             this.updateProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.updateProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateProjectButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateProjectButton.Location = new System.Drawing.Point(183, 91);
+            this.updateProjectButton.Location = new System.Drawing.Point(184, 92);
             this.updateProjectButton.Margin = new System.Windows.Forms.Padding(2);
             this.updateProjectButton.Name = "updateProjectButton";
-            this.updateProjectButton.Size = new System.Drawing.Size(177, 85);
+            this.updateProjectButton.Size = new System.Drawing.Size(178, 86);
             this.updateProjectButton.TabIndex = 5;
             this.updateProjectButton.Text = "Update Project";
             this.updateProjectButton.UseVisualStyleBackColor = false;
@@ -173,10 +173,10 @@
             this.updateEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.updateEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateEmployeeButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateEmployeeButton.Location = new System.Drawing.Point(364, 91);
+            this.updateEmployeeButton.Location = new System.Drawing.Point(366, 92);
             this.updateEmployeeButton.Margin = new System.Windows.Forms.Padding(2);
             this.updateEmployeeButton.Name = "updateEmployeeButton";
-            this.updateEmployeeButton.Size = new System.Drawing.Size(177, 85);
+            this.updateEmployeeButton.Size = new System.Drawing.Size(178, 86);
             this.updateEmployeeButton.TabIndex = 6;
             this.updateEmployeeButton.Text = "Update Employee";
             this.updateEmployeeButton.UseVisualStyleBackColor = false;
@@ -191,10 +191,10 @@
             this.profileButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.profileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profileButton.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.profileButton.Location = new System.Drawing.Point(545, 91);
+            this.profileButton.Location = new System.Drawing.Point(548, 92);
             this.profileButton.Margin = new System.Windows.Forms.Padding(2);
             this.profileButton.Name = "profileButton";
-            this.profileButton.Size = new System.Drawing.Size(177, 85);
+            this.profileButton.Size = new System.Drawing.Size(178, 86);
             this.profileButton.TabIndex = 7;
             this.profileButton.Text = "Change My Profile";
             this.profileButton.UseVisualStyleBackColor = false;
@@ -293,20 +293,20 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel1.Controls.Add(this.profileButton, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.assignButton, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.addEmployeeButton, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.addProjectButton, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.workReportButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.updateSkillButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.updateProjectButton, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.updateEmployeeButton, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.assignButton, 3, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 86);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(724, 178);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(728, 180);
             this.tableLayoutPanel1.TabIndex = 14;
             // 
             // mainData
@@ -317,6 +317,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.mainData.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.mainData.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mainData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mainData.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.mainData.Location = new System.Drawing.Point(0, 337);

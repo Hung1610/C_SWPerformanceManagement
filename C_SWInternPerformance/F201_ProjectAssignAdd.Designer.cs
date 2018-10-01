@@ -59,7 +59,7 @@
             // 
             this.projectNameBox.FormattingEnabled = true;
             this.projectNameBox.Location = new System.Drawing.Point(156, 25);
-            this.projectNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.projectNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.projectNameBox.Name = "projectNameBox";
             this.projectNameBox.Size = new System.Drawing.Size(201, 21);
             this.projectNameBox.TabIndex = 2;
@@ -89,7 +89,7 @@
             // remarkRichTxt
             // 
             this.remarkRichTxt.Location = new System.Drawing.Point(156, 156);
-            this.remarkRichTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.remarkRichTxt.Margin = new System.Windows.Forms.Padding(2);
             this.remarkRichTxt.Name = "remarkRichTxt";
             this.remarkRichTxt.Size = new System.Drawing.Size(318, 62);
             this.remarkRichTxt.TabIndex = 14;
@@ -110,7 +110,7 @@
             // 
             this.employeeBox.FormattingEnabled = true;
             this.employeeBox.Location = new System.Drawing.Point(156, 63);
-            this.employeeBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.employeeBox.Margin = new System.Windows.Forms.Padding(2);
             this.employeeBox.Name = "employeeBox";
             this.employeeBox.Size = new System.Drawing.Size(201, 21);
             this.employeeBox.TabIndex = 2;
@@ -119,7 +119,7 @@
             // 
             this.roleBox.FormattingEnabled = true;
             this.roleBox.Location = new System.Drawing.Point(156, 87);
-            this.roleBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roleBox.Margin = new System.Windows.Forms.Padding(2);
             this.roleBox.Name = "roleBox";
             this.roleBox.Size = new System.Drawing.Size(201, 21);
             this.roleBox.TabIndex = 2;
@@ -149,7 +149,7 @@
             // startDatePicker
             // 
             this.startDatePicker.Location = new System.Drawing.Point(156, 111);
-            this.startDatePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startDatePicker.Margin = new System.Windows.Forms.Padding(2);
             this.startDatePicker.Name = "startDatePicker";
             this.startDatePicker.Size = new System.Drawing.Size(161, 20);
             this.startDatePicker.TabIndex = 16;
@@ -157,7 +157,7 @@
             // endDatePicker
             // 
             this.endDatePicker.Location = new System.Drawing.Point(156, 134);
-            this.endDatePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.endDatePicker.Margin = new System.Windows.Forms.Padding(2);
             this.endDatePicker.Name = "endDatePicker";
             this.endDatePicker.Size = new System.Drawing.Size(161, 20);
             this.endDatePicker.TabIndex = 16;
@@ -171,7 +171,7 @@
             this.assignButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.assignButton.Image = global::C_SWInternPerformance.Properties.Resources.add_song__1_;
             this.assignButton.Location = new System.Drawing.Point(389, 17);
-            this.assignButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.assignButton.Margin = new System.Windows.Forms.Padding(2);
             this.assignButton.Name = "assignButton";
             this.assignButton.Size = new System.Drawing.Size(85, 34);
             this.assignButton.TabIndex = 17;
@@ -217,9 +217,12 @@
             this.Controls.Add(this.projectNameBox);
             this.Controls.Add(this.projectName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F201_ProjectAssignAdd";
             this.Text = "F201_ProjectAssignAdd";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

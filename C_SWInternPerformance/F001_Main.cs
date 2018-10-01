@@ -54,7 +54,7 @@ namespace C_SWInternPerformance
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             // Configure color schema
             materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Grey100, Primary.Grey800,
+                Primary.Grey100, Primary.Grey900,
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.BLACK
             );

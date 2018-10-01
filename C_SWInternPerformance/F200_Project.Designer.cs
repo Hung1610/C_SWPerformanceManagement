@@ -220,6 +220,9 @@
             this.labelTitle.Size = new System.Drawing.Size(185, 25);
             this.labelTitle.TabIndex = 6;
             this.labelTitle.Text = "Create New Project";
+            this.labelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
+            this.labelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseMove);
+            this.labelTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseUp);
             // 
             // labelProjectID
             // 
@@ -246,7 +249,7 @@
             // 
             // topPanel
             // 
-            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.topPanel.Controls.Add(this.closeButton);
             this.topPanel.Controls.Add(this.saveButton);
             this.topPanel.Controls.Add(this.labelTitle);
@@ -263,8 +266,8 @@
             // 
             // closeButton
             // 
-            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.closeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -286,9 +289,9 @@
             this.saveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(356, 42);
+            this.saveButton.Location = new System.Drawing.Point(337, 39);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(115, 29);
+            this.saveButton.Size = new System.Drawing.Size(137, 32);
             this.saveButton.TabIndex = 9;
             this.saveButton.Text = "CREATE/SAVE";
             this.saveButton.UseVisualStyleBackColor = false;
