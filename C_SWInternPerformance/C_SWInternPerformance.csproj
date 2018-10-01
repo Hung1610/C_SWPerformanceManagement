@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A273F9C-4F52-4974-8F23-8DB96F12E550}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>C_SWInternPerformance</RootNamespace>
+    <AssemblyName>SW Performancce Management</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\SWManagement\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5F56C12CD012E4BC13D7E45A8046D62A24214927</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>C_SWInternPerformance_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\SoftWorldICO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonForm.Designer.cs">
+      <DependentUpon>CommonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BranchData.cs" />
+    <Compile Include="Data\DetailedEmployeeData.cs" />
+    <Compile Include="Data\LevelData.cs" />
+    <Compile Include="Data\PerformanceData.cs" />
+    <Compile Include="Data\PositionData.cs" />
+    <Compile Include="Data\ProfileData.cs" />
+    <Compile Include="Data\RoleData.cs" />
+    <Compile Include="Data\SkillData.cs" />
+    <Compile Include="F001_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F001_Main.Designer.cs">
+      <DependentUpon>F001_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F000_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F000_Login.Designer.cs">
+      <DependentUpon>F000_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F100_WorkingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F100_WorkingReport.Designer.cs">
+      <DependentUpon>F100_WorkingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F200_Project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F200_Project.Designer.cs">
+      <DependentUpon>F200_Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F201_ProjectAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F201_ProjectAssign.Designer.cs">
+      <DependentUpon>F201_ProjectAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F201_ProjectAssignAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F201_ProjectAssignAdd.Designer.cs">
+      <DependentUpon>F201_ProjectAssignAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F300_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F300_Employee.Designer.cs">
+      <DependentUpon>F300_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F301_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F301_Profile.Designer.cs">
+      <DependentUpon>F301_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F500_SkillManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F500_SkillManage.Designer.cs">
+      <DependentUpon>F500_SkillManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Main.cs" />
+    <Compile Include="Models\Profile.cs" />
+    <Compile Include="Models\ProjectAssign.cs" />
+    <Compile Include="Models\Projects.cs" />
+    <Compile Include="Models\SkillEdit.cs" />
+    <Compile Include="Models\SkillManage.cs" />
+    <Compile Include="Presenters\BasePresenter.cs" />
+    <Compile Include="Data\EmployeeData.cs" />
+    <Compile Include="Presenters\IEmployee.cs" />
+    <Compile Include="Presenters\IMain.cs" />
+    <Compile Include="Presenters\IProfile.cs" />
+    <Compile Include="Presenters\IProjectAssign.cs" />
+    <Compile Include="Presenters\IProjects.cs" />
+    <Compile Include="Presenters\ISkillEdit.cs" />
+    <Compile Include="Presenters\ISkillManage.cs" />
+    <Compile Include="Presenters\PEmployee.cs" />
+    <Compile Include="Presenters\PMain.cs" />
+    <Compile Include="Presenters\PProfile.cs" />
+    <Compile Include="Presenters\PProjectAssign.cs" />
+    <Compile Include="Data\ProjectAssignData.cs" />
+    <Compile Include="Models\ProjectReport.cs" />
+    <Compile Include="Presenters\ILogin.cs" />
+    <Compile Include="Presenters\IProjectReport.cs" />
+    <Compile Include="Presenters\PLogin.cs" />
+    <Compile Include="Presenters\PProjectReport.cs" />
+    <Compile Include="Presenters\PProjects.cs" />
+    <Compile Include="Data\ProjectsData.cs" />
+    <Compile Include="Presenters\PSkillEdit.cs" />
+    <Compile Include="Presenters\PSkillManage.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilFormFunctions.cs" />
+    <EmbeddedResource Include="F001_Main.resx">
+      <DependentUpon>F001_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F000_Login.resx">
+      <DependentUpon>F000_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F100_WorkingReport.resx">
+      <DependentUpon>F100_WorkingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F200_Project.resx">
+      <DependentUpon>F200_Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F201_ProjectAssign.resx">
+      <DependentUpon>F201_ProjectAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F201_ProjectAssignAdd.resx">
+      <DependentUpon>F201_ProjectAssignAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F300_Employee.resx">
+      <DependentUpon>F300_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F301_Profile.resx">
+      <DependentUpon>F301_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F500_SkillManage.resx">
+      <DependentUpon>F500_SkillManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="C_SWInternPerformance_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\softworld_logo_footer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-song %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoftWorldICO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
