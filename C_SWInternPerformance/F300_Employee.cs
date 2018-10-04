@@ -23,8 +23,12 @@ namespace C_SWInternPerformance
         string CreateConfirmMessage = "Create a new employee ?";
         string CreateConfirmOk = "Employee Created.";
 
+        string EmptyWarningTitle = "Field Empty";
+        string EmptyWarningMessage = "Please enter employee name!";
+
         // ID gotten from main for use in Edit mode.
-        int editID;
+        int editID = -1;
+
         // Declare presenter.
         static private PEmployee pEmployee = new PEmployee();
         // Lists to populate with database data.
@@ -223,14 +227,17 @@ namespace C_SWInternPerformance
         }
         #endregion
         
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            base.Close_Click(sender, e);
-            this.Close();
-        }
-
+        // Save/Add button.
         private void saveButton_Click(object sender, EventArgs e)
         {
+            if (EmployeeName.Equals(""))
+            {
+                MessageBox.Show(EmptyWarningMessage,
+                            EmptyWarningTitle,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                return;
+            }
             if (editID != -1)
             {
                 DialogResult result = MessageBox.Show(SaveConfirmMessage,
@@ -256,6 +263,13 @@ namespace C_SWInternPerformance
                 }
             }
             EmployeeRefresh?.Invoke(this, new EventArgs());
+        }
+
+        // Close Button.
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            base.Close_Click(sender, e);
+            this.Close();
         }
     }
 }

@@ -334,7 +334,7 @@ namespace C_SWInternPerformance
         {
             F201_ProjectAssignAdd Add = new F201_ProjectAssignAdd();
             Add.AssignRefresh += RefreshRequest;
-            Add.Show();
+            Add.ShowDialog();
         }
 
         // Save button.

@@ -23,8 +23,12 @@ namespace C_SWInternPerformance
         string SaveConfirmMessage = "Save this project ?";
         string SaveConfirmOk = "Project Saved.";
 
+        string EmptyWarningTitle = "Field Empty";
+        string EmptyWarningMessage = "Please enter project name!";
+
         // ID taken from main.
         int editID = -1;
+
         // Declare presenter.
         private PProjects pProject;
         //
@@ -141,6 +145,14 @@ namespace C_SWInternPerformance
         // Create/Save button.
         private void CreateSave_Click(object sender, EventArgs e)
         {
+            if (ProjectName.Equals(""))
+            {
+                MessageBox.Show(EmptyWarningMessage,
+                            EmptyWarningTitle,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                return;
+            }
             if (editID != -1)
             {
                 DialogResult result = MessageBox.Show(SaveConfirmMessage,

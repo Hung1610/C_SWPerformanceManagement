@@ -24,24 +24,16 @@ namespace C_SWInternPerformance
         // ID taken from Login for use in this and other forms.
         int UserID;
 
+        // Default size.
+        int height;
+        int width;
+
         // Declare presenters.
         PMain pMain;
 
         // Lists to store data.
         BindingList<ProjectsData> projects;
         BindingList<PerformanceData> performances;
-
-        // Close all currently opened forms when this form is closed, then re-open Login.
-        private void FrmData_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            List<Form> openForms = new List<Form>();
-            foreach (Form f in Application.OpenForms)
-                openForms.Add(f);
-            foreach (Form f in openForms)
-                f.Close();
-            F000_Login login = new F000_Login();
-            login.Show();
-        }
 
         // Initialize components and some data.
         public F001_Main(int ID)
@@ -58,11 +50,12 @@ namespace C_SWInternPerformance
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.BLACK
             );
-
             Console.WriteLine(ID);
             pMain = new PMain(this);
             UserID = ID;
             userLabel.Text = pMain.GetUser(ID);
+            height = this.Height;
+            width = this.Width;
             // Populate the lists.
             projects = pMain.GetProjects();
             performances = pMain.GetPerformances();
@@ -85,6 +78,8 @@ namespace C_SWInternPerformance
             mainData.Columns["WorkingDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             mainData.Columns["WorkingHour"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             mainData.Columns["WorkingName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            foreach (DataGridViewColumn column in mainData.Columns)
+                column.SortMode = DataGridViewColumnSortMode.Automatic;
         }
 
         // Gives the form Shadow Drop.
@@ -217,6 +212,7 @@ namespace C_SWInternPerformance
             performances = pMain.GetPerformances();
             projectBox.SelectedIndex = 0;
             timeBox.SelectedIndex = 0;
+            projectBox.DataSource = projects;
             mainData.DataSource = new BindingList<PerformanceData>(performances.OrderBy(x => x.ProjectName).ToList());
         }
         // Listen to refresh event from other forms.
@@ -439,6 +435,18 @@ namespace C_SWInternPerformance
             }
             F301_Profile f301 = new F301_Profile(UserID);
             f301.Show();
+        }
+
+        // Close all currently opened forms when this form is closed, then re-open Login.
+        private void FrmData_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            List<Form> openForms = new List<Form>();
+            foreach (Form f in Application.OpenForms)
+                openForms.Add(f);
+            foreach (Form f in openForms)
+                f.Close();
+            F000_Login login = new F000_Login();
+            login.Show();
         }
     }
 }

@@ -107,8 +107,6 @@ namespace C_SWInternPerformance
         {
             LoginP = new PLogin(this);
             InitializeComponent();
-            this.MaximumSize = this.Size;
-            this.MinimumSize = this.Size;
         }
 
         // Login button
