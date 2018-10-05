@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F001_Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.workReportButton = new System.Windows.Forms.Button();
             this.imageListButtons = new System.Windows.Forms.ImageList(this.components);
             this.addProjectButton = new System.Windows.Forms.Button();
@@ -51,9 +51,9 @@
             this.toDatePick = new System.Windows.Forms.DateTimePicker();
             this.mainData = new System.Windows.Forms.DataGridView();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.labelWelcome = new MaterialSkin.Controls.MaterialLabel();
-            this.userLabel = new MaterialSkin.Controls.MaterialLabel();
             this.flowLayoutMenuButtons = new System.Windows.Forms.FlowLayoutPanel();
+            this.userLabel = new System.Windows.Forms.Button();
+            this.imageListAvatar = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mainData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.flowLayoutMenuButtons.SuspendLayout();
@@ -65,6 +65,8 @@
             this.workReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.workReportButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.workReportButton.FlatAppearance.BorderSize = 2;
+            this.workReportButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.workReportButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.workReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.workReportButton.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.workReportButton.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -100,6 +102,8 @@
             this.addProjectButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addProjectButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.addProjectButton.FlatAppearance.BorderSize = 2;
+            this.addProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.addProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.addProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProjectButton.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addProjectButton.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -121,6 +125,8 @@
             this.addEmployeeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addEmployeeButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.addEmployeeButton.FlatAppearance.BorderSize = 2;
+            this.addEmployeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.addEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.addEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEmployeeButton.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmployeeButton.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -142,6 +148,8 @@
             this.assignButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.assignButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.assignButton.FlatAppearance.BorderSize = 2;
+            this.assignButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.assignButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.assignButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.assignButton.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignButton.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -163,6 +171,8 @@
             this.updateSkillButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateSkillButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.updateSkillButton.FlatAppearance.BorderSize = 2;
+            this.updateSkillButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.updateSkillButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.updateSkillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateSkillButton.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateSkillButton.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -184,6 +194,8 @@
             this.updateProjectButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateProjectButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.updateProjectButton.FlatAppearance.BorderSize = 2;
+            this.updateProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.updateProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.updateProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateProjectButton.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateProjectButton.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -205,6 +217,8 @@
             this.updateEmployeeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateEmployeeButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.updateEmployeeButton.FlatAppearance.BorderSize = 2;
+            this.updateEmployeeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.updateEmployeeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.updateEmployeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateEmployeeButton.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateEmployeeButton.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -226,6 +240,8 @@
             this.profileButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.profileButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.profileButton.FlatAppearance.BorderSize = 2;
+            this.profileButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.profileButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.profileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.profileButton.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profileButton.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -311,7 +327,7 @@
             this.timeBox.Margin = new System.Windows.Forms.Padding(2);
             this.timeBox.Name = "timeBox";
             this.timeBox.Size = new System.Drawing.Size(88, 23);
-            this.timeBox.TabIndex = 12;
+            this.timeBox.TabIndex = 13;
             this.timeBox.SelectedIndexChanged += new System.EventHandler(this.TimeBox_SelectedIndexChanged);
             // 
             // fromDatePick
@@ -320,7 +336,7 @@
             this.fromDatePick.Margin = new System.Windows.Forms.Padding(2);
             this.fromDatePick.Name = "fromDatePick";
             this.fromDatePick.Size = new System.Drawing.Size(214, 20);
-            this.fromDatePick.TabIndex = 13;
+            this.fromDatePick.TabIndex = 14;
             this.fromDatePick.ValueChanged += new System.EventHandler(this.fromDatePick_ValueChanged);
             // 
             // toDatePick
@@ -328,8 +344,10 @@
             this.toDatePick.Location = new System.Drawing.Point(309, 313);
             this.toDatePick.Margin = new System.Windows.Forms.Padding(2);
             this.toDatePick.Name = "toDatePick";
+            this.toDatePick.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toDatePick.RightToLeftLayout = true;
             this.toDatePick.Size = new System.Drawing.Size(214, 20);
-            this.toDatePick.TabIndex = 13;
+            this.toDatePick.TabIndex = 15;
             this.toDatePick.ValueChanged += new System.EventHandler(this.toDatePick_ValueChanged);
             // 
             // mainData
@@ -342,31 +360,31 @@
             this.mainData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.mainData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.mainData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mainData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.mainData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.mainData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.mainData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mainData.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.mainData.DefaultCellStyle = dataGridViewCellStyle6;
             this.mainData.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.mainData.Location = new System.Drawing.Point(0, 354);
+            this.mainData.Location = new System.Drawing.Point(6, 356);
             this.mainData.Margin = new System.Windows.Forms.Padding(2);
             this.mainData.Name = "mainData";
             this.mainData.RowTemplate.Height = 24;
-            this.mainData.Size = new System.Drawing.Size(1051, 260);
+            this.mainData.Size = new System.Drawing.Size(1039, 244);
             this.mainData.TabIndex = 18;
+            this.mainData.TabStop = false;
             this.mainData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainData_CellClick);
             this.mainData.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainData_RowLeave);
             this.mainData.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.mainData_RowValidating);
@@ -385,36 +403,6 @@
             this.pictureBoxLogo.TabIndex = 17;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // labelWelcome
-            // 
-            this.labelWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelWelcome.AutoSize = true;
-            this.labelWelcome.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.labelWelcome.Depth = 0;
-            this.labelWelcome.Font = new System.Drawing.Font("Roboto", 11F);
-            this.labelWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelWelcome.Location = new System.Drawing.Point(762, 35);
-            this.labelWelcome.MouseState = MaterialSkin.MouseState.HOVER;
-            this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(79, 19);
-            this.labelWelcome.TabIndex = 21;
-            this.labelWelcome.Text = "Welcome, ";
-            // 
-            // userLabel
-            // 
-            this.userLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.userLabel.AutoSize = true;
-            this.userLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userLabel.Depth = 0;
-            this.userLabel.Font = new System.Drawing.Font("Roboto", 11F);
-            this.userLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.userLabel.Location = new System.Drawing.Point(836, 35);
-            this.userLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(77, 19);
-            this.userLabel.TabIndex = 22;
-            this.userLabel.Text = "[unknown]";
-            // 
             // flowLayoutMenuButtons
             // 
             this.flowLayoutMenuButtons.AutoScroll = true;
@@ -432,16 +420,45 @@
             this.flowLayoutMenuButtons.Size = new System.Drawing.Size(739, 182);
             this.flowLayoutMenuButtons.TabIndex = 23;
             // 
+            // userLabel
+            // 
+            this.userLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userLabel.AutoSize = true;
+            this.userLabel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.userLabel.BackColor = System.Drawing.Color.White;
+            this.userLabel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.userLabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.userLabel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.userLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userLabel.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.userLabel.ImageKey = "24644049.jpg";
+            this.userLabel.ImageList = this.imageListAvatar;
+            this.userLabel.Location = new System.Drawing.Point(903, 24);
+            this.userLabel.Name = "userLabel";
+            this.userLabel.Size = new System.Drawing.Size(142, 40);
+            this.userLabel.TabIndex = 24;
+            this.userLabel.TabStop = false;
+            this.userLabel.Text = "[UNKNOWN]";
+            this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.userLabel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.userLabel.UseVisualStyleBackColor = false;
+            // 
+            // imageListAvatar
+            // 
+            this.imageListAvatar.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListAvatar.ImageStream")));
+            this.imageListAvatar.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListAvatar.Images.SetKeyName(0, "24644049.jpg");
+            // 
             // F001_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1051, 616);
+            this.ClientSize = new System.Drawing.Size(1051, 606);
+            this.Controls.Add(this.userLabel);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.flowLayoutMenuButtons);
-            this.Controls.Add(this.userLabel);
-            this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.mainData);
             this.Controls.Add(this.toDatePick);
             this.Controls.Add(this.fromDatePick);
@@ -453,7 +470,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(744, 544);
+            this.MinimumSize = new System.Drawing.Size(744, 500);
             this.Name = "F001_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
@@ -487,10 +504,10 @@
         private System.Windows.Forms.DateTimePicker toDatePick;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.DataGridView mainData;
-        private MaterialSkin.Controls.MaterialLabel labelWelcome;
-        private MaterialSkin.Controls.MaterialLabel userLabel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutMenuButtons;
         private System.Windows.Forms.ImageList imageListButtons;
+        private System.Windows.Forms.Button userLabel;
+        private System.Windows.Forms.ImageList imageListAvatar;
     }
 }
 

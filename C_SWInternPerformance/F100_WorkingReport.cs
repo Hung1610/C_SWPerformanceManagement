@@ -24,6 +24,10 @@ namespace C_SWInternPerformance
         // Declare presenters.
         private PProjectReport PReport;
 
+        // Events to refresh F001_Main.
+        public delegate void RefreshEventHandler(object sender, EventArgs e);
+        public event RefreshEventHandler ReportRefresh;
+
         // Initialize UI components along with some data.
         public F100_WorkingReport(int ID)
         {
@@ -124,6 +128,7 @@ namespace C_SWInternPerformance
             {
                 PReport = new PProjectReport(this);
                 PReport.Submit();
+                ReportRefresh?.Invoke(this, new EventArgs());
                 MessageBox.Show(SubmitConfirmOk);
             }
         }

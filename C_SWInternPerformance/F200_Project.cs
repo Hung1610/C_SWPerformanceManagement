@@ -34,6 +34,9 @@ namespace C_SWInternPerformance
         //
         BindingList<ProjectsData> projectList;
 
+        // Auto complete for project name text field.
+        AutoCompleteStringCollection AutoCompleteSource;
+
         // Events to refresh F001_Main.
         public delegate void RefreshEventHandler(object sender, EventArgs e);
         public event RefreshEventHandler ProjectRefresh;
@@ -62,13 +65,26 @@ namespace C_SWInternPerformance
             txtEditID.Visible = true;
             // Populate the form with current Project to edit.
             var project = pProject.GetProject(eID);
-            projectNameTxt.Text = project.pName;
-            projectInfoTxt.Text = project.pInfo;
-            cusNameTxt.Text = project.cName;
-            cusInfoTxt.Text = project.cInfo;
-            remarkRichTxt.Text = project.remark;
-            startDatePick.Value = project.start;
-            endDatePick.Value = project.end;
+            txtProjectName.Text = project.pName;
+            txtProjectInfo.Text = project.pInfo;
+            txtCusName.Text = project.cName;
+            txtCusInfo.Text = project.cInfo;
+            richTxtRemark.Text = project.remark;
+            datePickStart.Value = project.start;
+            datePickEnd.Value = project.end;
+        }
+
+
+        private void F200_Project_Load(object sender, EventArgs e)
+        {
+            AutoCompleteSource = new AutoCompleteStringCollection();
+            // Strings for Project Name suggestions.
+            foreach (ProjectsData project in projectList)
+            {
+                UtilFormFunctions.AddUnique(AutoCompleteSource, project.ProjectName);
+            }
+            // Set Autocomplete source.
+            txtProjectName.AutoCompleteCustomSource = AutoCompleteSource;
         }
 
         // Make dragging Title Panel drag the form around.
@@ -95,49 +111,49 @@ namespace C_SWInternPerformance
         {
             get
             {
-                return projectNameTxt.Text;
+                return txtProjectName.Text;
             }
         }
         public string ProjectInfo
         {
             get
             {
-                return projectInfoTxt.Text;
+                return txtProjectInfo.Text;
             }
         }
         public string CustomerName
         {
             get
             {
-                return cusNameTxt.Text;
+                return txtCusName.Text;
             }
         }
         public string CustomerInfo
         {
             get
             {
-                return cusInfoTxt.Text;
+                return txtCusInfo.Text;
             }
         }
         public string Remark
         {
             get
             {
-                return remarkRichTxt.Text;
+                return richTxtRemark.Text;
             }
         }
         public DateTime StartDate
         {
             get
             {
-                return startDatePick.Value;
+                return datePickStart.Value;
             }
         }
         public DateTime EndDate
         {
             get
             {
-                return endDatePick.Value;
+                return datePickEnd.Value;
             }
         }
         #endregion
@@ -162,6 +178,7 @@ namespace C_SWInternPerformance
                 if (result == DialogResult.Yes)
                 {
                     pProject.Save(editID);
+                    ProjectRefresh?.Invoke(this, new EventArgs());
                     MessageBox.Show(SaveConfirmOk);
                 }
             }
@@ -174,10 +191,10 @@ namespace C_SWInternPerformance
                 if (result == DialogResult.Yes)
                 {
                     pProject.Save(editID);
+                    ProjectRefresh?.Invoke(this, new EventArgs());
                     MessageBox.Show(CreateConfirmOk);
                 }
             }
-            ProjectRefresh?.Invoke(this, new EventArgs());
         }
 
         // Close button.

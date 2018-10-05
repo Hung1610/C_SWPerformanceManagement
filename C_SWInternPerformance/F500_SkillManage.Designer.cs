@@ -247,7 +247,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.84121F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.48439F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.83318F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(365, 157);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(403, 157);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // materialLabel2
@@ -261,16 +261,16 @@
             this.materialLabel2.Location = new System.Drawing.Point(3, 83);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(146, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(161, 19);
             this.materialLabel2.TabIndex = 3;
             this.materialLabel2.Text = "Remark";
             // 
             // richTxtRemark
             // 
             this.richTxtRemark.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTxtRemark.Location = new System.Drawing.Point(155, 86);
+            this.richTxtRemark.Location = new System.Drawing.Point(170, 86);
             this.richTxtRemark.Name = "richTxtRemark";
-            this.richTxtRemark.Size = new System.Drawing.Size(207, 68);
+            this.richTxtRemark.Size = new System.Drawing.Size(230, 68);
             this.richTxtRemark.TabIndex = 5;
             this.richTxtRemark.Text = "";
             // 
@@ -284,7 +284,7 @@
             this.materialLabel1.Location = new System.Drawing.Point(3, 60);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(146, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(161, 19);
             this.materialLabel1.TabIndex = 2;
             this.materialLabel1.Text = "Delete";
             // 
@@ -293,7 +293,7 @@
             this.checkDel.AutoSize = true;
             this.checkDel.Depth = 0;
             this.checkDel.Font = new System.Drawing.Font("Roboto", 10F);
-            this.checkDel.Location = new System.Drawing.Point(152, 56);
+            this.checkDel.Location = new System.Drawing.Point(167, 56);
             this.checkDel.Margin = new System.Windows.Forms.Padding(0);
             this.checkDel.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkDel.MouseState = MaterialSkin.MouseState.HOVER;
@@ -313,16 +313,16 @@
             this.materialLabel3.Location = new System.Drawing.Point(3, 32);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(146, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(161, 19);
             this.materialLabel3.TabIndex = 2;
             this.materialLabel3.Text = "Start Date";
             // 
             // datePickStart
             // 
             this.datePickStart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.datePickStart.Location = new System.Drawing.Point(155, 31);
+            this.datePickStart.Location = new System.Drawing.Point(170, 31);
             this.datePickStart.Name = "datePickStart";
-            this.datePickStart.Size = new System.Drawing.Size(207, 20);
+            this.datePickStart.Size = new System.Drawing.Size(230, 20);
             this.datePickStart.TabIndex = 1;
             // 
             // materialLabel9
@@ -335,7 +335,7 @@
             this.materialLabel9.Location = new System.Drawing.Point(3, 4);
             this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(146, 19);
+            this.materialLabel9.Size = new System.Drawing.Size(161, 19);
             this.materialLabel9.TabIndex = 2;
             this.materialLabel9.Text = "Skill";
             // 
@@ -345,9 +345,9 @@
             this.comboBoxSkill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxSkill.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSkill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxSkill.Location = new System.Drawing.Point(155, 3);
+            this.comboBoxSkill.Location = new System.Drawing.Point(170, 3);
             this.comboBoxSkill.Name = "comboBoxSkill";
-            this.comboBoxSkill.Size = new System.Drawing.Size(207, 21);
+            this.comboBoxSkill.Size = new System.Drawing.Size(230, 21);
             this.comboBoxSkill.TabIndex = 6;
             // 
             // tabEdit
@@ -424,7 +424,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.84121F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.48439F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.83318F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(365, 157);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(403, 157);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // materialLabel6
@@ -437,7 +437,7 @@
             this.materialLabel6.Location = new System.Drawing.Point(3, 4);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(146, 19);
+            this.materialLabel6.Size = new System.Drawing.Size(161, 19);
             this.materialLabel6.TabIndex = 4;
             this.materialLabel6.Text = "Skill Type";
             // 
@@ -451,16 +451,16 @@
             this.materialLabel5.Location = new System.Drawing.Point(3, 32);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(146, 19);
+            this.materialLabel5.Size = new System.Drawing.Size(161, 19);
             this.materialLabel5.TabIndex = 4;
             this.materialLabel5.Text = "Skill Name";
             // 
             // richTxtSkillRemark
             // 
             this.richTxtSkillRemark.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTxtSkillRemark.Location = new System.Drawing.Point(155, 86);
+            this.richTxtSkillRemark.Location = new System.Drawing.Point(170, 86);
             this.richTxtSkillRemark.Name = "richTxtSkillRemark";
-            this.richTxtSkillRemark.Size = new System.Drawing.Size(207, 68);
+            this.richTxtSkillRemark.Size = new System.Drawing.Size(230, 68);
             this.richTxtSkillRemark.TabIndex = 3;
             this.richTxtSkillRemark.Text = "";
             // 
@@ -469,7 +469,7 @@
             this.checkSkillDel.AutoSize = true;
             this.checkSkillDel.Depth = 0;
             this.checkSkillDel.Font = new System.Drawing.Font("Roboto", 10F);
-            this.checkSkillDel.Location = new System.Drawing.Point(152, 56);
+            this.checkSkillDel.Location = new System.Drawing.Point(167, 56);
             this.checkSkillDel.Margin = new System.Windows.Forms.Padding(0);
             this.checkSkillDel.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkSkillDel.MouseState = MaterialSkin.MouseState.HOVER;
@@ -490,7 +490,7 @@
             this.materialLabel8.Location = new System.Drawing.Point(3, 60);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(146, 19);
+            this.materialLabel8.Size = new System.Drawing.Size(161, 19);
             this.materialLabel8.TabIndex = 4;
             this.materialLabel8.Text = "Delete";
             // 
@@ -505,18 +505,17 @@
             this.materialLabel7.Location = new System.Drawing.Point(3, 83);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(146, 19);
+            this.materialLabel7.Size = new System.Drawing.Size(161, 19);
             this.materialLabel7.TabIndex = 4;
             this.materialLabel7.Text = "Remark";
             // 
             // comboSkillType
             // 
             this.comboSkillType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboSkillType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboSkillType.FormattingEnabled = true;
-            this.comboSkillType.Location = new System.Drawing.Point(155, 3);
+            this.comboSkillType.Location = new System.Drawing.Point(170, 3);
             this.comboSkillType.Name = "comboSkillType";
-            this.comboSkillType.Size = new System.Drawing.Size(207, 21);
+            this.comboSkillType.Size = new System.Drawing.Size(230, 21);
             this.comboSkillType.TabIndex = 0;
             // 
             // txtSkillName
@@ -524,9 +523,9 @@
             this.txtSkillName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtSkillName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtSkillName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSkillName.Location = new System.Drawing.Point(155, 31);
+            this.txtSkillName.Location = new System.Drawing.Point(170, 31);
             this.txtSkillName.Name = "txtSkillName";
-            this.txtSkillName.Size = new System.Drawing.Size(207, 20);
+            this.txtSkillName.Size = new System.Drawing.Size(230, 20);
             this.txtSkillName.TabIndex = 5;
             // 
             // addSkillButton

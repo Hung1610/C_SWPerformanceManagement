@@ -45,15 +45,17 @@ namespace C_SWInternPerformance
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             // Configure color schema
+            
             materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Grey100, Primary.Grey900,
+                Primary.BlueGrey900, Primary.Grey900,
                 Primary.Blue500, Accent.LightBlue200,
-                TextShade.BLACK
+                TextShade.WHITE
             );
+            
             Console.WriteLine(ID);
             pMain = new PMain(this);
             UserID = ID;
-            userLabel.Text = pMain.GetUser(ID);
+            userLabel.Text = "Welcome, " + pMain.GetUser(ID);
             height = this.Height;
             width = this.Width;
             // Populate the lists.
@@ -205,7 +207,7 @@ namespace C_SWInternPerformance
         private void RefreshForm()
         {
             pMain = new PMain(this);
-            userLabel.Text = pMain.GetUser(UserID);
+            userLabel.Text = "Welcome, " + pMain.GetUser(UserID);
             projectBox.SelectedIndex = 0;
             timeBox.SelectedIndex = 0;
             projects = pMain.GetProjects();
@@ -389,6 +391,7 @@ namespace C_SWInternPerformance
                 }
             }
             F100_WorkingReport f100= new F100_WorkingReport(UserID);
+            f100.ReportRefresh += RefreshRequest;
             f100.Show();
         }
 

@@ -103,12 +103,12 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataProjectAssign.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataProjectAssign.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataProjectAssign.Location = new System.Drawing.Point(0, 91);
+            this.dataProjectAssign.Location = new System.Drawing.Point(0, 92);
             this.dataProjectAssign.Margin = new System.Windows.Forms.Padding(2);
             this.dataProjectAssign.Name = "dataProjectAssign";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -120,7 +120,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataProjectAssign.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataProjectAssign.RowTemplate.Height = 24;
-            this.dataProjectAssign.Size = new System.Drawing.Size(744, 329);
+            this.dataProjectAssign.Size = new System.Drawing.Size(744, 328);
             this.dataProjectAssign.TabIndex = 4;
             this.dataProjectAssign.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.DataProjectAssign_DataError);
             this.dataProjectAssign.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataProjectAssign_RowEnter);

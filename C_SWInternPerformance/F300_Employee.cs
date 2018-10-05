@@ -32,9 +32,13 @@ namespace C_SWInternPerformance
         // Declare presenter.
         static private PEmployee pEmployee = new PEmployee();
         // Lists to populate with database data.
+        BindingList<EmployeeData> employeeList = pEmployee.GetEmployees();
         BindingList<PositionData> posList = pEmployee.GetPositions();
         BindingList<LevelData> lvlList = pEmployee.GetLevels();
         BindingList<BranchData> branchList = pEmployee.GetBranches();
+
+        // Auto complete for employee name text field.
+        AutoCompleteStringCollection AutoCompleteSource;
 
         // Events to refresh F001_Main.
         public delegate void RefreshEventHandler(object sender, EventArgs e);
@@ -49,15 +53,15 @@ namespace C_SWInternPerformance
             saveButton.Text = "CREATE";
 
             // Assign lists to the comboboxes.
-            posBox.DataSource = posList;
-            posBox.DisplayMember = "PositionName";
-            posBox.ValueMember = "PositionID";
-            lvlBox.DataSource = lvlList;
-            lvlBox.DisplayMember = "LevelName";
-            lvlBox.ValueMember = "LevelID";
-            braBox.DataSource = branchList;
-            braBox.DisplayMember = "BranchName";
-            braBox.ValueMember = "BranchID";
+            boxPos.DataSource = posList;
+            boxPos.DisplayMember = "PositionName";
+            boxPos.ValueMember = "PositionID";
+            boxLvl.DataSource = lvlList;
+            boxLvl.DisplayMember = "LevelName";
+            boxLvl.ValueMember = "LevelID";
+            boxBra.DataSource = branchList;
+            boxBra.DisplayMember = "BranchName";
+            boxBra.ValueMember = "BranchID";
         }
         // Edit Mode.
         public F300_Employee(int ID)
@@ -73,32 +77,44 @@ namespace C_SWInternPerformance
             saveButton.Text = "SAVE";
 
             // Assign lists to the comboboxes.
-            posBox.DataSource = posList;
-            posBox.DisplayMember = "PositionName";
-            posBox.ValueMember = "PositionID";
-            lvlBox.DataSource = lvlList;
-            lvlBox.DisplayMember = "LevelName";
-            lvlBox.ValueMember = "LevelID";
-            braBox.DataSource = branchList;
-            braBox.DisplayMember = "BranchName";
-            braBox.ValueMember = "BranchID";
+            boxPos.DataSource = posList;
+            boxPos.DisplayMember = "PositionName";
+            boxPos.ValueMember = "PositionID";
+            boxLvl.DataSource = lvlList;
+            boxLvl.DisplayMember = "LevelName";
+            boxLvl.ValueMember = "LevelID";
+            boxBra.DataSource = branchList;
+            boxBra.DisplayMember = "BranchName";
+            boxBra.ValueMember = "BranchID";
             // Show the data of the currently being edited employee.
             DetailedEmployeeData employee = pEmployee.GetEmployee(ID);
-            nameTxt.Text = employee.EmployeeName;
-            posBox.SelectedValue = employee.PositionID;
-            braBox.SelectedValue = employee.BranchID;
-            startDatePick.Value = employee.StartDate;
-            endDatePick.Value = employee.EndDate;
-            emailTxt.Text = employee.Email;
-            mobileTxt.Text = employee.Mobile;
-            addressTxt.Text = employee.Address;
-            birthDatePick.Value = employee.Birthday;
-            lvlBox.SelectedValue = employee.LevelID;
-            desireTxt.Text = employee.Desire;
+            txtName.Text = employee.EmployeeName;
+            boxPos.SelectedValue = employee.PositionID;
+            boxBra.SelectedValue = employee.BranchID;
+            datePickStart.Value = employee.StartDate;
+            datePickEnd.Value = employee.EndDate;
+            txtEmail.Text = employee.Email;
+            txtMobile.Text = employee.Mobile;
+            txtAddress.Text = employee.Address;
+            datePickBirth.Value = employee.Birthday;
+            boxLvl.SelectedValue = employee.LevelID;
+            txtDesire.Text = employee.Desire;
             if (employee.Del == 1)
-                delFlagCheck.Checked = true;
-            else delFlagCheck.Checked = false;
-            remarkRichTxt.Text = employee.Remark;
+                checkDel.Checked = true;
+            else checkDel.Checked = false;
+            richTxtRemark.Text = employee.Remark;
+        }
+
+        private void F300_Employee_Load(object sender, EventArgs e)
+        {
+            AutoCompleteSource = new AutoCompleteStringCollection();
+            // Strings for Project Name suggestions.
+            foreach (EmployeeData employee in employeeList)
+            {
+                UtilFormFunctions.AddUnique(AutoCompleteSource, employee.EmployeeName);
+            }
+            // Set Autocomplete source.
+            txtName.AutoCompleteCustomSource = AutoCompleteSource;
         }
 
         // Make dragging Title Panel drag the form around.
@@ -132,21 +148,21 @@ namespace C_SWInternPerformance
         {
             get
             {
-                return nameTxt.Text;
+                return txtName.Text;
             }
         }
         public int PositionID
         {
             get
             {
-                return Convert.ToInt32(posBox.SelectedValue);
+                return Convert.ToInt32(boxPos.SelectedValue);
             }
         }
         public int BranchID
         {
             get
             {
-                var current = (BranchData)braBox.SelectedItem;
+                var current = (BranchData)boxBra.SelectedItem;
                 return current.BranchID;
             }
         }
@@ -154,49 +170,49 @@ namespace C_SWInternPerformance
         {
             get
             {
-                return startDatePick.Value;
+                return datePickStart.Value;
             }
         }
         public DateTime EndDate
         {
             get
             {
-                return endDatePick.Value;
+                return datePickEnd.Value;
             }
         }
         public string Email
         {
             get
             {
-                return emailTxt.Text;
+                return txtEmail.Text;
             }
         }
         public string Mobile
         {
             get
             {
-                return mobileTxt.Text;
+                return txtMobile.Text;
             }
         }
         public string Address
         {
             get
             {
-                return addressTxt.Text;
+                return txtAddress.Text;
             }
         }
         public DateTime Birthday
         {
             get
             {
-                return birthDatePick.Value;
+                return datePickBirth.Value;
             }
         }
         public int LevelID
         {
             get
             {
-                var current = (LevelData)lvlBox.SelectedItem;
+                var current = (LevelData)boxLvl.SelectedItem;
                 return current.LevelID;
             }
         }
@@ -204,21 +220,21 @@ namespace C_SWInternPerformance
         {
             get
             {
-                return remarkRichTxt.Text;
+                return richTxtRemark.Text;
             }
         }
         public string Desire
         {
             get
             {
-                return desireTxt.Text;
+                return txtDesire.Text;
             }
         }
         public int Del
         {
             get
             {
-                if (delFlagCheck.Checked == true)
+                if (checkDel.Checked == true)
                 {
                     return 1;
                 }
@@ -247,6 +263,7 @@ namespace C_SWInternPerformance
                 if (result == DialogResult.Yes)
                 {
                     pEmployee.Save(editID);
+                    EmployeeRefresh?.Invoke(this, new EventArgs());
                     MessageBox.Show(SaveConfirmOk);
                 }
             }
@@ -259,10 +276,10 @@ namespace C_SWInternPerformance
                 if (result == DialogResult.Yes)
                 {
                     pEmployee.Save(editID);
+                    EmployeeRefresh?.Invoke(this, new EventArgs());
                     MessageBox.Show(CreateConfirmOk);
                 }
             }
-            EmployeeRefresh?.Invoke(this, new EventArgs());
         }
 
         // Close Button.
