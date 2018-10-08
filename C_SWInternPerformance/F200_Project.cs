@@ -26,6 +26,7 @@ namespace C_SWInternPerformance
         string EmptyWarningTitle = "Field Empty";
         string EmptyWarningMessage = "Please enter project name!";
 
+        string ExceptionErrorTitle = "Exception Error";
         // ID taken from main.
         int editID = -1;
 
@@ -177,9 +178,17 @@ namespace C_SWInternPerformance
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    pProject.Save(editID);
-                    ProjectRefresh?.Invoke(this, new EventArgs());
-                    MessageBox.Show(SaveConfirmOk);
+                    try
+                    {
+
+                        pProject.Save(editID);
+                        ProjectRefresh?.Invoke(this, new EventArgs());
+                        MessageBox.Show(SaveConfirmOk);
+                    }
+                    catch(Exception ee)
+                    {
+                        MessageBox.Show(ee.ToString(), ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else
@@ -190,9 +199,16 @@ namespace C_SWInternPerformance
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    pProject.Save(editID);
-                    ProjectRefresh?.Invoke(this, new EventArgs());
-                    MessageBox.Show(CreateConfirmOk);
+                    try
+                    {
+                        pProject.Save(editID);
+                        ProjectRefresh?.Invoke(this, new EventArgs());
+                        MessageBox.Show(CreateConfirmOk);
+                    }
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show(ee.ToString(), ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

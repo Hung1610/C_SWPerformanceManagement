@@ -22,7 +22,7 @@ namespace C_SWInternPerformance
         string RowSelectMessage = "Please select a row from the table.";
 
         // ID taken from Login for use in this and other forms.
-        int UserID;
+        public static int UserID;
 
         // Default size.
         int height;

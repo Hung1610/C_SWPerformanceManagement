@@ -19,6 +19,7 @@ namespace C_SWInternPerformance
 
         private int opacity = 50;
         [DefaultValue(50)]
+
         public int Opacity
         {
             get
@@ -32,6 +33,7 @@ namespace C_SWInternPerformance
                 this.opacity = value;
             }
         }
+
         protected override CreateParams CreateParams
         {
             get
@@ -41,6 +43,7 @@ namespace C_SWInternPerformance
                 return cp;
             }
         }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             using (var brush = new SolidBrush(Color.FromArgb(this.opacity * 255 / 100, this.BackColor)))

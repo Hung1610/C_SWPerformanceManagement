@@ -21,6 +21,7 @@ namespace C_SWInternPerformance
 
         // User ID gotten from Main.
         int UserID;
+
         // Declare presenters.
         private PProjectReport PReport;
 
@@ -126,10 +127,17 @@ namespace C_SWInternPerformance
                                                     MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                PReport = new PProjectReport(this);
-                PReport.Submit();
-                ReportRefresh?.Invoke(this, new EventArgs());
-                MessageBox.Show(SubmitConfirmOk);
+                try
+                {
+                    PReport = new PProjectReport(this);
+                    PReport.Submit();
+                    ReportRefresh?.Invoke(this, new EventArgs());
+                    MessageBox.Show(SubmitConfirmOk);
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show(ee.ToString(), "Exception Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         //Close button.
