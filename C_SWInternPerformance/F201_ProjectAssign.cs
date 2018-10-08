@@ -89,7 +89,6 @@ namespace C_SWInternPerformance
             // Setting autosize mode.
             EmployeeCol.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             ProjectCol.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataProjectAssign.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         // Make dragging Title Panel drag the form around.

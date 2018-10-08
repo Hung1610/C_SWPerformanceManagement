@@ -100,7 +100,7 @@
             this.closeButton.AutoSize = true;
             this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.closeButton.Depth = 0;
-            this.closeButton.Location = new System.Drawing.Point(597, 0);
+            this.closeButton.Location = new System.Drawing.Point(600, 0);
             this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.closeButton.Name = "closeButton";

@@ -35,9 +35,6 @@
             this.projectName = new System.Windows.Forms.Label();
             this.projectNameBox = new System.Windows.Forms.ComboBox();
             this.dataProjectAssign = new System.Windows.Forms.DataGridView();
-            this.ProjectCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.EmployeeCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.RoleCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.middleProjectBox = new System.Windows.Forms.ComboBox();
             this.middleEmpBox = new System.Windows.Forms.ComboBox();
             this.middleRoleBox = new System.Windows.Forms.ComboBox();
@@ -48,6 +45,9 @@
             this.RefreshButton = new System.Windows.Forms.Button();
             this.saveButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.ProjectCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.EmployeeCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.RoleCol = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataProjectAssign)).BeginInit();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +82,7 @@
             // dataProjectAssign
             // 
             this.dataProjectAssign.AllowUserToAddRows = false;
+            this.dataProjectAssign.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataProjectAssign.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataProjectAssign.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataProjectAssign.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -126,24 +127,6 @@
             this.dataProjectAssign.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataProjectAssign_RowEnter);
             this.dataProjectAssign.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.DataProjectAssign_RowValidating);
             this.dataProjectAssign.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.DataProjectAssign_UserDeletingRow);
-            // 
-            // ProjectCol
-            // 
-            this.ProjectCol.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.ProjectCol.HeaderText = "Project";
-            this.ProjectCol.Name = "ProjectCol";
-            // 
-            // EmployeeCol
-            // 
-            this.EmployeeCol.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.EmployeeCol.HeaderText = "Employee";
-            this.EmployeeCol.Name = "EmployeeCol";
-            // 
-            // RoleCol
-            // 
-            this.RoleCol.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.RoleCol.HeaderText = "Role";
-            this.RoleCol.Name = "RoleCol";
             // 
             // middleProjectBox
             // 
@@ -193,6 +176,7 @@
             // 
             // closeButton
             // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.AutoSize = true;
             this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.closeButton.Depth = 0;
@@ -286,6 +270,27 @@
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // ProjectCol
+            // 
+            this.ProjectCol.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.ProjectCol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjectCol.HeaderText = "Project";
+            this.ProjectCol.Name = "ProjectCol";
+            // 
+            // EmployeeCol
+            // 
+            this.EmployeeCol.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.EmployeeCol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmployeeCol.HeaderText = "Employee";
+            this.EmployeeCol.Name = "EmployeeCol";
+            // 
+            // RoleCol
+            // 
+            this.RoleCol.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.RoleCol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RoleCol.HeaderText = "Role";
+            this.RoleCol.Name = "RoleCol";
             // 
             // F201_ProjectAssign
             // 

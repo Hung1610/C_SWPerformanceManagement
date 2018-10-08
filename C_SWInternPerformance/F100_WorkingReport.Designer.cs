@@ -55,7 +55,7 @@
             this.projectBox.Location = new System.Drawing.Point(205, 2);
             this.projectBox.Margin = new System.Windows.Forms.Padding(2);
             this.projectBox.Name = "projectBox";
-            this.projectBox.Size = new System.Drawing.Size(250, 21);
+            this.projectBox.Size = new System.Drawing.Size(212, 21);
             this.projectBox.TabIndex = 1;
             // 
             // datePick
@@ -63,7 +63,7 @@
             this.datePick.Location = new System.Drawing.Point(205, 57);
             this.datePick.Margin = new System.Windows.Forms.Padding(2);
             this.datePick.Name = "datePick";
-            this.datePick.Size = new System.Drawing.Size(250, 20);
+            this.datePick.Size = new System.Drawing.Size(212, 20);
             this.datePick.TabIndex = 2;
             // 
             // workTimeUpDown
@@ -71,7 +71,7 @@
             this.workTimeUpDown.Location = new System.Drawing.Point(205, 112);
             this.workTimeUpDown.Margin = new System.Windows.Forms.Padding(2);
             this.workTimeUpDown.Name = "workTimeUpDown";
-            this.workTimeUpDown.Size = new System.Drawing.Size(96, 20);
+            this.workTimeUpDown.Size = new System.Drawing.Size(50, 20);
             this.workTimeUpDown.TabIndex = 3;
             // 
             // remarkRichTxt
@@ -212,7 +212,7 @@
             this.submitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submitButton.Depth = 0;
             this.submitButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.submitButton.Location = new System.Drawing.Point(433, 330);
+            this.submitButton.Location = new System.Drawing.Point(436, 330);
             this.submitButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.submitButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.submitButton.Name = "submitButton";

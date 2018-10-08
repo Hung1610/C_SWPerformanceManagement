@@ -40,12 +40,11 @@ namespace C_SWInternPerformance
         {
             InitializeComponent();
             this.Icon = Properties.Resources.SoftWorldICO;
-            // Create a material theme manager and add the form to manage (this)
+            // Create a material theme manager and add the form to manage (this).
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            // Configure color schema
-            
+            // Configure color schema.
             materialSkinManager.ColorScheme = new ColorScheme(
                 Primary.BlueGrey900, Primary.Grey900,
                 Primary.Blue500, Accent.LightBlue200,
@@ -440,6 +439,36 @@ namespace C_SWInternPerformance
             f301.Show();
         }
 
+
+
+        // Hide the side panel when clicking on the form.
+        private void F001_Main_Click(object sender, EventArgs e)
+        {
+            if (panelSide.Visible)
+            {
+                slideButton.BackColor = Color.FromArgb(38, 50, 56);
+                slideButton.FlatAppearance.BorderColor = Color.FromArgb(38, 50, 56);
+                panelSide.Visible = false;
+            }
+        }
+
+        // Side Panel menu button.
+        private void slideButton_Click(object sender, EventArgs e)
+        {
+            if (!panelSide.Visible)
+            {
+                slideButton.BackColor = Color.FromArgb(33, 33, 33);
+                slideButton.FlatAppearance.BorderColor = Color.FromArgb(33, 33, 33);
+                panelSide.Visible = true;
+            }
+            else
+            {
+                slideButton.BackColor = Color.FromArgb(38, 50, 56);
+                slideButton.FlatAppearance.BorderColor = Color.FromArgb(38, 50, 56);
+                panelSide.Visible = false;
+            }
+        }
+        
         // Close all currently opened forms when this form is closed, then re-open Login.
         private void FrmData_FormClosed(object sender, FormClosedEventArgs e)
         {

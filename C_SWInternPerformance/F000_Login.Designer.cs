@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.loginButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.closeButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.flatTxtUser = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.flatTxtPass = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.loginButton = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.checkRemember = new MaterialSkin.Controls.MaterialCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::C_SWInternPerformance.Properties.Resources.softworld_logo_footer;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 58);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 38);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(271, 182);
@@ -52,25 +53,6 @@
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseUp);
             // 
-            // loginButton
-            // 
-            this.loginButton.AutoSize = true;
-            this.loginButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.loginButton.BackColor = System.Drawing.Color.White;
-            this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loginButton.Depth = 0;
-            this.loginButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.loginButton.Location = new System.Drawing.Point(38, 379);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.loginButton.MouseState = MaterialSkin.MouseState.HOVER;
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Primary = false;
-            this.loginButton.Size = new System.Drawing.Size(60, 36);
-            this.loginButton.TabIndex = 0;
-            this.loginButton.Text = "Sign In";
-            this.loginButton.UseVisualStyleBackColor = false;
-            this.loginButton.Click += new System.EventHandler(this.Login_Click);
-            // 
             // closeButton
             // 
             this.closeButton.AutoSize = true;
@@ -78,7 +60,7 @@
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.Depth = 0;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.Location = new System.Drawing.Point(255, 379);
+            this.closeButton.Location = new System.Drawing.Point(145, 411);
             this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.closeButton.Name = "closeButton";
@@ -95,7 +77,7 @@
             this.flatTxtUser.Depth = 0;
             this.flatTxtUser.ForeColor = System.Drawing.SystemColors.ControlText;
             this.flatTxtUser.Hint = "";
-            this.flatTxtUser.Location = new System.Drawing.Point(38, 278);
+            this.flatTxtUser.Location = new System.Drawing.Point(38, 242);
             this.flatTxtUser.MouseState = MaterialSkin.MouseState.HOVER;
             this.flatTxtUser.Name = "flatTxtUser";
             this.flatTxtUser.PasswordChar = '\0';
@@ -114,7 +96,7 @@
             this.flatTxtPass.BackColor = System.Drawing.Color.LightGray;
             this.flatTxtPass.Depth = 0;
             this.flatTxtPass.Hint = "";
-            this.flatTxtPass.Location = new System.Drawing.Point(38, 316);
+            this.flatTxtPass.Location = new System.Drawing.Point(38, 280);
             this.flatTxtPass.MouseState = MaterialSkin.MouseState.HOVER;
             this.flatTxtPass.Name = "flatTxtPass";
             this.flatTxtPass.PasswordChar = '\0';
@@ -128,23 +110,56 @@
             this.flatTxtPass.Enter += new System.EventHandler(this.passTxt_Enter);
             this.flatTxtPass.Leave += new System.EventHandler(this.passTxt_Leave);
             // 
+            // loginButton
+            // 
+            this.loginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.loginButton.Depth = 0;
+            this.loginButton.Location = new System.Drawing.Point(38, 365);
+            this.loginButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Primary = true;
+            this.loginButton.Size = new System.Drawing.Size(271, 37);
+            this.loginButton.TabIndex = 5;
+            this.loginButton.Text = "Log In";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.Login_Click);
+            // 
+            // checkRemember
+            // 
+            this.checkRemember.AutoSize = true;
+            this.checkRemember.Depth = 0;
+            this.checkRemember.Font = new System.Drawing.Font("Roboto", 10F);
+            this.checkRemember.Location = new System.Drawing.Point(38, 318);
+            this.checkRemember.Margin = new System.Windows.Forms.Padding(0);
+            this.checkRemember.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkRemember.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkRemember.Name = "checkRemember";
+            this.checkRemember.Ripple = true;
+            this.checkRemember.Size = new System.Drawing.Size(120, 30);
+            this.checkRemember.TabIndex = 6;
+            this.checkRemember.Text = "Remember Me";
+            this.checkRemember.UseVisualStyleBackColor = true;
+            // 
             // F000_Login
             // 
             this.AcceptButton = this.loginButton;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(348, 436);
+            this.ClientSize = new System.Drawing.Size(348, 462);
             this.ControlBox = false;
+            this.Controls.Add(this.checkRemember);
+            this.Controls.Add(this.loginButton);
             this.Controls.Add(this.flatTxtPass);
             this.Controls.Add(this.flatTxtUser);
             this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.loginButton);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F000_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.F000_Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseUp);
@@ -156,9 +171,10 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialFlatButton loginButton;
         private MaterialSkin.Controls.MaterialFlatButton closeButton;
         private MaterialSkin.Controls.MaterialSingleLineTextField flatTxtUser;
         private MaterialSkin.Controls.MaterialSingleLineTextField flatTxtPass;
+        private MaterialSkin.Controls.MaterialRaisedButton loginButton;
+        private MaterialSkin.Controls.MaterialCheckBox checkRemember;
     }
 }

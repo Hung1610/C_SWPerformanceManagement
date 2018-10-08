@@ -72,8 +72,8 @@
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.47826F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.52174F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.31418F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.68583F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
@@ -104,18 +104,18 @@
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 13;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145408F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145409F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145409F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145409F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145409F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145409F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145409F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145409F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145409F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145409F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145409F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.145409F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14541F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14541F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14541F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14541F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14541F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14541F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14541F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14541F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14541F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14541F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.14541F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.25509F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(427, 401);
             this.tableLayoutPanel1.TabIndex = 0;
@@ -128,7 +128,7 @@
             this.label1.Location = new System.Drawing.Point(2, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 20);
+            this.label1.Size = new System.Drawing.Size(159, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Name*";
             // 
@@ -140,7 +140,7 @@
             this.label2.Location = new System.Drawing.Point(2, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 20);
+            this.label2.Size = new System.Drawing.Size(159, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Position";
             // 
@@ -152,7 +152,7 @@
             this.label3.Location = new System.Drawing.Point(2, 60);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 20);
+            this.label3.Size = new System.Drawing.Size(159, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Branch";
             // 
@@ -164,7 +164,7 @@
             this.label4.Location = new System.Drawing.Point(2, 88);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(181, 20);
+            this.label4.Size = new System.Drawing.Size(159, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Start Date";
             // 
@@ -176,7 +176,7 @@
             this.label5.Location = new System.Drawing.Point(2, 116);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 20);
+            this.label5.Size = new System.Drawing.Size(159, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "End Date";
             // 
@@ -188,7 +188,7 @@
             this.label6.Location = new System.Drawing.Point(2, 144);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 20);
+            this.label6.Size = new System.Drawing.Size(159, 20);
             this.label6.TabIndex = 1;
             this.label6.Text = "Email Private";
             // 
@@ -200,7 +200,7 @@
             this.label7.Location = new System.Drawing.Point(2, 172);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(181, 20);
+            this.label7.Size = new System.Drawing.Size(159, 20);
             this.label7.TabIndex = 1;
             this.label7.Text = "Mobile";
             // 
@@ -212,7 +212,7 @@
             this.label8.Location = new System.Drawing.Point(2, 200);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(181, 20);
+            this.label8.Size = new System.Drawing.Size(159, 20);
             this.label8.TabIndex = 1;
             this.label8.Text = "Address";
             // 
@@ -224,7 +224,7 @@
             this.label9.Location = new System.Drawing.Point(2, 228);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(181, 20);
+            this.label9.Size = new System.Drawing.Size(159, 20);
             this.label9.TabIndex = 1;
             this.label9.Text = "Birth Date";
             // 
@@ -236,7 +236,7 @@
             this.label10.Location = new System.Drawing.Point(2, 256);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(181, 20);
+            this.label10.Size = new System.Drawing.Size(159, 20);
             this.label10.TabIndex = 1;
             this.label10.Text = "Level";
             // 
@@ -248,7 +248,7 @@
             this.label11.Location = new System.Drawing.Point(2, 284);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(181, 20);
+            this.label11.Size = new System.Drawing.Size(159, 20);
             this.label11.TabIndex = 1;
             this.label11.Text = "Desire";
             // 
@@ -260,7 +260,7 @@
             this.label12.Location = new System.Drawing.Point(2, 312);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(181, 20);
+            this.label12.Size = new System.Drawing.Size(159, 20);
             this.label12.TabIndex = 1;
             this.label12.Text = "DelFlag";
             // 
@@ -278,10 +278,12 @@
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.Location = new System.Drawing.Point(187, 4);
+            this.txtName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtName.Location = new System.Drawing.Point(165, 4);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(238, 20);
+            this.txtName.Size = new System.Drawing.Size(260, 20);
             this.txtName.TabIndex = 2;
             // 
             // boxBra
@@ -290,64 +292,64 @@
             this.boxBra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxBra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boxBra.FormattingEnabled = true;
-            this.boxBra.Location = new System.Drawing.Point(187, 59);
+            this.boxBra.Location = new System.Drawing.Point(165, 59);
             this.boxBra.Margin = new System.Windows.Forms.Padding(2);
             this.boxBra.Name = "boxBra";
-            this.boxBra.Size = new System.Drawing.Size(238, 21);
+            this.boxBra.Size = new System.Drawing.Size(260, 21);
             this.boxBra.TabIndex = 4;
             // 
             // datePickStart
             // 
             this.datePickStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.datePickStart.Location = new System.Drawing.Point(187, 88);
+            this.datePickStart.Location = new System.Drawing.Point(165, 88);
             this.datePickStart.Margin = new System.Windows.Forms.Padding(2);
             this.datePickStart.Name = "datePickStart";
-            this.datePickStart.Size = new System.Drawing.Size(238, 20);
+            this.datePickStart.Size = new System.Drawing.Size(260, 20);
             this.datePickStart.TabIndex = 5;
             // 
             // datePickEnd
             // 
             this.datePickEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.datePickEnd.Location = new System.Drawing.Point(187, 116);
+            this.datePickEnd.Location = new System.Drawing.Point(165, 116);
             this.datePickEnd.Margin = new System.Windows.Forms.Padding(2);
             this.datePickEnd.Name = "datePickEnd";
-            this.datePickEnd.Size = new System.Drawing.Size(238, 20);
+            this.datePickEnd.Size = new System.Drawing.Size(260, 20);
             this.datePickEnd.TabIndex = 5;
             // 
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(187, 144);
+            this.txtEmail.Location = new System.Drawing.Point(165, 144);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(238, 20);
+            this.txtEmail.Size = new System.Drawing.Size(260, 20);
             this.txtEmail.TabIndex = 6;
             // 
             // txtMobile
             // 
             this.txtMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMobile.Location = new System.Drawing.Point(187, 172);
+            this.txtMobile.Location = new System.Drawing.Point(165, 172);
             this.txtMobile.Margin = new System.Windows.Forms.Padding(2);
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(238, 20);
+            this.txtMobile.Size = new System.Drawing.Size(260, 20);
             this.txtMobile.TabIndex = 7;
             // 
             // txtAddress
             // 
             this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddress.Location = new System.Drawing.Point(187, 200);
+            this.txtAddress.Location = new System.Drawing.Point(165, 200);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(238, 20);
+            this.txtAddress.Size = new System.Drawing.Size(260, 20);
             this.txtAddress.TabIndex = 8;
             // 
             // datePickBirth
             // 
             this.datePickBirth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.datePickBirth.Location = new System.Drawing.Point(187, 228);
+            this.datePickBirth.Location = new System.Drawing.Point(165, 228);
             this.datePickBirth.Margin = new System.Windows.Forms.Padding(2);
             this.datePickBirth.Name = "datePickBirth";
-            this.datePickBirth.Size = new System.Drawing.Size(238, 20);
+            this.datePickBirth.Size = new System.Drawing.Size(260, 20);
             this.datePickBirth.TabIndex = 9;
             // 
             // boxLvl
@@ -356,39 +358,39 @@
             this.boxLvl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxLvl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boxLvl.FormattingEnabled = true;
-            this.boxLvl.Location = new System.Drawing.Point(187, 255);
+            this.boxLvl.Location = new System.Drawing.Point(165, 255);
             this.boxLvl.Margin = new System.Windows.Forms.Padding(2);
             this.boxLvl.Name = "boxLvl";
-            this.boxLvl.Size = new System.Drawing.Size(238, 21);
+            this.boxLvl.Size = new System.Drawing.Size(260, 21);
             this.boxLvl.TabIndex = 10;
             // 
             // txtDesire
             // 
             this.txtDesire.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDesire.Location = new System.Drawing.Point(187, 284);
+            this.txtDesire.Location = new System.Drawing.Point(165, 284);
             this.txtDesire.Margin = new System.Windows.Forms.Padding(2);
             this.txtDesire.Name = "txtDesire";
-            this.txtDesire.Size = new System.Drawing.Size(238, 20);
+            this.txtDesire.Size = new System.Drawing.Size(260, 20);
             this.txtDesire.TabIndex = 11;
             // 
             // checkDel
             // 
             this.checkDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.checkDel.AutoSize = true;
-            this.checkDel.Location = new System.Drawing.Point(187, 315);
+            this.checkDel.Location = new System.Drawing.Point(165, 315);
             this.checkDel.Margin = new System.Windows.Forms.Padding(2);
             this.checkDel.Name = "checkDel";
-            this.checkDel.Size = new System.Drawing.Size(238, 14);
+            this.checkDel.Size = new System.Drawing.Size(260, 14);
             this.checkDel.TabIndex = 12;
             this.checkDel.UseVisualStyleBackColor = true;
             // 
             // richTxtRemark
             // 
             this.richTxtRemark.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTxtRemark.Location = new System.Drawing.Point(187, 338);
+            this.richTxtRemark.Location = new System.Drawing.Point(165, 338);
             this.richTxtRemark.Margin = new System.Windows.Forms.Padding(2);
             this.richTxtRemark.Name = "richTxtRemark";
-            this.richTxtRemark.Size = new System.Drawing.Size(238, 61);
+            this.richTxtRemark.Size = new System.Drawing.Size(260, 61);
             this.richTxtRemark.TabIndex = 13;
             this.richTxtRemark.Text = "";
             // 
@@ -398,10 +400,10 @@
             this.boxPos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxPos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boxPos.FormattingEnabled = true;
-            this.boxPos.Location = new System.Drawing.Point(187, 31);
+            this.boxPos.Location = new System.Drawing.Point(165, 31);
             this.boxPos.Margin = new System.Windows.Forms.Padding(2);
             this.boxPos.Name = "boxPos";
-            this.boxPos.Size = new System.Drawing.Size(238, 21);
+            this.boxPos.Size = new System.Drawing.Size(260, 21);
             this.boxPos.TabIndex = 3;
             // 
             // labelTitle
@@ -436,7 +438,7 @@
             // 
             // txtID
             // 
-            this.txtID.BackColor = System.Drawing.Color.White;
+            this.txtID.BackColor = System.Drawing.Color.Gainsboro;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(137, 5);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
@@ -448,7 +450,7 @@
             // 
             // panelTitle
             // 
-            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.panelTitle.Controls.Add(this.labelTitle);
             this.panelTitle.Controls.Add(this.panel1);
             this.panelTitle.Controls.Add(this.closeButton);
@@ -494,8 +496,9 @@
             // 
             // closeButton
             // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.BackColor = System.Drawing.Color.Transparent;
-            this.closeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.closeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

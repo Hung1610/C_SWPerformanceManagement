@@ -46,12 +46,12 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelProjectID = new System.Windows.Forms.Label();
             this.txtEditID = new System.Windows.Forms.TextBox();
-            this.topPanel = new System.Windows.Forms.Panel();
+            this.panelTitle = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.saveButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.tableLayoutPanel1.SuspendLayout();
-            this.topPanel.SuspendLayout();
+            this.panelTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -252,7 +252,7 @@
             // 
             // txtEditID
             // 
-            this.txtEditID.BackColor = System.Drawing.Color.White;
+            this.txtEditID.BackColor = System.Drawing.Color.Gainsboro;
             this.txtEditID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEditID.Location = new System.Drawing.Point(120, 5);
             this.txtEditID.Name = "txtEditID";
@@ -262,26 +262,26 @@
             this.txtEditID.TabStop = false;
             this.txtEditID.Visible = false;
             // 
-            // topPanel
+            // panelTitle
             // 
-            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.topPanel.Controls.Add(this.closeButton);
-            this.topPanel.Controls.Add(this.panel1);
-            this.topPanel.Controls.Add(this.labelTitle);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(449, 83);
-            this.topPanel.TabIndex = 8;
-            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
-            this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseMove);
-            this.topPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseUp);
+            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.panelTitle.Controls.Add(this.closeButton);
+            this.panelTitle.Controls.Add(this.panel1);
+            this.panelTitle.Controls.Add(this.labelTitle);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(449, 83);
+            this.panelTitle.TabIndex = 8;
+            this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
+            this.panelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseMove);
+            this.panelTitle.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseUp);
             // 
             // closeButton
             // 
             this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.BackColor = System.Drawing.Color.Transparent;
-            this.closeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.closeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -306,9 +306,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(449, 36);
             this.panel1.TabIndex = 10;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseUp);
             // 
             // saveButton
             // 
@@ -333,7 +330,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(449, 507);
-            this.Controls.Add(this.topPanel);
+            this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "F200_Project";
@@ -342,8 +339,8 @@
             this.Load += new System.EventHandler(this.F200_Project_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
+            this.panelTitle.ResumeLayout(false);
+            this.panelTitle.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -370,7 +367,7 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelProjectID;
         private System.Windows.Forms.TextBox txtEditID;
-        private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialFlatButton saveButton;
         private System.Windows.Forms.Button closeButton;

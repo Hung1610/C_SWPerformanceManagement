@@ -109,6 +109,15 @@ namespace C_SWInternPerformance
             InitializeComponent();
         }
 
+        private void F000_Login_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.userName != string.Empty)
+            {
+                flatTxtUser.Text = Properties.Settings.Default.userName;
+                flatTxtPass.Text = Properties.Settings.Default.passUser;
+            }
+        }
+
         // Login button
         private void Login_Click(object sender, EventArgs e)
         {
@@ -121,6 +130,18 @@ namespace C_SWInternPerformance
             }
             else
             {
+                if (checkRemember.Checked)
+                {
+                    Properties.Settings.Default.userName = flatTxtUser.Text;
+                    Properties.Settings.Default.passUser = flatTxtPass.Text;
+                    Properties.Settings.Default.Save();
+                }
+                else
+                {
+                    Properties.Settings.Default.userName = string.Empty;
+                    Properties.Settings.Default.passUser = string.Empty;
+                    Properties.Settings.Default.Save();
+                }
                 F001_Main main = new F001_Main(ID);
                 main.Show();
                 this.Close();

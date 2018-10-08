@@ -51,12 +51,19 @@
             this.toDatePick = new System.Windows.Forms.DateTimePicker();
             this.mainData = new System.Windows.Forms.DataGridView();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.flowLayoutMenuButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.userLabel = new System.Windows.Forms.Button();
             this.imageListAvatar = new System.Windows.Forms.ImageList(this.components);
+            this.imageListSide = new System.Windows.Forms.ImageList(this.components);
+            this.slideButton = new System.Windows.Forms.Button();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.sendButton = new System.Windows.Forms.Button();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.panelSide = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.mainData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.flowLayoutMenuButtons.SuspendLayout();
+            this.panelSide.SuspendLayout();
             this.SuspendLayout();
             // 
             // workReportButton
@@ -72,7 +79,7 @@
             this.workReportButton.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.workReportButton.ImageKey = "workreport.png";
             this.workReportButton.ImageList = this.imageListButtons;
-            this.workReportButton.Location = new System.Drawing.Point(2, 2);
+            this.workReportButton.Location = new System.Drawing.Point(559, 86);
             this.workReportButton.Margin = new System.Windows.Forms.Padding(2);
             this.workReportButton.Name = "workReportButton";
             this.workReportButton.Size = new System.Drawing.Size(178, 86);
@@ -95,6 +102,7 @@
             this.imageListButtons.Images.SetKeyName(6, "project add.png");
             this.imageListButtons.Images.SetKeyName(7, "skills.png");
             this.imageListButtons.Images.SetKeyName(8, "technical-drawing.png");
+            this.imageListButtons.Images.SetKeyName(9, "menu.png");
             // 
             // addProjectButton
             // 
@@ -109,7 +117,7 @@
             this.addProjectButton.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.addProjectButton.ImageKey = "project add.png";
             this.addProjectButton.ImageList = this.imageListButtons;
-            this.addProjectButton.Location = new System.Drawing.Point(184, 2);
+            this.addProjectButton.Location = new System.Drawing.Point(195, 86);
             this.addProjectButton.Margin = new System.Windows.Forms.Padding(2);
             this.addProjectButton.Name = "addProjectButton";
             this.addProjectButton.Size = new System.Drawing.Size(178, 86);
@@ -132,7 +140,7 @@
             this.addEmployeeButton.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.addEmployeeButton.ImageKey = "add businessman.png";
             this.addEmployeeButton.ImageList = this.imageListButtons;
-            this.addEmployeeButton.Location = new System.Drawing.Point(366, 2);
+            this.addEmployeeButton.Location = new System.Drawing.Point(377, 86);
             this.addEmployeeButton.Margin = new System.Windows.Forms.Padding(2);
             this.addEmployeeButton.Name = "addEmployeeButton";
             this.addEmployeeButton.Size = new System.Drawing.Size(178, 86);
@@ -146,6 +154,7 @@
             // 
             this.assignButton.BackColor = System.Drawing.Color.White;
             this.assignButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.assignButton.Enabled = false;
             this.assignButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.assignButton.FlatAppearance.BorderSize = 2;
             this.assignButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
@@ -155,7 +164,7 @@
             this.assignButton.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.assignButton.ImageKey = "project-management.png";
             this.assignButton.ImageList = this.imageListButtons;
-            this.assignButton.Location = new System.Drawing.Point(548, 2);
+            this.assignButton.Location = new System.Drawing.Point(13, 86);
             this.assignButton.Margin = new System.Windows.Forms.Padding(2);
             this.assignButton.Name = "assignButton";
             this.assignButton.Size = new System.Drawing.Size(178, 86);
@@ -178,7 +187,7 @@
             this.updateSkillButton.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.updateSkillButton.ImageKey = "skills.png";
             this.updateSkillButton.ImageList = this.imageListButtons;
-            this.updateSkillButton.Location = new System.Drawing.Point(2, 92);
+            this.updateSkillButton.Location = new System.Drawing.Point(13, 176);
             this.updateSkillButton.Margin = new System.Windows.Forms.Padding(2);
             this.updateSkillButton.Name = "updateSkillButton";
             this.updateSkillButton.Size = new System.Drawing.Size(178, 86);
@@ -201,7 +210,7 @@
             this.updateProjectButton.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.updateProjectButton.ImageKey = "project.png";
             this.updateProjectButton.ImageList = this.imageListButtons;
-            this.updateProjectButton.Location = new System.Drawing.Point(184, 92);
+            this.updateProjectButton.Location = new System.Drawing.Point(195, 176);
             this.updateProjectButton.Margin = new System.Windows.Forms.Padding(2);
             this.updateProjectButton.Name = "updateProjectButton";
             this.updateProjectButton.Size = new System.Drawing.Size(178, 86);
@@ -224,7 +233,7 @@
             this.updateEmployeeButton.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.updateEmployeeButton.ImageKey = "businessman.png";
             this.updateEmployeeButton.ImageList = this.imageListButtons;
-            this.updateEmployeeButton.Location = new System.Drawing.Point(366, 92);
+            this.updateEmployeeButton.Location = new System.Drawing.Point(377, 176);
             this.updateEmployeeButton.Margin = new System.Windows.Forms.Padding(2);
             this.updateEmployeeButton.Name = "updateEmployeeButton";
             this.updateEmployeeButton.Size = new System.Drawing.Size(178, 86);
@@ -247,7 +256,7 @@
             this.profileButton.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.profileButton.ImageKey = "user(1).png";
             this.profileButton.ImageList = this.imageListButtons;
-            this.profileButton.Location = new System.Drawing.Point(548, 92);
+            this.profileButton.Location = new System.Drawing.Point(559, 176);
             this.profileButton.Margin = new System.Windows.Forms.Padding(2);
             this.profileButton.Name = "profileButton";
             this.profileButton.Size = new System.Drawing.Size(178, 86);
@@ -382,7 +391,7 @@
             this.mainData.Margin = new System.Windows.Forms.Padding(2);
             this.mainData.Name = "mainData";
             this.mainData.RowTemplate.Height = 24;
-            this.mainData.Size = new System.Drawing.Size(1039, 244);
+            this.mainData.Size = new System.Drawing.Size(1111, 244);
             this.mainData.TabIndex = 18;
             this.mainData.TabStop = false;
             this.mainData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainData_CellClick);
@@ -398,48 +407,31 @@
             this.pictureBoxLogo.Location = new System.Drawing.Point(754, 86);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(291, 207);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(358, 207);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 17;
             this.pictureBoxLogo.TabStop = false;
-            // 
-            // flowLayoutMenuButtons
-            // 
-            this.flowLayoutMenuButtons.AutoScroll = true;
-            this.flowLayoutMenuButtons.Controls.Add(this.workReportButton);
-            this.flowLayoutMenuButtons.Controls.Add(this.addProjectButton);
-            this.flowLayoutMenuButtons.Controls.Add(this.addEmployeeButton);
-            this.flowLayoutMenuButtons.Controls.Add(this.assignButton);
-            this.flowLayoutMenuButtons.Controls.Add(this.updateSkillButton);
-            this.flowLayoutMenuButtons.Controls.Add(this.updateProjectButton);
-            this.flowLayoutMenuButtons.Controls.Add(this.updateEmployeeButton);
-            this.flowLayoutMenuButtons.Controls.Add(this.profileButton);
-            this.flowLayoutMenuButtons.Location = new System.Drawing.Point(11, 86);
-            this.flowLayoutMenuButtons.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutMenuButtons.Name = "flowLayoutMenuButtons";
-            this.flowLayoutMenuButtons.Size = new System.Drawing.Size(739, 182);
-            this.flowLayoutMenuButtons.TabIndex = 23;
             // 
             // userLabel
             // 
             this.userLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.userLabel.AutoSize = true;
-            this.userLabel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.userLabel.BackColor = System.Drawing.Color.White;
-            this.userLabel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.userLabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.userLabel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.userLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.userLabel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.userLabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.userLabel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.userLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userLabel.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userLabel.ForeColor = System.Drawing.Color.White;
             this.userLabel.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.userLabel.ImageKey = "24644049.jpg";
             this.userLabel.ImageList = this.imageListAvatar;
-            this.userLabel.Location = new System.Drawing.Point(903, 24);
+            this.userLabel.Location = new System.Drawing.Point(754, 24);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(142, 40);
+            this.userLabel.Size = new System.Drawing.Size(311, 40);
             this.userLabel.TabIndex = 24;
             this.userLabel.TabStop = false;
-            this.userLabel.Text = "[UNKNOWN]";
+            this.userLabel.Text = "Welcome, [UNKNOWN]";
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.userLabel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.userLabel.UseVisualStyleBackColor = false;
@@ -450,16 +442,115 @@
             this.imageListAvatar.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListAvatar.Images.SetKeyName(0, "24644049.jpg");
             // 
+            // imageListSide
+            // 
+            this.imageListSide.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListSide.ImageStream")));
+            this.imageListSide.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListSide.Images.SetKeyName(0, "menu.png");
+            this.imageListSide.Images.SetKeyName(1, "chat.png");
+            this.imageListSide.Images.SetKeyName(2, "right-arrow.png");
+            this.imageListSide.Images.SetKeyName(3, "send.png");
+            // 
+            // slideButton
+            // 
+            this.slideButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.slideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.slideButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.slideButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.slideButton.ImageKey = "chat.png";
+            this.slideButton.ImageList = this.imageListSide;
+            this.slideButton.Location = new System.Drawing.Point(1062, 24);
+            this.slideButton.Name = "slideButton";
+            this.slideButton.Size = new System.Drawing.Size(61, 40);
+            this.slideButton.TabIndex = 27;
+            this.slideButton.UseVisualStyleBackColor = false;
+            this.slideButton.Click += new System.EventHandler(this.slideButton_Click);
+            // 
+            // materialDivider1
+            // 
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(187, 101);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(3, 150);
+            this.materialDivider1.TabIndex = 8;
+            this.materialDivider1.Text = "materialDivider1";
+            // 
+            // materialDivider2
+            // 
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(551, 101);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(3, 150);
+            this.materialDivider2.TabIndex = 8;
+            this.materialDivider2.Text = "materialDivider1";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.richTextBox1.Location = new System.Drawing.Point(28, 62);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(319, 426);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
+            // sendButton
+            // 
+            this.sendButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sendButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.sendButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.sendButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sendButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sendButton.ForeColor = System.Drawing.Color.White;
+            this.sendButton.ImageKey = "right-arrow.png";
+            this.sendButton.ImageList = this.imageListSide;
+            this.sendButton.Location = new System.Drawing.Point(286, 494);
+            this.sendButton.Name = "sendButton";
+            this.sendButton.Size = new System.Drawing.Size(61, 60);
+            this.sendButton.TabIndex = 27;
+            this.sendButton.UseVisualStyleBackColor = false;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox2.Location = new System.Drawing.Point(28, 494);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(261, 60);
+            this.richTextBox2.TabIndex = 1;
+            this.richTextBox2.Text = "";
+            // 
+            // panelSide
+            // 
+            this.panelSide.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.panelSide.Controls.Add(this.richTextBox1);
+            this.panelSide.Controls.Add(this.sendButton);
+            this.panelSide.Controls.Add(this.richTextBox2);
+            this.panelSide.Location = new System.Drawing.Point(754, 24);
+            this.panelSide.Name = "panelSide";
+            this.panelSide.Size = new System.Drawing.Size(369, 586);
+            this.panelSide.TabIndex = 30;
+            this.panelSide.Visible = false;
+            // 
             // F001_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1051, 606);
+            this.ClientSize = new System.Drawing.Size(1123, 606);
+            this.Controls.Add(this.slideButton);
             this.Controls.Add(this.userLabel);
+            this.Controls.Add(this.panelSide);
             this.Controls.Add(this.pictureBoxLogo);
-            this.Controls.Add(this.flowLayoutMenuButtons);
-            this.Controls.Add(this.mainData);
             this.Controls.Add(this.toDatePick);
             this.Controls.Add(this.fromDatePick);
             this.Controls.Add(this.timeBox);
@@ -468,17 +559,29 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.materialDivider2);
+            this.Controls.Add(this.materialDivider1);
+            this.Controls.Add(this.assignButton);
+            this.Controls.Add(this.addProjectButton);
+            this.Controls.Add(this.addEmployeeButton);
+            this.Controls.Add(this.workReportButton);
+            this.Controls.Add(this.updateSkillButton);
+            this.Controls.Add(this.updateProjectButton);
+            this.Controls.Add(this.updateEmployeeButton);
+            this.Controls.Add(this.profileButton);
+            this.Controls.Add(this.mainData);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(744, 500);
+            this.MinimumSize = new System.Drawing.Size(744, 300);
             this.Name = "F001_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmData_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.F001_Main_Click);
             ((System.ComponentModel.ISupportInitialize)(this.mainData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            this.flowLayoutMenuButtons.ResumeLayout(false);
+            this.panelSide.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,10 +607,17 @@
         private System.Windows.Forms.DateTimePicker toDatePick;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.DataGridView mainData;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutMenuButtons;
         private System.Windows.Forms.ImageList imageListButtons;
         private System.Windows.Forms.Button userLabel;
         private System.Windows.Forms.ImageList imageListAvatar;
+        private System.Windows.Forms.ImageList imageListSide;
+        private System.Windows.Forms.Button slideButton;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button sendButton;
+        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private MaterialSkin.Controls.MaterialDivider materialDivider2;
+        private System.Windows.Forms.Panel panelSide;
     }
 }
 

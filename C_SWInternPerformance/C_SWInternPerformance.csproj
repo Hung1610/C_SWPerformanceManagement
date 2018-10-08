@@ -159,6 +159,9 @@
     <Compile Include="Models\Projects.cs" />
     <Compile Include="Models\SkillEdit.cs" />
     <Compile Include="Models\SkillManage.cs" />
+    <Compile Include="OpacityPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Presenters\BasePresenter.cs" />
     <Compile Include="Data\EmployeeData.cs" />
     <Compile Include="Presenters\IEmployee.cs" />
