@@ -225,6 +225,8 @@ namespace C_SWInternPerformance
             Permissions = pMain.GetRights();
             if (!Permissions.Contains("r1"))
                 assignButton.Enabled = false;
+            else
+                assignButton.Enabled = true;
             projectBox.SelectedIndex = 0;
             timeBox.SelectedIndex = 0;
             projects = pMain.GetProjects();
@@ -498,6 +500,7 @@ namespace C_SWInternPerformance
                 f.Close();
             F000_Login login = new F000_Login();
             login.Show();
+            login.Focus();
         }
     }
 }
