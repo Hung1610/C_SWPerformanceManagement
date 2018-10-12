@@ -52,7 +52,7 @@
             this.projectBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.projectBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.projectBox.FormattingEnabled = true;
-            this.projectBox.Location = new System.Drawing.Point(205, 2);
+            this.projectBox.Location = new System.Drawing.Point(157, 2);
             this.projectBox.Margin = new System.Windows.Forms.Padding(2);
             this.projectBox.Name = "projectBox";
             this.projectBox.Size = new System.Drawing.Size(212, 21);
@@ -60,7 +60,7 @@
             // 
             // datePick
             // 
-            this.datePick.Location = new System.Drawing.Point(205, 57);
+            this.datePick.Location = new System.Drawing.Point(157, 54);
             this.datePick.Margin = new System.Windows.Forms.Padding(2);
             this.datePick.Name = "datePick";
             this.datePick.Size = new System.Drawing.Size(212, 20);
@@ -68,7 +68,7 @@
             // 
             // workTimeUpDown
             // 
-            this.workTimeUpDown.Location = new System.Drawing.Point(205, 112);
+            this.workTimeUpDown.Location = new System.Drawing.Point(157, 106);
             this.workTimeUpDown.Margin = new System.Windows.Forms.Padding(2);
             this.workTimeUpDown.Name = "workTimeUpDown";
             this.workTimeUpDown.Size = new System.Drawing.Size(50, 20);
@@ -77,18 +77,18 @@
             // remarkRichTxt
             // 
             this.remarkRichTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.remarkRichTxt.Location = new System.Drawing.Point(205, 167);
+            this.remarkRichTxt.Location = new System.Drawing.Point(157, 158);
             this.remarkRichTxt.Margin = new System.Windows.Forms.Padding(2);
             this.remarkRichTxt.Name = "remarkRichTxt";
-            this.remarkRichTxt.Size = new System.Drawing.Size(282, 87);
+            this.remarkRichTxt.Size = new System.Drawing.Size(330, 83);
             this.remarkRichTxt.TabIndex = 4;
             this.remarkRichTxt.Text = "";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.80661F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.19338F));
             this.tableLayoutPanel1.Controls.Add(this.materialLabel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.datePick, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.remarkRichTxt, 1, 3);
@@ -105,7 +105,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.78261F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(489, 256);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(489, 243);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // materialLabel1
@@ -127,7 +127,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(3, 55);
+            this.materialLabel2.Location = new System.Drawing.Point(3, 52);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(40, 19);
@@ -140,7 +140,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(3, 110);
+            this.materialLabel3.Location = new System.Drawing.Point(3, 104);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(102, 19);
@@ -153,7 +153,7 @@
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(3, 165);
+            this.materialLabel4.Location = new System.Drawing.Point(3, 156);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(60, 19);

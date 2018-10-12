@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelProjectName = new System.Windows.Forms.Label();
             this.txtProjectName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelProjectName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtProjectName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
@@ -89,16 +89,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(423, 403);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // labelProjectName
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Project Name*";
+            this.labelProjectName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelProjectName.AutoSize = true;
+            this.labelProjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProjectName.Location = new System.Drawing.Point(3, 7);
+            this.labelProjectName.Name = "labelProjectName";
+            this.labelProjectName.Size = new System.Drawing.Size(99, 40);
+            this.labelProjectName.TabIndex = 0;
+            this.labelProjectName.Text = "Project Name*";
             // 
             // txtProjectName
             // 
@@ -350,7 +350,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelProjectName;
         private System.Windows.Forms.TextBox txtProjectName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

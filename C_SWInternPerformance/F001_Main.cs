@@ -25,8 +25,8 @@ namespace C_SWInternPerformance
         public static int UserID;
 
         // Default size.
-        int height;
-        int width;
+        int defaultHeight;
+        int defaultWidth;
 
         // Declare presenters.
         PMain pMain;
@@ -50,13 +50,13 @@ namespace C_SWInternPerformance
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.WHITE
             );
-            
+
             Console.WriteLine(ID);
             pMain = new PMain(this);
             UserID = ID;
             userLabel.Text = "Welcome, " + pMain.GetUser(ID);
-            height = this.Height;
-            width = this.Width;
+            defaultHeight = this.Height;
+            defaultWidth = this.Width;
             // Populate the lists.
             projects = pMain.GetProjects();
             performances = pMain.GetPerformances();

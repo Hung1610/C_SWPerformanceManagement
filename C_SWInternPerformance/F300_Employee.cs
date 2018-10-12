@@ -246,7 +246,9 @@ namespace C_SWInternPerformance
         // Save/Add button.
         private void saveButton_Click(object sender, EventArgs e)
         {
-            if (EmployeeName.Equals(""))
+            bool hasOnlyWhite = EmployeeName.Length > 0 &&
+                        EmployeeName.Trim().Length == 0;
+            if (hasOnlyWhite || EmployeeName.Equals(""))
             {
                 MessageBox.Show(EmptyWarningMessage,
                             EmptyWarningTitle,

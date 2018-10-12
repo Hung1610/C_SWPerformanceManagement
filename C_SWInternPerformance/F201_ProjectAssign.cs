@@ -18,7 +18,7 @@ namespace C_SWInternPerformance
         string SaveConfirmTitle = "Changes Confirm.";
         string SaveConfirmMessage = "Carry out the changes ?";
 
-        string eeExceptionErrorTitle = "Exception Error";
+        string ExceptionErrorTitle = "Exception Error";
 
         // Declare presenter.
         private PProjectAssign pAssign;

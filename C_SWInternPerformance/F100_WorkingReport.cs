@@ -19,6 +19,9 @@ namespace C_SWInternPerformance
         string SubmitConfirmMessage = "Submit this report ?";
         string SubmitConfirmOk = "Report Submitted.";
 
+        string ExceptionErrorTitle = "Exception Error";
+        string ExceptionErrorMeessage = "There was an error with a database query. Please check the error log.";
+
         // User ID gotten from Main.
         int UserID;
 
@@ -134,9 +137,9 @@ namespace C_SWInternPerformance
                     ReportRefresh?.Invoke(this, new EventArgs());
                     MessageBox.Show(SubmitConfirmOk);
                 }
-                catch (Exception ee)
+                catch (Exception)
                 {
-                    MessageBox.Show(ee.ToString(), "Exception Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ExceptionErrorMeessage, ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

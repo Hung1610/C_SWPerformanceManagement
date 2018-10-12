@@ -19,6 +19,10 @@ namespace C_SWInternPerformance
         string LoginErrorTitle = "Login Error";
         string LoginErrorMessage = "Wrong user Name or Password";
 
+
+        string ExceptionErrorTitle = "Exception Error";
+        string ExceptionErrorMeessage = "There was a problem connecting to the database.";
+
         // Declare presenter.
         private PLogin LoginP { get; set; }
         // This region implements ILogin elements.
@@ -151,9 +155,9 @@ namespace C_SWInternPerformance
                     this.Close();
                 }
             }
-            catch (Exception ee)
+            catch (Exception)
             {
-                MessageBox.Show(ee.ToString(), "Exception Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ExceptionErrorMeessage, ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -27,6 +27,8 @@ namespace C_SWInternPerformance
         string EmptyWarningMessage = "Please enter project name!";
 
         string ExceptionErrorTitle = "Exception Error";
+        string ExceptionErrorMeessage = "There was an error with a database query. Please check the error log.";
+
         // ID taken from main.
         int editID = -1;
 
@@ -162,8 +164,11 @@ namespace C_SWInternPerformance
         // Create/Save button.
         private void CreateSave_Click(object sender, EventArgs e)
         {
-            if (ProjectName.Equals(""))
+            bool hasOnlyWhite = ProjectName.Length > 0 &&
+                        ProjectName.Trim().Length == 0;
+            if (hasOnlyWhite || ProjectName == string.Empty)
             {
+
                 MessageBox.Show(EmptyWarningMessage,
                             EmptyWarningTitle,
                             MessageBoxButtons.OK,
@@ -185,9 +190,9 @@ namespace C_SWInternPerformance
                         ProjectRefresh?.Invoke(this, new EventArgs());
                         MessageBox.Show(SaveConfirmOk);
                     }
-                    catch(Exception ee)
+                    catch(Exception)
                     {
-                        MessageBox.Show(ee.ToString(), ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ExceptionErrorMeessage, ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -205,9 +210,9 @@ namespace C_SWInternPerformance
                         ProjectRefresh?.Invoke(this, new EventArgs());
                         MessageBox.Show(CreateConfirmOk);
                     }
-                    catch (Exception ee)
+                    catch (Exception)
                     {
-                        MessageBox.Show(ee.ToString(), ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ExceptionErrorMeessage, ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
