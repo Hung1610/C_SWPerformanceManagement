@@ -21,8 +21,10 @@ namespace C_SWInternPerformance
         // Message box strings.
         string RowSelectMessage = "Please select a row from the table.";
 
-        // ID taken from Login for use in this and other forms.
-        public static int UserID;
+        // Permissions string.
+        string Permissions;
+        // UserID.
+        int uID;
 
         // Default size.
         int defaultHeight;
@@ -51,9 +53,9 @@ namespace C_SWInternPerformance
                 TextShade.WHITE
             );
 
+            uID = ID;
             Console.WriteLine(ID);
             pMain = new PMain(this);
-            UserID = ID;
             userLabel.Text = "Welcome, " + pMain.GetUser(ID);
             defaultHeight = this.Height;
             defaultWidth = this.Width;
@@ -69,6 +71,11 @@ namespace C_SWInternPerformance
         // Initialize Data for the list view.
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Get a string containing user rights.
+            Permissions = pMain.GetRights();
+            if (!Permissions.Contains("r1"))
+                assignButton.Enabled = false;
+
             // Hiding backstage columns.
             mainData.Columns["PerformanceID"].Visible = false;
             mainData.Columns["ProjectID"].Visible = false;
@@ -161,6 +168,14 @@ namespace C_SWInternPerformance
 
         // This region implements IMain elements.
         #region IMain ELEMENTS.
+        public int UserID
+        {
+            get
+            {
+                return uID;
+            }
+        }
+
         public int ProjectID
         {
             get
@@ -207,6 +222,9 @@ namespace C_SWInternPerformance
         {
             pMain = new PMain(this);
             userLabel.Text = "Welcome, " + pMain.GetUser(UserID);
+            Permissions = pMain.GetRights();
+            if (!Permissions.Contains("r1"))
+                assignButton.Enabled = false;
             projectBox.SelectedIndex = 0;
             timeBox.SelectedIndex = 0;
             projects = pMain.GetProjects();
@@ -216,6 +234,7 @@ namespace C_SWInternPerformance
             projectBox.DataSource = projects;
             mainData.DataSource = new BindingList<PerformanceData>(performances.OrderBy(x => x.ProjectName).ToList());
         }
+
         // Listen to refresh event from other forms.
         private void RefreshRequest(object sender, EventArgs e)
         {

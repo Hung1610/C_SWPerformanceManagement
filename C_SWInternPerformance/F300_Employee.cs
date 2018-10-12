@@ -250,12 +250,14 @@ namespace C_SWInternPerformance
                         EmployeeName.Trim().Length == 0;
             if (hasOnlyWhite || EmployeeName.Equals(""))
             {
+                labelName.ForeColor = Color.Red;
                 MessageBox.Show(EmptyWarningMessage,
                             EmptyWarningTitle,
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                 return;
             }
+            labelName.ForeColor = Color.Black;
             if (editID != -1)
             {
                 DialogResult result = MessageBox.Show(SaveConfirmMessage,

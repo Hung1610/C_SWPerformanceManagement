@@ -34,7 +34,7 @@
             this.tabControlSkill = new MaterialSkin.Controls.MaterialTabControl();
             this.tabManage = new System.Windows.Forms.TabPage();
             this.splitCon = new System.Windows.Forms.SplitContainer();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.listBoxSkill = new System.Windows.Forms.ListBox();
             this.saveSkillManageButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -97,6 +97,7 @@
             // 
             // closeButton
             // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.AutoSize = true;
             this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.closeButton.Depth = 0;
@@ -160,7 +161,7 @@
             // splitCon.Panel1
             // 
             this.splitCon.Panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.splitCon.Panel1.Controls.Add(this.materialLabel4);
+            this.splitCon.Panel1.Controls.Add(this.label1);
             this.splitCon.Panel1.Controls.Add(this.listBoxSkill);
             // 
             // splitCon.Panel2
@@ -175,18 +176,15 @@
             this.splitCon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.splitCont_MouseMove);
             this.splitCon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.splitCont_MouseUp);
             // 
-            // materialLabel4
+            // label1
             // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(4, 4);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(85, 19);
-            this.materialLabel4.TabIndex = 1;
-            this.materialLabel4.Text = "Your Skills:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Your Skills:";
             // 
             // listBoxSkill
             // 
@@ -563,11 +561,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(12, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 25);
+            this.label5.Size = new System.Drawing.Size(105, 21);
             this.label5.TabIndex = 4;
             this.label5.Text = "Skill Manage";
             this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
@@ -593,6 +591,7 @@
             this.Controls.Add(this.panelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "F500_SkillManage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Skill Manage";
             this.Load += new System.EventHandler(this.F500_SkillManage_Load);
             this.panelTitle.ResumeLayout(false);
@@ -652,9 +651,9 @@
         private System.Windows.Forms.SplitContainer splitConSkill;
         private System.Windows.Forms.ListBox listBoxSkillEdit;
         private MaterialSkin.Controls.MaterialFlatButton saveSkillButton;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialFlatButton addSkillButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox txtSkillName;
+        private System.Windows.Forms.Label label1;
     }
 }

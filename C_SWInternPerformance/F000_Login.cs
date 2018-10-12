@@ -16,9 +16,11 @@ namespace C_SWInternPerformance
     public partial class F000_Login : CommonForm, ILogin
     {
         // Message box strings.
+
+        /*
         string LoginErrorTitle = "Login Error";
         string LoginErrorMessage = "Wrong user Name or Password";
-
+        */
 
         string ExceptionErrorTitle = "Exception Error";
         string ExceptionErrorMeessage = "There was a problem connecting to the database.";
@@ -133,11 +135,14 @@ namespace C_SWInternPerformance
                 if (ID == 0)
                 {
                     Console.WriteLine("Login Failed");
-                    MessageBox.Show(LoginErrorMessage, LoginErrorTitle,
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    labelUserWrong.Visible = true;
+                    labelPassWrong.Visible = true;
+                    //MessageBox.Show(LoginErrorMessage, LoginErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
+                    labelUserWrong.Visible = false;
+                    labelPassWrong.Visible = false;
                     if (checkRemember.Checked)
                     {
                         Properties.Settings.Default.userName = flatTxtUser.Text;

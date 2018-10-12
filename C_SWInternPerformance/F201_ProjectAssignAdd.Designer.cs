@@ -191,6 +191,7 @@
             // 
             // closeButton
             // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.AutoSize = true;
             this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.closeButton.Depth = 0;
@@ -228,6 +229,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F201_ProjectAssignAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Project Assignment";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);

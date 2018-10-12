@@ -189,7 +189,7 @@
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(744, 43);
+            this.panelTitle.Size = new System.Drawing.Size(744, 40);
             this.panelTitle.TabIndex = 7;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             this.panelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
@@ -216,12 +216,12 @@
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.Black;
             this.labelTitle.Location = new System.Drawing.Point(11, 10);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(139, 25);
+            this.labelTitle.Size = new System.Drawing.Size(118, 21);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Project Assign";
             this.labelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
@@ -311,6 +311,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F201_ProjectAssign";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Project Assign";
             this.Load += new System.EventHandler(this.F201_ProjectAssign_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataProjectAssign)).EndInit();

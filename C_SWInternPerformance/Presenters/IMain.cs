@@ -8,6 +8,7 @@ namespace C_SWInternPerformance.Presenters
 {
     interface IMain
     {
+        int UserID { get; }
         int ProjectID { get; }
         int EmployeeID { get; }
     }

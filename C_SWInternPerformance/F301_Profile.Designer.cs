@@ -41,8 +41,10 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.saveButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.pictureAvatar = new System.Windows.Forms.PictureBox();
             this.panelTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitle
@@ -54,7 +56,7 @@
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(537, 43);
+            this.panelTitle.Size = new System.Drawing.Size(537, 40);
             this.panelTitle.TabIndex = 0;
             this.panelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
             this.panelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseMove);
@@ -62,6 +64,7 @@
             // 
             // closeButton
             // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.AutoSize = true;
             this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.closeButton.Depth = 0;
@@ -79,12 +82,12 @@
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.Black;
             this.labelTitle.Location = new System.Drawing.Point(11, 10);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(161, 25);
+            this.labelTitle.Size = new System.Drawing.Size(134, 21);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Edit Your Profile";
             this.labelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseDown);
@@ -93,6 +96,8 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.12303F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.87697F));
@@ -104,7 +109,7 @@
             this.tableLayoutPanel1.Controls.Add(this.materialLabel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.materialLabel3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.materialLabel4, 0, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 63);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(155, 65);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -112,7 +117,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.78261F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(507, 153);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(369, 153);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // checkDel
@@ -120,7 +125,7 @@
             this.checkDel.AutoSize = true;
             this.checkDel.Depth = 0;
             this.checkDel.Font = new System.Drawing.Font("Roboto", 10F);
-            this.checkDel.Location = new System.Drawing.Point(167, 119);
+            this.checkDel.Location = new System.Drawing.Point(122, 119);
             this.checkDel.Margin = new System.Windows.Forms.Padding(0);
             this.checkDel.MouseLocation = new System.Drawing.Point(-1, -1);
             this.checkDel.MouseState = MaterialSkin.MouseState.HOVER;
@@ -134,30 +139,30 @@
             // richTxtRemark
             // 
             this.richTxtRemark.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTxtRemark.Location = new System.Drawing.Point(169, 68);
+            this.richTxtRemark.Location = new System.Drawing.Point(124, 68);
             this.richTxtRemark.Margin = new System.Windows.Forms.Padding(2);
             this.richTxtRemark.Name = "richTxtRemark";
-            this.richTxtRemark.Size = new System.Drawing.Size(336, 49);
+            this.richTxtRemark.Size = new System.Drawing.Size(243, 49);
             this.richTxtRemark.TabIndex = 2;
             this.richTxtRemark.Text = "";
             // 
             // txtPass
             // 
             this.txtPass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPass.Location = new System.Drawing.Point(169, 35);
+            this.txtPass.Location = new System.Drawing.Point(124, 35);
             this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(336, 20);
+            this.txtPass.Size = new System.Drawing.Size(243, 20);
             this.txtPass.TabIndex = 3;
             this.txtPass.UseSystemPasswordChar = true;
             // 
             // txtEmail
             // 
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEmail.Location = new System.Drawing.Point(169, 2);
+            this.txtEmail.Location = new System.Drawing.Point(124, 2);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(336, 20);
+            this.txtEmail.Size = new System.Drawing.Size(243, 20);
             this.txtEmail.TabIndex = 3;
             // 
             // materialLabel1
@@ -214,11 +219,13 @@
             // 
             // saveButton
             // 
+            this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.saveButton.AutoSize = true;
             this.saveButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveButton.Depth = 0;
-            this.saveButton.Location = new System.Drawing.Point(478, 224);
+            this.saveButton.Location = new System.Drawing.Point(478, 226);
             this.saveButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.saveButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.saveButton.Name = "saveButton";
@@ -229,23 +236,39 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
+            // pictureAvatar
+            // 
+            this.pictureAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureAvatar.Image = global::C_SWInternPerformance.Properties.Resources.avatar;
+            this.pictureAvatar.InitialImage = global::C_SWInternPerformance.Properties.Resources.avatar;
+            this.pictureAvatar.Location = new System.Drawing.Point(12, 67);
+            this.pictureAvatar.Name = "pictureAvatar";
+            this.pictureAvatar.Size = new System.Drawing.Size(124, 151);
+            this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureAvatar.TabIndex = 4;
+            this.pictureAvatar.TabStop = false;
+            // 
             // F301_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(537, 263);
+            this.ClientSize = new System.Drawing.Size(537, 265);
+            this.Controls.Add(this.pictureAvatar);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "F301_Profile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profile Edit";
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +289,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private System.Windows.Forms.PictureBox pictureAvatar;
     }
 }

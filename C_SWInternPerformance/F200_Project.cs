@@ -168,13 +168,14 @@ namespace C_SWInternPerformance
                         ProjectName.Trim().Length == 0;
             if (hasOnlyWhite || ProjectName == string.Empty)
             {
-
+                labelProjectName.ForeColor = Color.Red;
                 MessageBox.Show(EmptyWarningMessage,
                             EmptyWarningTitle,
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                 return;
             }
+            labelProjectName.ForeColor = Color.Black;
             if (editID != -1)
             {
                 DialogResult result = MessageBox.Show(SaveConfirmMessage,

@@ -34,6 +34,8 @@
             this.flatTxtPass = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.loginButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.checkRemember = new MaterialSkin.Controls.MaterialCheckBox();
+            this.labelUserWrong = new System.Windows.Forms.Label();
+            this.labelPassWrong = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +44,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::C_SWInternPerformance.Properties.Resources.softworld_logo_footer;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 28);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(271, 182);
@@ -60,7 +62,7 @@
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.Depth = 0;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.Location = new System.Drawing.Point(145, 411);
+            this.closeButton.Location = new System.Drawing.Point(147, 411);
             this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.closeButton.Name = "closeButton";
@@ -77,7 +79,7 @@
             this.flatTxtUser.Depth = 0;
             this.flatTxtUser.ForeColor = System.Drawing.SystemColors.ControlText;
             this.flatTxtUser.Hint = "";
-            this.flatTxtUser.Location = new System.Drawing.Point(38, 242);
+            this.flatTxtUser.Location = new System.Drawing.Point(38, 225);
             this.flatTxtUser.MouseState = MaterialSkin.MouseState.HOVER;
             this.flatTxtUser.Name = "flatTxtUser";
             this.flatTxtUser.PasswordChar = '\0';
@@ -96,7 +98,7 @@
             this.flatTxtPass.BackColor = System.Drawing.Color.LightGray;
             this.flatTxtPass.Depth = 0;
             this.flatTxtPass.Hint = "";
-            this.flatTxtPass.Location = new System.Drawing.Point(38, 280);
+            this.flatTxtPass.Location = new System.Drawing.Point(38, 271);
             this.flatTxtPass.MouseState = MaterialSkin.MouseState.HOVER;
             this.flatTxtPass.Name = "flatTxtPass";
             this.flatTxtPass.PasswordChar = '\0';
@@ -141,6 +143,28 @@
             this.checkRemember.Text = "Remember Me";
             this.checkRemember.UseVisualStyleBackColor = true;
             // 
+            // labelUserWrong
+            // 
+            this.labelUserWrong.AutoSize = true;
+            this.labelUserWrong.ForeColor = System.Drawing.Color.Red;
+            this.labelUserWrong.Location = new System.Drawing.Point(38, 252);
+            this.labelUserWrong.Name = "labelUserWrong";
+            this.labelUserWrong.Size = new System.Drawing.Size(91, 13);
+            this.labelUserWrong.TabIndex = 7;
+            this.labelUserWrong.Text = "Unavailable Email";
+            this.labelUserWrong.Visible = false;
+            // 
+            // labelPassWrong
+            // 
+            this.labelPassWrong.AutoSize = true;
+            this.labelPassWrong.ForeColor = System.Drawing.Color.Red;
+            this.labelPassWrong.Location = new System.Drawing.Point(38, 302);
+            this.labelPassWrong.Name = "labelPassWrong";
+            this.labelPassWrong.Size = new System.Drawing.Size(112, 13);
+            this.labelPassWrong.TabIndex = 8;
+            this.labelPassWrong.Text = "Unavailable Password";
+            this.labelPassWrong.Visible = false;
+            // 
             // F000_Login
             // 
             this.AcceptButton = this.loginButton;
@@ -148,6 +172,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(348, 462);
             this.ControlBox = false;
+            this.Controls.Add(this.labelPassWrong);
+            this.Controls.Add(this.labelUserWrong);
             this.Controls.Add(this.checkRemember);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.flatTxtPass);
@@ -176,5 +202,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField flatTxtPass;
         private MaterialSkin.Controls.MaterialRaisedButton loginButton;
         private MaterialSkin.Controls.MaterialCheckBox checkRemember;
+        private System.Windows.Forms.Label labelUserWrong;
+        private System.Windows.Forms.Label labelPassWrong;
     }
 }
