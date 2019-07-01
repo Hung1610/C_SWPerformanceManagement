@@ -18,6 +18,8 @@ namespace C_SWInternPerformance
         string SaveConfirmTitle = "Changes Confirm.";
         string SaveConfirmMessage = "Carry out the changes ?";
 
+        string ExceptionErrorTitle = "Exception Error";
+
         // Declare presenter.
         private PProjectAssign pAssign;
         // Lists to populate with database data.
@@ -37,7 +39,6 @@ namespace C_SWInternPerformance
         }
         private void F201_ProjectAssign_Load(object sender, EventArgs e)
         {
-            RefreshButton.BackgroundImageLayout = ImageLayout.Stretch;
             // Getting the necessary lists.
             pAssign = new PProjectAssign(this);
             projectList = pAssign.AssignList();
@@ -52,6 +53,7 @@ namespace C_SWInternPerformance
             projectNameBox.DisplayMember = "ProjectName";
             dataProjectAssign.DataSource = assignedList;
             assignedList.DataSource = new BindingList<ProjectAssignData>(projectList.OrderBy(x => x.ProjectName).ToList());
+
             // Setting some attributes for the DataGrid. Rename the columns.
             // Hide the ProjectName Column to replace with a combobox.
             dataProjectAssign.Columns["ProjectName"].Visible = false;
@@ -86,10 +88,10 @@ namespace C_SWInternPerformance
             dataProjectAssign.Columns["ProjectID"].Visible = false;
             dataProjectAssign.Columns["EmployeeID"].Visible = false;
             dataProjectAssign.Columns["RoleID"].Visible = false;
+
             // Setting autosize mode.
             EmployeeCol.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             ProjectCol.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataProjectAssign.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         // Make dragging Title Panel drag the form around.
@@ -334,7 +336,7 @@ namespace C_SWInternPerformance
         {
             F201_ProjectAssignAdd Add = new F201_ProjectAssignAdd();
             Add.AssignRefresh += RefreshRequest;
-            Add.Show();
+            Add.ShowDialog();
         }
 
         // Save button.

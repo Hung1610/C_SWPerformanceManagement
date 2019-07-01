@@ -63,9 +63,19 @@ namespace C_SWInternPerformance.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap add_song__1_ {
+        internal static System.Drawing.Bitmap add {
             get {
-                object obj = ResourceManager.GetObject("add-song (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap avatar {
+            get {
+                object obj = ResourceManager.GetObject("avatar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -117,16 +127,6 @@ namespace C_SWInternPerformance.Properties {
             get {
                 object obj = ResourceManager.GetObject("SoftWorldICO", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap user_512 {
-            get {
-                object obj = ResourceManager.GetObject("user-512", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

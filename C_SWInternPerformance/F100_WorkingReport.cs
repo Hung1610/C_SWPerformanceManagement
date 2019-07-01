@@ -19,10 +19,18 @@ namespace C_SWInternPerformance
         string SubmitConfirmMessage = "Submit this report ?";
         string SubmitConfirmOk = "Report Submitted.";
 
+        string ExceptionErrorTitle = "Exception Error";
+        string ExceptionErrorMeessage = "There was an error with a database query. Please check the error log.";
+
         // User ID gotten from Main.
         int UserID;
+
         // Declare presenters.
         private PProjectReport PReport;
+
+        // Events to refresh F001_Main.
+        public delegate void RefreshEventHandler(object sender, EventArgs e);
+        public event RefreshEventHandler ReportRefresh;
 
         // Initialize UI components along with some data.
         public F100_WorkingReport(int ID)
@@ -122,9 +130,17 @@ namespace C_SWInternPerformance
                                                     MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                PReport = new PProjectReport(this);
-                PReport.Submit();
-                MessageBox.Show(SubmitConfirmOk);
+                try
+                {
+                    PReport = new PProjectReport(this);
+                    PReport.Submit();
+                    ReportRefresh?.Invoke(this, new EventArgs());
+                    MessageBox.Show(SubmitConfirmOk);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show(ExceptionErrorMeessage, ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         //Close button.

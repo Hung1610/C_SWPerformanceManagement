@@ -16,8 +16,14 @@ namespace C_SWInternPerformance
     public partial class F000_Login : CommonForm, ILogin
     {
         // Message box strings.
+
+        /*
         string LoginErrorTitle = "Login Error";
         string LoginErrorMessage = "Wrong user Name or Password";
+        */
+
+        string ExceptionErrorTitle = "Exception Error";
+        string ExceptionErrorMeessage = "There was a problem connecting to the database.";
 
         // Declare presenter.
         private PLogin LoginP { get; set; }
@@ -107,25 +113,56 @@ namespace C_SWInternPerformance
         {
             LoginP = new PLogin(this);
             InitializeComponent();
-            this.MaximumSize = this.Size;
-            this.MinimumSize = this.Size;
+        }
+
+        private void F000_Login_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.userName != string.Empty)
+            {
+                flatTxtUser.Text = Properties.Settings.Default.userName;
+                flatTxtPass.Text = Properties.Settings.Default.passUser;
+                checkRemember.Checked = true;
+                flatTxtPass.UseSystemPasswordChar = true;
+            }
         }
 
         // Login button
         private void Login_Click(object sender, EventArgs e)
         {
-            int ID = LoginP.GetLogin().ID;
-            if (ID == 0)
+            try
             {
-                Console.WriteLine("Login Failed");
-                MessageBox.Show(LoginErrorMessage, LoginErrorTitle,
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int ID = LoginP.GetLogin().ID;
+                if (ID == 0)
+                {
+                    Console.WriteLine("Login Failed");
+                    labelUserWrong.Visible = true;
+                    labelPassWrong.Visible = true;
+                    //MessageBox.Show(LoginErrorMessage, LoginErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    labelUserWrong.Visible = false;
+                    labelPassWrong.Visible = false;
+                    if (checkRemember.Checked)
+                    {
+                        Properties.Settings.Default.userName = flatTxtUser.Text;
+                        Properties.Settings.Default.passUser = flatTxtPass.Text;
+                        Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        Properties.Settings.Default.userName = string.Empty;
+                        Properties.Settings.Default.passUser = string.Empty;
+                        Properties.Settings.Default.Save();
+                    }
+                    F001_Main main = new F001_Main(ID);
+                    main.Show();
+                    this.Close();
+                }
             }
-            else
+            catch (Exception)
             {
-                F001_Main main = new F001_Main(ID);
-                main.Show();
-                this.Close();
+                MessageBox.Show(ExceptionErrorMeessage, ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

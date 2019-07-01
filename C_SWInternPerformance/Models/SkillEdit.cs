@@ -25,11 +25,10 @@ namespace C_SWInternPerformance.Models
             using (SqlConnection conn = new SqlConnection(conStr))
             {
                 conn.Open();
-                string sql = "Execute AddSkill @sID, @name, @type, @del, @remark";
+                string sql = "Execute AddSkill  @name, @type, @del, @remark";
                 Console.WriteLine(sql);
                 using (SqlCommand command = new SqlCommand(sql, conn))
                 {
-                    command.Parameters.Add("@sID", SqlDbType.Int).Value = SkillEditID;
                     command.Parameters.Add("@name", SqlDbType.NVarChar).Value = SkillName;
                     command.Parameters.Add("@type", SqlDbType.NVarChar).Value = SkillType;
                     command.Parameters.Add("@del", SqlDbType.TinyInt).Value = DelEdit;

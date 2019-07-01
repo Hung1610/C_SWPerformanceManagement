@@ -17,7 +17,6 @@ namespace C_SWInternPerformance.Presenters
         {
             SkillEdit skill = new SkillEdit
             {
-                SkillEditID = vSkillEdit.SkillEditID,
                 SkillName = vSkillEdit.SkillName,
                 SkillType = vSkillEdit.SkillType,
                 DelEdit = vSkillEdit.DelEdit,

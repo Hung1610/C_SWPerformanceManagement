@@ -15,15 +15,21 @@ namespace C_SWInternPerformance
             if (!comboBox.Items.Contains(entry))
                 comboBox.Items.Add(entry);
         }
+        // same for an AutoCompleteStringCollection.
+        public static void AddUnique(AutoCompleteStringCollection col, string entry)
+        {
+            if (!col.Contains(entry))
+                col.Add(entry);
+        }
+
 
         // Check if combobox elements contain a string.
         public static bool BoxContain (ComboBox comboBox, string text)
         {
-            
-            foreach(var item in comboBox.Items)
+            foreach (var item in comboBox.Items)
             {
                 string itemtxt = comboBox.GetItemText(item);
-                if (itemtxt.Equals(text))
+                if (itemtxt.ToLower().Equals(text.ToLower()))
                     return true;
             }
             return false;
@@ -31,11 +37,10 @@ namespace C_SWInternPerformance
         // same for a list box.
         public static bool BoxContain(ListBox comboBox, string text)
         {
-            
             foreach (var item in comboBox.Items)
             {
                 string itemtxt = comboBox.GetItemText(item);
-                if (itemtxt.Equals(text))
+                if (itemtxt.ToLower().Equals(text.ToLower()))
                     return true;
             }
             return false;

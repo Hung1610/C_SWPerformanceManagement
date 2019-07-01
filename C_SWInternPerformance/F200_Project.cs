@@ -23,12 +23,22 @@ namespace C_SWInternPerformance
         string SaveConfirmMessage = "Save this project ?";
         string SaveConfirmOk = "Project Saved.";
 
+        string EmptyWarningTitle = "Field Empty";
+        string EmptyWarningMessage = "Please enter project name!";
+
+        string ExceptionErrorTitle = "Exception Error";
+        string ExceptionErrorMeessage = "There was an error with a database query. Please check the error log.";
+
         // ID taken from main.
         int editID = -1;
+
         // Declare presenter.
         private PProjects pProject;
         //
         BindingList<ProjectsData> projectList;
+
+        // Auto complete for project name text field.
+        AutoCompleteStringCollection AutoCompleteSource;
 
         // Events to refresh F001_Main.
         public delegate void RefreshEventHandler(object sender, EventArgs e);
@@ -58,13 +68,26 @@ namespace C_SWInternPerformance
             txtEditID.Visible = true;
             // Populate the form with current Project to edit.
             var project = pProject.GetProject(eID);
-            projectNameTxt.Text = project.pName;
-            projectInfoTxt.Text = project.pInfo;
-            cusNameTxt.Text = project.cName;
-            cusInfoTxt.Text = project.cInfo;
-            remarkRichTxt.Text = project.remark;
-            startDatePick.Value = project.start;
-            endDatePick.Value = project.end;
+            txtProjectName.Text = project.pName;
+            txtProjectInfo.Text = project.pInfo;
+            txtCusName.Text = project.cName;
+            txtCusInfo.Text = project.cInfo;
+            richTxtRemark.Text = project.remark;
+            datePickStart.Value = project.start;
+            datePickEnd.Value = project.end;
+        }
+
+
+        private void F200_Project_Load(object sender, EventArgs e)
+        {
+            AutoCompleteSource = new AutoCompleteStringCollection();
+            // Strings for Project Name suggestions.
+            foreach (ProjectsData project in projectList)
+            {
+                UtilFormFunctions.AddUnique(AutoCompleteSource, project.ProjectName);
+            }
+            // Set Autocomplete source.
+            txtProjectName.AutoCompleteCustomSource = AutoCompleteSource;
         }
 
         // Make dragging Title Panel drag the form around.
@@ -91,49 +114,49 @@ namespace C_SWInternPerformance
         {
             get
             {
-                return projectNameTxt.Text;
+                return txtProjectName.Text;
             }
         }
         public string ProjectInfo
         {
             get
             {
-                return projectInfoTxt.Text;
+                return txtProjectInfo.Text;
             }
         }
         public string CustomerName
         {
             get
             {
-                return cusNameTxt.Text;
+                return txtCusName.Text;
             }
         }
         public string CustomerInfo
         {
             get
             {
-                return cusInfoTxt.Text;
+                return txtCusInfo.Text;
             }
         }
         public string Remark
         {
             get
             {
-                return remarkRichTxt.Text;
+                return richTxtRemark.Text;
             }
         }
         public DateTime StartDate
         {
             get
             {
-                return startDatePick.Value;
+                return datePickStart.Value;
             }
         }
         public DateTime EndDate
         {
             get
             {
-                return endDatePick.Value;
+                return datePickEnd.Value;
             }
         }
         #endregion
@@ -141,6 +164,18 @@ namespace C_SWInternPerformance
         // Create/Save button.
         private void CreateSave_Click(object sender, EventArgs e)
         {
+            bool hasOnlyWhite = ProjectName.Length > 0 &&
+                        ProjectName.Trim().Length == 0;
+            if (hasOnlyWhite || ProjectName == string.Empty)
+            {
+                labelProjectName.ForeColor = Color.Red;
+                MessageBox.Show(EmptyWarningMessage,
+                            EmptyWarningTitle,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                return;
+            }
+            labelProjectName.ForeColor = Color.Black;
             if (editID != -1)
             {
                 DialogResult result = MessageBox.Show(SaveConfirmMessage,
@@ -149,8 +184,17 @@ namespace C_SWInternPerformance
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    pProject.Save(editID);
-                    MessageBox.Show(SaveConfirmOk);
+                    try
+                    {
+
+                        pProject.Save(editID);
+                        ProjectRefresh?.Invoke(this, new EventArgs());
+                        MessageBox.Show(SaveConfirmOk);
+                    }
+                    catch(Exception)
+                    {
+                        MessageBox.Show(ExceptionErrorMeessage, ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else
@@ -161,11 +205,18 @@ namespace C_SWInternPerformance
                                                     MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    pProject.Save(editID);
-                    MessageBox.Show(CreateConfirmOk);
+                    try
+                    {
+                        pProject.Save(editID);
+                        ProjectRefresh?.Invoke(this, new EventArgs());
+                        MessageBox.Show(CreateConfirmOk);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show(ExceptionErrorMeessage, ExceptionErrorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
-            ProjectRefresh?.Invoke(this, new EventArgs());
         }
 
         // Close button.

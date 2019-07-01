@@ -33,6 +33,8 @@ namespace C_SWInternPerformance
         // Declare Presenter.
         PSkillManage PSkill;
         PSkillEdit PSkillEdit;
+
+        AutoCompleteStringCollection AutoCompleteSource;
         // Lists to populate with data.
         BindingList<SkillData> SkillList;
         BindingList<SkillData> UserSkills;
@@ -59,16 +61,19 @@ namespace C_SWInternPerformance
             listBoxSkill.ValueMember = "SkillListID";
             //
             // tabEdit data.
-            // Assign data to lists.
+            AutoCompleteSource = new AutoCompleteStringCollection();
+            // Strings for skillname,type suggestions.
+            foreach (SkillData skill in SkillList)
+            {
+                UtilFormFunctions.AddUnique(comboSkillType, skill.SkillType);
+                UtilFormFunctions.AddUnique(AutoCompleteSource, skill.SkillName);
+            }
+            // Assign data to AutoComplete.
+            txtSkillName.AutoCompleteCustomSource = AutoCompleteSource;
             // Assign boxes datasource.
             listBoxSkillEdit.DataSource = SkillList;
             listBoxSkillEdit.DisplayMember = "SkillName";
             listBoxSkillEdit.ValueMember = "SkillListID";
-
-            foreach (SkillData skill in SkillList)
-            {
-                UtilFormFunctions.AddUnique(comboSkillType,skill.SkillType);
-            }
         }
 
         // Make dragging Title Panel drag the form around.
@@ -228,6 +233,25 @@ namespace C_SWInternPerformance
         }
         #endregion
 
+        // Refresh Form.
+        public void RefreshForm()
+        {
+            comboSkillType.Items.Clear();
+            AutoCompleteSource.Clear();
+            // Re-get data.
+            UserSkills = PSkill.GetUserSkill(UserID);
+            SkillList = PSkill.SkillList();
+            foreach (SkillData skill in SkillList)
+            {
+                UtilFormFunctions.AddUnique(comboSkillType, skill.SkillType);
+                UtilFormFunctions.AddUnique(AutoCompleteSource, skill.SkillName);
+            }
+
+            // Assign data.
+            txtSkillName.AutoCompleteCustomSource = AutoCompleteSource;
+            listBoxSkill.DataSource = UserSkills;
+            listBoxSkillEdit.DataSource = SkillList;
+        }
 
         // Handle listbox selection. tabManage.
         private void listBoxSkill_SelectedIndexChanged(object sender, EventArgs e)
@@ -284,8 +308,7 @@ namespace C_SWInternPerformance
                     PSkill.SkillAssign(UserID);
                     MessageBox.Show(CreateSuccess);
                 }
-                UserSkills = PSkill.GetUserSkill(UserID);
-                listBoxSkill.DataSource = UserSkills;
+                RefreshForm();
             }
         }
 
@@ -302,8 +325,7 @@ namespace C_SWInternPerformance
             {
                 PSkillEdit.SaveSkill();
                 MessageBox.Show(SaveSuccess);
-                SkillList = PSkill.SkillList();
-                listBoxSkillEdit.DataSource = SkillList;
+                RefreshForm();
             }
         }
 
@@ -326,8 +348,7 @@ namespace C_SWInternPerformance
             {
                 PSkillEdit.AddSkill();
                 MessageBox.Show(CreateSuccess);
-                SkillList = PSkill.SkillList();
-                listBoxSkillEdit.DataSource = SkillList;
+                RefreshForm();
             }
         }
 

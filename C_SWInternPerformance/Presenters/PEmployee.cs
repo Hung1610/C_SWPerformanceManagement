@@ -21,6 +21,12 @@ namespace C_SWInternPerformance.Presenters
             return emp.GetEmployee(ID);
         }
         // Get lists.
+        // Get a list of employees.
+        public BindingList<EmployeeData> GetEmployees()
+        {
+            Employee emp = new Employee();
+            return emp.GetEmployeeDatas();
+        }
         // Get a list of Position for the combobox.
         public BindingList<PositionData> GetPositions()
         {

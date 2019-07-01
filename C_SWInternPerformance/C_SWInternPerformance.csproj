@@ -159,6 +159,9 @@
     <Compile Include="Models\Projects.cs" />
     <Compile Include="Models\SkillEdit.cs" />
     <Compile Include="Models\SkillManage.cs" />
+    <Compile Include="OpacityPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Presenters\BasePresenter.cs" />
     <Compile Include="Data\EmployeeData.cs" />
     <Compile Include="Presenters\IEmployee.cs" />
@@ -235,9 +238,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\softworld_logo_footer.png" />
@@ -270,9 +271,6 @@
     <None Include="Resources\add-song %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user-512.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\login.png" />
   </ItemGroup>
   <ItemGroup>
@@ -283,6 +281,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

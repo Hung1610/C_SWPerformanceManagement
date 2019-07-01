@@ -21,8 +21,14 @@ namespace C_SWInternPerformance
         // Message box strings.
         string RowSelectMessage = "Please select a row from the table.";
 
-        // ID taken from Login for use in this and other forms.
-        int UserID;
+        // Permissions string.
+        string Permissions;
+        // UserID.
+        int uID;
+
+        // Default size.
+        int defaultHeight;
+        int defaultWidth;
 
         // Declare presenters.
         PMain pMain;
@@ -31,38 +37,28 @@ namespace C_SWInternPerformance
         BindingList<ProjectsData> projects;
         BindingList<PerformanceData> performances;
 
-        // Close all currently opened forms when this form is closed, then re-open Login.
-        private void FrmData_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            List<Form> openForms = new List<Form>();
-            foreach (Form f in Application.OpenForms)
-                openForms.Add(f);
-            foreach (Form f in openForms)
-                f.Close();
-            F000_Login login = new F000_Login();
-            login.Show();
-        }
-
         // Initialize components and some data.
         public F001_Main(int ID)
         {
             InitializeComponent();
             this.Icon = Properties.Resources.SoftWorldICO;
-            // Create a material theme manager and add the form to manage (this)
+            // Create a material theme manager and add the form to manage (this).
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            // Configure color schema
+            // Configure color schema.
             materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Grey100, Primary.Grey900,
+                Primary.BlueGrey900, Primary.Grey900,
                 Primary.Blue500, Accent.LightBlue200,
-                TextShade.BLACK
+                TextShade.WHITE
             );
 
+            uID = ID;
             Console.WriteLine(ID);
             pMain = new PMain(this);
-            UserID = ID;
-            userLabel.Text = pMain.GetUser(ID);
+            userLabel.Text = "Welcome, " + pMain.GetUser(ID);
+            defaultHeight = this.Height;
+            defaultWidth = this.Width;
             // Populate the lists.
             projects = pMain.GetProjects();
             performances = pMain.GetPerformances();
@@ -75,6 +71,11 @@ namespace C_SWInternPerformance
         // Initialize Data for the list view.
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Get a string containing user rights.
+            Permissions = pMain.GetRights();
+            if (!Permissions.Contains("r1"))
+                assignButton.Enabled = false;
+
             // Hiding backstage columns.
             mainData.Columns["PerformanceID"].Visible = false;
             mainData.Columns["ProjectID"].Visible = false;
@@ -85,6 +86,8 @@ namespace C_SWInternPerformance
             mainData.Columns["WorkingDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             mainData.Columns["WorkingHour"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             mainData.Columns["WorkingName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            foreach (DataGridViewColumn column in mainData.Columns)
+                column.SortMode = DataGridViewColumnSortMode.Automatic;
         }
 
         // Gives the form Shadow Drop.
@@ -165,6 +168,14 @@ namespace C_SWInternPerformance
 
         // This region implements IMain elements.
         #region IMain ELEMENTS.
+        public int UserID
+        {
+            get
+            {
+                return uID;
+            }
+        }
+
         public int ProjectID
         {
             get
@@ -210,15 +221,22 @@ namespace C_SWInternPerformance
         private void RefreshForm()
         {
             pMain = new PMain(this);
-            userLabel.Text = pMain.GetUser(UserID);
+            userLabel.Text = "Welcome, " + pMain.GetUser(UserID);
+            Permissions = pMain.GetRights();
+            if (!Permissions.Contains("r1"))
+                assignButton.Enabled = false;
+            else
+                assignButton.Enabled = true;
             projectBox.SelectedIndex = 0;
             timeBox.SelectedIndex = 0;
             projects = pMain.GetProjects();
             performances = pMain.GetPerformances();
             projectBox.SelectedIndex = 0;
             timeBox.SelectedIndex = 0;
+            projectBox.DataSource = projects;
             mainData.DataSource = new BindingList<PerformanceData>(performances.OrderBy(x => x.ProjectName).ToList());
         }
+
         // Listen to refresh event from other forms.
         private void RefreshRequest(object sender, EventArgs e)
         {
@@ -393,6 +411,7 @@ namespace C_SWInternPerformance
                 }
             }
             F100_WorkingReport f100= new F100_WorkingReport(UserID);
+            f100.ReportRefresh += RefreshRequest;
             f100.Show();
         }
 
@@ -439,6 +458,49 @@ namespace C_SWInternPerformance
             }
             F301_Profile f301 = new F301_Profile(UserID);
             f301.Show();
+        }
+
+
+
+        // Hide the side panel when clicking on the form.
+        private void F001_Main_Click(object sender, EventArgs e)
+        {
+            if (panelSide.Visible)
+            {
+                slideButton.BackColor = Color.FromArgb(38, 50, 56);
+                slideButton.FlatAppearance.BorderColor = Color.FromArgb(38, 50, 56);
+                panelSide.Visible = false;
+            }
+        }
+
+        // Side Panel menu button.
+        private void slideButton_Click(object sender, EventArgs e)
+        {
+            if (!panelSide.Visible)
+            {
+                slideButton.BackColor = Color.FromArgb(33, 33, 33);
+                slideButton.FlatAppearance.BorderColor = Color.FromArgb(33, 33, 33);
+                panelSide.Visible = true;
+            }
+            else
+            {
+                slideButton.BackColor = Color.FromArgb(38, 50, 56);
+                slideButton.FlatAppearance.BorderColor = Color.FromArgb(38, 50, 56);
+                panelSide.Visible = false;
+            }
+        }
+        
+        // Close all currently opened forms when this form is closed, then re-open Login.
+        private void FrmData_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            List<Form> openForms = new List<Form>();
+            foreach (Form f in Application.OpenForms)
+                openForms.Add(f);
+            foreach (Form f in openForms)
+                f.Close();
+            F000_Login login = new F000_Login();
+            login.Show();
+            login.Focus();
         }
     }
 }
